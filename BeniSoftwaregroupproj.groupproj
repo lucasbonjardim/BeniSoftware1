@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5AD55459-C639-4B37-AF69-39C622A16355}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BeniERP\BeniErp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="BeniErp">
+        <MSBuild Projects="BeniERP\BeniErp.dproj"/>
+    </Target>
+    <Target Name="BeniErp:Clean">
+        <MSBuild Projects="BeniERP\BeniErp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BeniErp:Make">
+        <MSBuild Projects="BeniERP\BeniErp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="BeniErp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="BeniErp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="BeniErp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
