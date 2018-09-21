@@ -1,5 +1,4 @@
 unit unit_utilfuncs;
-{Esta unit contém objetos e funções genéricas para uso em qualquer aplicação}
 
 interface
 
@@ -115,7 +114,7 @@ begin
             exit;
           end;
 
-// "try" - protege o código para eventuais erros de conversão de tipo através da função "StrToInt"
+
   try
 { *-- Cálculo do 1o. Digito Verificador --* }
     sm := 0;
@@ -516,7 +515,7 @@ begin
         end
       else
       crc := crc shr 1;
-      data := data shr 1; // this line is not ELSE and executed anyway.
+      data := data shr 1;
     end;
   end;
 
