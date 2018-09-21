@@ -36,7 +36,7 @@ type
     tmr_data: TTimer;
     pg_control_1: TPageControl;
     TabSheet1: TTabSheet;
-    LinkLabel1: TLinkLabel;
+    lbl_info: TLabel;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);

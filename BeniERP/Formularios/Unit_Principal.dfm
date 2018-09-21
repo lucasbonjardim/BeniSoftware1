@@ -90,7 +90,7 @@ object Form_Principal: TForm_Principal
             Left = 48
             Top = 24
             Width = 265
-            Height = 28
+            Height = 30
             TabOrder = 0
             Text = 'SearchBox1'
           end
@@ -104,7 +104,6 @@ object Form_Principal: TForm_Principal
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = -5
         object Img_logo: TImage
           Left = 52
           Top = 25
@@ -623,6 +622,19 @@ object Form_Principal: TForm_Principal
           Proportional = True
           Stretch = True
         end
+        object lbl_info: TLabel
+          Left = 52
+          Top = 1
+          Width = 382
+          Height = 20
+          Caption = 'Guararapes | Demais regi'#245'es (18) 99709-7902 '
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clInactiveBorder
+          Font.Height = -16
+          Font.Name = '@Microsoft JhengHei'
+          Font.Style = []
+          ParentFont = False
+        end
         object Panel1: TPanel
           Left = 0
           Top = 0
@@ -655,23 +667,6 @@ object Form_Principal: TForm_Principal
             TabOrder = 0
             OnClick = btn_lateralClick
           end
-        end
-        object LinkLabel1: TLinkLabel
-          Left = 58
-          Top = 1
-          Width = 315
-          Height = 23
-          BevelOuter = bvNone
-          Caption = 'Guararapes | Demais regi'#245'es (18) 99709-7902 '
-          Color = clWhite
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWhite
-          Font.Height = -16
-          Font.Name = 'Calibri'
-          Font.Style = [fsBold]
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 1
         end
       end
     end
@@ -819,7 +814,7 @@ object Form_Principal: TForm_Principal
     Left = 856
     Top = 4
     Bitmap = {
-      494C010104008000080120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101040080000C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
