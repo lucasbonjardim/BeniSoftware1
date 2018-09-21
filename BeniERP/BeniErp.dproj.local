@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/08/28 18:04:37.000.039,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/08/28 20:06:05.000.723,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/08/29 19:26:15.000.271,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/08/29 19:52:23.000.359,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/08/31 19:41:15.000.720,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/01 00:26:59.000.715,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/01 09:30:40.000.521,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:12:21.000.521,=C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:13:09.000.678,C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\Unit_Principal.dfm</Transaction>
+    <Transaction>2018/09/04 22:13:09.000.678,C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\Unit_Principal.pas</Transaction>
+    <Transaction>2018/09/04 22:13:18.000.210,C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\BeniSoftware\Projetos\Trunk\BeniErp.dproj</Transaction>
+    <Transaction>2018/09/04 22:15:48.000.001,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:16:49.000.245,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\DataModulePrincipal.pas</Transaction>
+    <Transaction>2018/09/04 22:16:49.000.245,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\DataModulePrincipal.dfm</Transaction>
+    <Transaction>2018/09/04 22:19:53.000.099,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Principal.pas</Transaction>
+    <Transaction>2018/09/04 22:20:02.000.489,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\DataModulePrincipal.pas</Transaction>
+    <Transaction>2018/09/04 22:20:32.000.423,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\DataModulePrincipal.pas=</Transaction>
+    <Transaction>2018/09/04 22:21:26.000.470,=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\DataModulePrincipal.pas</Transaction>
+    <Transaction>2018/09/04 22:22:04.000.824,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:22:22.000.049,D:\BeniSoftware\Projetos\Trunk\BeniERP\Rotinas\Unit_Rotinas.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:28:20.000.107,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:29:15.000.601,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmBcoErp.dfm</Transaction>
+    <Transaction>2018/09/04 22:29:15.000.601,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmBcoErp.pas</Transaction>
+    <Transaction>2018/09/04 22:32:49.000.359,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:33:10.000.329,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Rotinas\Unit_Variaveis_Globais.pas</Transaction>
+    <Transaction>2018/09/04 22:42:57.000.013,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:48:25.000.404,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Controle\ParamControleLicenca.pas</Transaction>
+    <Transaction>2018/09/04 22:51:55.000.572,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:52:26.000.502,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Controle\ParamControleTerminalPDV.pas</Transaction>
+    <Transaction>2018/09/04 22:54:52.000.589,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:55:14.000.233,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Controle\ParamControleTerminalECF.pas</Transaction>
+    <Transaction>2018/09/04 22:57:02.000.066,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 22:57:25.000.106,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Rotinas\Unit_Relatorios.pas</Transaction>
+    <Transaction>2018/09/05 23:14:16.000.937,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/05 23:14:44.000.187,D:\BeniSoftware\Projetos\Trunk\BeniERP\Rotinas\unit_utilfuncs.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/07 17:48:02.000.156,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/07 17:48:24.000.865,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmACBR.pas</Transaction>
+    <Transaction>2018/09/07 17:48:24.000.865,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmACBR.dfm</Transaction>
+    <Transaction>2018/09/10 19:50:10.000.663,=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/10 19:51:01.000.820,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas</Transaction>
+    <Transaction>2018/09/10 19:51:01.000.820,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.dfm</Transaction>
+    <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas</Transaction>
+    <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm</Transaction>
+    <Transaction>2018/09/17 18:19:36.000.471,=D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/17 18:22:17.000.446,D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas=</Transaction>
+    <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm</Transaction>
+    <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="nexus"/>
+	</ActiveMobileDevice>
+</BorlandProject>
