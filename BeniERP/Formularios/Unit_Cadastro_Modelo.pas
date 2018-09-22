@@ -82,6 +82,7 @@ type
     procedure BtnConsultarClick(Sender: TObject);
     procedure BtnGravarClick(Sender: TObject);
     procedure BtnLimparPesquisaClick(Sender: TObject);
+    procedure cxGrid1DBTableView1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -265,6 +266,11 @@ end;
 procedure TForm_Cadastro_Modelo.btn_sairClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TForm_Cadastro_Modelo.cxGrid1DBTableView1DblClick(Sender: TObject);
+begin
+   cxPageControl1.ActivePage := tbCadastro;
 end;
 
 procedure TForm_Cadastro_Modelo.dsPrincipalStateChange(Sender: TObject);

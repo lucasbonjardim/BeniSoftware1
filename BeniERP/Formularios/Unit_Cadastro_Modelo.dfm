@@ -4,8 +4,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 722
-  ClientWidth = 1180
+  ClientHeight = 712
+  ClientWidth = 1170
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,7 +24,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     AlignWithMargins = True
     Left = 0
     Top = 55
-    Width = 1180
+    Width = 1170
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
@@ -38,7 +38,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1180
+    Width = 1170
     Height = 52
     AutoSize = True
     ButtonHeight = 52
@@ -52,7 +52,6 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     ShowCaptions = True
     ShowHint = False
     TabOrder = 0
-    ExplicitTop = 3
     object BtnNovo: TToolButton
       Left = 0
       Top = 0
@@ -134,36 +133,27 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object cxPageControl1: TcxPageControl
     Left = 0
     Top = 61
-    Width = 1180
-    Height = 661
+    Width = 1170
+    Height = 651
     Align = alClient
     TabOrder = 1
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ExplicitLeft = 64
-    ExplicitTop = 136
-    ExplicitWidth = 826
-    ExplicitHeight = 687
-    ClientRectBottom = 657
+    ClientRectBottom = 647
     ClientRectLeft = 4
-    ClientRectRight = 1176
+    ClientRectRight = 1166
     ClientRectTop = 24
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
       ImageIndex = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 714
-      ExplicitHeight = 539
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1172
+        Width = 1162
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 714
         object lblPesquisa: TcxLabel
           AlignWithMargins = True
           Left = 3
@@ -334,7 +324,6 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
           SpeedButtonOptions.Flat = True
           SpeedButtonOptions.Transparent = True
           TabOrder = 2
-          ExplicitLeft = 594
         end
         object pnlData2: TPanel
           Left = 470
@@ -545,15 +534,12 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       object cxGrid1: TcxGrid
         Left = 0
         Top = 41
-        Width = 1172
-        Height = 592
+        Width = 1162
+        Height = 582
         Align = alClient
         TabOrder = 1
-        ExplicitLeft = 696
-        ExplicitTop = 360
-        ExplicitWidth = 250
-        ExplicitHeight = 200
         object cxGrid1DBTableView1: TcxGridDBTableView
+          OnDblClick = cxGrid1DBTableView1DblClick
           Navigator.Buttons.CustomButtons = <>
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <>
@@ -567,9 +553,6 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitLeft = 5
-      ExplicitTop = 25
-      ExplicitHeight = 630
     end
   end
   object dsPrincipal: TDataSource

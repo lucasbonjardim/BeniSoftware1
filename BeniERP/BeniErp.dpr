@@ -16,7 +16,8 @@ uses
   UdtmACBR in 'dtm\UdtmACBR.pas' {dtmACBR},
   Unit_Cadastro_Modelo in 'Formularios\Unit_Cadastro_Modelo.pas' {Form_Cadastro_Modelo},
   UdtmImagens in 'dtm\UdtmImagens.pas' {dtmImagens: TDataModule},
-  Unit_exibeefeitoespera in 'Formularios\Unit_exibeefeitoespera.pas' {form_exibeefeitoespera};
+  Unit_exibeefeitoespera in 'Formularios\Unit_exibeefeitoespera.pas' {form_exibeefeitoespera},
+  Unit_Cadastro_Produtos in 'Formularios\Unit_Cadastro_Produtos.pas' {Form_Cadastro_Produtos};
 
 {$R *.res}
 
@@ -25,6 +26,7 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Principal, Form_Principal);
   Application.CreateForm(TdtmImagens, dtmImagens);
-  Application.CreateForm(Tform_exibeefeitoespera, form_exibeefeitoespera);
+  Application.CreateForm(TDtmBcoErp, DtmBcoErp);
+  Application.CreateForm(TdtmACBR, dtmACBR);
   Application.Run;
 end.

@@ -16,12 +16,13 @@
     <Transaction>2018/09/07 17:48:24.000.865,D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmACBR.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
     <Transaction>2018/09/10 19:51:01.000.820,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
     <Transaction>2018/09/10 19:51:01.000.820,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm</Transaction>
-    <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.dfm</Transaction>
     <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas</Transaction>
-    <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas=D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.dfm</Transaction>
     <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm=D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.dfm</Transaction>
+    <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas=D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.pas</Transaction>
     <Transaction>2018/09/22 10:54:31.000.597,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\dtm\UdtmImagens.dfm</Transaction>
     <Transaction>2018/09/22 18:04:48.000.565,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_exibeefeitoespera.dfm</Transaction>
+    <Transaction>2018/09/22 18:57:49.000.678,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_Produtos.dfm</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android="nexus"/>

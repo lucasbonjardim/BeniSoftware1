@@ -12,6 +12,7 @@ object DtmBcoErp: TDtmBcoErp
         'Database=192.168.0.78:C:\BeniSoftware\BeniERP\DataBase\Gestao.FD' +
         'B'
       'DriverID=FB')
+    Connected = True
     LoginPrompt = False
     Left = 24
     Top = 16

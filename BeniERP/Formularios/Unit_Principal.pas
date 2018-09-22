@@ -413,14 +413,15 @@ var
 implementation
 
 uses
-Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo;
+Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
+  Unit_Cadastro_Produtos;
 
 {$R *.dfm}
 
 
 procedure TForm_Principal.actLayoutExecute(Sender: TObject);
 begin
-  AbreForm(TForm_Cadastro_Modelo,Form_Cadastro_Modelo);
+  AbreForm(TForm_Cadastro_Produtos,Form_Cadastro_Produtos);
 end;
 
 procedure TForm_Principal.btn_lateralClick(Sender: TObject);
