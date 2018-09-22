@@ -127,6 +127,11 @@
             <Form>Form_Cadastro_Modelo</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="dtm\UdtmImagens.pas">
+            <Form>dtmImagens</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -150,12 +155,6 @@
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k250.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp250.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_NFeDanfeFR.bpl">File D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_NFeDanfeFR.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_CTeDacteFR.bpl">File D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_CTeDacteFR.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_NFSeDanfseFR.bpl">File D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_NFSeDanfseFR.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_BoletoFR.bpl">File D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_BoletoFR.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_MDFeDamdfeFR.bpl">File D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_MDFeDamdfeFR.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_GNREGuiaFR.bpl">File D:\BeniSoftware\Projetos\COMPONENTES\Acbr\Lib\Delphi\LibD25\ACBr_GNREGuiaFR.bpl not found</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">

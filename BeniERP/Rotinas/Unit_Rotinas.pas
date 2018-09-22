@@ -13,6 +13,7 @@ uses
     procedure p_LeParametros(pConnName: String);
     procedure AbreForm(aClasseForm: TComponentClass; aForm: TForm);
     function Criptografa(Texto: string; chave: Byte): String;
+    function FormEstaCriado(AClass: TClass): Boolean;
   
    var
     ArqIni: TIniFile;
@@ -63,11 +64,33 @@ end;
 
  procedure AbreForm(aClasseForm: TComponentClass; aForm: TForm);
 begin
-  Application.CreateForm(aClasseForm, aForm);
-  try
-    aForm.ShowModal;
-  finally
-    aForm.Free;
+  if not FormEstaCriado(aClasseForm) then
+  begin
+    if (aForm = nil) then
+    begin
+      Application.CreateForm(aClasseForm, aForm);
+      aForm.Show;
+    end
+    else
+    begin
+      aForm.WindowState := WsNormal;
+      aForm.BringToFront;
+      aForm.Focused;
+    end;
+  end;
+
+end;
+
+function FormEstaCriado(AClass: TClass): Boolean;
+var
+  I: Integer;
+begin
+  Result := False;
+  for I := 0 to Screen.FormCount -1 do begin
+    if Screen.Forms[I] is AClass then begin
+      Result := True;
+      Break;
+    end;
   end;
 end;
 

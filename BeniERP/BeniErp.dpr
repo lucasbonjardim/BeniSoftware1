@@ -14,7 +14,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   UdtmACBR in 'dtm\UdtmACBR.pas' {dtmACBR},
-  Unit_Cadastro_Modelo in 'Formularios\Unit_Cadastro_Modelo.pas' {Form_Cadastro_Modelo};
+  Unit_Cadastro_Modelo in 'Formularios\Unit_Cadastro_Modelo.pas' {Form_Cadastro_Modelo},
+  UdtmImagens in 'dtm\UdtmImagens.pas' {dtmImagens: TDataModule};
 
 {$R *.res}
 
@@ -22,6 +23,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Principal, Form_Principal);
-  Application.CreateForm(TForm_Cadastro_Modelo, Form_Cadastro_Modelo);
+  Application.CreateForm(TdtmImagens, dtmImagens);
   Application.Run;
 end.
