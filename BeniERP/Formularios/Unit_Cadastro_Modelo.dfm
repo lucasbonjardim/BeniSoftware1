@@ -4,8 +4,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 762
-  ClientWidth = 1220
+  ClientHeight = 742
+  ClientWidth = 1200
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,9 +22,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   TextHeight = 13
   object cxPageControl1: TcxPageControl
     Left = 0
-    Top = 30
-    Width = 1220
-    Height = 732
+    Top = 25
+    Width = 1200
+    Height = 717
     Align = alClient
     Color = clBtnFace
     ParentBackground = False
@@ -34,9 +34,11 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     Properties.CustomButtons.Buttons = <>
     LookAndFeel.NativeStyle = False
     LookAndFeel.SkinName = 'SevenClassic'
-    ClientRectBottom = 729
+    ExplicitTop = 33
+    ExplicitHeight = 709
+    ClientRectBottom = 714
     ClientRectLeft = 2
-    ClientRectRight = 1217
+    ClientRectRight = 1197
     ClientRectTop = 27
     object tbCadastro: TcxTabSheet
       Caption = 'Detalhe'
@@ -50,15 +52,17 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbPesquisa: TcxTabSheet
       Caption = 'Grade'
       ImageIndex = 7
+      ExplicitHeight = 682
       object cxGrid1: TcxGrid
         Left = 0
         Top = 0
-        Width = 1215
-        Height = 702
+        Width = 1195
+        Height = 687
         Align = alClient
         TabOrder = 0
         LockedStateImageOptions.Text = 'Por favor, Aguarde!'
         LookAndFeel.SkinName = 'DevExpressStyle'
+        ExplicitHeight = 682
         object cxGrid1DBTableView1: TcxGridDBTableView
           Navigator.Buttons.CustomButtons = <>
           DataController.DataSource = dsPrincipal
@@ -86,21 +90,21 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1220
-    Height = 30
+    Width = 1200
+    Height = 25
     Align = alTop
-    Color = clWhite
+    BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
     object BtnNovo: TcxButton
-      Left = 280
-      Top = 1
+      Left = 384
+      Top = 0
       Width = 61
-      Height = 28
+      Height = 25
       Hint = 'Novo Registro'
-      Align = alLeft
       Caption = ' Novo'
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -144,16 +148,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnNovoClick
     end
     object BtnExcluir: TcxButton
-      Left = 536
-      Top = 1
+      Left = 653
+      Top = 0
       Width = 63
-      Height = 28
+      Height = 25
       Hint = 'Excluir Registro'
-      Align = alLeft
       Caption = 'Excluir'
       Enabled = False
       LookAndFeel.NativeStyle = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -197,15 +200,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnExcluirClick
     end
     object BtnAlterar: TcxButton
-      Left = 341
-      Top = 1
+      Left = 446
+      Top = 0
       Width = 61
-      Height = 28
+      Height = 25
       Hint = 'Alterar Registro'
-      Align = alLeft
       Caption = 'Alterar'
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -249,14 +252,14 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnAlterarClick
     end
     object BtnPesquisar: TcxButton
-      Left = 108
-      Top = 1
+      Left = 148
+      Top = 0
       Width = 76
-      Height = 28
+      Height = 25
       Hint = 'Pesquisar'
-      Align = alLeft
       Caption = 'Pesquisar'
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -299,15 +302,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnPesquisarClick
     end
     object BtnSalvar: TcxButton
-      Left = 475
-      Top = 1
+      Left = 586
+      Top = 0
       Width = 61
-      Height = 28
+      Height = 25
       Hint = 'Salvar'
-      Align = alLeft
       Caption = 'Salvar'
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000040000
@@ -350,15 +353,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnSalvarClick
     end
     object BtnCancelar: TcxButton
-      Left = 402
-      Top = 1
+      Left = 508
+      Top = 0
       Width = 73
-      Height = 28
+      Height = 25
       Hint = 'Cancelar altera'#231#245'es'
-      Align = alLeft
       Caption = 'Cancelar'
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000020000
@@ -401,14 +404,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnCancelarClick
     end
     object BtnPrimeiroRegistro: TcxButton
-      Left = 1
-      Top = 1
+      Left = 0
+      Top = 0
       Width = 32
-      Height = 28
+      Height = 25
       Hint = 'Primeiro Registro'
       Align = alLeft
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -448,16 +452,20 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       ShowHint = True
       TabOrder = 4
       OnClick = BtnPrimeiroRegistroClick
+      ExplicitLeft = 2
+      ExplicitTop = 3
+      ExplicitHeight = 27
     end
     object BtnRegistroAnterior: TcxButton
-      Left = 33
-      Top = 1
-      Width = 25
-      Height = 28
+      Left = 32
+      Top = 0
+      Width = 32
+      Height = 25
       Hint = 'Registro Anterior'
       Align = alLeft
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -497,17 +505,18 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       ShowHint = True
       TabOrder = 5
       OnClick = BtnRegistroAnteriorClick
+      ExplicitHeight = 33
     end
     object BtnLimparPesquisa: TcxButton
-      Left = 184
-      Top = 1
+      Left = 254
+      Top = 0
       Width = 96
-      Height = 28
+      Height = 25
       Hint = 'Limpar Pesquisa'
-      Align = alLeft
       Caption = 'Limpar Pesquisa'
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -549,15 +558,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnLimparPesquisaClick
     end
     object BtnImprimir: TcxButton
-      Left = 599
-      Top = 1
+      Left = 734
+      Top = 0
       Width = 78
-      Height = 28
+      Height = 25
       Hint = 'Imprimir'
-      Align = alLeft
       Caption = 'Imprimir'
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -597,14 +606,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       TabOrder = 9
     end
     object BtnRegistroPosterior: TcxButton
-      Left = 58
-      Top = 1
-      Width = 25
-      Height = 28
+      Left = 64
+      Top = 0
+      Width = 32
+      Height = 25
       Hint = 'Registro Posterior'
       Align = alLeft
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -644,16 +654,20 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       ShowHint = True
       TabOrder = 10
       OnClick = BtnRegistroPosteriorClick
+      ExplicitLeft = 69
+      ExplicitTop = 3
+      ExplicitHeight = 27
     end
     object BtnUltimoRegistro: TcxButton
-      Left = 83
-      Top = 1
-      Width = 25
-      Height = 28
+      Left = 96
+      Top = 0
+      Width = 32
+      Height = 25
       Hint = 'Ultimo Registro'
       Align = alLeft
       Enabled = False
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Blue'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -693,16 +707,18 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       ShowHint = True
       TabOrder = 11
       OnClick = BtnUltimoRegistroClick
+      ExplicitHeight = 33
     end
     object btnFechar: TcxButton
-      Left = 1144
-      Top = 1
+      Left = 1125
+      Top = 0
       Width = 75
-      Height = 28
+      Height = 25
       Hint = 'Fechar Tela'
       Align = alRight
       Caption = 'Fechar'
-      LookAndFeel.SkinName = 'LondonLiquidSky'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'VisualStudio2013Light'
       OptionsImage.Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -741,6 +757,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OptionsImage.ImageIndex = 60
       TabOrder = 12
       OnClick = AC_FecharExecute
+      ExplicitLeft = 1123
+      ExplicitTop = 3
+      ExplicitHeight = 28
     end
   end
   object dsPrincipal: TDataSource

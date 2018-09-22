@@ -61,15 +61,12 @@ begin
     try
       FDPhysFBDriverLink1.VendorHome := ExtractFilePath(Application.ExeName)+ 'DLLs\';
       FDPhysFBDriverLink1.VendorLib  := 'fbclient.dll';
-      FDPhysFBDriverLink1.Release;
       FDBcoERP.Connected := false;
       FDBcoERP.Params.Clear;
       FDBcoERP.Params.Values['DriverID']  := 'FB';
       FDBcoERP.Params.Values['database']  := INI.ReadString('LOGIN','Banco'      ,'127.0.0.1:c:\sotis\super\tabelas\bcosup.fdb');
       FDBcoERP.Params.Values['user_name'] := INI.ReadString('LOGIN','USUARIO'    ,'SYSDBA');
       FDBcoERP.Params.Values['password']  := INI.ReadString('LOGIN','SENHA'      ,'masterkey');
-     // FDBcoERP.Params.Values['server']    := INI.ReadString('LOGIN','IPServidor' ,'localhost');
-     // FDBcoERP.Params.Values['port']      := INI.ReadString('LOGIN','Porta'      ,'3050');
       FDBcoERP.Connected   := true;
       ConexaoDados         := DtmBcoErp.FDBcoERP;
 
