@@ -26,39 +26,50 @@ uses
   cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData,
   Vcl.Menus, System.Actions, Vcl.ActnList, cxButtons, cxGridLevel, cxClasses,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
-  cxGrid,FireDAC.Comp.Client, cxPC;
+  cxGrid,FireDAC.Comp.Client, cxPC, Vcl.ToolWin, cxContainer, Vcl.Mask,
+  cxTextEdit, cxCurrencyEdit, cxLabel;
 
 type
   TForm_Cadastro_Modelo = class(TForm)
-    cxPageControl1: TcxPageControl;
-    tbCadastro: TcxTabSheet;
-    tbPesquisa: TcxTabSheet;
-    cxGrid1: TcxGrid;
-    cxGrid1DBTableView1: TcxGridDBTableView;
-    cxGrid1Level1: TcxGridLevel;
-    Panel1: TPanel;
-    BtnNovo: TcxButton;
-    BtnExcluir: TcxButton;
-    BtnAlterar: TcxButton;
-    BtnPesquisar: TcxButton;
-    BtnSalvar: TcxButton;
-    BtnCancelar: TcxButton;
-    BtnPrimeiroRegistro: TcxButton;
-    BtnRegistroAnterior: TcxButton;
-    BtnLimparPesquisa: TcxButton;
-    BtnImprimir: TcxButton;
-    BtnRegistroPosterior: TcxButton;
-    BtnUltimoRegistro: TcxButton;
     dsPrincipal: TDataSource;
     cxLookAndFeelController1: TcxLookAndFeelController;
-    btnFechar: TcxButton;
+    BarraMenu: TcxImageList;
+    ToolBar1: TToolBar;
+    BtnNovo: TToolButton;
+    BtnSalvar: TToolButton;
+    btnCancelar: TToolButton;
+    BtnAlterar: TToolButton;
+    BtnExcluir: TToolButton;
+    ToolButton6: TToolButton;
+    BtnPesquisar: TToolButton;
+    btnFechar: TToolButton;
+    cxPageControl1: TcxPageControl;
+    tbPesquisa: TcxTabSheet;
+    Panel3: TPanel;
+    lblPesquisa: TcxLabel;
+    Panel4: TPanel;
+    edtText: TEdit;
+    edtCurr: TcxCurrencyEdit;
+    edtData: TDateTimePicker;
+    edtMask: TMaskEdit;
+    cxButton1: TcxButton;
+    pnlData2: TPanel;
+    Shape1: TShape;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1: TcxGrid;
+    tbCadastro: TcxTabSheet;
+    BtnRegistroPosterior: TcxButton;
+    BtnUltimoRegistro: TcxButton;
+    BtnRegistroAnterior: TcxButton;
+    BtnPrimeiroRegistro: TcxButton;
+    BtnLimparPesquisa: TToolButton;
+    ToolButton1: TToolButton;
     procedure btn_sairClick(Sender: TObject);
     procedure BtnPrimeiroRegistroClick(Sender: TObject);
     procedure BtnRegistroAnteriorClick(Sender: TObject);
     procedure BtnRegistroPosteriorClick(Sender: TObject);
     procedure BtnUltimoRegistroClick(Sender: TObject);
-    procedure BtnPesquisarClick(Sender: TObject);
-    procedure BtnLimparPesquisaClick(Sender: TObject);
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnCancelarClick(Sender: TObject);
@@ -68,6 +79,9 @@ type
     procedure dsPrincipalStateChange(Sender: TObject);
     procedure AC_FecharExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure BtnConsultarClick(Sender: TObject);
+    procedure BtnGravarClick(Sender: TObject);
+    procedure BtnLimparPesquisaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -81,7 +95,7 @@ implementation
 
 {$R *.dfm}
 
-uses UdtmImagens;
+uses UdtmImagens, Unit_Principal, UdtmACBR;
 
 procedure TForm_Cadastro_Modelo.AC_FecharExecute(Sender: TObject);
 begin
@@ -98,6 +112,7 @@ begin
       ShowMessage('Erro em alterar Registro: '+e.Message);
     end;
   end;
+
 end;
 
 procedure TForm_Cadastro_Modelo.BtnCancelarClick(Sender: TObject);
@@ -115,6 +130,20 @@ begin
       ShowMessage('Erro ao cancelar operação: '+e.Message);
     end;
   end;
+end;
+
+procedure TForm_Cadastro_Modelo.BtnConsultarClick(Sender: TObject);
+begin
+   try
+    cxPageControl1.ActivePage := tbPesquisa;
+    dsPrincipal.DataSet.open;
+
+  except on e:Exception do
+    begin
+      ShowMessage('Erro ao pesquisar Registro: '+e.Message);
+    end;
+  end;
+
 end;
 
 procedure TForm_Cadastro_Modelo.BtnExcluirClick(Sender: TObject);
@@ -140,20 +169,22 @@ begin
   close;
 end;
 
-procedure TForm_Cadastro_Modelo.BtnLimparPesquisaClick(Sender: TObject);
+procedure TForm_Cadastro_Modelo.BtnGravarClick(Sender: TObject);
 begin
-  try
-    dsPrincipal.DataSet.Close;
+   try
+    TFDQuery(dsPrincipal.DataSet).Post;
+
   except on e:Exception do
     begin
-      ShowMessage('Erro ao cancelar pesquisa: '+e.Message);
+     ShowMessage('Erro ao Salvar Registro: '+e.Message);
     end;
+
   end;
 end;
 
 procedure TForm_Cadastro_Modelo.BtnNovoClick(Sender: TObject);
 begin
-  try
+   try
     cxPageControl1.ActivePage := tbCadastro;
 
     if not dsPrincipal.DataSet.Active then
@@ -168,19 +199,6 @@ begin
   except on e:Exception do
     begin
       ShowMessage('Erro ao Incluir Registro: '+e.Message);
-    end;
-  end;
-end;
-
-procedure TForm_Cadastro_Modelo.BtnPesquisarClick(Sender: TObject);
-begin
-  try
-    cxPageControl1.ActivePage := tbPesquisa;
-    dsPrincipal.DataSet.open;
-
-  except on e:Exception do
-    begin
-      ShowMessage('Erro ao pesquisar Registro: '+e.Message);
     end;
   end;
 end;
@@ -272,6 +290,17 @@ procedure TForm_Cadastro_Modelo.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   Action :=caFree;
+end;
+
+procedure TForm_Cadastro_Modelo.BtnLimparPesquisaClick(Sender: TObject);
+begin
+   try
+    dsPrincipal.DataSet.Close;
+  except on e:Exception do
+    begin
+      ShowMessage('Erro ao cancelar pesquisa: '+e.Message);
+    end;
+  end;
 end;
 
 end.

@@ -15,7 +15,8 @@ uses
   Vcl.Styles,
   UdtmACBR in 'dtm\UdtmACBR.pas' {dtmACBR},
   Unit_Cadastro_Modelo in 'Formularios\Unit_Cadastro_Modelo.pas' {Form_Cadastro_Modelo},
-  UdtmImagens in 'dtm\UdtmImagens.pas' {dtmImagens: TDataModule};
+  UdtmImagens in 'dtm\UdtmImagens.pas' {dtmImagens: TDataModule},
+  Unit_exibeefeitoespera in 'Formularios\Unit_exibeefeitoespera.pas' {form_exibeefeitoespera};
 
 {$R *.res}
 
@@ -24,5 +25,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Principal, Form_Principal);
   Application.CreateForm(TdtmImagens, dtmImagens);
+  Application.CreateForm(Tform_exibeefeitoespera, form_exibeefeitoespera);
   Application.Run;
 end.

@@ -27,7 +27,8 @@ uses
   dxTabbedMDI, cxGraphics, Vcl.PlatformDefaultStyleActnCtrls, Vcl.ActnMan,
   cxLookAndFeels, dxSkinsForm, cxControls, cxLookAndFeelPainters, dxRibbonSkins,
   dxSkinsdxRibbonPainter, dxRibbonCustomizationForm, dxRibbon, dxGDIPlusClasses,
-  dxNavBarOfficeNavigationBar, dxSkinsdxBarPainter, dxBar;
+  dxNavBarOfficeNavigationBar, dxSkinsdxBarPainter, dxBar,
+  dxSkinsdxStatusBarPainter, dxStatusBar;
 
 type
   TForm_Principal = class(TForm)
@@ -36,33 +37,6 @@ type
     actLayout: TAction;
     actPower: TAction;
     imlIcons: TImageList;
-    tmr_data: TTimer;
-    ActionManager: TActionManager;
-    act_produtos: TAction;
-    actCliente: TAction;
-    actVasilhame: TAction;
-    actFornecedores: TAction;
-    actFiscais: TAction;
-    actOperadores: TAction;
-    actVendedores: TAction;
-    actFinalzadoras: TAction;
-    actEitquetas: TAction;
-    actPDV: TAction;
-    actImportarDados: TAction;
-    actCargaBalanca: TAction;
-    actTabelaProdutos: TAction;
-    ActInstBeneficente: TAction;
-    ActPedidoPDV: TAction;
-    Aliquotas: TAction;
-    ActNotaFiscalPaulista: TAction;
-    act_Terminal_Pdv: TAction;
-    act_loja: TAction;
-    act_usuarios: TAction;
-    act_layout_teclados: TAction;
-    act_SAT_ECF: TAction;
-    act_cad_Ecf: TAction;
-    act_rel_clientes: TAction;
-    act_Rel_sat: TAction;
     cxmglst_icones: TcxImageList;
     dxSkinController1: TdxSkinController;
     pnl_lateral: TPanel;
@@ -79,7 +53,6 @@ type
     btn_lateral: TButton;
     dxTabbedMDIManager1: TdxTabbedMDIManager;
     img_fundo: TImage;
-    dxNavBarOfficeNavigationBar1: TdxNavBarOfficeNavigationBar;
     dxRibbon1: TdxRibbon;
     tabCadastro: TdxRibbonTab;
     tabMovimentos: TdxRibbonTab;
@@ -417,6 +390,7 @@ type
     Contabil1: TdxBarSubItem;
     R00: TdxBarSubItem;
     P000: TdxBarSubItem;
+    SB: TdxStatusBar;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -425,7 +399,7 @@ type
     procedure p_abreconfig(Sender: TObject);
     procedure actLayoutExecute(Sender: TObject);
     procedure btn_lateralClick(Sender: TObject);
-    procedure tmr_dataTimer(Sender: TObject);
+
   private
     hora : TDateTime;
     dia, tarde, noite: string;
@@ -465,6 +439,8 @@ procedure TForm_Principal.CarregaConfiguracao;
 var
 TemaAleatorio : Integer;
 begin
+  pnl_lateral.Width :=53;
+
   if FileExists(ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpg') then
   begin
     img_fundo.Picture.LoadFromFile(ExtractFilePath(Application.ExeName) +
@@ -473,7 +449,7 @@ begin
   end;
 
   TemaAleatorio := Random(12);
-  TemaAleatorio := 7;
+ // TemaAleatorio := 7;
 
   case TemaAleatorio of
   1:
@@ -572,9 +548,7 @@ begin
       catMenuItems.HotButtonColor        := $005353CC;
      // RxWizardHeader1.CaptionFont.Color  := $005353CC;
     end;
-
   end;
-
 end;
 
 procedure TForm_Principal.catMenuItemsCategoryCollapase(Sender: TObject;
@@ -605,27 +579,6 @@ end;
 procedure TForm_Principal.p_abreconfig(Sender: TObject);
 begin
   AbreForm(TForm_Cadastro_Modelo,Form_Cadastro_Modelo);
-end;
-
-procedure TForm_Principal.tmr_dataTimer(Sender: TObject);
-begin
-  dia  := '6:00';
-  tarde:= '12:00';
-  noite:= '18:00';
-  hora := Time;
-
- { If hora > StrtoTime(Dia) then
-  begin
-    RxWizardHeader1.Comments := 'Marilia-SP' + 'Olá, Bom Dia! ';
-  end;
-   If hora > StrtoTime(Tarde) then
-  begin
-    RxWizardHeader1.Comments := 'Marilia-SP' + 'Olá, Boa Tarde! ';
-  end;
-   If hora > StrtoTime(noite) then
-  begin
-    RxWizardHeader1.Comments := 'Marilia-SP' + 'Olá, Boa Noite! ';
-  end; }
 end;
 
 end.

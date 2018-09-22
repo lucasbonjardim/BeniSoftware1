@@ -22,7 +22,7 @@ object Form_Principal: TForm_Principal
     Left = 185
     Top = 147
     Width = 1253
-    Height = 572
+    Height = 577
     Align = alClient
     Center = True
     Picture.Data = {
@@ -492,35 +492,30 @@ object Form_Principal: TForm_Principal
       D42822A9514452A34611498D22921AB5DFD7FE5F800100E3BE9FC7C60BC23700
       00000049454E44AE426082}
     Transparent = True
-    ExplicitLeft = 0
-    ExplicitTop = 198
-    ExplicitWidth = 1018
-    ExplicitHeight = 546
+    ExplicitLeft = 191
+    ExplicitHeight = 597
   end
   object pnl_lateral: TPanel
     Left = 0
     Top = 147
     Width = 185
-    Height = 572
+    Height = 577
     Align = alLeft
     BevelOuter = bvNone
     Color = 14461444
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 65
-    ExplicitHeight = 654
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 572
+      Height = 577
       Color = 5460940
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
-      ExplicitHeight = 654
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -594,7 +589,6 @@ object Form_Principal: TForm_Principal
       ShowCaption = False
       ShowHint = False
       TabOrder = 0
-      ExplicitHeight = 65
       object ActivityIndicator1: TActivityIndicator
         Left = 13
         Top = 2
@@ -616,7 +610,6 @@ object Form_Principal: TForm_Principal
       ShowCaption = False
       ShowHint = False
       TabOrder = 1
-      ExplicitHeight = 65
       object Panel2: TPanel
         Left = 0
         Top = -48
@@ -625,7 +618,6 @@ object Form_Principal: TForm_Principal
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitTop = -8
       end
     end
     object pnl_logo: TPanel
@@ -636,7 +628,6 @@ object Form_Principal: TForm_Principal
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitHeight = 65
       object lbl_info: TLabel
         Left = 52
         Top = 1
@@ -658,7 +649,6 @@ object Form_Principal: TForm_Principal
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitHeight = 65
         object btn_lateral: TButton
           Left = 0
           Top = -15
@@ -682,31 +672,9 @@ object Form_Principal: TForm_Principal
           StylusHotImageIndex = 0
           TabOrder = 0
           OnClick = btn_lateralClick
-          ExplicitTop = 25
         end
       end
     end
-  end
-  object dxNavBarOfficeNavigationBar1: TdxNavBarOfficeNavigationBar
-    Left = 0
-    Top = 719
-    Width = 1438
-    Height = 25
-    AutoSize = False
-    Items = <
-      item
-        Visible = True
-      end
-      item
-        Visible = True
-      end
-      item
-        Visible = True
-      end
-      item
-        Visible = True
-      end>
-    TabOrder = 2
   end
   object dxRibbon1: TdxRibbon
     Left = 0
@@ -719,11 +687,8 @@ object Form_Principal: TForm_Principal
     ColorSchemeName = 'White'
     ShowMinimizeButton = False
     Contexts = <>
-    TabOrder = 3
+    TabOrder = 2
     TabStop = False
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 908
     object tabCadastro: TdxRibbonTab
       Active = True
       Caption = 'Cadastros'
@@ -804,10 +769,51 @@ object Form_Principal: TForm_Principal
       Index = 6
     end
   end
+  object SB: TdxStatusBar
+    Left = 0
+    Top = 724
+    Width = 1438
+    Height = 20
+    Panels = <
+      item
+        PanelStyleClassName = 'TdxStatusBarTextPanelStyle'
+        Text = 'Usu'#225'rio '
+        Width = 70
+      end
+      item
+        PanelStyleClassName = 'TdxStatusBarTextPanelStyle'
+        Width = 150
+      end
+      item
+        PanelStyleClassName = 'TdxStatusBarTextPanelStyle'
+        Text = 'Empresa'
+        Width = 60
+      end
+      item
+        PanelStyleClassName = 'TdxStatusBarTextPanelStyle'
+        Width = 410
+      end
+      item
+        PanelStyleClassName = 'TdxStatusBarTextPanelStyle'
+        Width = 70
+      end
+      item
+        PanelStyleClassName = 'TdxStatusBarTextPanelStyle'
+      end>
+    PaintStyle = stpsUseLookAndFeel
+    LookAndFeel.Kind = lfUltraFlat
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = 'Metropolis'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+  end
   object ActionList1: TActionList
     Images = imlIcons
     Left = 1280
-    Top = 340
+    Top = 284
     object actHome: TAction
       Caption = 'Home'
       ImageIndex = 1
@@ -827,9 +833,9 @@ object Form_Principal: TForm_Principal
     Height = 32
     Width = 32
     Left = 1360
-    Top = 276
+    Top = 228
     Bitmap = {
-      494C010104008000300120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010104008000340120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1891,142 +1897,6 @@ object Form_Principal: TForm_Principal
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000}
-  end
-  object tmr_data: TTimer
-    OnTimer = tmr_dataTimer
-    Left = 1366
-    Top = 219
-  end
-  object ActionManager: TActionManager
-    Images = cxmglst_icones
-    Left = 1274
-    Top = 280
-    StyleName = 'Platform Default'
-    object act_produtos: TAction
-      Category = 'Base'
-      Caption = 'Produtos'
-      ImageIndex = 190
-    end
-    object actCliente: TAction
-      Category = 'Base'
-      Caption = 'Cliente'
-      Hint = 'Cadastro de Cliente'
-      ImageIndex = 178
-    end
-    object actVasilhame: TAction
-      Category = 'Base'
-      Caption = 'Vasilhame'
-      ImageIndex = 25
-    end
-    object actFornecedores: TAction
-      Category = 'Base'
-      Caption = 'Fornecedores'
-      ImageIndex = 152
-    end
-    object actFiscais: TAction
-      Category = 'Base'
-      Caption = 'Fiscais'
-      ImageIndex = 163
-    end
-    object actOperadores: TAction
-      Category = 'Base'
-      Caption = 'Operadores'
-      ImageIndex = 167
-    end
-    object actVendedores: TAction
-      Category = 'Base'
-      Caption = 'Vendedores'
-      ImageIndex = 183
-    end
-    object actFinalzadoras: TAction
-      Category = 'Base'
-      Caption = 'Finalzadoras'
-      ImageIndex = 161
-    end
-    object actEitquetas: TAction
-      Category = 'Base'
-      Caption = 'Eitquetas'
-      ImageIndex = 173
-    end
-    object actPDV: TAction
-      Category = 'Base'
-      Caption = 'PDV'
-      ImageIndex = 194
-    end
-    object actImportarDados: TAction
-      Category = 'Base'
-      Caption = 'ImportarDados'
-      ImageIndex = 173
-    end
-    object actCargaBalanca: TAction
-      Category = 'Base'
-      Caption = 'Balan'#231'a'
-      ImageIndex = 65
-    end
-    object actTabelaProdutos: TAction
-      Category = 'Base'
-      Caption = 'Tabela Produtos'
-      ImageIndex = 12
-    end
-    object ActInstBeneficente: TAction
-      Category = 'Base'
-      Caption = 'Institui'#231#227'o Beneficente'
-      ImageIndex = 4
-    end
-    object ActPedidoPDV: TAction
-      Category = 'Base'
-      Caption = 'Pedido PDV'
-      ImageIndex = 73
-    end
-    object Aliquotas: TAction
-      Category = 'Fiscal'
-      Caption = 'Aliquota'
-      Hint = 'Clique aqui para Cadastrar as Aliquotas de saida no PDV'
-      ImageIndex = 168
-    end
-    object ActNotaFiscalPaulista: TAction
-      Category = 'Fiscal'
-      Caption = 'Nota Fiscal Paulista'
-      ImageIndex = 27
-    end
-    object act_Terminal_Pdv: TAction
-      Category = 'Par'#226'metros PDV'
-      Caption = 'Terminal PDV'#39's'
-      ImageIndex = 40
-    end
-    object act_loja: TAction
-      Category = 'Par'#226'metros PDV'
-      Caption = 'Loja'
-      ImageIndex = 4
-    end
-    object act_usuarios: TAction
-      Category = 'Par'#226'metros PDV'
-      Caption = 'Usu'#225'rios'
-      ImageIndex = 50
-    end
-    object act_layout_teclados: TAction
-      Category = 'Par'#226'metros PDV'
-      Caption = 'Layout Teclados'
-      ImageIndex = 17
-    end
-    object act_SAT_ECF: TAction
-      Category = 'Par'#226'metros PDV'
-      Caption = 'SAT ECF'
-      ImageIndex = 61
-    end
-    object act_cad_Ecf: TAction
-      Category = 'Par'#226'metros PDV'
-      Caption = 'Cadastro ECF'
-    end
-    object act_rel_clientes: TAction
-      Category = 'Relat'#243'rios '
-      Caption = 'Relat'#243'rios Clientes'
-      ImageIndex = 63
-    end
-    object act_Rel_sat: TAction
-      Category = 'Relat'#243'rios '
-      Caption = 'Relatorios Sat'
-    end
   end
   object cxmglst_icones: TcxImageList
     Height = 24
@@ -17463,8 +17333,8 @@ object Form_Principal: TForm_Principal
   end
   object dxTabbedMDIManager1: TdxTabbedMDIManager
     Active = True
-    LookAndFeel.NativeStyle = True
-    LookAndFeel.SkinName = 'DevExpressStyle'
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = 'Office2016Colorful'
     TabProperties.CloseButtonMode = cbmActiveTab
     TabProperties.CustomButtons.Buttons = <>
     Left = 1277
@@ -17513,8 +17383,8 @@ object Form_Principal: TForm_Principal
     MenuAnimations = maSlide
     PopupMenuLinks = <>
     UseSystemFont = True
-    Left = 184
-    Top = 240
+    Left = 1352
+    Top = 288
     DockControlHeights = (
       0
       0

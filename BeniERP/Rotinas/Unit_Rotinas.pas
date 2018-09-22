@@ -20,7 +20,7 @@ uses
 
 implementation
   uses
-  UdtmBcoErp,Unit_Principal;
+  UdtmBcoErp,Unit_Principal, Unit_exibeefeitoespera;
 
 
 procedure CriaArqIni;
