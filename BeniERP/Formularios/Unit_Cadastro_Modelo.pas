@@ -43,28 +43,28 @@ type
     ToolButton6: TToolButton;
     BtnPesquisar: TToolButton;
     btnFechar: TToolButton;
+    Shape1: TShape;
+    BtnLimparPesquisa: TToolButton;
+    ToolButton1: TToolButton;
     cxPageControl1: TcxPageControl;
     tbPesquisa: TcxTabSheet;
-    Panel3: TPanel;
+    Panel1: TPanel;
     lblPesquisa: TcxLabel;
-    Panel4: TPanel;
+    Panel2: TPanel;
     edtText: TEdit;
     edtCurr: TcxCurrencyEdit;
     edtData: TDateTimePicker;
     edtMask: TMaskEdit;
     cxButton1: TcxButton;
     pnlData2: TPanel;
-    Shape1: TShape;
-    cxGrid1DBTableView1: TcxGridDBTableView;
-    cxGrid1Level1: TcxGridLevel;
-    cxGrid1: TcxGrid;
+    edtData2: TDateTimePicker;
+    rgOptionGrid: TRadioGroup;
     tbCadastro: TcxTabSheet;
+    pnl_top: TPanel;
     BtnRegistroPosterior: TcxButton;
-    BtnUltimoRegistro: TcxButton;
-    BtnRegistroAnterior: TcxButton;
     BtnPrimeiroRegistro: TcxButton;
-    BtnLimparPesquisa: TToolButton;
-    ToolButton1: TToolButton;
+    BtnRegistroAnterior: TcxButton;
+    BtnUltimoRegistro: TcxButton;
     procedure btn_sairClick(Sender: TObject);
     procedure BtnPrimeiroRegistroClick(Sender: TObject);
     procedure BtnRegistroAnteriorClick(Sender: TObject);
@@ -83,6 +83,8 @@ type
     procedure BtnGravarClick(Sender: TObject);
     procedure BtnLimparPesquisaClick(Sender: TObject);
     procedure cxGrid1DBTableView1DblClick(Sender: TObject);
+    procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -96,7 +98,7 @@ implementation
 
 {$R *.dfm}
 
-uses UdtmImagens, Unit_Principal, UdtmACBR;
+uses UdtmImagens, Unit_Principal, UdtmACBR, Unit_Variaveis_Globais;
 
 procedure TForm_Cadastro_Modelo.AC_FecharExecute(Sender: TObject);
 begin
@@ -273,6 +275,12 @@ begin
    cxPageControl1.ActivePage := tbCadastro;
 end;
 
+procedure TForm_Cadastro_Modelo.cxVisualizaDBTableView1DblClick(
+  Sender: TObject);
+begin
+   cxPageControl1.ActivePage := tbCadastro;
+end;
+
 procedure TForm_Cadastro_Modelo.dsPrincipalStateChange(Sender: TObject);
 begin
   BtnPesquisar.Enabled         := (Sender as TDataSource).State in [dsInactive];
@@ -295,7 +303,66 @@ end;
 procedure TForm_Cadastro_Modelo.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  if TFDQuery(dsPrincipal.DataSet).State in [dsInsert, dsEdit] then
+  begin
+    If Application.MessageBox('Existem dados Alterados que não foram salvos, Deseja Sair ?','Atenção!',MB_YESNO +
+    MB_ICONQUESTION + MB_DEFBUTTON2) = IDYES Then
+    Action :=caFree
+    else
+    exit;
+  end
+  else
   Action :=caFree;
+end;
+
+procedure TForm_Cadastro_Modelo.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+   case key of
+     VK_ESCAPE:
+     begin
+       BtnFecharClick( nil );
+       Abort;
+       Exit;
+     end;
+
+     vk_f5:
+     begin
+       if btnnovo.Enabled then
+          btnnovo.Click;
+     end;
+
+     vk_f6:
+     begin
+       if BtnSalvar.Enabled then
+          BtnSalvar.Click;
+     end;
+
+     vk_f7:
+     begin
+       if btncancelar.Enabled then
+          btncancelar.Click;
+     end;
+
+     vk_f8:
+     begin
+       if btnalterar.Enabled then
+          btnalterar.Click;
+     end;
+
+     vk_f9:
+     begin
+       if btnexcluir.Enabled then
+          btnexcluir.Click;
+     end;
+
+     VK_F3:
+     begin
+      if dsPrincipal.State in [ dsInsert, dsEdit ] then
+        Exit;
+      btnPesquisar.Click
+     end;
+   end;
 end;
 
 procedure TForm_Cadastro_Modelo.BtnLimparPesquisaClick(Sender: TObject);

@@ -140,6 +140,14 @@
             <Form>Form_Cadastro_Produtos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Formularios\Unit_Baixa_Tabela_IBPT.pas">
+            <Form>form_baixa_ibpt</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Formularios\Unit_Cadastro_ICMS.pas">
+            <Form>Form_Cadastro_ICMS</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

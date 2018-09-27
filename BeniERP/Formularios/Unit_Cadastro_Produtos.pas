@@ -142,108 +142,6 @@ type
     FdqProdutosNUMERO_LOTE: TStringField;
     FdqProdutosUNIDADE_MEDICAMENTO: TStringField;
     FdqProdutosUSO_PROLONGADO: TStringField;
-    cxGrid1DBTableView1COD_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1COD_LAB: TcxGridDBColumn;
-    cxGrid1DBTableView1COD_SEC: TcxGridDBColumn;
-    cxGrid1DBTableView1VALOR_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1PROMOCAO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1CONTROLA_ESTOQUE_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1COMISSAO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1QUANT_UNIDADE_ENTRADA: TcxGridDBColumn;
-    cxGrid1DBTableView1ESTOQUE_MINIMO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1NOME_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1DESC_CUPOM: TcxGridDBColumn;
-    cxGrid1DBTableView1ATIVO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1MARGEM_LUCRO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1LOCALIZACAO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1PRODUTO_PESADO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1COD_SETOR: TcxGridDBColumn;
-    cxGrid1DBTableView1TECLA_ATALHO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1INDICE_RECEITA_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1DIAS_VALIDADE_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1REFERENCIA_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1COMPLEMENTO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1ICMS_CONT_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1ICMS_CONT_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1ICMS_CF_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1ICMS_CF_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1CST_CONT_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1CST_CONT_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1CST_CF_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1CST_CF_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1CAMINHO_FOTO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1SAIR_TABELA_PRECO: TcxGridDBColumn;
-    cxGrid1DBTableView1CFOP_VENDAS_CONT_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1CFOP_VENDAS_CF_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1CFOP_VENDAS_CONT_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1CFOP_VENDAS_CF_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1ST_CONT_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1VR_AGREG_CONT_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1IPI_CONT_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1IPI_CF_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1IPI_CONT_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1IPI_CF_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1COD_NCM: TcxGridDBColumn;
-    cxGrid1DBTableView1CLASSIFICACAO_FISCAL: TcxGridDBColumn;
-    cxGrid1DBTableView1CODIGO_TIPO: TcxGridDBColumn;
-    cxGrid1DBTableView1COD_PRODUTO_ESTOQUE: TcxGridDBColumn;
-    cxGrid1DBTableView1COD_GRUPO: TcxGridDBColumn;
-    cxGrid1DBTableView1SUB_GRUPO: TcxGridDBColumn;
-    cxGrid1DBTableView1PRECO_PROGRAMADO: TcxGridDBColumn;
-    cxGrid1DBTableView1ALIQUOTA_PIS: TcxGridDBColumn;
-    cxGrid1DBTableView1ALIQUOTA_COFINS: TcxGridDBColumn;
-    cxGrid1DBTableView1ALIQUOTA_IR: TcxGridDBColumn;
-    cxGrid1DBTableView1ALIQUOTA_CSLL: TcxGridDBColumn;
-    cxGrid1DBTableView1ALIQUOTA_OUTRAS: TcxGridDBColumn;
-    cxGrid1DBTableView1ISENTO_PIS_COFINS_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1PRECO_CUSTO: TcxGridDBColumn;
-    cxGrid1DBTableView1CREDITO_ICMS: TcxGridDBColumn;
-    cxGrid1DBTableView1PRECO_PRAZO_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1TIPO_PRODUCAO: TcxGridDBColumn;
-    cxGrid1DBTableView1CODIGO_BARRA_PRO: TcxGridDBColumn;
-    cxGrid1DBTableView1CODIGO_UNIDADE_SAIDA: TcxGridDBColumn;
-    cxGrid1DBTableView1CODIGO_UNIDADE_ENTRADA: TcxGridDBColumn;
-    cxGrid1DBTableView1PRECO_PROGRAMADO_PRAZO: TcxGridDBColumn;
-    cxGrid1DBTableView1RED_CF_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1RED_CF_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1RED_CONT_EST: TcxGridDBColumn;
-    cxGrid1DBTableView1RED_CONT_FORA: TcxGridDBColumn;
-    cxGrid1DBTableView1DATA_VALIDADE: TcxGridDBColumn;
-    cxGrid1DBTableView1CODIGO_SETOR_ESTOQUE: TcxGridDBColumn;
-    cxGrid1DBTableView1ORIG: TcxGridDBColumn;
-    cxGrid1DBTableView1CSOSN: TcxGridDBColumn;
-    cxGrid1DBTableView1IPI: TcxGridDBColumn;
-    cxGrid1DBTableView1ICMS: TcxGridDBColumn;
-    cxGrid1DBTableView1RICMS: TcxGridDBColumn;
-    cxGrid1DBTableView1IVA: TcxGridDBColumn;
-    cxGrid1DBTableView1PIS: TcxGridDBColumn;
-    cxGrid1DBTableView1CONFINS: TcxGridDBColumn;
-    cxGrid1DBTableView1TAMANHO: TcxGridDBColumn;
-    cxGrid1DBTableView1COR: TcxGridDBColumn;
-    cxGrid1DBTableView1OBS: TcxGridDBColumn;
-    cxGrid1DBTableView1CST_PIS: TcxGridDBColumn;
-    cxGrid1DBTableView1CST_COFINS: TcxGridDBColumn;
-    cxGrid1DBTableView1CST_IPI: TcxGridDBColumn;
-    cxGrid1DBTableView1ULTIMA_ALTERACAO: TcxGridDBColumn;
-    cxGrid1DBTableView1VALOR_ATACADO: TcxGridDBColumn;
-    cxGrid1DBTableView1ALIQ_IBPT_NAC: TcxGridDBColumn;
-    cxGrid1DBTableView1ALIQ_IBPT_IMP: TcxGridDBColumn;
-    cxGrid1DBTableView1FATOR_CONVERSAO: TcxGridDBColumn;
-    cxGrid1DBTableView1ALERTA_COPA: TcxGridDBColumn;
-    cxGrid1DBTableView1ALERTA_COZINHA: TcxGridDBColumn;
-    cxGrid1DBTableView1ANDROID_VISUALIZA: TcxGridDBColumn;
-    cxGrid1DBTableView1TEMPO_PREPARO: TcxGridDBColumn;
-    cxGrid1DBTableView1NAO_PERMITE_FRAC: TcxGridDBColumn;
-    cxGrid1DBTableView1SABORES: TcxGridDBColumn;
-    cxGrid1DBTableView1CEST: TcxGridDBColumn;
-    cxGrid1DBTableView1NCM_EX: TcxGridDBColumn;
-    cxGrid1DBTableView1CODIGO_SERVICO: TcxGridDBColumn;
-    cxGrid1DBTableView1SERVICO_CODIGO: TcxGridDBColumn;
-    cxGrid1DBTableView1CLASSE_TERAPEUTICA: TcxGridDBColumn;
-    cxGrid1DBTableView1REGISTRO_MEDICAMENTO: TcxGridDBColumn;
-    cxGrid1DBTableView1NUMERO_LOTE: TcxGridDBColumn;
-    cxGrid1DBTableView1UNIDADE_MEDICAMENTO: TcxGridDBColumn;
-    cxGrid1DBTableView1USO_PROLONGADO: TcxGridDBColumn;
     cxPaginas2: TcxPageControl;
     cxDadosProduto: TcxTabSheet;
     pnlLateral1: TPanel;
@@ -257,7 +155,7 @@ type
     cxLabel25: TcxLabel;
     cxDBDATA_VALIDADE: TcxDBDateEdit;
     pnlCentral1: TPanel;
-    Panel1: TPanel;
+    Panel3: TPanel;
     cxLabel1: TcxLabel;
     dbedtCOD_PRO: TDBEdit;
     cxLabel3: TcxLabel;
@@ -265,7 +163,7 @@ type
     cxLabel4: TcxLabel;
     cxDBLTipo: TcxDBLookupComboBox;
     dbrgrpTIPO_PRODUCAO: TDBRadioGroup;
-    Panel2: TPanel;
+    Panel4: TPanel;
     cxLabel2: TcxLabel;
     dbedtNOME_PRO: TDBEdit;
     Panel5: TPanel;
@@ -450,7 +348,84 @@ type
     Label12: TLabel;
     cxDBTextEdit2: TcxDBTextEdit;
     cxDBTextEdit3: TcxDBTextEdit;
+    cxImgsGrid: TcxImageList;
+    cxGridImg: TcxImageList;
+    cxVisualiza: TcxGrid;
+    cxVisualizaDBTableView1: TcxGridDBTableView;
+    cxVisualizaDBTableView1STATUS: TcxGridDBColumn;
+    cxVisualizaDBTableView1COD_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1CODIGO_BARRA_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1CODIGO_UNIDADE_SAIDA: TcxGridDBColumn;
+    cxVisualizaDBTableView1CODIGO_UNIDADE_ENTRADA: TcxGridDBColumn;
+    cxVisualizaDBTableView1VALOR_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRECO_PRAZO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PROMOCAO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1ESTOQUE: TcxGridDBColumn;
+    cxVisualizaDBTableView1DESC_CUPOM: TcxGridDBColumn;
+    cxVisualizaDBTableView1REFERENCIA_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1CODIGO_TIPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_TIPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1TIPO_PRODUCAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1COD_SEC: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_SEC: TcxGridDBColumn;
+    cxVisualizaDBTableView1COD_GRUPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_GRUPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1SUB_GRUPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_SUBGRUPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1COD_LAB: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_LAB: TcxGridDBColumn;
+    cxVisualizaDBTableView1CONTROLA_ESTOQUE_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1COMISSAO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1QUANT_UNIDADE_ENTRADA: TcxGridDBColumn;
+    cxVisualizaDBTableView1ESTOQUE_MINIMO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1ATIVO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1MARGEM_LUCRO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1LOCALIZACAO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRODUTO_PESADO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1COD_SETOR: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_SETOR_BAL: TcxGridDBColumn;
+    cxVisualizaDBTableView1TECLA_ATALHO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1INDICE_RECEITA_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1DIAS_VALIDADE_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1COMPLEMENTO_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1SAIR_TABELA_PRECO: TcxGridDBColumn;
+    cxVisualizaDBTableView1COD_NCM: TcxGridDBColumn;
+    cxVisualizaDBTableView1COD_PRODUTO_ESTOQUE: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_PRO_ESTOQUE: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRECO_PROGRAMADO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRECO_CUSTO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRECO_PROGRAMADO_PRAZO: TcxGridDBColumn;
+    cxVisualizaDBTableView1DATA_VALIDADE: TcxGridDBColumn;
+    cxVisualizaDBTableView1CODIGO_SETOR_ESTOQUE: TcxGridDBColumn;
+    cxVisualizaDBTableView1NOME_SETOR_ESTOQUE: TcxGridDBColumn;
+    cxVisualizaDBTableView1TAMANHO: TcxGridDBColumn;
+    cxVisualizaDBTableView1COR: TcxGridDBColumn;
+    cxVisualizaDBTableView1OBS: TcxGridDBColumn;
+    cxVisualizaDBTableView1ULTIMA_ALTERACAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1VALOR_ATACADO: TcxGridDBColumn;
+    cxVisualizaDBTableView1ALERTA_COPA: TcxGridDBColumn;
+    cxVisualizaDBTableView1ALERTA_COZINHA: TcxGridDBColumn;
+    cxVisualizaDBTableView1ANDROID_VISUALIZA: TcxGridDBColumn;
+    cxVisualizaDBTableView1TEMPO_PREPARO: TcxGridDBColumn;
+    cxVisualizaDBTableView1NAO_PERMITE_FRAC: TcxGridDBColumn;
+    cxVisualizaDBTableView1SABORES: TcxGridDBColumn;
+    cxVisualizaDBTableView1UNID_ENT: TcxGridDBColumn;
+    cxVisualizaDBTableView1UNID_SAI: TcxGridDBColumn;
+    cxNCMs: TcxGridDBTableView;
+    cxNCMsNCM: TcxGridDBColumn;
+    cxNCMsEX: TcxGridDBColumn;
+    cxNCMsDESC_NCM: TcxGridDBColumn;
+    cxNCMsDESCRICAO: TcxGridDBColumn;
+    cxCEST: TcxGridDBTableView;
+    cxCESTCEST: TcxGridDBColumn;
+    cxCESTDescricao: TcxGridDBColumn;
+    cxVisualizaLevel1: TcxGridLevel;
+    FDQuxiliar: TFDQuery;
+    procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
+    procedure cxButton1Click(Sender: TObject);
   private
+    procedure MostraProdutos;
     { Private declarations }
   public
     { Public declarations }
@@ -463,6 +438,36 @@ implementation
 
 {$R *.dfm}
 
-uses UdtmBcoErp;
+uses UdtmBcoErp, Unit_Variaveis_Globais;
+
+procedure TForm_Cadastro_Produtos.cxButton1Click(Sender: TObject);
+begin
+  inherited;
+  MostraProdutos;
+end;
+
+procedure TForm_Cadastro_Produtos.cxVisualizaDBTableView1DblClick(
+  Sender: TObject);
+begin
+  inherited;
+  cxPageControl1.ActivePage := tbCadastro;
+
+end;
+
+procedure TForm_Cadastro_Produtos.MostraProdutos;
+var
+  vl_sql: String;
+begin
+  vl_sql :=
+  'select * from produto T                                                     '+
+  'WHERE nome_pro LIKE '+ '%'+ edtMask.text + '%' + ' OR t.desc_cupom LIKE     '+
+  '%'+ edtMask.text + '%';
+
+   FdqProdutos.Close;
+   FdqProdutos.SQL.Clear;
+   FdqProdutos.SQL.Text := vl_sql;
+   FdqProdutos.Open;
+
+end;
 
 end.

@@ -64,20 +64,28 @@ end;
 
  procedure AbreForm(aClasseForm: TComponentClass; aForm: TForm);
 begin
-  if not FormEstaCriado(aClasseForm) then
-  begin
-    if (aForm = nil) then
+  try
+    if not FormEstaCriado(aClasseForm) then
     begin
-      Application.CreateForm(aClasseForm, aForm);
-      aForm.Show;
-    end
-    else
+      if (aForm = nil) then
+      begin
+        Application.CreateForm(aClasseForm, aForm);
+        aForm.Show;
+      end
+      else
+      begin
+        aForm.WindowState := WsNormal;
+        aForm.BringToFront;
+        aForm.Focused;
+      end;
+    end;
+
+  except on e:Exception do
     begin
-      aForm.WindowState := WsNormal;
-      aForm.BringToFront;
-      aForm.Focused;
+
     end;
   end;
+
 
 end;
 

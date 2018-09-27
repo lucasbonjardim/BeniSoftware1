@@ -8,6 +8,16 @@ uses
   IniFiles, Vcl.StdCtrls, Contnrs, System.Classes,FireDAC.Comp.Client, System.JSON;
 
 
+  // Variaveis Teclas
+  const
+  VK_ESCAPE = 27;
+  vk_f5     = 116;
+  vk_f6     = 117;
+  vk_f7     = 118;
+  vk_f8     = 119;
+  vk_f9     = 120;
+
+
   type
   TPROPDVTipoRegistro = ( regVendeItem,               regDescontoTotalCupom,
                           regFinalizadorVenda,        regCancelamentoCupom,
@@ -186,6 +196,7 @@ c_TipoTeclado: Array[1..19] of String = ( 'KT','KX','KF','IC','PC','GT',
   intSequenciaItem    : Integer ;
   intAuxiliar         : Integer ;
   strAuxiliar         : String  ;
+  COD_EMP             : Integer;
 
 
 implementation

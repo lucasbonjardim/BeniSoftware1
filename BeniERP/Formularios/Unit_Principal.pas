@@ -399,6 +399,8 @@ type
     procedure p_abreconfig(Sender: TObject);
     procedure actLayoutExecute(Sender: TObject);
     procedure btn_lateralClick(Sender: TObject);
+    procedure C007Click(Sender: TObject);
+    procedure C1042Click(Sender: TObject);
 
   private
     hora : TDateTime;
@@ -414,7 +416,7 @@ implementation
 
 uses
 Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
-  Unit_Cadastro_Produtos;
+  Unit_Cadastro_Produtos, Unit_Cadastro_ICMS;
 
 {$R *.dfm}
 
@@ -436,10 +438,22 @@ begin
   end;
 end;
 
+procedure TForm_Principal.C007Click(Sender: TObject);
+begin
+   AbreForm(TForm_Cadastro_Produtos,Form_Cadastro_Produtos);
+end;
+
+procedure TForm_Principal.C1042Click(Sender: TObject);
+begin
+   AbreForm(TForm_Cadastro_ICMS,Form_Cadastro_ICMS);
+end;
+
 procedure TForm_Principal.CarregaConfiguracao;
 var
 TemaAleatorio : Integer;
 begin
+  COD_EMP :=1;
+
   pnl_lateral.Width :=53;
 
   if FileExists(ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpg') then

@@ -12,8 +12,8 @@
     <Transaction>2018/09/04 22:52:26.000.502,D:\BeniSoftware\Projetos\Trunk\BeniERP\Controle\ParamControleTerminalPDV.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
     <Transaction>2018/09/04 22:55:14.000.233,D:\BeniSoftware\Projetos\Trunk\BeniERP\Controle\ParamControleTerminalECF.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
     <Transaction>2018/09/04 22:57:25.000.106,D:\BeniSoftware\Projetos\Trunk\BeniERP\Rotinas\Unit_Relatorios.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
-    <Transaction>2018/09/07 17:48:24.000.865,D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmACBR.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/09/07 17:48:24.000.865,D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmACBR.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
+    <Transaction>2018/09/07 17:48:24.000.865,D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmACBR.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/09/10 19:51:01.000.820,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas</Transaction>
     <Transaction>2018/09/10 19:51:01.000.820,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas</Transaction>
@@ -23,8 +23,40 @@
     <Transaction>2018/09/22 10:54:31.000.597,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\dtm\UdtmImagens.dfm</Transaction>
     <Transaction>2018/09/22 18:04:48.000.565,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_exibeefeitoespera.dfm</Transaction>
     <Transaction>2018/09/22 18:57:49.000.678,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_Produtos.dfm</Transaction>
+    <Transaction>2018/09/26 20:19:54.000.632,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Baixa_Tabela_IBPT.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
+    <Transaction>2018/09/26 20:34:22.000.173,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_ICMS.dfm</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android="nexus"/>
-	</ActiveMobileDevice>
+	</ActiveMobileDevice>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Controle"/>
+    <File Path="Controle\ParamControleLicenca.pas"/>
+    <File Path="Controle\ParamControleTerminalECF.pas"/>
+    <File Path="Controle\ParamControleTerminalPDV.pas"/>
+    <File Path="dtm"/>
+    <File Path="dtm\UdtmACBR.pas"/>
+    <File Path="dtm\UdtmACBR.dfm"/>
+    <File Path="dtm\UdtmBcoErp.pas"/>
+    <File Path="dtm\UdtmBcoErp.dfm"/>
+    <File Path="dtm\UdtmImagens.pas"/>
+    <File Path="dtm\UdtmImagens.dfm"/>
+    <File Path="Formularios"/>
+    <File Path="Formularios\Unit_Baixa_Tabela_IBPT.pas"/>
+    <File Path="Formularios\Unit_Baixa_Tabela_IBPT.dfm"/>
+    <File Path="Formularios\Unit_Cadastro_ICMS.pas"/>
+    <File Path="Formularios\Unit_Cadastro_ICMS.dfm"/>
+    <File Path="Formularios\Unit_Cadastro_Modelo.pas"/>
+    <File Path="Formularios\Unit_Cadastro_Modelo.dfm"/>
+    <File Path="Formularios\Unit_Cadastro_Produtos.pas"/>
+    <File Path="Formularios\Unit_Cadastro_Produtos.dfm"/>
+    <File Path="Formularios\Unit_exibeefeitoespera.pas"/>
+    <File Path="Formularios\Unit_exibeefeitoespera.dfm"/>
+    <File Path="Formularios\Unit_Principal.pas"/>
+    <File Path="Formularios\Unit_Principal.dfm"/>
+    <File Path="Rotinas"/>
+    <File Path="Rotinas\Unit_Relatorios.pas"/>
+    <File Path="Rotinas\Unit_Rotinas.pas"/>
+    <File Path="Rotinas\unit_utilfuncs.pas"/>
+    <File Path="Rotinas\Unit_Variaveis_Globais.pas"/>
+  </ProjectSortOrder>
 </BorlandProject>

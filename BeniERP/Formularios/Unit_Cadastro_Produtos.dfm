@@ -1,379 +1,415 @@
 inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   Caption = 'Cadastro de Produtos'
-  ClientHeight = 692
-  ClientWidth = 1407
-  ExplicitWidth = 1423
-  ExplicitHeight = 731
+  ClientHeight = 652
+  ClientWidth = 1367
+  ExplicitWidth = 1383
+  ExplicitHeight = 691
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Width = 1407
+    Width = 1367
     ExplicitWidth = 1170
   end
   inherited ToolBar1: TToolBar
-    Width = 1407
-    ExplicitWidth = 1407
+    Width = 1367
+    ExplicitTop = -3
+    ExplicitWidth = 1367
   end
   inherited cxPageControl1: TcxPageControl
-    Width = 1407
-    Height = 631
-    Properties.ActivePage = tbCadastro
-    ExplicitWidth = 1407
-    ExplicitHeight = 631
-    ClientRectBottom = 627
-    ClientRectRight = 1403
+    Top = 84
+    Width = 1367
+    Height = 568
+    ExplicitTop = 84
+    ExplicitWidth = 1367
+    ExplicitHeight = 568
+    ClientRectBottom = 564
+    ClientRectRight = 1363
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1399
-      ExplicitHeight = 603
-      inherited Panel3: TPanel
-        Width = 1399
-        ExplicitWidth = 1399
+      ExplicitWidth = 1359
+      ExplicitHeight = 540
+      inherited Panel1: TPanel
+        Width = 1359
+        ExplicitWidth = 1359
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
         end
-        inherited Panel4: TPanel
-          inherited edtCurr: TcxCurrencyEdit
-            ExplicitHeight = 23
+        inherited Panel2: TPanel
+          inherited edtMask: TMaskEdit
+            Text = ''
+            Visible = True
           end
         end
+        inherited cxButton1: TcxButton
+          OnClick = cxButton1Click
+        end
+        inherited rgOptionGrid: TRadioGroup
+          Width = 339
+          Items.Strings = (
+            'Todos'
+            'Ativos'
+            'Inativos')
+          ExplicitWidth = 339
+        end
       end
-      inherited cxGrid1: TcxGrid
-        Width = 1399
-        Height = 562
-        ExplicitWidth = 1399
-        ExplicitHeight = 562
-        inherited cxGrid1DBTableView1: TcxGridDBTableView
+      object cxVisualiza: TcxGrid
+        AlignWithMargins = True
+        Left = 3
+        Top = 44
+        Width = 1353
+        Height = 493
+        Align = alClient
+        TabOrder = 1
+        LookAndFeel.Kind = lfStandard
+        LookAndFeel.NativeStyle = False
+        LookAndFeel.SkinName = 'Metropolis'
+        RootLevelOptions.DetailFrameColor = clNone
+        object cxVisualizaDBTableView1: TcxGridDBTableView
+          OnDblClick = cxVisualizaDBTableView1DblClick
+          Navigator.Buttons.CustomButtons = <>
           DataController.DataSource = dsPrincipal
-          object cxGrid1DBTableView1COD_PRO: TcxGridDBColumn
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          OptionsCustomize.ColumnHiding = True
+          OptionsCustomize.ColumnsQuickCustomization = True
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          object cxVisualizaDBTableView1STATUS: TcxGridDBColumn
+            Caption = 'Status'
+            DataBinding.FieldName = 'STATUS'
+            Options.Moving = False
+            VisibleForCustomization = False
+            Width = 50
+          end
+          object cxVisualizaDBTableView1COD_PRO: TcxGridDBColumn
+            Caption = 'C'#243'd'
             DataBinding.FieldName = 'COD_PRO'
           end
-          object cxGrid1DBTableView1COD_LAB: TcxGridDBColumn
-            DataBinding.FieldName = 'COD_LAB'
-          end
-          object cxGrid1DBTableView1COD_SEC: TcxGridDBColumn
-            DataBinding.FieldName = 'COD_SEC'
-          end
-          object cxGrid1DBTableView1VALOR_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'VALOR_PRO'
-          end
-          object cxGrid1DBTableView1PROMOCAO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'PROMOCAO_PRO'
-          end
-          object cxGrid1DBTableView1CONTROLA_ESTOQUE_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'CONTROLA_ESTOQUE_PRO'
-          end
-          object cxGrid1DBTableView1COMISSAO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'COMISSAO_PRO'
-          end
-          object cxGrid1DBTableView1QUANT_UNIDADE_ENTRADA: TcxGridDBColumn
-            DataBinding.FieldName = 'QUANT_UNIDADE_ENTRADA'
-          end
-          object cxGrid1DBTableView1ESTOQUE_MINIMO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'ESTOQUE_MINIMO_PRO'
-          end
-          object cxGrid1DBTableView1NOME_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'NOME_PRO'
-          end
-          object cxGrid1DBTableView1DESC_CUPOM: TcxGridDBColumn
-            DataBinding.FieldName = 'DESC_CUPOM'
-          end
-          object cxGrid1DBTableView1ATIVO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'ATIVO_PRO'
-          end
-          object cxGrid1DBTableView1MARGEM_LUCRO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'MARGEM_LUCRO_PRO'
-          end
-          object cxGrid1DBTableView1LOCALIZACAO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'LOCALIZACAO_PRO'
-          end
-          object cxGrid1DBTableView1PRODUTO_PESADO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRODUTO_PESADO_PRO'
-          end
-          object cxGrid1DBTableView1COD_SETOR: TcxGridDBColumn
-            DataBinding.FieldName = 'COD_SETOR'
-          end
-          object cxGrid1DBTableView1TECLA_ATALHO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'TECLA_ATALHO_PRO'
-          end
-          object cxGrid1DBTableView1INDICE_RECEITA_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'INDICE_RECEITA_PRO'
-          end
-          object cxGrid1DBTableView1DIAS_VALIDADE_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'DIAS_VALIDADE_PRO'
-          end
-          object cxGrid1DBTableView1REFERENCIA_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'REFERENCIA_PRO'
-          end
-          object cxGrid1DBTableView1COMPLEMENTO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'COMPLEMENTO_PRO'
-          end
-          object cxGrid1DBTableView1ICMS_CONT_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'ICMS_CONT_EST'
-          end
-          object cxGrid1DBTableView1ICMS_CONT_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'ICMS_CONT_FORA'
-          end
-          object cxGrid1DBTableView1ICMS_CF_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'ICMS_CF_EST'
-          end
-          object cxGrid1DBTableView1ICMS_CF_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'ICMS_CF_FORA'
-          end
-          object cxGrid1DBTableView1CST_CONT_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'CST_CONT_EST'
-          end
-          object cxGrid1DBTableView1CST_CONT_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'CST_CONT_FORA'
-          end
-          object cxGrid1DBTableView1CST_CF_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'CST_CF_EST'
-          end
-          object cxGrid1DBTableView1CST_CF_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'CST_CF_FORA'
-          end
-          object cxGrid1DBTableView1CAMINHO_FOTO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'CAMINHO_FOTO_PRO'
-          end
-          object cxGrid1DBTableView1SAIR_TABELA_PRECO: TcxGridDBColumn
-            DataBinding.FieldName = 'SAIR_TABELA_PRECO'
-          end
-          object cxGrid1DBTableView1CFOP_VENDAS_CONT_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'CFOP_VENDAS_CONT_EST'
-          end
-          object cxGrid1DBTableView1CFOP_VENDAS_CF_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'CFOP_VENDAS_CF_EST'
-          end
-          object cxGrid1DBTableView1CFOP_VENDAS_CONT_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'CFOP_VENDAS_CONT_FORA'
-          end
-          object cxGrid1DBTableView1CFOP_VENDAS_CF_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'CFOP_VENDAS_CF_FORA'
-          end
-          object cxGrid1DBTableView1ST_CONT_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'ST_CONT_EST'
-          end
-          object cxGrid1DBTableView1VR_AGREG_CONT_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'VR_AGREG_CONT_EST'
-          end
-          object cxGrid1DBTableView1IPI_CONT_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'IPI_CONT_EST'
-          end
-          object cxGrid1DBTableView1IPI_CF_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'IPI_CF_EST'
-          end
-          object cxGrid1DBTableView1IPI_CONT_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'IPI_CONT_FORA'
-          end
-          object cxGrid1DBTableView1IPI_CF_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'IPI_CF_FORA'
-          end
-          object cxGrid1DBTableView1COD_NCM: TcxGridDBColumn
-            DataBinding.FieldName = 'COD_NCM'
-          end
-          object cxGrid1DBTableView1CLASSIFICACAO_FISCAL: TcxGridDBColumn
-            DataBinding.FieldName = 'CLASSIFICACAO_FISCAL'
-          end
-          object cxGrid1DBTableView1CODIGO_TIPO: TcxGridDBColumn
-            DataBinding.FieldName = 'CODIGO_TIPO'
-          end
-          object cxGrid1DBTableView1COD_PRODUTO_ESTOQUE: TcxGridDBColumn
-            DataBinding.FieldName = 'COD_PRODUTO_ESTOQUE'
-          end
-          object cxGrid1DBTableView1COD_GRUPO: TcxGridDBColumn
-            DataBinding.FieldName = 'COD_GRUPO'
-          end
-          object cxGrid1DBTableView1SUB_GRUPO: TcxGridDBColumn
-            DataBinding.FieldName = 'SUB_GRUPO'
-          end
-          object cxGrid1DBTableView1PRECO_PROGRAMADO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRECO_PROGRAMADO'
-          end
-          object cxGrid1DBTableView1ALIQUOTA_PIS: TcxGridDBColumn
-            DataBinding.FieldName = 'ALIQUOTA_PIS'
-          end
-          object cxGrid1DBTableView1ALIQUOTA_COFINS: TcxGridDBColumn
-            DataBinding.FieldName = 'ALIQUOTA_COFINS'
-          end
-          object cxGrid1DBTableView1ALIQUOTA_IR: TcxGridDBColumn
-            DataBinding.FieldName = 'ALIQUOTA_IR'
-          end
-          object cxGrid1DBTableView1ALIQUOTA_CSLL: TcxGridDBColumn
-            DataBinding.FieldName = 'ALIQUOTA_CSLL'
-          end
-          object cxGrid1DBTableView1ALIQUOTA_OUTRAS: TcxGridDBColumn
-            DataBinding.FieldName = 'ALIQUOTA_OUTRAS'
-          end
-          object cxGrid1DBTableView1ISENTO_PIS_COFINS_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'ISENTO_PIS_COFINS_PRO'
-          end
-          object cxGrid1DBTableView1PRECO_CUSTO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRECO_CUSTO'
-          end
-          object cxGrid1DBTableView1CREDITO_ICMS: TcxGridDBColumn
-            DataBinding.FieldName = 'CREDITO_ICMS'
-          end
-          object cxGrid1DBTableView1PRECO_PRAZO_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRECO_PRAZO_PRO'
-          end
-          object cxGrid1DBTableView1TIPO_PRODUCAO: TcxGridDBColumn
-            DataBinding.FieldName = 'TIPO_PRODUCAO'
-          end
-          object cxGrid1DBTableView1CODIGO_BARRA_PRO: TcxGridDBColumn
+          object cxVisualizaDBTableView1CODIGO_BARRA_PRO: TcxGridDBColumn
+            Caption = 'C'#243'd. de Barras'
             DataBinding.FieldName = 'CODIGO_BARRA_PRO'
           end
-          object cxGrid1DBTableView1CODIGO_UNIDADE_SAIDA: TcxGridDBColumn
-            DataBinding.FieldName = 'CODIGO_UNIDADE_SAIDA'
+          object cxVisualizaDBTableView1NOME_PRO: TcxGridDBColumn
+            Caption = 'Nome do Produto'
+            DataBinding.FieldName = 'NOME_PRO'
+            Width = 350
           end
-          object cxGrid1DBTableView1CODIGO_UNIDADE_ENTRADA: TcxGridDBColumn
-            DataBinding.FieldName = 'CODIGO_UNIDADE_ENTRADA'
+          object cxVisualizaDBTableView1CODIGO_UNIDADE_SAIDA: TcxGridDBColumn
+            Caption = 'Un. Saida'
+            DataBinding.FieldName = 'UNID_SAI'
           end
-          object cxGrid1DBTableView1PRECO_PROGRAMADO_PRAZO: TcxGridDBColumn
+          object cxVisualizaDBTableView1CODIGO_UNIDADE_ENTRADA: TcxGridDBColumn
+            Caption = 'Un. Ent.'
+            DataBinding.FieldName = 'UNID_ENT'
+          end
+          object cxVisualizaDBTableView1VALOR_PRO: TcxGridDBColumn
+            Caption = 'Valor a V'#237'sta'
+            DataBinding.FieldName = 'VALOR_PRO'
+          end
+          object cxVisualizaDBTableView1PRECO_PRAZO_PRO: TcxGridDBColumn
+            Caption = 'Valor a Prazo'
+            DataBinding.FieldName = 'PRECO_PRAZO_PRO'
+          end
+          object cxVisualizaDBTableView1PROMOCAO_PRO: TcxGridDBColumn
+            Caption = 'Valor Promo'#231#227'o'
+            DataBinding.FieldName = 'PROMOCAO_PRO'
+          end
+          object cxVisualizaDBTableView1ESTOQUE: TcxGridDBColumn
+            Caption = 'Estoque'
+            DataBinding.FieldName = 'ESTOQUE'
+          end
+          object cxVisualizaDBTableView1DESC_CUPOM: TcxGridDBColumn
+            Caption = 'Descri'#231#227'o do Cupom'
+            DataBinding.FieldName = 'DESC_CUPOM'
+          end
+          object cxVisualizaDBTableView1REFERENCIA_PRO: TcxGridDBColumn
+            Caption = 'Refer'#234'ncia Interna'
+            DataBinding.FieldName = 'REFERENCIA_PRO'
+          end
+          object cxVisualizaDBTableView1CODIGO_TIPO: TcxGridDBColumn
+            Caption = 'Tipo Produto'
+            DataBinding.FieldName = 'CODIGO_TIPO'
+            Visible = False
+            VisibleForCustomization = False
+          end
+          object cxVisualizaDBTableView1NOME_TIPO: TcxGridDBColumn
+            Caption = 'Nome Tipo Produto'
+            DataBinding.FieldName = 'NOME_TIPO'
+          end
+          object cxVisualizaDBTableView1TIPO_PRODUCAO: TcxGridDBColumn
+            Caption = 'Tipo Produ'#231#227'o'
+            DataBinding.FieldName = 'TIPO_PRODUCAO'
+          end
+          object cxVisualizaDBTableView1COD_SEC: TcxGridDBColumn
+            Caption = 'Se'#231#227'o'
+            DataBinding.FieldName = 'COD_SEC'
+          end
+          object cxVisualizaDBTableView1NOME_SEC: TcxGridDBColumn
+            Caption = 'Nome Se'#231#227'o'
+            DataBinding.FieldName = 'NOME_SEC'
+            VisibleForEditForm = bFalse
+          end
+          object cxVisualizaDBTableView1COD_GRUPO: TcxGridDBColumn
+            Caption = 'Grupo'
+            DataBinding.FieldName = 'COD_GRUPO'
+          end
+          object cxVisualizaDBTableView1NOME_GRUPO: TcxGridDBColumn
+            Caption = 'Nome Grupo'
+            DataBinding.FieldName = 'NOME_GRUPO'
+            VisibleForEditForm = bFalse
+          end
+          object cxVisualizaDBTableView1SUB_GRUPO: TcxGridDBColumn
+            Caption = 'Subgrupo'
+            DataBinding.FieldName = 'SUB_GRUPO'
+          end
+          object cxVisualizaDBTableView1NOME_SUBGRUPO: TcxGridDBColumn
+            Caption = 'Nome Subgrupo'
+            DataBinding.FieldName = 'NOME_SUBGRUPO'
+            VisibleForEditForm = bFalse
+          end
+          object cxVisualizaDBTableView1COD_LAB: TcxGridDBColumn
+            Caption = 'Fabricante'
+            DataBinding.FieldName = 'COD_LAB'
+          end
+          object cxVisualizaDBTableView1NOME_LAB: TcxGridDBColumn
+            DataBinding.FieldName = 'NOME_LAB'
+            VisibleForEditForm = bFalse
+          end
+          object cxVisualizaDBTableView1CONTROLA_ESTOQUE_PRO: TcxGridDBColumn
+            Caption = 'Controla Estoque'
+            DataBinding.FieldName = 'CONTROLA_ESTOQUE_PRO'
+          end
+          object cxVisualizaDBTableView1COMISSAO_PRO: TcxGridDBColumn
+            Caption = 'Comiss'#227'o Produto'
+            DataBinding.FieldName = 'COMISSAO_PRO'
+          end
+          object cxVisualizaDBTableView1QUANT_UNIDADE_ENTRADA: TcxGridDBColumn
+            Caption = 'Qt. Un. Ent'
+            DataBinding.FieldName = 'QUANT_UNIDADE_ENTRADA'
+            Width = 70
+          end
+          object cxVisualizaDBTableView1ESTOQUE_MINIMO_PRO: TcxGridDBColumn
+            Caption = 'Estoque Min.'
+            DataBinding.FieldName = 'ESTOQUE_MINIMO_PRO'
+            Width = 70
+          end
+          object cxVisualizaDBTableView1ATIVO_PRO: TcxGridDBColumn
+            Caption = 'Produto Ativo'
+            DataBinding.FieldName = 'ATIVO_PRO'
+          end
+          object cxVisualizaDBTableView1MARGEM_LUCRO_PRO: TcxGridDBColumn
+            Caption = 'Margem de Lucro'
+            DataBinding.FieldName = 'MARGEM_LUCRO_PRO'
+          end
+          object cxVisualizaDBTableView1LOCALIZACAO_PRO: TcxGridDBColumn
+            Caption = 'Localizacao do Produto'
+            DataBinding.FieldName = 'LOCALIZACAO_PRO'
+          end
+          object cxVisualizaDBTableView1PRODUTO_PESADO_PRO: TcxGridDBColumn
+            Caption = 'Produto Pesado'
+            DataBinding.FieldName = 'PRODUTO_PESADO_PRO'
+          end
+          object cxVisualizaDBTableView1COD_SETOR: TcxGridDBColumn
+            Caption = 'Setor de Balan'#231'a'
+            DataBinding.FieldName = 'COD_SETOR'
+          end
+          object cxVisualizaDBTableView1NOME_SETOR_BAL: TcxGridDBColumn
+            Caption = 'Nome Setor de Balan'#231'a'
+            DataBinding.FieldName = 'NOME_SETOR_BAL'
+            VisibleForEditForm = bFalse
+          end
+          object cxVisualizaDBTableView1TECLA_ATALHO_PRO: TcxGridDBColumn
+            Caption = 'Tecla de Atalho'
+            DataBinding.FieldName = 'TECLA_ATALHO_PRO'
+          end
+          object cxVisualizaDBTableView1INDICE_RECEITA_PRO: TcxGridDBColumn
+            Caption = 'Receita'
+            DataBinding.FieldName = 'INDICE_RECEITA_PRO'
+          end
+          object cxVisualizaDBTableView1DIAS_VALIDADE_PRO: TcxGridDBColumn
+            Caption = 'Dias de Validade'
+            DataBinding.FieldName = 'DIAS_VALIDADE_PRO'
+          end
+          object cxVisualizaDBTableView1COMPLEMENTO_PRO: TcxGridDBColumn
+            Caption = 'Complemento no Produto'
+            DataBinding.FieldName = 'COMPLEMENTO_PRO'
+          end
+          object cxVisualizaDBTableView1SAIR_TABELA_PRECO: TcxGridDBColumn
+            Caption = 'Mostra Tabela pre'#231'o'
+            DataBinding.FieldName = 'SAIR_TABELA_PRECO'
+          end
+          object cxVisualizaDBTableView1COD_NCM: TcxGridDBColumn
+            Caption = 'C'#243'digo NCM'
+            DataBinding.FieldName = 'COD_NCM'
+          end
+          object cxVisualizaDBTableView1COD_PRODUTO_ESTOQUE: TcxGridDBColumn
+            Caption = 'Usa estoque Produto'
+            DataBinding.FieldName = 'COD_PRODUTO_ESTOQUE'
+          end
+          object cxVisualizaDBTableView1NOME_PRO_ESTOQUE: TcxGridDBColumn
+            Caption = 'Nome Produto Usando Estoque'
+            DataBinding.FieldName = 'NOME_PRO_ESTOQUE'
+            VisibleForEditForm = bFalse
+          end
+          object cxVisualizaDBTableView1PRECO_PROGRAMADO: TcxGridDBColumn
+            Caption = 'Valor Programado'
+            DataBinding.FieldName = 'PRECO_PROGRAMADO'
+          end
+          object cxVisualizaDBTableView1PRECO_CUSTO: TcxGridDBColumn
+            Caption = 'Pre'#231'o de Custo'
+            DataBinding.FieldName = 'PRECO_CUSTO'
+          end
+          object cxVisualizaDBTableView1PRECO_PROGRAMADO_PRAZO: TcxGridDBColumn
+            Caption = 'Pre'#231'o Programado'
             DataBinding.FieldName = 'PRECO_PROGRAMADO_PRAZO'
           end
-          object cxGrid1DBTableView1RED_CF_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'RED_CF_EST'
-          end
-          object cxGrid1DBTableView1RED_CF_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'RED_CF_FORA'
-          end
-          object cxGrid1DBTableView1RED_CONT_EST: TcxGridDBColumn
-            DataBinding.FieldName = 'RED_CONT_EST'
-          end
-          object cxGrid1DBTableView1RED_CONT_FORA: TcxGridDBColumn
-            DataBinding.FieldName = 'RED_CONT_FORA'
-          end
-          object cxGrid1DBTableView1DATA_VALIDADE: TcxGridDBColumn
+          object cxVisualizaDBTableView1DATA_VALIDADE: TcxGridDBColumn
+            Caption = 'Validade'
             DataBinding.FieldName = 'DATA_VALIDADE'
           end
-          object cxGrid1DBTableView1CODIGO_SETOR_ESTOQUE: TcxGridDBColumn
+          object cxVisualizaDBTableView1CODIGO_SETOR_ESTOQUE: TcxGridDBColumn
+            Caption = 'Setor Estoque'
             DataBinding.FieldName = 'CODIGO_SETOR_ESTOQUE'
           end
-          object cxGrid1DBTableView1ORIG: TcxGridDBColumn
-            DataBinding.FieldName = 'ORIG'
+          object cxVisualizaDBTableView1NOME_SETOR_ESTOQUE: TcxGridDBColumn
+            Caption = 'Nome Setor do Estoque'
+            DataBinding.FieldName = 'NOME_SETOR_ESTOQUE'
+            VisibleForEditForm = bFalse
           end
-          object cxGrid1DBTableView1CSOSN: TcxGridDBColumn
-            DataBinding.FieldName = 'CSOSN'
-          end
-          object cxGrid1DBTableView1IPI: TcxGridDBColumn
-            DataBinding.FieldName = 'IPI'
-          end
-          object cxGrid1DBTableView1ICMS: TcxGridDBColumn
-            DataBinding.FieldName = 'ICMS'
-          end
-          object cxGrid1DBTableView1RICMS: TcxGridDBColumn
-            DataBinding.FieldName = 'RICMS'
-          end
-          object cxGrid1DBTableView1IVA: TcxGridDBColumn
-            DataBinding.FieldName = 'IVA'
-          end
-          object cxGrid1DBTableView1PIS: TcxGridDBColumn
-            DataBinding.FieldName = 'PIS'
-          end
-          object cxGrid1DBTableView1CONFINS: TcxGridDBColumn
-            DataBinding.FieldName = 'CONFINS'
-          end
-          object cxGrid1DBTableView1TAMANHO: TcxGridDBColumn
+          object cxVisualizaDBTableView1TAMANHO: TcxGridDBColumn
+            Caption = 'Tamanho'
             DataBinding.FieldName = 'TAMANHO'
           end
-          object cxGrid1DBTableView1COR: TcxGridDBColumn
+          object cxVisualizaDBTableView1COR: TcxGridDBColumn
+            Caption = 'Cor'
             DataBinding.FieldName = 'COR'
           end
-          object cxGrid1DBTableView1OBS: TcxGridDBColumn
+          object cxVisualizaDBTableView1OBS: TcxGridDBColumn
+            Caption = 'Observa'#231#245'es'
             DataBinding.FieldName = 'OBS'
           end
-          object cxGrid1DBTableView1CST_PIS: TcxGridDBColumn
-            DataBinding.FieldName = 'CST_PIS'
-          end
-          object cxGrid1DBTableView1CST_COFINS: TcxGridDBColumn
-            DataBinding.FieldName = 'CST_COFINS'
-          end
-          object cxGrid1DBTableView1CST_IPI: TcxGridDBColumn
-            DataBinding.FieldName = 'CST_IPI'
-          end
-          object cxGrid1DBTableView1ULTIMA_ALTERACAO: TcxGridDBColumn
+          object cxVisualizaDBTableView1ULTIMA_ALTERACAO: TcxGridDBColumn
+            Caption = 'Ultima Altera'#231#227'o'
             DataBinding.FieldName = 'ULTIMA_ALTERACAO'
           end
-          object cxGrid1DBTableView1VALOR_ATACADO: TcxGridDBColumn
+          object cxVisualizaDBTableView1VALOR_ATACADO: TcxGridDBColumn
+            Caption = 'Valor Atacado'
             DataBinding.FieldName = 'VALOR_ATACADO'
           end
-          object cxGrid1DBTableView1ALIQ_IBPT_NAC: TcxGridDBColumn
-            DataBinding.FieldName = 'ALIQ_IBPT_NAC'
-          end
-          object cxGrid1DBTableView1ALIQ_IBPT_IMP: TcxGridDBColumn
-            DataBinding.FieldName = 'ALIQ_IBPT_IMP'
-          end
-          object cxGrid1DBTableView1FATOR_CONVERSAO: TcxGridDBColumn
-            DataBinding.FieldName = 'FATOR_CONVERSAO'
-          end
-          object cxGrid1DBTableView1ALERTA_COPA: TcxGridDBColumn
+          object cxVisualizaDBTableView1ALERTA_COPA: TcxGridDBColumn
+            Caption = 'Alerta Copa'
             DataBinding.FieldName = 'ALERTA_COPA'
           end
-          object cxGrid1DBTableView1ALERTA_COZINHA: TcxGridDBColumn
+          object cxVisualizaDBTableView1ALERTA_COZINHA: TcxGridDBColumn
+            Caption = 'Alerta Cozinha'
             DataBinding.FieldName = 'ALERTA_COZINHA'
           end
-          object cxGrid1DBTableView1ANDROID_VISUALIZA: TcxGridDBColumn
+          object cxVisualizaDBTableView1ANDROID_VISUALIZA: TcxGridDBColumn
+            Caption = 'Visualiza Mobile'
             DataBinding.FieldName = 'ANDROID_VISUALIZA'
           end
-          object cxGrid1DBTableView1TEMPO_PREPARO: TcxGridDBColumn
+          object cxVisualizaDBTableView1TEMPO_PREPARO: TcxGridDBColumn
+            Caption = 'Tempo de Preparo'
             DataBinding.FieldName = 'TEMPO_PREPARO'
           end
-          object cxGrid1DBTableView1NAO_PERMITE_FRAC: TcxGridDBColumn
+          object cxVisualizaDBTableView1NAO_PERMITE_FRAC: TcxGridDBColumn
+            Caption = 'Vend. Frac.'
             DataBinding.FieldName = 'NAO_PERMITE_FRAC'
           end
-          object cxGrid1DBTableView1SABORES: TcxGridDBColumn
+          object cxVisualizaDBTableView1SABORES: TcxGridDBColumn
+            Caption = 'Sabores'
             DataBinding.FieldName = 'SABORES'
           end
-          object cxGrid1DBTableView1CEST: TcxGridDBColumn
+          object cxVisualizaDBTableView1UNID_ENT: TcxGridDBColumn
+            DataBinding.FieldName = 'UNID_ENT'
+            Visible = False
+            VisibleForCustomization = False
+            VisibleForEditForm = bFalse
+          end
+          object cxVisualizaDBTableView1UNID_SAI: TcxGridDBColumn
+            DataBinding.FieldName = 'UNID_SAI'
+            Visible = False
+            VisibleForCustomization = False
+            VisibleForEditForm = bFalse
+          end
+        end
+        object cxNCMs: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.KeyFieldNames = 'NCM'
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Inserting = False
+          OptionsView.ColumnAutoWidth = True
+          object cxNCMsNCM: TcxGridDBColumn
+            DataBinding.FieldName = 'NCM'
+            Width = 100
+          end
+          object cxNCMsEX: TcxGridDBColumn
+            Caption = 'Ex.'
+            DataBinding.FieldName = 'EX'
+          end
+          object cxNCMsDESC_NCM: TcxGridDBColumn
+            Caption = 'Descri'#231#227'o do NCM'
+            DataBinding.FieldName = 'DESC_NCM'
+            Width = 200
+          end
+          object cxNCMsDESCRICAO: TcxGridDBColumn
+            Caption = 'Descri'#231#227'o do Perfil'
+            DataBinding.FieldName = 'DESCRICAO'
+            Width = 300
+          end
+        end
+        object cxCEST: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.KeyFieldNames = 'CEST'
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsView.ColumnAutoWidth = True
+          OptionsView.GroupByBox = False
+          object cxCESTCEST: TcxGridDBColumn
             DataBinding.FieldName = 'CEST'
+            Width = 100
           end
-          object cxGrid1DBTableView1NCM_EX: TcxGridDBColumn
-            DataBinding.FieldName = 'NCM_EX'
+          object cxCESTDescricao: TcxGridDBColumn
+            Caption = 'Descri'#231#227'o'
+            DataBinding.FieldName = 'DESCRICAO'
           end
-          object cxGrid1DBTableView1CODIGO_SERVICO: TcxGridDBColumn
-            DataBinding.FieldName = 'CODIGO_SERVICO'
-          end
-          object cxGrid1DBTableView1SERVICO_CODIGO: TcxGridDBColumn
-            DataBinding.FieldName = 'SERVICO_CODIGO'
-          end
-          object cxGrid1DBTableView1CLASSE_TERAPEUTICA: TcxGridDBColumn
-            DataBinding.FieldName = 'CLASSE_TERAPEUTICA'
-          end
-          object cxGrid1DBTableView1REGISTRO_MEDICAMENTO: TcxGridDBColumn
-            DataBinding.FieldName = 'REGISTRO_MEDICAMENTO'
-          end
-          object cxGrid1DBTableView1NUMERO_LOTE: TcxGridDBColumn
-            DataBinding.FieldName = 'NUMERO_LOTE'
-          end
-          object cxGrid1DBTableView1UNIDADE_MEDICAMENTO: TcxGridDBColumn
-            DataBinding.FieldName = 'UNIDADE_MEDICAMENTO'
-          end
-          object cxGrid1DBTableView1USO_PROLONGADO: TcxGridDBColumn
-            DataBinding.FieldName = 'USO_PROLONGADO'
-          end
+        end
+        object cxVisualizaLevel1: TcxGridLevel
+          GridView = cxVisualizaDBTableView1
         end
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1399
-      ExplicitHeight = 603
+      ExplicitWidth = 1359
+      ExplicitHeight = 540
       object cxPaginas2: TcxPageControl
         Left = 0
         Top = 0
-        Width = 1399
-        Height = 603
+        Width = 1359
+        Height = 540
         Align = alClient
         TabOrder = 0
         Properties.ActivePage = cxDadosProduto
         Properties.CustomButtons.Buttons = <>
-        ClientRectBottom = 599
+        ClientRectBottom = 536
         ClientRectLeft = 4
-        ClientRectRight = 1395
+        ClientRectRight = 1355
         ClientRectTop = 24
         object cxDadosProduto: TcxTabSheet
           Caption = 'Dados do produto'
@@ -382,7 +418,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             Left = 849
             Top = 0
             Width = 204
-            Height = 575
+            Height = 512
             Align = alLeft
             BevelOuter = bvNone
             TabOrder = 1
@@ -526,11 +562,11 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             Left = 0
             Top = 0
             Width = 849
-            Height = 575
+            Height = 512
             Align = alLeft
             BevelOuter = bvNone
             TabOrder = 0
-            object Panel1: TPanel
+            object Panel3: TPanel
               Left = 0
               Top = 0
               Width = 849
@@ -625,7 +661,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                   'P')
               end
             end
-            object Panel2: TPanel
+            object Panel4: TPanel
               Left = 0
               Top = 90
               Width = 849
@@ -1219,7 +1255,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object pnl1: TPanel
             Left = 0
             Top = 0
-            Width = 1391
+            Width = 1351
             Height = 47
             Align = alTop
             BevelOuter = bvNone
@@ -1287,7 +1323,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel12: TPanel
             Left = 0
             Top = 47
-            Width = 1391
+            Width = 1351
             Height = 47
             Align = alTop
             BevelOuter = bvNone
@@ -1387,8 +1423,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object dbmmoOBS: TDBMemo
             Left = 0
             Top = 0
-            Width = 1391
-            Height = 575
+            Width = 1351
+            Height = 512
             Align = alClient
             BorderStyle = bsNone
             DataField = 'OBS'
@@ -1402,7 +1438,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object GroupBox1: TGroupBox
             Left = 0
             Top = 0
-            Width = 1391
+            Width = 1351
             Height = 209
             Align = alTop
             Caption = 'Foto'
@@ -1452,8 +1488,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel17: TPanel
             Left = 0
             Top = 217
-            Width = 1391
-            Height = 358
+            Width = 1351
+            Height = 295
             Align = alClient
             BevelOuter = bvNone
             Color = clWhite
@@ -1463,7 +1499,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 0
               Top = 29
-              Width = 1391
+              Width = 1351
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -1478,7 +1514,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 0
               Top = 3
-              Width = 1391
+              Width = 1351
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -1493,8 +1529,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 3
               Top = 38
-              Width = 1385
-              Height = 317
+              Width = 1345
+              Height = 254
               Align = alClient
               TabOrder = 0
               object cxComprasDBTableView1: TcxGridDBTableView
@@ -1579,14 +1615,14 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Style.TextStyle = [fsBold, fsItalic]
               Properties.Alignment.Horz = taCenter
               Properties.Alignment.Vert = taVCenter
-              AnchorX = 696
+              AnchorX = 676
               AnchorY = 18
             end
           end
           object Panel18: TPanel
             Left = 0
             Top = 0
-            Width = 1391
+            Width = 1351
             Height = 217
             Align = alTop
             BevelOuter = bvNone
@@ -1971,8 +2007,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object cxFornecedores: TcxGrid
             Left = 0
             Top = 0
-            Width = 1391
-            Height = 534
+            Width = 1351
+            Height = 471
             Align = alClient
             TabOrder = 0
             object cxFornecedoresDBTableView1: TcxGridDBTableView
@@ -2007,8 +2043,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object pnl3: TPanel
             Left = 0
-            Top = 534
-            Width = 1391
+            Top = 471
+            Width = 1351
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
@@ -2023,8 +2059,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object cxComposicao: TcxGrid
             Left = 0
             Top = 0
-            Width = 1391
-            Height = 534
+            Width = 1351
+            Height = 471
             Align = alClient
             TabOrder = 0
             object cxGridDBTableView1: TcxGridDBTableView
@@ -2076,8 +2112,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object Panel19: TPanel
             Left = 0
-            Top = 534
-            Width = 1391
+            Top = 471
+            Width = 1351
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
@@ -2092,7 +2128,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object pnl4: TPanel
             Left = 0
             Top = 0
-            Width = 1391
+            Width = 1351
             Height = 46
             Align = alTop
             BevelOuter = bvNone
@@ -2141,7 +2177,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel21: TPanel
             Left = 0
             Top = 46
-            Width = 1391
+            Width = 1351
             Height = 41
             Align = alTop
             BevelOuter = bvNone
@@ -2246,6 +2282,28 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
         end
       end
+    end
+  end
+  inherited pnl_top: TPanel
+    Width = 1367
+    Height = 23
+    ExplicitWidth = 1367
+    ExplicitHeight = 23
+    inherited BtnRegistroPosterior: TcxButton
+      Left = 66
+      ExplicitLeft = 66
+    end
+    inherited BtnPrimeiroRegistro: TcxButton
+      Left = 2
+      ExplicitLeft = 2
+    end
+    inherited BtnRegistroAnterior: TcxButton
+      Left = 34
+      ExplicitLeft = 34
+    end
+    inherited BtnUltimoRegistro: TcxButton
+      Left = 98
+      ExplicitLeft = 98
     end
   end
   inherited dsPrincipal: TDataSource
@@ -2854,5 +2912,244 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       FixedChar = True
       Size = 1
     end
+  end
+  object cxImgsGrid: TcxImageList
+    DrawingStyle = dsTransparent
+    FormatVersion = 1
+    DesignInfo = 525496
+    ImageInfo = <
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          00000000000000000000131313264747478D686868CF797979F17A7A7AF36A6A
+          6AD3494949911616162C00000000000000000000000000000000000000000000
+          0000020202044646468B7E7E7EFB808080FF808080FF808080FF808080FF8080
+          80FF808080FF7F7F7FFD4C4C4C97040404080000000000000000000000000202
+          0204585858AF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF5F5F5FBD0404040800000000000000004545
+          4589808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF4D4D4D9900000000111111227E7E
+          7EFB808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF7F7F7FFD18181830444444878080
+          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF808080FF4C4C4C97656565C98080
+          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF808080FF6D6D6DD9757575E98080
+          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF808080FF7B7B7BF5757575E98080
+          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF808080FF7B7B7BF5646464C78080
+          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF808080FF6D6D6DD9444444878080
+          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF808080FF4C4C4C97121212247E7E
+          7EFB808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF7F7F7FFD1717172E000000004444
+          4487808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF4D4D4D9900000000000000000202
+          0204585858AF808080FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF5E5E5EBB0404040800000000000000000000
+          000002020204454545897E7E7EFB808080FF808080FF808080FF808080FF8080
+          80FF808080FF7F7F7FFD4B4B4B95040404080000000000000000000000000000
+          00000000000000000000131313264646468B686868CF797979F1797979F16A6A
+          6AD3494949911515152A00000000000000000000000000000000}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          00000000000000000000152415264C854C8D70C470CF82E482F184E684F372C7
+          72D34E894E91182A182C00000000000000000000000000000000000000000000
+          0000020402044B834B8B88ED88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF89EF89FD528F5297040804080000000000000000000000000204
+          02045FA55FAF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF66B366BD0408040800000000000000004A81
+          4A898AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF53915399000000001220122288ED
+          88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF89EF89FD1A2D1A30498049878AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF528F52976DBE6DC98AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF75CD75D97EDC7EE98AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF85E885F57EDC7EE98AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF85E885F56CBC6CC78AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF75CD75D9498049878AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF528F52971322132488ED
+          88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF89EF89FD192B192E000000004980
+          49878AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF5391539900000000000000000204
+          02045FA55FAF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF8AF18AFF8AF18AFF65B165BB0408040800000000000000000000
+          0000020402044A814A8988ED88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
+          8AFF8AF18AFF89EF89FD518D5195040804080000000000000000000000000000
+          00000000000000000000152415264B834B8B70C470CF82E482F182E482F172C7
+          72D34E894E911728172A00000000000000000000000000000000}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          00000000000000000000151524264C4C858D7070C4CF8282E4F18484E6F37272
+          C7D34E4E899118182A2C00000000000000000000000000000000000000000000
+          0000020204044B4B838B8888EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8989EFFD52528F97040408080000000000000000000000000202
+          04045F5FA5AF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF6666B3BD0404080800000000000000004A4A
+          81898A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF5353919900000000121220228888
+          EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8989EFFD1A1A2D30494980878A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF52528F976D6DBEC98A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF7575CDD97E7EDCE98A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8585E8F57E7EDCE98A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8585E8F56C6CBCC78A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF7575CDD9494980878A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF52528F97131322248888
+          EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8989EFFD19192B2E000000004949
+          80878A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF5353919900000000000000000202
+          04045F5FA5AF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8A8AF1FF8A8AF1FF6565B1BB0404080800000000000000000000
+          0000020204044A4A81898888EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
+          F1FF8A8AF1FF8989EFFD51518D95040408080000000000000000000000000000
+          00000000000000000000151524264B4B838B7070C4CF8282E4F18282E4F17272
+          C7D34E4E89911717282A00000000000000000000000000000000}
+      end>
+  end
+  object cxGridImg: TcxImageList
+    DrawingStyle = dsTransparent
+    FormatVersion = 1
+    DesignInfo = 1049848
+    ImageInfo = <
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000010101010101
+          0101010101010101010101010101010101010101010104040407030303070101
+          0101010101010101010101010101010101010101010101010101010101010101
+          0101010101010101010101010101030303052626266F3B3B3BAE3B3B3BB22121
+          2160010101020101010101010101010101010101010101010101010101010101
+          0101010101010101010118181843464646D3535353FF3F3F3FBE414141C65353
+          53FF404040C00F0F0F2A01010101010101010101010101010101010101010101
+          010101010101292929742C2C2C7F4B4B4BE5535353FF3F3F3FBE414141C65353
+          53FF4D4D4DE93333339522222262010101010101010101010101010101010101
+          01010404040A2F2F2F8A505050F72F2F2F87454545D53F3F3FBE414141C64646
+          46D5383838A4505050F62C2C2C81030303070101010101010101010101011717
+          1740484848DA535353FF535353FF535353FF3636369F2D2D2D822F2F2F863B3B
+          3BB2535353FF535353FF535353FF464646D31515153A010101013030308C5353
+          53FE535353FF535353FF535353FF535353FF4D4D4DED141414391B1B1B4C4F4F
+          4FF4535353FF535353FF535353FF535353FF525252FD2B2B2B7C1010102D4A4A
+          4AE0535353FF535353FF535353FF383838AB0A0A0A1901010101010101010C0C
+          0C213C3C3CB7535353FF535353FF535353FF434343CF0A0A0A1B010101010909
+          0919424242C94A4A4AE41C1C1C50010101010101010101010101010101010101
+          0101010101011F1F1F5A4C4C4CE83C3C3CB50606060D01010101010101010101
+          0101080808140C0C0C2001010101010101010101010101010101010101010101
+          010101010101010101010E0E0E26040404090101010101010101010101010909
+          0917424242C84B4B4BE71E1E1E56010101010101010101010101010101010101
+          010101010102222222614D4D4DED3C3C3CB70606060F010101010F0F0F294949
+          49DD535353FF535353FF535353FF3C3C3CB30C0C0C1F01010101010101010D0D
+          0D233E3E3EBB535353FF535353FF535353FF454545D20C0C0C202F2F2F885252
+          52FD535353FF535353FF535353FF535353FF4F4F4FF3171717401B1B1B4D5050
+          50F5535353FF535353FF535353FF535353FF525252FB28282874010101011616
+          163D464646D6535353FF535353FF535353FF3030308D02020203040404093636
+          36A5535353FF535353FF535353FF444444CD1212123201010101010101010101
+          0101040404082B2B2B7F4F4F4FF42525256B0101010101010101010101010101
+          01022C2C2C80505050F528282877030303050101010101010101010101010101
+          010101010101010101010606060E010101010101010101010101010101010101
+          0101010101010707071101010101010101010101010101010101}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000010101010101
+          0101010101010101010101010101010101010101010103060207030602070101
+          0101010101010101010101010101010101010101010101010101010101010101
+          0101010101010101010101010101020401052058036F308803AE338C03B21C4C
+          0360010201020101010101010101010101010101010101010101010101010101
+          01010101010101010101143603433AA602D345C900FF359601BE369B02C645C9
+          00FF359702C00D22022A01010101010101010101010101010101010101010101
+          010101010101235C04742564047F3FB401E545C900FF359601BE369B02C645C9
+          00FF40B801E92C7505951D4E0462010101010101010101010101010101010101
+          01010408020A276D038A43C201F7286B04873AA602D5359601BE369B02C63AA8
+          02D52F8204A443C201F626660481030502070101010101010101010101011333
+          03403CAC02DA45C900FF45C900FF44C800FF2E7D049F27670582286A0586338C
+          03B245C900FF45C900FF45C900FF3AA602D3122E033A01010101286F038C44C7
+          00FE45C900FF45C900FF45C900FF45C900FF40BB01ED112D0339173D034C41BF
+          01F445C900FF45C900FF45C900FF45C900FF43C600FD2462037C0E24022D3DB0
+          01E045C900FF45C900FF45C900FF308703AB0814021901010101010101010B1B
+          0221339001B744C800FF45C900FF45C900FF39A202CF0916021B010101010814
+          0219369E02C93EB401E418400350010101010101010101010101010101010101
+          0101010101011B47035A3FB701E8328F01B5050B020D01010101010101010101
+          0101071002140B1A032001010101010101010101010101010101010101010101
+          010101010101010101010C1E0326040702090101010101010101010101010812
+          0217379D02C83FB401E719440356010101010101010101010101010101010101
+          0101010201021C4D036140BB01ED339001B7050C020F010101010D2002293DAD
+          02DD45C900FF45C900FF45C900FF328E03B30A19021F01010101010101010B1C
+          0223339301BB45C900FF45C900FF45C900FF3AA602D20A190220286C048844C7
+          00FD44C800FF44C800FF45C900FF45C900FF42C001F314330340173D034D42C0
+          01F545C900FF45C900FF45C900FF45C900FF44C500FB225B0374010101011231
+          023D3BA802D644C800FF45C900FF45C900FF286F038D02030103040702092E81
+          03A545C900FF45C900FF45C900FF38A202CD0F28023201010101010101010101
+          0101030602082464037F43BF01F41F55036B0101010101010101010101010102
+          01022565038042C001F5225E0377020401050101010101010101010101010101
+          01010101010101010101050B020E010101010101010101010101010101010101
+          010101010101060E021101010101010101010101010101010101}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000010101010101
+          0101010101010101010101010101010101010101010102020607020206070101
+          0101010101010101010101010101010101010101010101010101010101010101
+          0101010101010101010101010101020204050603586F090388AE08038CB20503
+          4C60010102020101010101010101010101010101010101010101010101010101
+          01010101010101010101050335430702A6D30700C9FF070394BE08029BC60700
+          C9FF080297C00303212A01010101010101010101010101010101010101010101
+          01010101010108055C740704647F0701B4E50700C9FF070394BE08029BC60700
+          C9FF0701B8E90905759506044E62010101010101010101010101010101010101
+          01010202080A06036D8A0801C2F708056B870802A6D5070394BE08029BC60802
+          A8D5080481A40801C2F607046581020205070101010101010101010101010403
+          33400802ABDA0700C9FF0700C9FF0700C8FF07047D9F0805668209056A860803
+          8CB20700C9FF0700C9FF0700C9FF0702A5D304032E3A0101010107046E8C0800
+          C7FE0700C9FF0700C9FF0700C9FF0700C9FF0701BBED04032D3905033C4C0801
+          BFF40700C9FF0700C9FF0700C9FF0700C9FF0800C6FD0704627C0402242D0801
+          B0E00700C9FF0700C9FF0700C9FF070387AB0302141901010101010101010303
+          1A21080190B70800C8FF0700C9FF0700C9FF0702A2CF0302161B010101010302
+          131906029EC90701B4E405033F50010101010101010101010101010101010101
+          0101010101010503475A0701B7E808018FB502020B0D01010101010101010101
+          0101030210140403192001010101010101010101010101010101010101010101
+          0101010101010101010104031E26020207090101010101010101010101010302
+          121706029DC80701B4E705034456010101010101010101010101010101010101
+          01010101010206034D610701BBED060190B702020C0F01010101030220290802
+          ADDD0700C9FF0700C9FF0700C9FF08038CB30302191F01010101010101010302
+          1C23070193BB0700C9FF0700C9FF0700C9FF0702A6D20302192007046C880700
+          C7FD0800C8FF0800C8FF0700C9FF0700C9FF0801C0F30503324005033D4D0801
+          C0F50700C9FF0700C9FF0700C9FF0700C9FF0800C5FB06045B74010101010403
+          313D0802A8D60800C8FF0700C9FF0700C9FF07036F8D01010303020207090603
+          81A50700C9FF0700C9FF0700C9FF0702A2CD0403273201010101010101010101
+          0101020206080603647F0801BFF40603556B0101010101010101010101010101
+          0202060365800801C0F506035E77020104050101010101010101010101010101
+          0101010101010101010102020B0E010101010101010101010101010101010101
+          01010101010103020E1101010101010101010101010101010101}
+      end>
+  end
+  object FDQuxiliar: TFDQuery
+    Connection = DtmBcoErp.FDBcoERP
+    Left = 939
+    Top = 11
   end
 end

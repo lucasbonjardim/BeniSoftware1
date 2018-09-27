@@ -20,9 +20,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 147
+    Top = 141
     Width = 1253
-    Height = 577
+    Height = 583
     Align = alClient
     Center = True
     Picture.Data = {
@@ -493,24 +493,24 @@ object Form_Principal: TForm_Principal
       00000049454E44AE426082}
     Transparent = True
     ExplicitLeft = 191
-    ExplicitHeight = 597
+    ExplicitHeight = 577
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 147
+    Top = 141
     Width = 185
-    Height = 577
+    Height = 583
     Align = alLeft
     BevelOuter = bvNone
-    Color = 14461444
+    Color = 12679980
     ParentBackground = False
     TabOrder = 0
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 577
-      Color = 5460940
+      Height = 583
+      Color = 12679980
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
@@ -565,10 +565,10 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 0
     Width = 1438
-    Height = 25
+    Height = 19
     Align = alTop
     BevelOuter = bvNone
-    Color = 5460940
+    Color = 12679980
     Font.Charset = ANSI_CHARSET
     Font.Color = clInactiveBorder
     Font.Height = -19
@@ -581,7 +581,7 @@ object Form_Principal: TForm_Principal
       Left = 1395
       Top = 0
       Width = 43
-      Height = 25
+      Height = 19
       Align = alRight
       BevelOuter = bvNone
       Color = clHighlight
@@ -591,18 +591,18 @@ object Form_Principal: TForm_Principal
       TabOrder = 0
       object ActivityIndicator1: TActivityIndicator
         Left = 13
-        Top = 2
-        Animate = True
-        FrameDelay = 30
+        Top = -4
+        FrameDelay = 1
         IndicatorColor = aicWhite
         IndicatorSize = aisSmall
+        IndicatorType = aitSectorRing
       end
     end
     object pnl_search: TPanel
       Left = 1051
       Top = 0
       Width = 344
-      Height = 25
+      Height = 19
       Align = alRight
       BevelOuter = bvNone
       Color = clHighlight
@@ -612,7 +612,7 @@ object Form_Principal: TForm_Principal
       TabOrder = 1
       object Panel2: TPanel
         Left = 0
-        Top = -48
+        Top = -54
         Width = 344
         Height = 73
         Align = alBottom
@@ -624,7 +624,7 @@ object Form_Principal: TForm_Principal
       Left = 0
       Top = 0
       Width = 417
-      Height = 25
+      Height = 19
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
@@ -645,13 +645,13 @@ object Form_Principal: TForm_Principal
         Left = 0
         Top = 0
         Width = 46
-        Height = 25
+        Height = 19
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 0
         object btn_lateral: TButton
           Left = 0
-          Top = -15
+          Top = -21
           Width = 46
           Height = 40
           Cursor = crHandPoint
@@ -678,7 +678,7 @@ object Form_Principal: TForm_Principal
   end
   object dxRibbon1: TdxRibbon
     Left = 0
-    Top = 25
+    Top = 19
     Width = 1438
     Height = 122
     BarManager = dxBarManager1
@@ -835,7 +835,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 228
     Bitmap = {
-      494C0101040080003C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101040080004C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -17327,7 +17327,7 @@ object Form_Principal: TForm_Principal
       end>
   end
   object dxSkinController1: TdxSkinController
-    SkinName = 'Office2016Colorful'
+    SkinName = 'Metropolis'
     Left = 1360
     Top = 168
   end
@@ -21569,12 +21569,14 @@ object Form_Principal: TForm_Principal
       Category = 0
       Hint = 'Cadastro de ICMS'
       Visible = ivAlways
+      OnClick = C1042Click
     end
     object C007: TdxBarButton
       Caption = 'Produto'
       Category = 0
       Hint = 'Produto'
       Visible = ivAlways
+      OnClick = C007Click
     end
     object CX000: TdxBarSubItem
       Caption = 'Gerais'
