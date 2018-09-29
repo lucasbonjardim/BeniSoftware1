@@ -7,12 +7,17 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
   FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
-  System.IniFiles, ACBRUtil, Vcl.Forms,  Vcl.Dialogs, FireDAC.Phys.IBBase;
+  System.IniFiles, ACBRUtil, Vcl.Forms,  Vcl.Dialogs, FireDAC.Phys.IBBase,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet;
 
 type
   TDtmBcoErp = class(TDataModule)
     FDBcoERP: TFDConnection;
     FDPhysFBDriverLink1: TFDPhysFBDriverLink;
+    fdq_auxiliar: TFDQuery;
+    Fdq_usuario: TFDQuery;
+    Fdq_Empresa: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
@@ -21,7 +26,7 @@ type
     
     { Private declarations }
   public
-    { Public declarations }
+  procedure btn_AcessoExecute(Sender: TObject);
   end;
 
 var
@@ -30,7 +35,11 @@ var
 implementation
 
 uses
-Unit_Variaveis_Globais,Unit_Rotinas;
+Unit_Variaveis_Globais,Unit_Rotinas, Unit_F_mensagem_Dialog, Unit_Acesso,
+  Unit_Principal, ParamControleTerminalPDV, ParamControleLicenca,
+  ParamControleTerminalECF, UdtmACBR, UdtmImagens, Unit_Baixa_Tabela_IBPT,
+  Unit_Cadastro_ICMS, Unit_Cadastro_Modelo, Unit_Cadastro_Produtos,
+  Unit_exibeefeitoespera, Unit_Relatorios, unit_utilfuncs;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -41,6 +50,12 @@ Unit_Variaveis_Globais,Unit_Rotinas;
 procedure TDtmBcoErp.DataModuleCreate(Sender: TObject);
 begin
   p_conexao;
+  if FDBcoERP.Connected then
+  btn_AcessoExecute(Self)
+  else
+  begin
+   ShowMessage('Não foi possivel fazer conexão com o banco.');
+  end;
 end;
 
 procedure TDtmBcoErp.DataModuleDestroy(Sender: TObject);
@@ -105,6 +120,42 @@ begin
     Q.Close;
     Q.Free;
   end;
+end;
+
+procedure TDtmBcoErp.btn_AcessoExecute(Sender: TObject);
+var
+  vSql: TStringList;
+begin
+  try
+    with fdq_auxiliar do
+    begin
+      close;
+      vSql := TStringList.Create;
+      vSql.Add('select * from usuario');
+      sql := vSql;
+      Open;
+      if not IsEmpty then
+      begin
+        try
+         FAcesso := TFAcesso.Create(Application);
+         FAcesso.cxte_Usuario.Clear;
+         FAcesso.cxte_Senha.Clear;
+         FAcesso.ShowModal;
+        finally
+          FAcesso.Free;
+        end;
+      end else
+      begin
+        showmessage('Parabéns por Adquirar o Software Beni E.R.P '+
+        sLineBreak+ 'Vamos Cadastrar o Primeiro usuário do Sistema.');
+      end;
+
+    end;
+
+  finally
+    vSql.Free;
+  end;
+
 end;
 
 

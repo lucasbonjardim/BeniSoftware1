@@ -88,6 +88,7 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_ExeOutput>C:\BeniSoftware\BeniERP\app</DCC_ExeOutput>
+        <Icon_MainIcon>BeniErp_Icon2.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -150,6 +151,10 @@
         </DCCReference>
         <DCCReference Include="Formularios\Unit_F_mensagem_Dialog.pas">
             <Form>frmDialog</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Formularios\Unit_Acesso.pas">
+            <Form>FAcesso</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

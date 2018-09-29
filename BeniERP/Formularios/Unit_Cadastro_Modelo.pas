@@ -153,12 +153,19 @@ end;
 procedure TForm_Cadastro_Modelo.BtnExcluirClick(Sender: TObject);
 begin
   try
-    If Application.MessageBox('Confirma Exclusão ?','Atenção!!!',MB_YESNO +
-    MB_ICONQUESTION + MB_DEFBUTTON2) = IDYES Then
+    if KDialog( 'Confirma Exclusão do registro?', 'Exclusão de registro', tdtPergunta ) then
      begin
        dsPrincipal.DataSet.Delete;
        cxPageControl1.ActivePage := tbPesquisa;
      end;
+
+
+   { If Application.MessageBox('Confirma Exclusão ?','Atenção!!!',MB_YESNO +
+    MB_ICONQUESTION + MB_DEFBUTTON2) = IDYES Then
+     begin
+       dsPrincipal.DataSet.Delete;
+       cxPageControl1.ActivePage := tbPesquisa;
+     end; }
 
   except on e:exception do
     begin

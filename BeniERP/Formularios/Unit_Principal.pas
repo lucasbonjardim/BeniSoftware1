@@ -28,7 +28,7 @@ uses
   cxLookAndFeels, dxSkinsForm, cxControls, cxLookAndFeelPainters, dxRibbonSkins,
   dxSkinsdxRibbonPainter, dxRibbonCustomizationForm, dxRibbon, dxGDIPlusClasses,
   dxNavBarOfficeNavigationBar, dxSkinsdxBarPainter, dxBar,
-  dxSkinsdxStatusBarPainter, dxStatusBar;
+  dxSkinsdxStatusBarPainter, dxStatusBar, ACBrBase, ACBrEnterTab;
 
 type
   TForm_Principal = class(TForm)
@@ -44,7 +44,6 @@ type
     catMenuItems: TCategoryButtons;
     pnlToolbar: TPanel;
     pnl_top_esquerdo: TPanel;
-    ActivityIndicator1: TActivityIndicator;
     pnl_search: TPanel;
     Panel2: TPanel;
     pnl_logo: TPanel;
@@ -391,6 +390,8 @@ type
     R00: TdxBarSubItem;
     P000: TdxBarSubItem;
     SB: TdxStatusBar;
+    pnl_info: TPanel;
+    ACBrEnterTab1: TACBrEnterTab;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -402,11 +403,16 @@ type
     procedure C007Click(Sender: TObject);
     procedure C1042Click(Sender: TObject);
 
+
   private
     hora : TDateTime;
     dia, tarde, noite: string;
   public
-    { Public declarations }
+   vg_usunome     : String;
+   vg_ususenh     : String;
+   vg_codigogrupo : String;
+   vg_temacor     : String;
+   vg_cadeado     : Boolean;
   end;
 
 var
@@ -416,7 +422,7 @@ implementation
 
 uses
 Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
-  Unit_Cadastro_Produtos, Unit_Cadastro_ICMS;
+  Unit_Cadastro_Produtos, Unit_Cadastro_ICMS, Unit_Acesso;
 
 {$R *.dfm}
 
@@ -450,7 +456,7 @@ end;
 
 procedure TForm_Principal.CarregaConfiguracao;
 var
-TemaAleatorio : Integer;
+  TemaAleatorio : Integer;
 begin
   COD_EMP :=1;
 
@@ -464,6 +470,9 @@ begin
   end;
 
   TemaAleatorio := Random(12);
+
+  exit;
+
   TemaAleatorio := 11;
 
   case TemaAleatorio of
@@ -564,6 +573,8 @@ begin
      // RxWizardHeader1.CaptionFont.Color  := $005353CC;
     end;
   end;
+
+
 end;
 
 procedure TForm_Principal.catMenuItemsCategoryCollapase(Sender: TObject;
@@ -595,5 +606,9 @@ procedure TForm_Principal.p_abreconfig(Sender: TObject);
 begin
   AbreForm(TForm_Cadastro_Modelo,Form_Cadastro_Modelo);
 end;
+
+
+
+
 
 end.
