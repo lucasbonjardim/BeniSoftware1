@@ -4,9 +4,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 682
-  ClientWidth = 1289
-  Color = clBtnFace
+  ClientHeight = 672
+  ClientWidth = 1279
+  Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -25,7 +25,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     AlignWithMargins = True
     Left = 0
     Top = 55
-    Width = 1289
+    Width = 1279
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
@@ -39,7 +39,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1289
+    Width = 1279
     Height = 52
     ButtonHeight = 52
     ButtonWidth = 79
@@ -133,8 +133,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object cxPageControl1: TcxPageControl
     Left = 0
     Top = 85
-    Width = 1289
-    Height = 597
+    Width = 1279
+    Height = 587
     Align = alClient
     Color = clWhite
     ParentBackground = False
@@ -142,9 +142,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     TabOrder = 1
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ClientRectBottom = 593
+    ClientRectBottom = 583
     ClientRectLeft = 4
-    ClientRectRight = 1285
+    ClientRectRight = 1275
     ClientRectTop = 24
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
@@ -152,7 +152,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1281
+        Width = 1271
         Height = 41
         Align = alTop
         BevelOuter = bvNone
@@ -369,12 +369,16 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
   end
   object pnl_top: TPanel
     Left = 0
     Top = 61
-    Width = 1289
+    Width = 1279
     Height = 24
     Align = alTop
     BevelOuter = bvNone

@@ -98,7 +98,8 @@ implementation
 
 {$R *.dfm}
 
-uses UdtmImagens, Unit_Principal, UdtmACBR, Unit_Variaveis_Globais;
+uses UdtmImagens, Unit_Principal, UdtmACBR, Unit_Variaveis_Globais,
+  Unit_F_mensagem_Dialog;
 
 procedure TForm_Cadastro_Modelo.AC_FecharExecute(Sender: TObject);
 begin
@@ -305,8 +306,7 @@ procedure TForm_Cadastro_Modelo.FormClose(Sender: TObject;
 begin
   if TFDQuery(dsPrincipal.DataSet).State in [dsInsert, dsEdit] then
   begin
-    If Application.MessageBox('Existem dados Alterados que não foram salvos, Deseja Sair ?','Atenção!',MB_YESNO +
-    MB_ICONQUESTION + MB_DEFBUTTON2) = IDYES Then
+    if KDialog( 'Existem dados Alterados que não foram salvos, Deseja Sair?', 'Cancelamento de Edição', tdtPergunta ) then
     Action :=caFree
     else
     exit;

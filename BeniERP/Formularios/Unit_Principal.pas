@@ -464,7 +464,7 @@ begin
   end;
 
   TemaAleatorio := Random(12);
- // TemaAleatorio := 7;
+  TemaAleatorio := 11;
 
   case TemaAleatorio of
   1:

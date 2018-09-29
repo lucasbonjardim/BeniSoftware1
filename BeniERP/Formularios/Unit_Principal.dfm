@@ -4,7 +4,7 @@ object Form_Principal: TForm_Principal
   Caption = 'Beni Style'
   ClientHeight = 744
   ClientWidth = 1438
-  Color = clBtnFace
+  Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -20,9 +20,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 141
+    Top = 149
     Width = 1253
-    Height = 583
+    Height = 575
     Align = alClient
     Center = True
     Picture.Data = {
@@ -493,29 +493,33 @@ object Form_Principal: TForm_Principal
       00000049454E44AE426082}
     Transparent = True
     ExplicitLeft = 191
+    ExplicitTop = 141
     ExplicitHeight = 577
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 141
+    Top = 149
     Width = 185
-    Height = 583
+    Height = 575
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 147
+    ExplicitHeight = 577
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 583
+      Height = 575
       Color = 12679980
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
+      ExplicitHeight = 577
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -565,7 +569,7 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 0
     Width = 1438
-    Height = 19
+    Height = 25
     Align = alTop
     BevelOuter = bvNone
     Color = 12679980
@@ -581,7 +585,7 @@ object Form_Principal: TForm_Principal
       Left = 1395
       Top = 0
       Width = 43
-      Height = 19
+      Height = 25
       Align = alRight
       BevelOuter = bvNone
       Color = clHighlight
@@ -602,7 +606,7 @@ object Form_Principal: TForm_Principal
       Left = 1051
       Top = 0
       Width = 344
-      Height = 19
+      Height = 25
       Align = alRight
       BevelOuter = bvNone
       Color = clHighlight
@@ -612,7 +616,7 @@ object Form_Principal: TForm_Principal
       TabOrder = 1
       object Panel2: TPanel
         Left = 0
-        Top = -54
+        Top = -48
         Width = 344
         Height = 73
         Align = alBottom
@@ -624,20 +628,20 @@ object Form_Principal: TForm_Principal
       Left = 0
       Top = 0
       Width = 417
-      Height = 19
+      Height = 25
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
       object lbl_info: TLabel
         Left = 52
         Top = 1
-        Width = 342
-        Height = 20
+        Width = 336
+        Height = 19
         Caption = 'Guararapes | Demais regi'#245'es (18) 99709-7902 '
         Font.Charset = ANSI_CHARSET
         Font.Color = clInactiveBorder
         Font.Height = -16
-        Font.Name = '@Microsoft JhengHei'
+        Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
       end
@@ -645,13 +649,13 @@ object Form_Principal: TForm_Principal
         Left = 0
         Top = 0
         Width = 46
-        Height = 19
+        Height = 25
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 0
         object btn_lateral: TButton
           Left = 0
-          Top = -21
+          Top = -15
           Width = 46
           Height = 40
           Cursor = crHandPoint
@@ -678,13 +682,13 @@ object Form_Principal: TForm_Principal
   end
   object dxRibbon1: TdxRibbon
     Left = 0
-    Top = 19
+    Top = 25
     Width = 1438
-    Height = 122
+    Height = 124
     BarManager = dxBarManager1
     Style = rs2016
-    ColorSchemeAccent = rcsaGreen
-    ColorSchemeName = 'White'
+    ColorSchemeAccent = rcsaBlue
+    ColorSchemeName = 'Office2013White'
     ShowMinimizeButton = False
     Contexts = <>
     TabOrder = 2
@@ -835,7 +839,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 228
     Bitmap = {
-      494C0101040080004C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101040080005C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -17461,7 +17465,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar3: TdxBar
       Caption = 'Gerais'
       CaptionButtons = <>
-      DockedLeft = 182
+      DockedLeft = 184
       DockedTop = 0
       FloatLeft = 784
       FloatTop = 8

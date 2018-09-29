@@ -19,7 +19,8 @@ uses
   Unit_exibeefeitoespera in 'Formularios\Unit_exibeefeitoespera.pas' {form_exibeefeitoespera},
   Unit_Cadastro_Produtos in 'Formularios\Unit_Cadastro_Produtos.pas' {Form_Cadastro_Produtos},
   Unit_Baixa_Tabela_IBPT in 'Formularios\Unit_Baixa_Tabela_IBPT.pas' {form_baixa_ibpt},
-  Unit_Cadastro_ICMS in 'Formularios\Unit_Cadastro_ICMS.pas' {Form_Cadastro_ICMS};
+  Unit_Cadastro_ICMS in 'Formularios\Unit_Cadastro_ICMS.pas' {Form_Cadastro_ICMS},
+  Unit_F_mensagem_Dialog in 'Formularios\Unit_F_mensagem_Dialog.pas' {frmDialog};
 
 {$R *.res}
 
@@ -30,5 +31,6 @@ begin
   Application.CreateForm(TdtmImagens, dtmImagens);
   Application.CreateForm(TDtmBcoErp, DtmBcoErp);
   Application.CreateForm(TdtmACBR, dtmACBR);
+  Application.CreateForm(TfrmDialog, frmDialog);
   Application.Run;
 end.

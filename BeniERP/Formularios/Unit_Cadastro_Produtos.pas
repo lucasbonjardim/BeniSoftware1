@@ -32,11 +32,6 @@ uses
   Vcl.DBCtrls, cxDBExtLookupComboBox, Vcl.Buttons, cxDropDownEdit,
   cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit, cxCalendar;
 
-
-
-
-
-
 type
   TForm_Cadastro_Produtos = class(TForm_Cadastro_Modelo)
     FdqProdutos: TFDQuery;
@@ -462,7 +457,6 @@ begin
   'select * from produto T                                                     '+
   'WHERE nome_pro LIKE '+ '%'+ edtMask.text + '%' + ' OR t.desc_cupom LIKE     '+
   '%'+ edtMask.text + '%';
-
    FdqProdutos.Close;
    FdqProdutos.SQL.Clear;
    FdqProdutos.SQL.Text := vl_sql;
