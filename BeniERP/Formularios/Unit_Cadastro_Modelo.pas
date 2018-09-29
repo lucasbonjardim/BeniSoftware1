@@ -99,7 +99,10 @@ implementation
 {$R *.dfm}
 
 uses UdtmImagens, Unit_Principal, UdtmACBR, Unit_Variaveis_Globais,
-  Unit_F_mensagem_Dialog;
+  Unit_F_mensagem_Dialog, ParamControleLicenca, ParamControleTerminalECF,
+  ParamControleTerminalPDV, UdtmBcoErp, Unit_Acesso, Unit_Alerta,
+  Unit_Baixa_Tabela_IBPT, Unit_Cadastro_ICMS, Unit_Cadastro_Produtos,
+  Unit_exibeefeitoespera, Unit_Relatorios, Unit_Rotinas, unit_utilfuncs;
 
 procedure TForm_Cadastro_Modelo.AC_FecharExecute(Sender: TObject);
 begin
@@ -113,7 +116,7 @@ begin
     dsPrincipal.DataSet.Edit;
   except on e:Exception do
     begin
-      ShowMessage('Erro em alterar Registro: '+e.Message);
+      AlertCard('Erro em alterar Registro: '+e.Message,'Erro');
     end;
   end;
 
@@ -131,7 +134,7 @@ begin
       TFDQuery(dsPrincipal.DataSet).Cancel;
   except on e:Exception do
     begin
-      ShowMessage('Erro ao cancelar operação: '+e.Message);
+      AlertCard('Erro ao cancelar operação: '+e.Message,'Erro');
     end;
   end;
 end;
@@ -144,7 +147,7 @@ begin
 
   except on e:Exception do
     begin
-      ShowMessage('Erro ao pesquisar Registro: '+e.Message);
+      AlertCard('Erro ao pesquisar Registro: '+e.Message,'Erro');
     end;
   end;
 
@@ -159,17 +162,9 @@ begin
        cxPageControl1.ActivePage := tbPesquisa;
      end;
 
-
-   { If Application.MessageBox('Confirma Exclusão ?','Atenção!!!',MB_YESNO +
-    MB_ICONQUESTION + MB_DEFBUTTON2) = IDYES Then
-     begin
-       dsPrincipal.DataSet.Delete;
-       cxPageControl1.ActivePage := tbPesquisa;
-     end; }
-
   except on e:exception do
     begin
-      ShowMessage('Erro ao Excluir Registro: '+e.Message);
+      AlertCard('Erro ao Excluir Registro: '+e.Message,'Erro');
     end;
 
   end;
@@ -187,7 +182,7 @@ begin
 
   except on e:Exception do
     begin
-     ShowMessage('Erro ao Salvar Registro: '+e.Message);
+     AlertCard('Erro ao Salvar Registro: '+e.Message, 'Erro');
     end;
 
   end;
@@ -209,7 +204,7 @@ begin
 
   except on e:Exception do
     begin
-      ShowMessage('Erro ao Incluir Registro: '+e.Message);
+      AlertCard('Erro ao Incluir Registro: '+e.Message, 'Erro');
     end;
   end;
 end;
@@ -221,7 +216,7 @@ begin
 
   except on e:Exception do
     begin
-      ShowMessage('Erro para ir no primeiro Registro: '+e.Message);
+      AlertCard('Erro para ir no primeiro Registro: '+e.Message,'Erro');
     end;
   end;
 end;
@@ -232,7 +227,7 @@ begin
     dsPrincipal.DataSet.Prior;
   except on e:Exception do
     begin
-      ShowMessage('Erro para ir no registro anterior: '+e.Message);
+      AlertCard('Erro para ir no registro anterior: '+e.Message,'Erro');
     end;
   end;
 end;
@@ -244,7 +239,7 @@ begin
 
   except on e:Exception do
     begin
-      ShowMessage('Erro para ir ao proximo Registro: '+e.Message);
+      AlertCard('Erro para ir ao proximo Registro: '+e.Message,'Erro');
     end;
   end;
 end;
@@ -256,7 +251,7 @@ begin
 
   except on e:Exception do
     begin
-     ShowMessage('Erro ao Salvar Registro: '+e.Message);
+     AlertCard('Erro ao Salvar Registro: '+e.Message,'Erro');
     end;
 
   end;
@@ -268,7 +263,7 @@ begin
     dsPrincipal.DataSet.Last;
   except on e:Exception do
     begin
-      ShowMessage('Erro para ir ao ultimo Registro: '+e.Message);
+      AlertCard('Erro para ir ao ultimo Registro: '+e.Message,'Erro');
     end;
   end;
 end;
@@ -378,7 +373,7 @@ begin
     dsPrincipal.DataSet.Close;
   except on e:Exception do
     begin
-      ShowMessage('Erro ao cancelar pesquisa: '+e.Message);
+      AlertCard('Erro ao cancelar pesquisa: '+e.Message,'Erro');
     end;
   end;
 end;

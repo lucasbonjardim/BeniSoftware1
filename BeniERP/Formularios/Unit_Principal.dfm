@@ -3341,9 +3341,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 88
+    Top = 86
     Width = 1253
-    Height = 636
+    Height = 638
     Align = alClient
     Center = True
     Picture.Data = {
@@ -6675,25 +6675,28 @@ object Form_Principal: TForm_Principal
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 88
+    Top = 86
     Width = 185
-    Height = 636
+    Height = 638
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 88
+    ExplicitHeight = 636
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 636
+      Height = 638
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
+      ExplicitHeight = 636
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -6741,7 +6744,7 @@ object Form_Principal: TForm_Principal
   end
   object pnlToolbar: TPanel
     Left = 0
-    Top = 4
+    Top = 2
     Width = 1438
     Height = 25
     Align = alTop
@@ -6755,6 +6758,7 @@ object Form_Principal: TForm_Principal
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 4
     object pnl_top_esquerdo: TPanel
       Left = 1395
       Top = 0
@@ -6848,7 +6852,7 @@ object Form_Principal: TForm_Principal
   end
   object dxRibbon1: TdxRibbon
     Left = 0
-    Top = 29
+    Top = 27
     Width = 1438
     Height = 59
     BarManager = dxBarManager1
@@ -6859,6 +6863,7 @@ object Form_Principal: TForm_Principal
     Contexts = <>
     TabOrder = 2
     TabStop = False
+    ExplicitTop = 29
     object tabCadastro: TdxRibbonTab
       Active = True
       Caption = 'Cadastros'
@@ -6984,10 +6989,10 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 0
     Width = 1438
-    Height = 4
+    Height = 2
     Align = alTop
     BevelOuter = bvNone
-    Color = 4718629
+    Color = 6961398
     ParentBackground = False
     TabOrder = 8
   end

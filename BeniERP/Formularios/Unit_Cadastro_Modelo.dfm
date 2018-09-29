@@ -4,8 +4,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 672
-  ClientWidth = 1279
+  ClientHeight = 652
+  ClientWidth = 1259
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,12 +25,12 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     AlignWithMargins = True
     Left = 0
     Top = 55
-    Width = 1279
+    Width = 1259
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
     Align = alTop
-    Brush.Color = 4044800
+    Brush.Color = 6961398
     Pen.Style = psClear
     ExplicitLeft = 8
     ExplicitTop = 11
@@ -39,7 +39,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1279
+    Width = 1259
     Height = 52
     ButtonHeight = 52
     ButtonWidth = 79
@@ -133,8 +133,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object cxPageControl1: TcxPageControl
     Left = 0
     Top = 85
-    Width = 1279
-    Height = 587
+    Width = 1259
+    Height = 567
     Align = alClient
     Color = clWhite
     ParentBackground = False
@@ -142,9 +142,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     TabOrder = 1
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ClientRectBottom = 583
+    ClientRectBottom = 563
     ClientRectLeft = 4
-    ClientRectRight = 1275
+    ClientRectRight = 1255
     ClientRectTop = 24
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
@@ -152,7 +152,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1271
+        Width = 1251
         Height = 41
         Align = alTop
         BevelOuter = bvNone
@@ -369,16 +369,12 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
     end
   end
   object pnl_top: TPanel
     Left = 0
     Top = 61
-    Width = 1279
+    Width = 1259
     Height = 24
     Align = alTop
     BevelOuter = bvNone

@@ -422,7 +422,10 @@ implementation
 
 uses
 Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
-  Unit_Cadastro_Produtos, Unit_Cadastro_ICMS, Unit_Acesso;
+  Unit_Cadastro_Produtos, Unit_Cadastro_ICMS, Unit_Acesso, ParamControleLicenca,
+  ParamControleTerminalECF, ParamControleTerminalPDV, UdtmACBR, UdtmImagens,
+  Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_exibeefeitoespera,
+  Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs;
 
 {$R *.dfm}
 

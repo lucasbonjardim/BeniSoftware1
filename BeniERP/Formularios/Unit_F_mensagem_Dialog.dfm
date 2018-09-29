@@ -29,8 +29,6 @@ object frmDialog: TfrmDialog
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 65
-    ExplicitWidth = 283
     object Panel2: TPanel
       Left = 135
       Top = 0
@@ -41,7 +39,6 @@ object frmDialog: TfrmDialog
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 53
       object btnConfirmar: TcxButton
         AlignWithMargins = True
         Left = 119
@@ -186,6 +183,7 @@ object frmDialog: TfrmDialog
         SpeedButtonOptions.Transparent = True
         TabOrder = 0
         OnClick = btnConfirmarClick
+        ExplicitTop = 6
       end
       object btnCancelar: TcxButton
         AlignWithMargins = True
@@ -331,7 +329,6 @@ object frmDialog: TfrmDialog
         SpeedButtonOptions.Transparent = True
         TabOrder = 1
         OnClick = btnCancelarClick
-        ExplicitTop = 6
       end
     end
   end
@@ -343,7 +340,6 @@ object frmDialog: TfrmDialog
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitHeight = 65
     object imgIco: TImage
       AlignWithMargins = True
       Left = 5
@@ -375,8 +371,6 @@ object frmDialog: TfrmDialog
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 223
-    ExplicitHeight = 65
     object lblMen: TcxLabel
       AlignWithMargins = True
       Left = 5
@@ -396,7 +390,7 @@ object frmDialog: TfrmDialog
     Left = 216
     Top = 48
     Bitmap = {
-      494C010103000500140030003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010103000500180030003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000C00000003000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

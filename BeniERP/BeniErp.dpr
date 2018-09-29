@@ -21,7 +21,8 @@ uses
   Unit_Baixa_Tabela_IBPT in 'Formularios\Unit_Baixa_Tabela_IBPT.pas' {form_baixa_ibpt},
   Unit_Cadastro_ICMS in 'Formularios\Unit_Cadastro_ICMS.pas' {Form_Cadastro_ICMS},
   Unit_F_mensagem_Dialog in 'Formularios\Unit_F_mensagem_Dialog.pas' {frmDialog},
-  Unit_Acesso in 'Formularios\Unit_Acesso.pas' {FAcesso};
+  Unit_Acesso in 'Formularios\Unit_Acesso.pas' {FAcesso},
+  Unit_Alerta in 'Formularios\Unit_Alerta.pas' {Form_Alerta};
 
 {$R *.res}
 
@@ -32,5 +33,6 @@ begin
   Application.CreateForm(TdtmImagens, dtmImagens);
   Application.CreateForm(TDtmBcoErp, DtmBcoErp);
   Application.CreateForm(TdtmACBR, dtmACBR);
+  Application.CreateForm(TForm_Alerta, Form_Alerta);
   Application.Run;
 end.
