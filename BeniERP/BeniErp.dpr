@@ -22,7 +22,8 @@ uses
   Unit_Cadastro_ICMS in 'Formularios\Unit_Cadastro_ICMS.pas' {Form_Cadastro_ICMS},
   Unit_F_mensagem_Dialog in 'Formularios\Unit_F_mensagem_Dialog.pas' {frmDialog},
   Unit_Acesso in 'Formularios\Unit_Acesso.pas' {FAcesso},
-  Unit_Alerta in 'Formularios\Unit_Alerta.pas' {Form_Alerta};
+  Unit_Alerta in 'Formularios\Unit_Alerta.pas' {Form_Alerta},
+  Unit_Cadastro_Usuario in 'Formularios\Unit_Cadastro_Usuario.pas' {Form_Cadastro_usuario};
 
 {$R *.res}
 

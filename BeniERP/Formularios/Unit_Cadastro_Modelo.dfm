@@ -4,8 +4,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 652
-  ClientWidth = 1259
+  ClientHeight = 632
+  ClientWidth = 1239
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,7 +25,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     AlignWithMargins = True
     Left = 0
     Top = 55
-    Width = 1259
+    Width = 1239
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
@@ -39,7 +39,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1259
+    Width = 1239
     Height = 52
     ButtonHeight = 52
     ButtonWidth = 79
@@ -133,18 +133,20 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object cxPageControl1: TcxPageControl
     Left = 0
     Top = 85
-    Width = 1259
-    Height = 567
+    Width = 1239
+    Height = 547
     Align = alClient
     Color = clWhite
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
-    Properties.ActivePage = tbPesquisa
+    Properties.ActivePage = tbCadastro
     Properties.CustomButtons.Buttons = <>
-    ClientRectBottom = 563
+    ExplicitLeft = 1
+    ExplicitTop = 89
+    ClientRectBottom = 543
     ClientRectLeft = 4
-    ClientRectRight = 1255
+    ClientRectRight = 1235
     ClientRectTop = 24
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
@@ -152,7 +154,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1251
+        Width = 1231
         Height = 41
         Align = alTop
         BevelOuter = bvNone
@@ -374,7 +376,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object pnl_top: TPanel
     Left = 0
     Top = 61
-    Width = 1259
+    Width = 1239
     Height = 24
     Align = alTop
     BevelOuter = bvNone

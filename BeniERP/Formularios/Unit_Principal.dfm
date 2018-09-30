@@ -3336,14 +3336,15 @@ object Form_Principal: TForm_Principal
   OldCreateOrder = False
   Position = poDesigned
   WindowState = wsMaximized
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 86
+    Top = 151
     Width = 1253
-    Height = 638
+    Height = 573
     Align = alClient
     Center = True
     Picture.Data = {
@@ -6675,28 +6676,25 @@ object Form_Principal: TForm_Principal
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 86
+    Top = 151
     Width = 185
-    Height = 638
+    Height = 573
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 88
-    ExplicitHeight = 636
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 638
+      Height = 573
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
-      ExplicitHeight = 636
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -6758,7 +6756,6 @@ object Form_Principal: TForm_Principal
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitTop = 4
     object pnl_top_esquerdo: TPanel
       Left = 1395
       Top = 0
@@ -6854,16 +6851,15 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 27
     Width = 1438
-    Height = 59
+    Height = 124
     BarManager = dxBarManager1
-    Style = rs2016Tablet
+    Style = rs2016
     ColorSchemeAccent = rcsaBlue
     ColorSchemeName = 'DevExpressStyle'
     ShowMinimizeButton = False
     Contexts = <>
     TabOrder = 2
     TabStop = False
-    ExplicitTop = 29
     object tabCadastro: TdxRibbonTab
       Active = True
       Caption = 'Cadastros'
@@ -7021,7 +7017,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 228
     Bitmap = {
-      494C010104008000740120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101040080007C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -23648,7 +23644,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar3: TdxBar
       Caption = 'Gerais'
       CaptionButtons = <>
-      DockedLeft = 193
+      DockedLeft = 183
       DockedTop = 0
       FloatLeft = 784
       FloatTop = 8
@@ -31896,6 +31892,7 @@ object Form_Principal: TForm_Principal
       Caption = '&Usu'#225'rio'
       Category = 8
       Visible = ivAlways
+      OnClick = B003Click
     end
     object B004: TdxBarButton
       Caption = '&Defini'#231#227'o de Acesso'

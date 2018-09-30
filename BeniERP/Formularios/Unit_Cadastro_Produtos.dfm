@@ -1,34 +1,35 @@
 inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   Caption = 'Cadastro de Produtos'
-  ClientHeight = 642
-  ClientWidth = 1357
-  ExplicitWidth = 1373
-  ExplicitHeight = 681
+  ClientHeight = 622
+  ClientWidth = 1337
+  ExplicitWidth = 1353
+  ExplicitHeight = 661
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Width = 1357
+    Width = 1337
     ExplicitWidth = 1170
   end
   inherited ToolBar1: TToolBar
-    Width = 1357
-    ExplicitWidth = 1357
+    Width = 1337
+    ExplicitWidth = 1337
   end
   inherited cxPageControl1: TcxPageControl
     Top = 84
-    Width = 1357
-    Height = 558
+    Width = 1337
+    Height = 538
+    ExplicitLeft = 0
     ExplicitTop = 84
-    ExplicitWidth = 1357
-    ExplicitHeight = 558
-    ClientRectBottom = 554
-    ClientRectRight = 1353
+    ExplicitWidth = 1337
+    ExplicitHeight = 538
+    ClientRectBottom = 534
+    ClientRectRight = 1333
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1349
-      ExplicitHeight = 530
+      ExplicitWidth = 1329
+      ExplicitHeight = 510
       inherited Panel1: TPanel
-        Width = 1349
-        ExplicitWidth = 1349
+        Width = 1329
+        ExplicitWidth = 1329
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
@@ -56,8 +57,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         AlignWithMargins = True
         Left = 3
         Top = 44
-        Width = 1343
-        Height = 483
+        Width = 1323
+        Height = 463
         Align = alClient
         TabOrder = 1
         LookAndFeel.Kind = lfStandard
@@ -395,46 +396,49 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1359
-      ExplicitHeight = 540
+      ExplicitWidth = 1329
+      ExplicitHeight = 510
       object cxPaginas2: TcxPageControl
         Left = 0
         Top = 0
-        Width = 1359
-        Height = 540
+        Width = 1329
+        Height = 510
         Align = alClient
         TabOrder = 0
         Properties.ActivePage = cxDadosProduto
         Properties.CustomButtons.Buttons = <>
-        ClientRectBottom = 536
+        ClientRectBottom = 506
         ClientRectLeft = 4
-        ClientRectRight = 1355
+        ClientRectRight = 1325
         ClientRectTop = 24
         object cxDadosProduto: TcxTabSheet
           Caption = 'Dados do produto'
           ImageIndex = 0
+          ExplicitLeft = -124
+          ExplicitTop = 96
           object pnlLateral1: TPanel
-            Left = 849
+            Left = 864
             Top = 0
-            Width = 204
-            Height = 512
-            Align = alLeft
+            Width = 457
+            Height = 482
+            Align = alRight
             BevelOuter = bvNone
             TabOrder = 1
             object grpAtivoCont: TGroupBox
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 198
+              Width = 451
               Height = 140
               Align = alTop
               Caption = ' Op'#231#245'es do Produto '
               TabOrder = 0
+              ExplicitWidth = 198
               object dbchkATIVO_PRO: TDBCheckBox
                 AlignWithMargins = True
                 Left = 5
                 Top = 18
-                Width = 188
+                Width = 441
                 Height = 17
                 Align = alTop
                 Caption = 'Ativo'
@@ -449,12 +453,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 TabOrder = 0
                 ValueChecked = 'S'
                 ValueUnchecked = 'N'
+                ExplicitWidth = 188
               end
               object dbchkCOMPLEMENTO_PRO: TDBCheckBox
                 AlignWithMargins = True
                 Left = 5
                 Top = 41
-                Width = 188
+                Width = 441
                 Height = 17
                 Align = alTop
                 Caption = 'Complemento na Descri'#231#227'o'
@@ -469,12 +474,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 TabOrder = 1
                 ValueChecked = 'S'
                 ValueUnchecked = 'N'
+                ExplicitWidth = 188
               end
               object dbchkCONTROLA_ESTOQUE_PRO: TDBCheckBox
                 AlignWithMargins = True
                 Left = 5
                 Top = 64
-                Width = 188
+                Width = 441
                 Height = 17
                 Align = alTop
                 Caption = 'Controla Estoque'
@@ -489,12 +495,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 TabOrder = 2
                 ValueChecked = 'S'
                 ValueUnchecked = 'N'
+                ExplicitWidth = 188
               end
               object dbchkSAIR_TABELA_PRECO: TDBCheckBox
                 AlignWithMargins = True
                 Left = 5
                 Top = 87
-                Width = 188
+                Width = 441
                 Height = 17
                 Align = alTop
                 Caption = 'Sair na tabela de Pre'#231'o'
@@ -509,12 +516,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 TabOrder = 3
                 ValueChecked = 'S'
                 ValueUnchecked = 'N'
+                ExplicitWidth = 188
               end
               object DBCheckBox1: TDBCheckBox
                 AlignWithMargins = True
                 Left = 5
                 Top = 110
-                Width = 188
+                Width = 441
                 Height = 17
                 Align = alTop
                 Caption = 'Visualiza Mobile'
@@ -529,18 +537,20 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 TabOrder = 4
                 ValueChecked = 'S'
                 ValueUnchecked = 'N'
+                ExplicitWidth = 188
               end
             end
             object Panel11: TPanel
               Left = 0
               Top = 146
-              Width = 204
+              Width = 457
               Height = 47
               Align = alTop
               BevelOuter = bvNone
               Color = clWhite
               ParentBackground = False
               TabOrder = 1
+              ExplicitWidth = 204
               object cxLabel25: TcxLabel
                 Left = 3
                 Top = 0
@@ -561,7 +571,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             Left = 0
             Top = 0
             Width = 849
-            Height = 512
+            Height = 482
             Align = alLeft
             BevelOuter = bvNone
             TabOrder = 0
@@ -670,6 +680,9 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Color = clWhite
               ParentBackground = False
               TabOrder = 2
+              DesignSize = (
+                849
+                45)
               object cxLabel2: TcxLabel
                 Left = 3
                 Top = -2
@@ -681,6 +694,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Top = 18
                 Width = 838
                 Height = 21
+                Anchors = [akLeft, akTop, akRight]
                 CharCase = ecUpperCase
                 DataField = 'NOME_PRO'
                 DataSource = dsPrincipal
@@ -697,6 +711,9 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Color = clWhite
               ParentBackground = False
               TabOrder = 3
+              DesignSize = (
+                849
+                45)
               object cxLabel5: TcxLabel
                 Left = 3
                 Top = -2
@@ -708,6 +725,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Top = 18
                 Width = 838
                 Height = 21
+                Anchors = [akLeft, akTop, akRight]
                 CharCase = ecUpperCase
                 DataField = 'DESC_CUPOM'
                 DataSource = dsPrincipal
@@ -1254,7 +1272,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object pnl1: TPanel
             Left = 0
             Top = 0
-            Width = 1351
+            Width = 1321
             Height = 47
             Align = alTop
             BevelOuter = bvNone
@@ -1322,7 +1340,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel12: TPanel
             Left = 0
             Top = 47
-            Width = 1351
+            Width = 1321
             Height = 47
             Align = alTop
             BevelOuter = bvNone
@@ -1419,15 +1437,11 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxObs: TcxTabSheet
           Caption = 'Observa'#231#245'es'
           ImageIndex = 2
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object dbmmoOBS: TDBMemo
             Left = 0
             Top = 0
-            Width = 1351
-            Height = 512
+            Width = 1321
+            Height = 482
             Align = alClient
             BorderStyle = bsNone
             DataField = 'OBS'
@@ -1438,14 +1452,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxFoto: TcxTabSheet
           Caption = 'Foto'
           ImageIndex = 3
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object GroupBox1: TGroupBox
             Left = 0
             Top = 0
-            Width = 1351
+            Width = 1321
             Height = 209
             Align = alTop
             Caption = 'Foto'
@@ -1495,8 +1505,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel17: TPanel
             Left = 0
             Top = 217
-            Width = 1351
-            Height = 295
+            Width = 1321
+            Height = 265
             Align = alClient
             BevelOuter = bvNone
             Color = clWhite
@@ -1506,7 +1516,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 0
               Top = 29
-              Width = 1351
+              Width = 1321
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -1521,7 +1531,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 0
               Top = 3
-              Width = 1351
+              Width = 1321
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -1536,8 +1546,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 3
               Top = 38
-              Width = 1345
-              Height = 254
+              Width = 1315
+              Height = 224
               Align = alClient
               TabOrder = 0
               object cxComprasDBTableView1: TcxGridDBTableView
@@ -1622,21 +1632,20 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Style.TextStyle = [fsBold, fsItalic]
               Properties.Alignment.Horz = taCenter
               Properties.Alignment.Vert = taVCenter
-              AnchorX = 676
+              AnchorX = 661
               AnchorY = 18
             end
           end
           object Panel18: TPanel
             Left = 0
             Top = 0
-            Width = 1341
+            Width = 1321
             Height = 217
             Align = alTop
             BevelOuter = bvNone
             Color = clWhite
             ParentBackground = False
             TabOrder = 1
-            ExplicitWidth = 1351
             object GroupBox3: TGroupBox
               AlignWithMargins = True
               Left = 3
@@ -2012,15 +2021,11 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object tabFornecedores: TcxTabSheet
           Caption = 'Fornecedores'
           ImageIndex = 5
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object cxFornecedores: TcxGrid
             Left = 0
             Top = 0
-            Width = 1351
-            Height = 471
+            Width = 1321
+            Height = 441
             Align = alClient
             TabOrder = 0
             object cxFornecedoresDBTableView1: TcxGridDBTableView
@@ -2055,8 +2060,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object pnl3: TPanel
             Left = 0
-            Top = 471
-            Width = 1351
+            Top = 441
+            Width = 1321
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
@@ -2068,15 +2073,11 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object tabComposicao: TcxTabSheet
           Caption = 'Composi'#231#227'o'
           ImageIndex = 6
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object cxComposicao: TcxGrid
             Left = 0
             Top = 0
-            Width = 1351
-            Height = 471
+            Width = 1321
+            Height = 441
             Align = alClient
             TabOrder = 0
             object cxGridDBTableView1: TcxGridDBTableView
@@ -2128,8 +2129,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object Panel19: TPanel
             Left = 0
-            Top = 471
-            Width = 1351
+            Top = 441
+            Width = 1321
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
@@ -2141,12 +2142,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxTabSheet1: TcxTabSheet
           Caption = 'Cupom Fiscal'
           ImageIndex = 7
-          ExplicitWidth = 1351
-          ExplicitHeight = 512
           object pnl4: TPanel
             Left = 0
             Top = 0
-            Width = 1351
+            Width = 1321
             Height = 46
             Align = alTop
             BevelOuter = bvNone
@@ -2195,7 +2194,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel21: TPanel
             Left = 0
             Top = 46
-            Width = 1351
+            Width = 1321
             Height = 41
             Align = alTop
             BevelOuter = bvNone
@@ -2245,10 +2244,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxTabSheet2: TcxTabSheet
           Caption = 'Medicamento'
           ImageIndex = 8
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object Label8: TLabel
             Left = 16
             Top = 16
@@ -2307,9 +2302,9 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
     end
   end
   inherited pnl_top: TPanel
-    Width = 1357
+    Width = 1337
     Height = 23
-    ExplicitWidth = 1357
+    ExplicitWidth = 1337
     ExplicitHeight = 23
     inherited BtnRegistroPosterior: TcxButton
       Left = 66
@@ -3171,7 +3166,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   end
   object FDQuxiliar: TFDQuery
     Connection = DtmBcoErp.FDBcoERP
-    Left = 939
-    Top = 11
+    Left = 937
+    Top = 7
   end
 end

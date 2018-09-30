@@ -28,7 +28,7 @@
     <Transaction>2018/09/29 10:39:03.000.445,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_F_mensagem_Dialog.dfm</Transaction>
     <Transaction>2018/09/29 12:01:02.000.189,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Acesso.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/09/29 17:12:06.000.841,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Alerta.dfm</Transaction>
-    <Transaction>2018/09/29 17:12:06.000.841,D:\BeniSoftware1\trunk\BeniERP\Unit1.pas=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Alerta.pas</Transaction>
+    <Transaction>2018/09/30 13:22:55.000.361,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_Usuario.dfm</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android="nexus"/>
@@ -64,6 +64,8 @@
     <File Path="Formularios\Unit_Acesso.dfm"/>
     <File Path="Formularios\Unit_Alerta.pas"/>
     <File Path="Formularios\Unit_Alerta.dfm"/>
+    <File Path="Formularios\Unit_Cadastro_Usuario.pas"/>
+    <File Path="Formularios\Unit_Cadastro_Usuario.dfm"/>
     <File Path="Rotinas"/>
     <File Path="Rotinas\Unit_Relatorios.pas"/>
     <File Path="Rotinas\Unit_Rotinas.pas"/>

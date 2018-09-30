@@ -27,7 +27,8 @@ uses
   Vcl.Menus, System.Actions, Vcl.ActnList, cxButtons, cxGridLevel, cxClasses,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
   cxGrid,FireDAC.Comp.Client, cxPC, Vcl.ToolWin, cxContainer, Vcl.Mask,
-  cxTextEdit, cxCurrencyEdit, cxLabel;
+  cxTextEdit, cxCurrencyEdit, cxLabel, dxSkinsdxNavBarPainter,
+  dxSkinsdxNavBarAccordionViewPainter, dxNavBar;
 
 type
   TForm_Cadastro_Modelo = class(TForm)
