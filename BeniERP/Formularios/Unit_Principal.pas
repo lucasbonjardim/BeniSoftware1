@@ -392,6 +392,7 @@ type
     SB: TdxStatusBar;
     pnl_info: TPanel;
     ACBrEnterTab1: TACBrEnterTab;
+    pnl_infodados: TPanel;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);

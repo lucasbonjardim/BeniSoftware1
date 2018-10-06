@@ -30,7 +30,7 @@ uses
   cxGrid, Vcl.StdCtrls, cxButtons, Vcl.Mask, Vcl.ComCtrls, cxTextEdit,
   cxCurrencyEdit, cxLabel, Vcl.ExtCtrls, cxPC, Vcl.ToolWin, cxDBEdit, cxDBLabel,
   Vcl.DBCtrls, cxDBExtLookupComboBox, Vcl.Buttons, cxDropDownEdit,
-  cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit, cxCalendar;
+  cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,System.StrUtils, cxCalendar;
 
 type
   TForm_Cadastro_Produtos = class(TForm_Cadastro_Modelo)
@@ -417,10 +417,17 @@ type
     cxCESTDescricao: TcxGridDBColumn;
     cxVisualizaLevel1: TcxGridLevel;
     FDQuxiliar: TFDQuery;
+    rdg_tpo_pesquisa: TRadioGroup;
+    lbl_qnt_produtos: TLabel;
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure BtnConsultarClick(Sender: TObject);
+    procedure edtMaskKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure BtnLimparPesquisaClick(Sender: TObject);
   private
     procedure MostraProdutos;
+    function retornabusca: string;
     { Private declarations }
   public
     { Public declarations }
@@ -433,7 +440,24 @@ implementation
 
 {$R *.dfm}
 
-uses UdtmBcoErp, Unit_Variaveis_Globais;
+uses UdtmBcoErp, Unit_Variaveis_Globais, ParamControleLicenca,
+  ParamControleTerminalECF, ParamControleTerminalPDV, UdtmACBR, UdtmImagens,
+  Unit_Acesso, Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_Cadastro_ICMS,
+  Unit_Cadastro_Usuario, Unit_exibeefeitoespera, Unit_F_mensagem_Dialog,
+  Unit_Principal, Unit_Relatorios, Unit_Rotinas, unit_utilfuncs;
+
+procedure TForm_Cadastro_Produtos.BtnConsultarClick(Sender: TObject);
+begin
+  MostraProdutos;
+end;
+
+procedure TForm_Cadastro_Produtos.BtnLimparPesquisaClick(Sender: TObject);
+begin
+  inherited;
+  edtMask.Text := '';
+  lbl_qnt_produtos.Visible := False;
+  lbl_qnt_produtos.Caption :='';
+end;
 
 procedure TForm_Cadastro_Produtos.cxButton1Click(Sender: TObject);
 begin
@@ -449,18 +473,64 @@ begin
 
 end;
 
+procedure TForm_Cadastro_Produtos.edtMaskKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+  if key = 13 then
+    MostraProdutos;
+end;
+
+function TForm_Cadastro_Produtos.retornabusca:String;
+begin
+  result := '''%'+edtMask.Text+'%''';
+end;
+
+
 procedure TForm_Cadastro_Produtos.MostraProdutos;
 var
-  vl_sql: String;
+  Liga: String;
+  sql: String;
 begin
-  vl_sql :=
-  'select * from produto T                                                     '+
-  'WHERE nome_pro LIKE '+ '%'+ edtMask.text + '%' + ' OR t.desc_cupom LIKE     '+
-  '%'+ edtMask.text + '%';
-   FdqProdutos.Close;
-   FdqProdutos.SQL.Clear;
-   FdqProdutos.SQL.Text := vl_sql;
-   FdqProdutos.Open;
+  if rdg_tpo_pesquisa.ItemIndex = -1 then
+    rdg_tpo_pesquisa.ItemIndex :=1;
+
+  FdqProdutos.Close;
+  DtmBcoErp.FDBcoERP.Commit;
+  FdqProdutos.SQL.Clear;
+  case  rdg_tpo_pesquisa.ItemIndex of
+    0: Liga := 'COD_PRO';
+    1: Liga := 'nome_pro';
+    else
+    begin
+      AlertCard('Selecione o tipo da pesquisa!','Atenção!');
+      edtMask.SetFocus;
+      exit;
+    end;
+  end;
+
+  sql :=
+  'select * from produto T                                                                          '+
+  'WHERE                                                                                            '+
+  Liga  + ' LIKE' + retornabusca + ' OR t.desc_cupom LIKE' + retornabusca ;
+
+  FdqProdutos.SQL.Text := sql;
+  FdqProdutos.Open;
+  if  FdqProdutos.RecordCount = 0 then
+  begin
+    lbl_qnt_produtos.Visible := False;
+    lbl_qnt_produtos.Caption :='';
+    edtMask.Text := '';
+    AlertCard('Nenhum Registro Encontrado conforme o Critério informado.','Atenção!');
+    edtMask.SetFocus;
+  end
+  else
+  begin
+    lbl_qnt_produtos.Visible := true;
+    lbl_qnt_produtos.Caption := IntToStr(FdqProdutos.RecordCount) + ' Registros Encontrados.  '
+  end;
+
+
 
 end;
 

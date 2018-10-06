@@ -4,9 +4,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 632
-  ClientWidth = 1239
-  Color = clWhite
+  ClientHeight = 602
+  ClientWidth = 1209
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -24,23 +24,22 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object Shape1: TShape
     AlignWithMargins = True
     Left = 0
-    Top = 55
-    Width = 1239
+    Top = 59
+    Width = 1209
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
     Align = alTop
-    Brush.Color = 6961398
+    Brush.Color = clGray
     Pen.Style = psClear
-    ExplicitLeft = 8
-    ExplicitTop = 11
-    ExplicitWidth = 1172
+    ExplicitWidth = 1219
   end
   object ToolBar1: TToolBar
-    Left = 0
-    Top = 0
-    Width = 1239
-    Height = 52
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1203
+    Height = 50
     ButtonHeight = 52
     ButtonWidth = 79
     Caption = 'ToolBar1'
@@ -132,9 +131,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   end
   object cxPageControl1: TcxPageControl
     Left = 0
-    Top = 85
-    Width = 1239
-    Height = 547
+    Top = 89
+    Width = 1209
+    Height = 513
     Align = alClient
     Color = clWhite
     ParentBackground = False
@@ -142,19 +141,21 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     TabOrder = 1
     Properties.ActivePage = tbCadastro
     Properties.CustomButtons.Buttons = <>
-    ExplicitLeft = 1
-    ExplicitTop = 89
-    ClientRectBottom = 543
-    ClientRectLeft = 4
-    ClientRectRight = 1235
-    ClientRectTop = 24
+    ClientRectBottom = 511
+    ClientRectLeft = 2
+    ClientRectRight = 1207
+    ClientRectTop = 26
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
       ImageIndex = 0
+      ExplicitLeft = 0
+      ExplicitTop = 28
+      ExplicitWidth = 0
+      ExplicitHeight = 497
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1231
+        Width = 1215
         Height = 41
         Align = alTop
         BevelOuter = bvNone
@@ -211,6 +212,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
             Properties.Nullable = False
             TabOrder = 1
             Visible = False
+            ExplicitHeight = 21
             Width = 397
           end
           object edtData: TDateTimePicker
@@ -375,8 +377,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   end
   object pnl_top: TPanel
     Left = 0
-    Top = 61
-    Width = 1239
+    Top = 65
+    Width = 1209
     Height = 24
     Align = alTop
     BevelOuter = bvNone
@@ -580,20 +582,21 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   end
   object dsPrincipal: TDataSource
     OnStateChange = dsPrincipalStateChange
-    Left = 912
-    Top = 32
+    Left = 904
+    Top = 7
   end
   object cxLookAndFeelController1: TcxLookAndFeelController
-    SkinName = 'Metropolis'
-    Left = 1016
-    Top = 32
+    NativeStyle = False
+    SkinName = 'Office2016Colorful'
+    Left = 1008
+    Top = 8
   end
   object BarraMenu: TcxImageList
     DrawingStyle = dsTransparent
     Height = 32
     Width = 32
     FormatVersion = 1
-    DesignInfo = 2163800
+    DesignInfo = 590928
     ImageInfo = <
       item
         Image.Data = {

@@ -3342,9 +3342,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 151
+    Top = 186
     Width = 1253
-    Height = 573
+    Height = 538
     Align = alClient
     Center = True
     Picture.Data = {
@@ -6676,25 +6676,28 @@ object Form_Principal: TForm_Principal
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 151
+    Top = 186
     Width = 185
-    Height = 573
+    Height = 538
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 151
+    ExplicitHeight = 573
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 573
+      Height = 538
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
+      ExplicitHeight = 573
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -6826,6 +6829,7 @@ object Form_Principal: TForm_Principal
           Width = 46
           Height = 40
           Cursor = crHandPoint
+          Hint = 'Exibe oculta Menu Lateral'
           Margins.Left = 0
           Margins.Top = 0
           Margins.Right = 0
@@ -6842,6 +6846,7 @@ object Form_Principal: TForm_Principal
           Style = bsCommandLink
           StylusHotImageIndex = 0
           TabOrder = 0
+          WordWrap = True
           OnClick = btn_lateralClick
         end
       end
@@ -6992,6 +6997,16 @@ object Form_Principal: TForm_Principal
     ParentBackground = False
     TabOrder = 8
   end
+  object pnl_infodados: TPanel
+    Left = 0
+    Top = 151
+    Width = 1438
+    Height = 35
+    Align = alTop
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 9
+  end
   object ActionList1: TActionList
     Images = imlIcons
     Left = 1280
@@ -7017,7 +7032,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 228
     Bitmap = {
-      494C0101040080007C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010104008000840120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -23509,7 +23524,8 @@ object Form_Principal: TForm_Principal
       end>
   end
   object dxSkinController1: TdxSkinController
-    SkinName = 'Metropolis'
+    NativeStyle = False
+    SkinName = 'Office2016Colorful'
     Left = 1360
     Top = 168
   end

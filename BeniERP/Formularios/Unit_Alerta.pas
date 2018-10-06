@@ -33,8 +33,13 @@ type
     Panel4: TPanel;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure btnConfirmarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
-
+    FXMin: Integer;
+    FYMin: Integer;
+    FXLMin: Integer;
+    FYLMin: Integer;
     { Private declarations }
   public
 
@@ -54,6 +59,15 @@ begin
    ModalResult := mrYes;
 end;
 
+procedure TForm_Alerta.FormCreate(Sender: TObject);
+begin
+  FXMin := 412;
+  FYMin := 148;
+  FXLMin := lblMen.Width;
+  FYLMin := lblMen.Height;
+  Form_Alerta.Width := lblMen.Width + 15;
+end;
+
 procedure TForm_Alerta.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -63,13 +77,21 @@ begin
    end;
 end;
 
+procedure TForm_Alerta.FormShow(Sender: TObject);
+begin
+  if FXLMin < lblMen.Width then
+    Form_Alerta.Width := FXMin + ( lblMen.Width + 15 );
+  if FYLMin < lblMen.Height then
+    Form_Alerta.Height := FYMin + ( lblMen.Height + 3 );
+end;
+
 function AlertCard( Texto: String;  Texto1: String ): Boolean;
 var
    Form_Alerta: TForm_Alerta;
 begin
   Form_Alerta := TForm_Alerta.Create( nil );
   try
-    Form_Alerta.lblMen.Caption := ' ' + Texto;
+    Form_Alerta.lblMen.Caption := Texto;
     Form_Alerta.Caption := Texto1;
     Result := Form_Alerta.ShowModal = mrYes;
    finally

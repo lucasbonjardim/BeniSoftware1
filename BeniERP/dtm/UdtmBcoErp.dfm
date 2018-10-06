@@ -24,7 +24,7 @@ object DtmBcoErp: TDtmBcoErp
   object fdq_auxiliar: TFDQuery
     Connection = FDBcoERP
     Left = 32
-    Top = 64
+    Top = 80
   end
   object Fdq_usuario: TFDQuery
     Connection = FDBcoERP

@@ -1,10 +1,10 @@
 object Form_Alerta: TForm_Alerta
   Left = 0
   Top = 0
-  BorderIcons = [biMaximize]
+  BorderIcons = [biSystemMenu]
   Caption = 'Alerta'
-  ClientHeight = 111
-  ClientWidth = 1076
+  ClientHeight = 109
+  ClientWidth = 653
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,26 +13,28 @@ object Form_Alerta: TForm_Alerta
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 57
-    Width = 1076
+    Top = 55
+    Width = 653
     Height = 54
     Align = alBottom
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 113
-    ExplicitWidth = 761
+    ExplicitTop = 57
+    ExplicitWidth = 1076
     object btnConfirmar: TcxButton
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 1070
+      Width = 647
       Height = 48
       Align = alClient
       Caption = 'Sair'
@@ -172,16 +174,14 @@ object Form_Alerta: TForm_Alerta
       SpeedButtonOptions.Transparent = True
       TabOrder = 0
       OnClick = btnConfirmarClick
-      ExplicitTop = 16
-      ExplicitWidth = 1014
-      ExplicitHeight = 35
+      ExplicitWidth = 1070
     end
   end
   object pnlMessage: TPanel
     Left = 0
     Top = 17
-    Width = 1076
-    Height = 40
+    Width = 653
+    Height = 38
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
@@ -193,9 +193,8 @@ object Form_Alerta: TForm_Alerta
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitTop = 33
-    ExplicitWidth = 761
-    ExplicitHeight = 80
+    ExplicitWidth = 1076
+    ExplicitHeight = 40
     object lblMen: TcxLabel
       AlignWithMargins = True
       Left = 43
@@ -206,35 +205,35 @@ object Form_Alerta: TForm_Alerta
       Margins.Bottom = 5
       Align = alClient
       Caption = ' Confirmao Cancelamento?'
-      ExplicitLeft = 94
-      ExplicitWidth = 637
-      ExplicitHeight = 65
+      ExplicitWidth = 1003
+      ExplicitHeight = 25
     end
     object Panel2: TPanel
       Left = 0
       Top = 0
       Width = 38
-      Height = 40
+      Height = 38
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitHeight = 40
     end
     object Panel4: TPanel
-      Left = 1051
+      Left = 628
       Top = 0
       Width = 25
-      Height = 40
+      Height = 38
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitLeft = 736
-      ExplicitHeight = 80
+      ExplicitLeft = 1051
+      ExplicitHeight = 40
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1076
+    Width = 653
     Height = 17
     Align = alTop
     BevelOuter = bvNone
@@ -247,6 +246,6 @@ object Form_Alerta: TForm_Alerta
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 1020
+    ExplicitWidth = 1076
   end
 end
