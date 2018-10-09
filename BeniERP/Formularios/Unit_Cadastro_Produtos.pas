@@ -30,7 +30,8 @@ uses
   cxGrid, Vcl.StdCtrls, cxButtons, Vcl.Mask, Vcl.ComCtrls, cxTextEdit,
   cxCurrencyEdit, cxLabel, Vcl.ExtCtrls, cxPC, Vcl.ToolWin, cxDBEdit, cxDBLabel,
   Vcl.DBCtrls, cxDBExtLookupComboBox, Vcl.Buttons, cxDropDownEdit,
-  cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,System.StrUtils, cxCalendar;
+  cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,System.StrUtils, cxCalendar,
+  ACBrBase, ACBrEnterTab;
 
 type
   TForm_Cadastro_Produtos = class(TForm_Cadastro_Modelo)
@@ -419,15 +420,22 @@ type
     FDQuxiliar: TFDQuery;
     rdg_tpo_pesquisa: TRadioGroup;
     lbl_qnt_produtos: TLabel;
+    chk_mostrafiltrogrid: TCheckBox;
+    ACBrEnterTab: TACBrEnterTab;
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
     procedure BtnConsultarClick(Sender: TObject);
     procedure edtMaskKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure BtnLimparPesquisaClick(Sender: TObject);
+    procedure cxVisualizaDBTableView1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure chk_mostrafiltrogridClick(Sender: TObject);
+    procedure rgOptionGridClick(Sender: TObject);
   private
     procedure MostraProdutos;
     function retornabusca: string;
+    function PreencheSQLSring(lSQL: String):String;
     { Private declarations }
   public
     { Public declarations }
@@ -449,6 +457,7 @@ uses UdtmBcoErp, Unit_Variaveis_Globais, ParamControleLicenca,
 procedure TForm_Cadastro_Produtos.BtnConsultarClick(Sender: TObject);
 begin
   MostraProdutos;
+
 end;
 
 procedure TForm_Cadastro_Produtos.BtnLimparPesquisaClick(Sender: TObject);
@@ -457,6 +466,14 @@ begin
   edtMask.Text := '';
   lbl_qnt_produtos.Visible := False;
   lbl_qnt_produtos.Caption :='';
+end;
+
+procedure TForm_Cadastro_Produtos.chk_mostrafiltrogridClick(Sender: TObject);
+begin
+  inherited;
+ // if chk_mostrafiltrogrid.Checked then
+  //  cxVisualizaDBTableView1.f
+
 end;
 
 procedure TForm_Cadastro_Produtos.cxButton1Click(Sender: TObject);
@@ -473,12 +490,26 @@ begin
 
 end;
 
+procedure TForm_Cadastro_Produtos.cxVisualizaDBTableView1KeyDown(
+  Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  inherited;
+   if key = 13 then
+    cxPageControl1.ActivePage := tbCadastro;
+end;
+
 procedure TForm_Cadastro_Produtos.edtMaskKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   inherited;
-  if key = 13 then
-    MostraProdutos;
+  if key in [13,114] then
+  MostraProdutos
+  else
+  if key = 27 then
+  begin
+    edtMask.Text := '';
+    edtMask.setfocus;
+  end;
 end;
 
 function TForm_Cadastro_Produtos.retornabusca:String;
@@ -486,18 +517,47 @@ begin
   result := '''%'+edtMask.Text+'%''';
 end;
 
+procedure TForm_Cadastro_Produtos.rgOptionGridClick(Sender: TObject);
+begin
+  inherited;
+  MostraProdutos;
+end;
+
+function TForm_Cadastro_Produtos.PreencheSQLSring(lSQL: String):String;
+begin
+   result := ''''+lSQL+'''';
+end;
+
 
 procedure TForm_Cadastro_Produtos.MostraProdutos;
 var
-  Liga: String;
+  Liga, liga2: String;
   sql: String;
 begin
+  cxPageControl1.ActivePage := tbPesquisa;
   if rdg_tpo_pesquisa.ItemIndex = -1 then
     rdg_tpo_pesquisa.ItemIndex :=1;
+
+  if ((rgOptionGrid.ItemIndex = 1) and (edtMask.Text = EmptyStr)) then
+    if not  KDialog( 'Deseja Pesquisar somente produtos Ativos?', 'Atenção', tdtPergunta ) then
+    begin
+       dsPrincipal.DataSet.Close;
+       exit;
+    end;
+
+
+  if ((rgOptionGrid.ItemIndex = 2) and (edtMask.Text = EmptyStr)) then
+    if not  KDialog( 'Deseja Pesquisar somente produtos Inativos?', 'Atenção', tdtPergunta ) then
+    begin
+      dsPrincipal.DataSet.Close;
+      exit;
+    end;
+
 
   FdqProdutos.Close;
   DtmBcoErp.FDBcoERP.Commit;
   FdqProdutos.SQL.Clear;
+
   case  rdg_tpo_pesquisa.ItemIndex of
     0: Liga := 'COD_PRO';
     1: Liga := 'nome_pro';
@@ -509,10 +569,21 @@ begin
     end;
   end;
 
+  case rgOptionGrid.ItemIndex of
+    1: liga2 := 'and t.ativo_pro LIKE ' + PreencheSQLSring('S');
+    2: liga2 := 'and t.ativo_pro LIKE ' + PreencheSQLSring('N');
+    else
+       liga2 := 'and (t.ativo_pro =' + PreencheSQLSring('N')+' or t.ativo_pro = '+ PreencheSQLSring('S')+')';
+  end;
+
+
   sql :=
-  'select * from produto T                                                                          '+
-  'WHERE                                                                                            '+
-  Liga  + ' LIKE' + retornabusca + ' OR t.desc_cupom LIKE' + retornabusca ;
+  ('select * from produto T                                                                       '+
+  'WHERE (                                                                                        '+
+  Liga  + ' LIKE' + retornabusca + ' OR t.desc_cupom LIKE' + retornabusca + ')                    '+
+  liga2);
+
+
 
   FdqProdutos.SQL.Text := sql;
   FdqProdutos.Open;
@@ -529,9 +600,6 @@ begin
     lbl_qnt_produtos.Visible := true;
     lbl_qnt_produtos.Caption := IntToStr(FdqProdutos.RecordCount) + ' Registros Encontrados.  '
   end;
-
-
-
 end;
 
 end.

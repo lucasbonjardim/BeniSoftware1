@@ -39,7 +39,7 @@ Unit_Variaveis_Globais,Unit_Rotinas, Unit_F_mensagem_Dialog, Unit_Acesso,
   Unit_Principal, ParamControleTerminalPDV, ParamControleLicenca,
   ParamControleTerminalECF, UdtmACBR, UdtmImagens, Unit_Baixa_Tabela_IBPT,
   Unit_Cadastro_ICMS, Unit_Cadastro_Modelo, Unit_Cadastro_Produtos,
-  Unit_exibeefeitoespera, Unit_Relatorios, unit_utilfuncs;
+  Unit_exibeefeitoespera, Unit_Relatorios, unit_utilfuncs, Unit_Alerta;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -146,8 +146,8 @@ begin
         end;
       end else
       begin
-        showmessage('Parabéns por Adquirar o Software Beni E.R.P '+
-        sLineBreak+ 'Vamos Cadastrar o Primeiro usuário do Sistema.');
+        AlertCard('Parabéns por Adquirar o Software Beni E.R.P '+
+        sLineBreak+ 'Vamos Cadastrar o Primeiro usuário do Sistema.','Parabéns!!');
       end;
 
     end;

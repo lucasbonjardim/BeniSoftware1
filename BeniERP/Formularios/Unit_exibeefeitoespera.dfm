@@ -3,9 +3,9 @@ object form_exibeefeitoespera: Tform_exibeefeitoespera
   Top = 0
   AlphaBlend = True
   AlphaBlendValue = 240
-  Caption = 'form_exibeefeitoespera'
-  ClientHeight = 111
-  ClientWidth = 126
+  BorderStyle = bsNone
+  ClientHeight = 619
+  ClientWidth = 719
   Color = 5395026
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,14 +13,29 @@ object form_exibeefeitoespera: Tform_exibeefeitoespera
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
-  object ActivityIndicator1: TActivityIndicator
-    Left = 40
-    Top = 32
-    Animate = True
-    FrameDelay = 20
-    IndicatorSize = aisLarge
-    IndicatorType = aitSectorRing
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 719
+    Height = 619
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitWidth = 124
+    ExplicitHeight = 108
+    object ActivityIndicator1: TActivityIndicator
+      AlignWithMargins = True
+      Left = 312
+      Top = 297
+      Animate = True
+      IndicatorSize = aisLarge
+      IndicatorType = aitRotatingSector
+    end
   end
 end

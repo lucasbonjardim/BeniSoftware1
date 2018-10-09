@@ -1,51 +1,45 @@
 inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   Caption = 'Cadastro de Produtos'
-  ClientHeight = 582
-  ClientWidth = 1297
-  ExplicitWidth = 1313
-  ExplicitHeight = 621
+  ClientHeight = 617
+  ClientWidth = 1384
+  ExplicitWidth = 1400
+  ExplicitHeight = 656
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 62
-    Width = 1297
+    Width = 1384
     Brush.Color = clMedGray
     ExplicitTop = 62
     ExplicitWidth = 1307
   end
   inherited ToolBar1: TToolBar
-    Width = 1291
+    Width = 1378
     Height = 53
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 1297
+    ExplicitWidth = 1378
     ExplicitHeight = 53
   end
   inherited cxPageControl1: TcxPageControl
     Top = 96
-    Width = 1297
-    Height = 486
-    Properties.ActivePage = tbPesquisa
-    ExplicitTop = 90
-    ExplicitWidth = 1297
-    ExplicitHeight = 492
-    ClientRectBottom = 484
-    ClientRectRight = 1295
+    Width = 1384
+    Height = 521
+    ExplicitTop = 96
+    ExplicitWidth = 1384
+    ExplicitHeight = 521
+    ClientRectBottom = 519
+    ClientRectRight = 1382
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1293
-      ExplicitHeight = 464
+      ExplicitWidth = 1380
+      ExplicitHeight = 493
       inherited Panel1: TPanel
-        Width = 1293
-        ExplicitWidth = 1293
+        Width = 1380
+        ExplicitWidth = 1380
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
         end
         inherited Panel2: TPanel
-          inherited edtCurr: TcxCurrencyEdit
-            ExplicitHeight = 23
-          end
           inherited edtMask: TMaskEdit
             Text = ''
             Visible = True
@@ -53,6 +47,9 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
         end
         inherited cxButton1: TcxButton
+          Hint = 'F3 Pesquisar'
+          ParentShowHint = False
+          ShowHint = True
           OnClick = cxButton1Click
         end
         inherited rgOptionGrid: TRadioGroup
@@ -62,6 +59,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             'Todos'
             'Ativos'
             'Inativos')
+          OnClick = rgOptionGridClick
           ExplicitLeft = 895
           ExplicitWidth = 339
         end
@@ -79,34 +77,52 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             'Descri'#231#227'o')
           TabOrder = 5
         end
+        object chk_mostrafiltrogrid: TCheckBox
+          Left = 1283
+          Top = 0
+          Width = 97
+          Height = 41
+          Align = alRight
+          Caption = 'Mostra Filtros'
+          TabOrder = 6
+          OnClick = chk_mostrafiltrogridClick
+          ExplicitLeft = 1240
+          ExplicitTop = 13
+          ExplicitHeight = 17
+        end
       end
       object cxVisualiza: TcxGrid
         AlignWithMargins = True
         Left = 3
         Top = 44
-        Width = 1287
-        Height = 411
+        Width = 1374
+        Height = 446
         Align = alClient
         TabOrder = 1
+        LockedStateImageOptions.Text = 'Aguarde!'
         LookAndFeel.Kind = lfStandard
         LookAndFeel.NativeStyle = False
         LookAndFeel.SkinName = 'Metropolis'
         RootLevelOptions.DetailFrameColor = clNone
-        ExplicitHeight = 417
         object cxVisualizaDBTableView1: TcxGridDBTableView
           OnDblClick = cxVisualizaDBTableView1DblClick
+          OnKeyDown = cxVisualizaDBTableView1KeyDown
           Navigator.Buttons.CustomButtons = <>
+          Navigator.Visible = True
+          FindPanel.InfoText = 'Digite e pressione Enter para Buscar Produtos.'
           DataController.DataSource = dsPrincipal
+          DataController.Filter.Active = True
+          DataController.Filter.AutoDataSetFilter = True
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <>
           DataController.Summary.SummaryGroups = <>
+          FilterRow.InfoText = 'Clique para Definir o FIltro.'
           OptionsCustomize.ColumnHiding = True
           OptionsCustomize.ColumnsQuickCustomization = True
           OptionsData.CancelOnExit = False
           OptionsData.Deleting = False
           OptionsData.DeletingConfirmation = False
-          OptionsData.Editing = False
-          OptionsData.Inserting = False
+          OptionsView.NoDataToDisplayInfoText = 'N'#227'o h'#225' Dados para mostrar.'
           object cxVisualizaDBTableView1STATUS: TcxGridDBColumn
             Caption = 'Status'
             DataBinding.FieldName = 'STATUS'
@@ -424,40 +440,37 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1293
-      ExplicitHeight = 464
+      ExplicitWidth = 1380
+      ExplicitHeight = 493
       object cxPaginas2: TcxPageControl
         Left = 0
         Top = 0
-        Width = 1293
-        Height = 458
+        Width = 1380
+        Height = 493
         Align = alClient
         TabOrder = 0
-        Properties.ActivePage = cxObs
+        Properties.ActivePage = cxDadosProduto
         Properties.CustomButtons.Buttons = <>
-        ExplicitHeight = 464
-        ClientRectBottom = 456
+        ClientRectBottom = 491
         ClientRectLeft = 2
-        ClientRectRight = 1291
+        ClientRectRight = 1378
         ClientRectTop = 26
         object cxDadosProduto: TcxTabSheet
           Caption = 'Dados do produto'
           ImageIndex = 0
-          ExplicitHeight = 436
           object pnlLateral1: TPanel
-            Left = 832
+            Left = 1068
             Top = 0
-            Width = 457
-            Height = 430
+            Width = 308
+            Height = 465
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitHeight = 436
             object grpAtivoCont: TGroupBox
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 451
+              Width = 302
               Height = 140
               Align = alTop
               Caption = ' Op'#231#245'es do Produto '
@@ -466,7 +479,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 AlignWithMargins = True
                 Left = 5
                 Top = 18
-                Width = 441
+                Width = 292
                 Height = 17
                 Align = alTop
                 Caption = 'Ativo'
@@ -486,7 +499,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 AlignWithMargins = True
                 Left = 5
                 Top = 41
-                Width = 441
+                Width = 292
                 Height = 17
                 Align = alTop
                 Caption = 'Complemento na Descri'#231#227'o'
@@ -506,7 +519,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 AlignWithMargins = True
                 Left = 5
                 Top = 64
-                Width = 441
+                Width = 292
                 Height = 17
                 Align = alTop
                 Caption = 'Controla Estoque'
@@ -526,7 +539,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 AlignWithMargins = True
                 Left = 5
                 Top = 87
-                Width = 441
+                Width = 292
                 Height = 17
                 Align = alTop
                 Caption = 'Sair na tabela de Pre'#231'o'
@@ -546,7 +559,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 AlignWithMargins = True
                 Left = 5
                 Top = 110
-                Width = 441
+                Width = 292
                 Height = 17
                 Align = alTop
                 Caption = 'Visualiza Mobile'
@@ -566,11 +579,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             object Panel11: TPanel
               Left = 0
               Top = 146
-              Width = 457
+              Width = 308
               Height = 47
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 1
               object cxLabel25: TcxLabel
@@ -593,11 +605,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             Left = 0
             Top = 0
             Width = 849
-            Height = 430
+            Height = 465
             Align = alLeft
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitHeight = 436
             object Panel3: TPanel
               Left = 0
               Top = 0
@@ -605,7 +616,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 0
               object cxLabel1: TcxLabel
@@ -616,9 +626,9 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               end
               object dbedtCOD_PRO: TDBEdit
                 Left = 5
-                Top = 19
+                Top = 14
                 Width = 121
-                Height = 23
+                Height = 24
                 TabStop = False
                 CharCase = ecUpperCase
                 DataField = 'COD_PRO'
@@ -634,29 +644,31 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               end
               object cxLabel3: TcxLabel
                 Left = 134
-                Top = 0
+                Top = -1
                 Caption = 'C'#243'digo de Barras :'
                 Transparent = True
               end
               object dbedtCODIGO_BARRA_PRO: TDBEdit
                 Left = 134
-                Top = 16
+                Top = 14
                 Width = 121
-                Height = 21
+                Height = 24
+                AutoSize = False
                 CharCase = ecUpperCase
                 DataField = 'CODIGO_BARRA_PRO'
                 DataSource = dsPrincipal
-                TabOrder = 3
+                TabOrder = 2
               end
               object cxLabel4: TcxLabel
                 Left = 261
-                Top = 0
+                Top = -1
                 Caption = 'Tipo produto :'
                 Transparent = True
               end
               object cxDBLTipo: TcxDBLookupComboBox
                 Left = 264
-                Top = 19
+                Top = 14
+                AutoSize = False
                 DataBinding.DataField = 'CODIGO_TIPO'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -672,13 +684,14 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                     FieldName = 'DESCRICAO'
                   end>
                 Properties.ListFieldIndex = 1
-                TabOrder = 5
+                TabOrder = 3
+                Height = 24
                 Width = 145
               end
               object dbrgrpTIPO_PRODUCAO: TDBRadioGroup
                 Left = 415
                 Top = 3
-                Width = 154
+                Width = 231
                 Height = 39
                 Caption = ' Tipo Produ'#231#227'o '
                 Columns = 2
@@ -700,7 +713,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 2
               DesignSize = (
@@ -716,8 +728,9 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Left = 5
                 Top = 18
                 Width = 838
-                Height = 21
+                Height = 24
                 Anchors = [akLeft, akTop, akRight]
+                AutoSize = False
                 CharCase = ecUpperCase
                 DataField = 'NOME_PRO'
                 DataSource = dsPrincipal
@@ -731,7 +744,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 3
               DesignSize = (
@@ -762,7 +774,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 1
               object dbtxtEX: TDBText
@@ -783,11 +794,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Left = 5
                 Top = 18
                 Width = 69
-                Height = 21
+                Height = 24
+                AutoSize = False
                 CharCase = ecUpperCase
                 DataField = 'ESTOQUE_MINIMO_PRO'
                 DataSource = dsPrincipal
-                TabOrder = 1
+                TabOrder = 3
               end
               object cxLabel7: TcxLabel
                 Left = 80
@@ -799,11 +811,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Left = 80
                 Top = 18
                 Width = 153
-                Height = 21
+                Height = 24
+                AutoSize = False
                 CharCase = ecUpperCase
                 DataField = 'LOCALIZACAO_PRO'
                 DataSource = dsPrincipal
-                TabOrder = 3
+                TabOrder = 4
               end
               object cxLabel8: TcxLabel
                 Left = 239
@@ -815,11 +828,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Left = 239
                 Top = 18
                 Width = 120
-                Height = 21
+                Height = 24
+                AutoSize = False
                 CharCase = ecUpperCase
                 DataField = 'REFERENCIA_PRO'
                 DataSource = dsPrincipal
-                TabOrder = 5
+                TabOrder = 6
               end
               object cxLabel9: TcxLabel
                 Left = 366
@@ -830,6 +844,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBNCM: TcxDBExtLookupComboBox
                 Left = 366
                 Top = 18
+                AutoSize = False
                 DataBinding.DataField = 'COD_NCM'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownListStyle = lsEditList
@@ -837,6 +852,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Properties.DropDownSizeable = True
                 Properties.DropDownWidth = 600
                 TabOrder = 7
+                Height = 24
                 Width = 105
               end
               object cxLabel32: TcxLabel
@@ -854,13 +870,15 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBExtCEST: TcxDBExtLookupComboBox
                 Left = 525
                 Top = 18
+                AutoSize = False
                 DataBinding.DataField = 'CEST'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownListStyle = lsEditList
                 Properties.DropDownRows = 15
                 Properties.DropDownSizeable = True
                 Properties.DropDownWidth = 600
-                TabOrder = 10
+                TabOrder = 8
+                Height = 24
                 Width = 105
               end
             end
@@ -871,7 +889,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 4
               object cxLabel10: TcxLabel
@@ -909,6 +926,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBCODIGO_UNIDADE_SAIDA: TcxDBLookupComboBox
                 Left = 5
                 Top = 17
+                AutoSize = False
                 DataBinding.DataField = 'CODIGO_UNIDADE_SAIDA'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -925,6 +943,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                   end>
                 Properties.ListFieldIndex = 1
                 TabOrder = 1
+                Height = 24
                 Width = 176
               end
               object cxLabel12: TcxLabel
@@ -936,6 +955,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBCODIGO_UNIDADE_ENTRADA: TcxDBLookupComboBox
                 Left = 189
                 Top = 17
+                AutoSize = False
                 DataBinding.DataField = 'CODIGO_UNIDADE_ENTRADA'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -952,6 +972,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                   end>
                 Properties.ListFieldIndex = 1
                 TabOrder = 2
+                Height = 24
                 Width = 176
               end
               object cxLabel13: TcxLabel
@@ -968,7 +989,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 5
               object cxLabel14: TcxLabel
@@ -1075,7 +1095,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 6
               object cxLabel17: TcxLabel
@@ -1087,6 +1106,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBCOD_LAB: TcxDBLookupComboBox
                 Left = 5
                 Top = 16
+                AutoSize = False
                 DataBinding.DataField = 'COD_LAB'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -1103,6 +1123,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                   end>
                 Properties.ListFieldIndex = 1
                 TabOrder = 1
+                Height = 24
                 Width = 228
               end
               object cxLabel21: TcxLabel
@@ -1114,6 +1135,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBCODIGO_SETOR_ESTOQUE: TcxDBLookupComboBox
                 Left = 298
                 Top = 16
+                AutoSize = False
                 DataBinding.DataField = 'CODIGO_SETOR_ESTOQUE'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -1130,6 +1152,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                   end>
                 Properties.ListFieldIndex = 1
                 TabOrder = 3
+                Height = 24
                 Width = 281
               end
             end
@@ -1140,7 +1163,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 7
               object cxLabel22: TcxLabel
@@ -1152,6 +1174,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBLookupComboBox1: TcxDBLookupComboBox
                 Left = 5
                 Top = 18
+                AutoSize = False
                 DataBinding.DataField = 'COD_SEC'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -1169,6 +1192,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Properties.ListFieldIndex = 1
                 Properties.ListOptions.SyncMode = True
                 TabOrder = 1
+                Height = 24
                 Width = 156
               end
               object cxLabel23: TcxLabel
@@ -1180,6 +1204,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBLookupComboBox2: TcxDBLookupComboBox
                 Left = 225
                 Top = 18
+                AutoSize = False
                 DataBinding.DataField = 'COD_GRUPO'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -1197,11 +1222,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Properties.ListFieldIndex = 1
                 Properties.ListOptions.SyncMode = True
                 TabOrder = 3
+                Height = 24
                 Width = 215
               end
               object cxDBLookupComboBox3: TcxDBLookupComboBox
                 Left = 446
                 Top = 18
+                AutoSize = False
                 DataBinding.DataField = 'SUB_GRUPO'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -1219,6 +1246,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Properties.ListFieldIndex = 1
                 Properties.ListOptions.SyncMode = True
                 TabOrder = 4
+                Height = 24
                 Width = 214
               end
               object cxLabel24: TcxLabel
@@ -1235,7 +1263,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Height = 45
               Align = alTop
               BevelOuter = bvNone
-              Color = clWhite
               ParentBackground = False
               TabOrder = 8
               object cxLabel31: TcxLabel
@@ -1292,15 +1319,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxBalanca: TcxTabSheet
           Caption = 'Balan'#231'a'
           ImageIndex = 1
-          ExplicitHeight = 436
           object pnl1: TPanel
             Left = 0
             Top = 0
-            Width = 1289
+            Width = 1376
             Height = 47
             Align = alTop
             BevelOuter = bvNone
-            Color = clWhite
             ParentBackground = False
             TabOrder = 0
             object dbrgrpPRODUTO_PESADO_PRO: TDBRadioGroup
@@ -1341,6 +1366,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBCOD_SETOR: TcxDBLookupComboBox
                 Left = 5
                 Top = 20
+                AutoSize = False
                 DataBinding.DataField = 'COD_SETOR'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -1357,6 +1383,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                   end>
                 Properties.ListFieldIndex = 1
                 TabOrder = 1
+                Height = 24
                 Width = 300
               end
             end
@@ -1364,11 +1391,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel12: TPanel
             Left = 0
             Top = 47
-            Width = 1289
+            Width = 1376
             Height = 47
             Align = alTop
             BevelOuter = bvNone
-            Color = clWhite
             ParentBackground = False
             TabOrder = 1
             object Panel13: TPanel
@@ -1388,6 +1414,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               object cxDBINDICE_RECEITA_PRO: TcxDBLookupComboBox
                 Left = 5
                 Top = 20
+                AutoSize = False
                 DataBinding.DataField = 'INDICE_RECEITA_PRO'
                 DataBinding.DataSource = dsPrincipal
                 Properties.DropDownAutoSize = True
@@ -1403,6 +1430,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                     FieldName = 'INGREDIENTES'
                   end>
                 TabOrder = 1
+                Height = 24
                 Width = 174
               end
             end
@@ -1424,7 +1452,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Left = 5
                 Top = 20
                 Width = 121
-                Height = 21
+                Height = 24
+                AutoSize = False
                 CharCase = ecUpperCase
                 DataField = 'DIAS_VALIDADE_PRO'
                 DataSource = dsPrincipal
@@ -1449,7 +1478,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 Left = 6
                 Top = 25
                 Width = 121
-                Height = 21
+                Height = 24
+                AutoSize = False
                 CharCase = ecUpperCase
                 DataField = 'TECLA_ATALHO_PRO'
                 DataSource = dsPrincipal
@@ -1461,28 +1491,25 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxObs: TcxTabSheet
           Caption = 'Observa'#231#245'es'
           ImageIndex = 2
-          ExplicitHeight = 436
           object dbmmoOBS: TDBMemo
             Left = 0
             Top = 0
-            Width = 1289
-            Height = 430
+            Width = 1376
+            Height = 465
             Align = alClient
             BorderStyle = bsNone
             DataField = 'OBS'
             DataSource = dsPrincipal
             TabOrder = 0
-            ExplicitHeight = 436
           end
         end
         object cxFoto: TcxTabSheet
           Caption = 'Foto'
           ImageIndex = 3
-          ExplicitHeight = 436
           object GroupBox1: TGroupBox
             Left = 0
             Top = 0
-            Width = 1289
+            Width = 1376
             Height = 209
             Align = alTop
             Caption = 'Foto'
@@ -1529,23 +1556,20 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxCompra: TcxTabSheet
           Caption = 'Compras / Venda'
           ImageIndex = 4
-          ExplicitHeight = 436
           object Panel17: TPanel
             Left = 0
             Top = 217
-            Width = 1289
-            Height = 213
+            Width = 1376
+            Height = 248
             Align = alClient
             BevelOuter = bvNone
-            Color = clWhite
             ParentBackground = False
             TabOrder = 0
-            ExplicitHeight = 219
             object shp2: TShape
               AlignWithMargins = True
               Left = 0
               Top = 29
-              Width = 1289
+              Width = 1376
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -1560,7 +1584,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 0
               Top = 3
-              Width = 1289
+              Width = 1376
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -1575,11 +1599,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 3
               Top = 38
-              Width = 1283
-              Height = 172
+              Width = 1370
+              Height = 207
               Align = alClient
               TabOrder = 0
-              ExplicitHeight = 178
               object cxComprasDBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
                 DataController.Summary.DefaultGroupSummaryItems = <>
@@ -1662,18 +1685,17 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Style.TextStyle = [fsBold, fsItalic]
               Properties.Alignment.Horz = taCenter
               Properties.Alignment.Vert = taVCenter
-              AnchorX = 645
+              AnchorX = 688
               AnchorY = 18
             end
           end
           object Panel18: TPanel
             Left = 0
             Top = 0
-            Width = 1289
+            Width = 1376
             Height = 217
             Align = alTop
             BevelOuter = bvNone
-            Color = clWhite
             ParentBackground = False
             TabOrder = 1
             object GroupBox3: TGroupBox
@@ -2051,15 +2073,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object tabFornecedores: TcxTabSheet
           Caption = 'Fornecedores'
           ImageIndex = 5
-          ExplicitHeight = 436
           object cxFornecedores: TcxGrid
             Left = 0
             Top = 0
-            Width = 1289
-            Height = 389
+            Width = 1376
+            Height = 424
             Align = alClient
             TabOrder = 0
-            ExplicitHeight = 395
             object cxFornecedoresDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -2092,29 +2112,25 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object pnl3: TPanel
             Left = 0
-            Top = 389
-            Width = 1289
+            Top = 424
+            Width = 1376
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
-            Color = clWhite
             ParentBackground = False
             TabOrder = 1
-            ExplicitTop = 395
           end
         end
         object tabComposicao: TcxTabSheet
           Caption = 'Composi'#231#227'o'
           ImageIndex = 6
-          ExplicitHeight = 436
           object cxComposicao: TcxGrid
             Left = 0
             Top = 0
-            Width = 1289
-            Height = 389
+            Width = 1376
+            Height = 424
             Align = alClient
             TabOrder = 0
-            ExplicitHeight = 395
             object cxGridDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -2164,25 +2180,22 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object Panel19: TPanel
             Left = 0
-            Top = 389
-            Width = 1289
+            Top = 424
+            Width = 1376
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
-            Color = clWhite
             ParentBackground = False
             TabOrder = 1
-            ExplicitTop = 395
           end
         end
         object cxTabSheet1: TcxTabSheet
           Caption = 'Cupom Fiscal'
           ImageIndex = 7
-          ExplicitHeight = 436
           object pnl4: TPanel
             Left = 0
             Top = 0
-            Width = 1289
+            Width = 1376
             Height = 46
             Align = alTop
             BevelOuter = bvNone
@@ -2196,6 +2209,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             object cxDBLookupComboBox4: TcxDBLookupComboBox
               Left = 9
               Top = 18
+              AutoSize = False
               DataBinding.DataField = 'ICMS_CF_EST'
               DataBinding.DataSource = dsPrincipal
               Properties.DropDownAutoSize = True
@@ -2210,6 +2224,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 end>
               Properties.ListFieldIndex = 1
               TabOrder = 1
+              Height = 24
               Width = 296
             end
             object cxLabel36: TcxLabel
@@ -2222,7 +2237,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Left = 311
               Top = 18
               Width = 121
-              Height = 21
+              Height = 24
+              AutoSize = False
               DataField = 'CST_CF_EST'
               DataSource = dsPrincipal
               TabOrder = 3
@@ -2231,7 +2247,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object Panel21: TPanel
             Left = 0
             Top = 46
-            Width = 1289
+            Width = 1376
             Height = 41
             Align = alTop
             BevelOuter = bvNone
@@ -2245,6 +2261,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             object cxDBLookupComboBox5: TcxDBLookupComboBox
               Left = 9
               Top = 18
+              AutoSize = False
               DataBinding.DataField = 'ICMS_CF_FORA'
               DataBinding.DataSource = dsPrincipal
               Properties.DropDownAutoSize = True
@@ -2259,6 +2276,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
                 end>
               Properties.ListFieldIndex = 1
               TabOrder = 1
+              Height = 24
               Width = 296
             end
             object cxLabel37: TcxLabel
@@ -2271,7 +2289,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Left = 311
               Top = 18
               Width = 121
-              Height = 21
+              Height = 24
+              AutoSize = False
               DataField = 'CST_CF_FORA'
               DataSource = dsPrincipal
               TabOrder = 3
@@ -2281,7 +2300,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxTabSheet2: TcxTabSheet
           Caption = 'Medicamento'
           ImageIndex = 8
-          ExplicitHeight = 436
           object Label8: TLabel
             Left = 16
             Top = 16
@@ -2321,18 +2339,22 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object cxDBTextEdit2: TcxDBTextEdit
             Left = 16
-            Top = 80
+            Top = 83
+            AutoSize = False
             DataBinding.DataField = 'REGISTRO_MEDICAMENTO'
             DataBinding.DataSource = dsPrincipal
             TabOrder = 0
+            Height = 24
             Width = 121
           end
           object cxDBTextEdit3: TcxDBTextEdit
             Left = 16
             Top = 128
+            AutoSize = False
             DataBinding.DataField = 'NUMERO_LOTE'
             DataBinding.DataSource = dsPrincipal
             TabOrder = 1
+            Height = 24
             Width = 121
           end
         end
@@ -2341,13 +2363,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   end
   inherited pnl_top: TPanel
     Top = 68
-    Width = 1297
+    Width = 1384
     Height = 28
-    ExplicitTop = 62
-    ExplicitWidth = 1297
+    ExplicitTop = 68
+    ExplicitWidth = 1384
     ExplicitHeight = 28
     object lbl_qnt_produtos: TLabel [0]
-      Left = 1155
+      Left = 1242
       Top = 0
       Width = 142
       Height = 28
@@ -2360,7 +2382,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False
-      ExplicitLeft = 1096
+      ExplicitLeft = 1252
       ExplicitHeight = 13
     end
     inherited BtnRegistroPosterior: TcxButton
@@ -3106,7 +3128,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   object cxGridImg: TcxImageList
     DrawingStyle = dsTransparent
     FormatVersion = 1
-    DesignInfo = 1049848
+    DesignInfo = 525560
     ImageInfo = <
       item
         Image.Data = {
@@ -3224,5 +3246,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
     Connection = DtmBcoErp.FDBcoERP
     Left = 937
     Top = 7
+  end
+  object ACBrEnterTab: TACBrEnterTab
+    EnterAsTab = True
+    Left = 1008
+    Top = 8
   end
 end

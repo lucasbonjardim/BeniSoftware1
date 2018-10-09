@@ -13,9 +13,7 @@ object Form_Alerta: TForm_Alerta
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
-  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
-  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -28,8 +26,6 @@ object Form_Alerta: TForm_Alerta
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 57
-    ExplicitWidth = 1076
     object btnConfirmar: TcxButton
       AlignWithMargins = True
       Left = 3
@@ -174,7 +170,6 @@ object Form_Alerta: TForm_Alerta
       SpeedButtonOptions.Transparent = True
       TabOrder = 0
       OnClick = btnConfirmarClick
-      ExplicitWidth = 1070
     end
   end
   object pnlMessage: TPanel
@@ -193,8 +188,6 @@ object Form_Alerta: TForm_Alerta
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1076
-    ExplicitHeight = 40
     object lblMen: TcxLabel
       AlignWithMargins = True
       Left = 43
@@ -205,8 +198,6 @@ object Form_Alerta: TForm_Alerta
       Margins.Bottom = 5
       Align = alClient
       Caption = ' Confirmao Cancelamento?'
-      ExplicitWidth = 1003
-      ExplicitHeight = 25
     end
     object Panel2: TPanel
       Left = 0
@@ -216,7 +207,6 @@ object Form_Alerta: TForm_Alerta
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitHeight = 40
     end
     object Panel4: TPanel
       Left = 628
@@ -226,8 +216,6 @@ object Form_Alerta: TForm_Alerta
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitLeft = 1051
-      ExplicitHeight = 40
     end
   end
   object Panel3: TPanel
@@ -246,6 +234,5 @@ object Form_Alerta: TForm_Alerta
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 1076
   end
 end

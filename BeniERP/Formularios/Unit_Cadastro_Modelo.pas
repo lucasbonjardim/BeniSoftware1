@@ -86,6 +86,7 @@ type
     procedure cxGrid1DBTableView1DblClick(Sender: TObject);
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -316,6 +317,23 @@ begin
   end
   else
   Action :=caFree;
+end;
+
+procedure TForm_Cadastro_Modelo.FormCreate(Sender: TObject);
+begin
+  BtnPesquisar.Enabled         :=True;
+  BtnLimparPesquisa.Enabled    :=False;
+  BtnRegistroAnterior.Enabled  :=False;
+  BtnRegistroPosterior.Enabled :=False;
+  BtnPrimeiroRegistro.Enabled  :=False;
+  BtnUltimoRegistro.Enabled    :=False;
+  btnNovo.Enabled              :=True;
+  btnSalvar.Enabled            :=False;
+  btnCancelar.Enabled          :=False;
+  btnAlterar.Enabled           :=False;
+  btnExcluir.Enabled           :=False;
+  btnFechar.Enabled            :=True;
+  cxPageControl1.ActivePage := tbPesquisa;
 end;
 
 procedure TForm_Cadastro_Modelo.FormKeyDown(Sender: TObject; var Key: Word;

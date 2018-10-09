@@ -3342,9 +3342,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 186
+    Top = 208
     Width = 1253
-    Height = 538
+    Height = 516
     Align = alClient
     Center = True
     Picture.Data = {
@@ -6676,28 +6676,25 @@ object Form_Principal: TForm_Principal
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 186
+    Top = 208
     Width = 185
-    Height = 538
+    Height = 516
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 151
-    ExplicitHeight = 573
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 538
+      Height = 516
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
-      ExplicitHeight = 573
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -6747,7 +6744,7 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 2
     Width = 1438
-    Height = 25
+    Height = 47
     Align = alTop
     BevelOuter = bvNone
     Color = 15450368
@@ -6763,7 +6760,7 @@ object Form_Principal: TForm_Principal
       Left = 1395
       Top = 0
       Width = 43
-      Height = 25
+      Height = 47
       Align = alRight
       BevelOuter = bvNone
       Color = clHighlight
@@ -6776,7 +6773,7 @@ object Form_Principal: TForm_Principal
       Left = 1051
       Top = 0
       Width = 344
-      Height = 25
+      Height = 47
       Align = alRight
       BevelOuter = bvNone
       Color = clHighlight
@@ -6786,7 +6783,7 @@ object Form_Principal: TForm_Principal
       TabOrder = 1
       object Panel2: TPanel
         Left = 0
-        Top = -48
+        Top = -26
         Width = 344
         Height = 73
         Align = alBottom
@@ -6798,7 +6795,7 @@ object Form_Principal: TForm_Principal
       Left = 0
       Top = 0
       Width = 417
-      Height = 25
+      Height = 47
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
@@ -6819,13 +6816,13 @@ object Form_Principal: TForm_Principal
         Left = 0
         Top = 0
         Width = 46
-        Height = 25
+        Height = 47
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 0
         object btn_lateral: TButton
           Left = 0
-          Top = -15
+          Top = 7
           Width = 46
           Height = 40
           Cursor = crHandPoint
@@ -6854,7 +6851,7 @@ object Form_Principal: TForm_Principal
   end
   object dxRibbon1: TdxRibbon
     Left = 0
-    Top = 27
+    Top = 49
     Width = 1438
     Height = 124
     BarManager = dxBarManager1
@@ -6995,11 +6992,11 @@ object Form_Principal: TForm_Principal
     BevelOuter = bvNone
     Color = 6961398
     ParentBackground = False
-    TabOrder = 8
+    TabOrder = 5
   end
   object pnl_infodados: TPanel
     Left = 0
-    Top = 151
+    Top = 173
     Width = 1438
     Height = 35
     Align = alTop
@@ -7032,7 +7029,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 228
     Bitmap = {
-      494C010104008000840120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010104008000900120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -23712,7 +23709,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar5: TdxBar
       Caption = 'Notas de Entrada'
       CaptionButtons = <>
-      DockedLeft = 220
+      DockedLeft = 221
       DockedTop = 0
       FloatLeft = 942
       FloatTop = 8
@@ -23736,7 +23733,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar6: TdxBar
       Caption = 'Saidas'
       CaptionButtons = <>
-      DockedLeft = 372
+      DockedLeft = 374
       DockedTop = 0
       FloatLeft = 942
       FloatTop = 8

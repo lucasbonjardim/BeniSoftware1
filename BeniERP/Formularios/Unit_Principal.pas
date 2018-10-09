@@ -410,12 +410,14 @@ type
   private
     hora : TDateTime;
     dia, tarde, noite: string;
+
   public
    vg_usunome     : String;
    vg_ususenh     : String;
    vg_codigogrupo : String;
    vg_temacor     : String;
    vg_cadeado     : Boolean;
+    procedure Exibeefeitoespera;
   end;
 
 var
@@ -515,6 +517,18 @@ end;
 procedure TForm_Principal.p_abreconfig(Sender: TObject);
 begin
   AbreForm(TForm_Cadastro_Modelo,Form_Cadastro_Modelo);
+end;
+
+procedure TForm_Principal.Exibeefeitoespera;
+begin
+  try
+    Application.CreateForm(Tform_exibeefeitoespera, form_exibeefeitoespera);
+    form_exibeefeitoespera.Show;
+    sleep(590);
+  finally
+   FreeAndNil(form_exibeefeitoespera);
+  end;
+
 end;
 
 end.

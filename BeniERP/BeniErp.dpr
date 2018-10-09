@@ -28,12 +28,12 @@ uses
 {$R *.res}
 
 begin
+  //ReportMemoryLeaksOnShutdown := True;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Principal, Form_Principal);
   Application.CreateForm(TdtmImagens, dtmImagens);
   Application.CreateForm(TDtmBcoErp, DtmBcoErp);
   Application.CreateForm(TdtmACBR, dtmACBR);
-  Application.CreateForm(TForm_Alerta, Form_Alerta);
   Application.Run;
 end.
