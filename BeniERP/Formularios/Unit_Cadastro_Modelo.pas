@@ -28,7 +28,8 @@ uses
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
   cxGrid,FireDAC.Comp.Client, cxPC, Vcl.ToolWin, cxContainer, Vcl.Mask,
   cxTextEdit, cxCurrencyEdit, cxLabel, dxSkinsdxNavBarPainter,
-  dxSkinsdxNavBarAccordionViewPainter, dxNavBar;
+  dxSkinsdxNavBarAccordionViewPainter, dxNavBar, ACBrBase, ACBrEnterTab,
+  dxScreenTip, dxCustomHint, cxHint;
 
 type
   TForm_Cadastro_Modelo = class(TForm)
@@ -66,6 +67,12 @@ type
     BtnPrimeiroRegistro: TcxButton;
     BtnRegistroAnterior: TcxButton;
     BtnUltimoRegistro: TcxButton;
+    pnl_baixo: TPanel;
+    Shape3: TShape;
+    ACBrEnterTab1: TACBrEnterTab;
+    Panel22: TPanel;
+    Panel23: TPanel;
+    cxHintStyleController1: TcxHintStyleController;
     procedure btn_sairClick(Sender: TObject);
     procedure BtnPrimeiroRegistroClick(Sender: TObject);
     procedure BtnRegistroAnteriorClick(Sender: TObject);
@@ -143,8 +150,9 @@ end;
 
 procedure TForm_Cadastro_Modelo.BtnConsultarClick(Sender: TObject);
 begin
-   try
-    cxPageControl1.ActivePage := tbPesquisa;
+  try
+    tbCadastro.TabVisible        := True;
+    cxPageControl1.ActivePage    := tbPesquisa;
     dsPrincipal.DataSet.open;
 
   except on e:Exception do
@@ -193,6 +201,7 @@ end;
 procedure TForm_Cadastro_Modelo.BtnNovoClick(Sender: TObject);
 begin
    try
+    tbCadastro.TabVisible        := True;
     cxPageControl1.ActivePage := tbCadastro;
 
     if not dsPrincipal.DataSet.Active then
@@ -333,7 +342,8 @@ begin
   btnAlterar.Enabled           :=False;
   btnExcluir.Enabled           :=False;
   btnFechar.Enabled            :=True;
-  cxPageControl1.ActivePage := tbPesquisa;
+  cxPageControl1.ActivePage    := tbPesquisa;
+  tbCadastro.TabVisible        := False;
 end;
 
 procedure TForm_Cadastro_Modelo.FormKeyDown(Sender: TObject; var Key: Word;
@@ -342,6 +352,7 @@ begin
    case key of
      VK_ESCAPE:
      begin
+       if KDialog( 'Deseja Sair?', 'Sair', tdtPergunta ) then
        BtnFecharClick( nil );
        Abort;
        Exit;
@@ -388,7 +399,9 @@ end;
 
 procedure TForm_Cadastro_Modelo.BtnLimparPesquisaClick(Sender: TObject);
 begin
-   try
+  try
+    tbCadastro.TabVisible        := False;
+    cxPageControl1.ActivePage    := tbPesquisa;
     dsPrincipal.DataSet.Close;
   except on e:Exception do
     begin

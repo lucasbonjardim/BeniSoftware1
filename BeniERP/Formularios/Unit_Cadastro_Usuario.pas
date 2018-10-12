@@ -31,7 +31,8 @@ uses
   FireDAC.Comp.Client, cxGridLevel, cxGridCustomView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGrid, cxCheckBox, dxCore,
   dxGalleryControl, dxColorGallery, dxDBColorGallery, dxColorEdit, dxDBColorEdit,
-  Vcl.DBCtrls,dxRibbonSkins;
+  Vcl.DBCtrls,dxRibbonSkins, ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint,
+  cxHint;
 
 type
   TForm_Cadastro_usuario = class(TForm_Cadastro_Modelo)
@@ -39,12 +40,6 @@ type
     cxGrid1Level1: TcxGridLevel;
     cxGrid1: TcxGrid;
     FDQ_usuarios: TFDQuery;
-    FDQ_usuariosCOD_USU: TIntegerField;
-    FDQ_usuariosNOME_USU: TStringField;
-    FDQ_usuariosSENHA_USU: TStringField;
-    FDQ_usuariosCOD_GRUPO: TIntegerField;
-    FDQ_usuariosOPERADOR_CAIXA: TStringField;
-    FDQ_usuariosTEMA_COR: TStringField;
     Label1: TLabel;
     cxDBSpinEdit1: TcxDBSpinEdit;
     Label2: TLabel;
@@ -53,9 +48,6 @@ type
     cxDBTextEdit2: TcxDBTextEdit;
     Label4: TLabel;
     cxDBSpinEdit2: TcxDBSpinEdit;
-    FDQ_usuariosNOME_COMPLETO: TStringField;
-    FDQ_usuariosEMAIL_USU: TStringField;
-    FDQ_usuariosDATA_NASCIMENTO_USU: TDateField;
     Label7: TLabel;
     cxDBTextEdit5: TcxDBTextEdit;
     Label8: TLabel;
@@ -74,18 +66,27 @@ type
     cxTabSheet1: TcxTabSheet;
     cbdbUsapadraotema: TcxDBCheckBox;
     DBRadioGroup1: TDBRadioGroup;
-    FDQ_usuariosUSUARIO_ATIVO: TIntegerField;
-    FDQ_usuariosMODELO_TEMA: TIntegerField;
     cxDBusuarioativo: TcxDBCheckBox;
-    FDQ_usuariosUSA_TEMAPADRAO: TIntegerField;
     cxDBoperadorcaixa: TcxDBCheckBox;
-    FDQ_usuariosUSUARIO_MASTER: TIntegerField;
     cxDBUsuarioMaster: TcxDBCheckBox;
     cxTabSheet2: TcxTabSheet;
     DBRadioGroup2: TDBRadioGroup;
     Label6: TLabel;
     dxDBColorEdit1: TdxDBColorEdit;
     cxGrid1DBTableView1USUARIO_MASTER: TcxGridDBColumn;
+    FDQ_usuariosCOD_USU: TIntegerField;
+    FDQ_usuariosNOME_USU: TWideStringField;
+    FDQ_usuariosSENHA_USU: TWideStringField;
+    FDQ_usuariosCOD_GRUPO: TIntegerField;
+    FDQ_usuariosOPERADOR_CAIXA: TWideStringField;
+    FDQ_usuariosTEMA_COR: TStringField;
+    FDQ_usuariosNOME_COMPLETO: TStringField;
+    FDQ_usuariosEMAIL_USU: TStringField;
+    FDQ_usuariosDATA_NASCIMENTO_USU: TDateField;
+    FDQ_usuariosUSUARIO_ATIVO: TIntegerField;
+    FDQ_usuariosMODELO_TEMA: TIntegerField;
+    FDQ_usuariosUSA_TEMAPADRAO: TIntegerField;
+    FDQ_usuariosUSUARIO_MASTER: TIntegerField;
     procedure BtnGravarClick(Sender: TObject);
     procedure cbdbUsapadraotemaClick(Sender: TObject);
     procedure cxDBusuarioativoClick(Sender: TObject);
@@ -110,6 +111,8 @@ uses UdtmBcoErp, ParamControleLicenca, ParamControleTerminalECF,
   Unit_Relatorios, Unit_Rotinas, unit_utilfuncs, Unit_Variaveis_Globais;
 
 procedure TForm_Cadastro_usuario.BtnGravarClick(Sender: TObject);
+var
+senha: String;
 begin
   if not cxDBusuarioativo.Checked and cxDBUsuarioMaster.Checked then
   begin
@@ -117,7 +120,8 @@ begin
     abort;
   end;
 
-
+  senha :=  f_dcrypdbf(cxDBTextEdit2.Text);
+  cxDBTextEdit2.Text :=  f_dcrypdbf(cxDBTextEdit2.Text);
   if cbdbUsapadraotema.Checked then
     dxDBColorEdit1.ColorValue := $00EBC100;
 

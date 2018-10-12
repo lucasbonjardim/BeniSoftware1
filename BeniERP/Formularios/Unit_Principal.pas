@@ -28,7 +28,8 @@ uses
   cxLookAndFeels, dxSkinsForm, cxControls, cxLookAndFeelPainters, dxRibbonSkins,
   dxSkinsdxRibbonPainter, dxRibbonCustomizationForm, dxRibbon, dxGDIPlusClasses,
   dxNavBarOfficeNavigationBar, dxSkinsdxBarPainter, dxBar,
-  dxSkinsdxStatusBarPainter, dxStatusBar, ACBrBase, ACBrEnterTab;
+  dxSkinsdxStatusBarPainter, dxStatusBar, ACBrBase, ACBrEnterTab, dxScreenTip,
+  dxCustomHint, cxHint;
 
 type
   TForm_Principal = class(TForm)
@@ -389,10 +390,19 @@ type
     Contabil1: TdxBarSubItem;
     R00: TdxBarSubItem;
     P000: TdxBarSubItem;
-    SB: TdxStatusBar;
     pnl_info: TPanel;
     ACBrEnterTab1: TACBrEnterTab;
     pnl_infodados: TPanel;
+    cxHintStyleController1: TcxHintStyleController;
+    dxBarButton11: TdxBarButton;
+    dxBarSubItem11: TdxBarSubItem;
+    dxBarButton12: TdxBarButton;
+    dxBarManager1Bar15: TdxBar;
+    dxBarButton13: TdxBarButton;
+    dxBarLargeButton12: TdxBarLargeButton;
+    dxBarLargeButton13: TdxBarLargeButton;
+    dxBarLargeButton14: TdxBarLargeButton;
+    dxBarButton14: TdxBarButton;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -405,6 +415,8 @@ type
     procedure C1042Click(Sender: TObject);
     procedure B003Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure R019Click(Sender: TObject);
 
 
   private
@@ -431,7 +443,7 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   ParamControleTerminalECF, ParamControleTerminalPDV, UdtmACBR, UdtmImagens,
   Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_exibeefeitoespera,
   Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs,
-  Unit_Cadastro_Usuario;
+  Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados;
 
 {$R *.dfm}
 
@@ -472,6 +484,7 @@ procedure TForm_Principal.CarregaConfiguracao;
 begin
   COD_EMP :=1;
   pnl_lateral.Width :=53;
+  dxRibbon1.ActiveTab := tabCadastro;
 
   if FileExists(ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpg') then
   begin
@@ -500,6 +513,20 @@ begin
   CarregaConfiguracao;
 end;
 
+procedure TForm_Principal.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  case key of
+    VK_ESCAPE:
+    begin
+      if KDialog( 'Deseja Sair do Sistema?', 'Sair', tdtPergunta ) then
+        Application.Terminate;
+      Abort;
+      Exit;
+    end;
+  end;
+end;
+
 procedure TForm_Principal.imgMenuClick(Sender: TObject);
 begin
   if SV.Opened then
@@ -517,6 +544,11 @@ end;
 procedure TForm_Principal.p_abreconfig(Sender: TObject);
 begin
   AbreForm(TForm_Cadastro_Modelo,Form_Cadastro_Modelo);
+end;
+
+procedure TForm_Principal.R019Click(Sender: TObject);
+begin
+   Application.CreateForm(TForm_Rel_Produtos_Alterados, Form_Rel_Produtos_Alterados);
 end;
 
 procedure TForm_Principal.Exibeefeitoespera;

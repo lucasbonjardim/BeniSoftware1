@@ -131,7 +131,7 @@ begin
     begin
       close;
       vSql := TStringList.Create;
-      vSql.Add('select * from usuario');
+      vSql.Add('select * from TB_USUARIO');
       sql := vSql;
       Open;
       if not IsEmpty then

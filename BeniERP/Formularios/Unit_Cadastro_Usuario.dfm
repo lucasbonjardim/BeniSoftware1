@@ -1,54 +1,61 @@
 inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
   Caption = 'Cadastro de Usu'#225'rio'
-  ClientHeight = 739
-  ClientWidth = 1231
-  ExplicitWidth = 1247
-  ExplicitHeight = 778
+  ClientHeight = 719
+  ClientWidth = 1211
+  ExplicitWidth = 1227
+  ExplicitHeight = 758
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Width = 1231
+    Width = 1211
     ExplicitWidth = 1251
   end
   inherited ToolBar1: TToolBar
-    Width = 1231
-    ExplicitWidth = 1231
+    Width = 1211
+    ExplicitWidth = 1211
   end
   inherited cxPageControl1: TcxPageControl
-    Width = 1231
-    Height = 654
-    ExplicitWidth = 1231
-    ExplicitHeight = 654
-    ClientRectBottom = 650
-    ClientRectRight = 1227
+    Width = 1211
+    Height = 651
+    Properties.ActivePage = tbCadastro
+    ExplicitWidth = 1211
+    ExplicitHeight = 651
+    ClientRectBottom = 647
+    ClientRectRight = 1207
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1223
-      ExplicitHeight = 626
+      ExplicitWidth = 1203
+      ExplicitHeight = 623
       inherited Panel1: TPanel
-        Width = 1223
-        ExplicitWidth = 1223
+        Width = 1203
+        ExplicitWidth = 1203
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           Visible = False
           AnchorX = 34
           AnchorY = 21
         end
-        inherited Panel2: TPanel
-          inherited edtCurr: TcxCurrencyEdit
-            ExplicitHeight = 23
-          end
-        end
         inherited rgOptionGrid: TRadioGroup
           Visible = False
         end
       end
+      inherited Panel22: TPanel
+        Top = 606
+        Width = 1203
+        TabOrder = 3
+        ExplicitTop = 606
+        ExplicitWidth = 1203
+      end
+      inherited Panel23: TPanel
+        Top = 583
+        Width = 1203
+        ExplicitTop = 583
+        ExplicitWidth = 1203
+      end
       object cxGrid1: TcxGrid
         Left = 0
         Top = 41
-        Width = 1223
-        Height = 585
+        Width = 1203
+        Height = 542
         Align = alClient
         TabOrder = 1
         object cxGrid1DBTableView1: TcxGridDBTableView
@@ -91,11 +98,15 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1223
-      ExplicitHeight = 626
-      object Label1: TLabel
+      ExplicitWidth = 1203
+      ExplicitHeight = 623
+      inherited Shape3: TShape
+        Top = 266
+        Width = 1203
+        ExplicitTop = 276
+        ExplicitWidth = 1213
+      end
+      object Label1: TLabel [1]
         Left = 53
         Top = 56
         Width = 37
@@ -103,7 +114,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Caption = 'C'#243'digo:'
         FocusControl = cxDBSpinEdit1
       end
-      object Label2: TLabel
+      object Label2: TLabel [2]
         Left = 64
         Top = 80
         Width = 26
@@ -111,7 +122,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Caption = 'login:'
         FocusControl = cxDBTextEdit1
       end
-      object Label3: TLabel
+      object Label3: TLabel [3]
         Left = 56
         Top = 107
         Width = 34
@@ -119,7 +130,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Caption = 'Senha:'
         FocusControl = cxDBTextEdit2
       end
-      object Label4: TLabel
+      object Label4: TLabel [4]
         Left = 21
         Top = 134
         Width = 69
@@ -127,7 +138,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Caption = 'Codigo Grupo:'
         FocusControl = cxDBSpinEdit2
       end
-      object Label7: TLabel
+      object Label7: TLabel [5]
         Left = 11
         Top = 161
         Width = 79
@@ -135,7 +146,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Caption = 'Nome Completo:'
         FocusControl = cxDBTextEdit5
       end
-      object Label8: TLabel
+      object Label8: TLabel [6]
         Left = 64
         Top = 188
         Width = 28
@@ -143,13 +154,20 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Caption = 'Email:'
         FocusControl = cxDBTextEdit6
       end
-      object Label9: TLabel
+      object Label9: TLabel [7]
         Left = 5
         Top = 222
         Width = 85
         Height = 13
         Caption = 'Data Nascimento:'
         FocusControl = cxDBDateEdit1
+      end
+      inherited pnl_baixo: TPanel
+        Top = 274
+        Width = 1203
+        TabOrder = 9
+        ExplicitTop = 274
+        ExplicitWidth = 1203
       end
       object cxDBSpinEdit1: TcxDBSpinEdit
         Left = 104
@@ -172,6 +190,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Top = 107
         DataBinding.DataField = 'SENHA_USU'
         DataBinding.DataSource = dsPrincipal
+        Properties.EchoMode = eemPassword
+        Properties.PasswordChar = '*'
         TabOrder = 2
         Width = 121
       end
@@ -190,7 +210,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         DataBinding.DataField = 'NOME_COMPLETO'
         DataBinding.DataSource = dsPrincipal
         TabOrder = 4
-        Width = 474
+        Width = 454
       end
       object cxDBTextEdit6: TcxDBTextEdit
         Left = 104
@@ -199,7 +219,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         DataBinding.DataField = 'EMAIL_USU'
         DataBinding.DataSource = dsPrincipal
         TabOrder = 5
-        Width = 474
+        Width = 454
       end
       object cxDBDateEdit1: TcxDBDateEdit
         Left = 104
@@ -211,8 +231,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
       object cxPageControl2: TcxPageControl
         Left = 0
-        Top = 294
-        Width = 1223
+        Top = 291
+        Width = 1203
         Height = 332
         Align = alBottom
         TabOrder = 7
@@ -220,7 +240,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Properties.CustomButtons.Buttons = <>
         ClientRectBottom = 328
         ClientRectLeft = 4
-        ClientRectRight = 1219
+        ClientRectRight = 1199
         ClientRectTop = 24
         object cxTabSheet1: TcxTabSheet
           Caption = 'Par'#226'metros '
@@ -365,7 +385,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       object DBRadioGroup1: TDBRadioGroup
         Left = 10
         Top = 8
-        Width = 205
+        Width = 185
         Height = 32
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Exibi'#231#227'o da Ribon'
@@ -384,8 +404,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
     end
   end
   inherited pnl_top: TPanel
-    Width = 1231
-    ExplicitWidth = 1231
+    Width = 1211
+    ExplicitWidth = 1211
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_usuarios
@@ -395,41 +415,36 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
   inherited BarraMenu: TcxImageList
     FormatVersion = 1
   end
-  object FDQ_usuarios: TFDQuery
+  object FDQ_usuarios: TFDQuery [7]
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
-      'select * from usuario')
+      'select * from TB_USUARIO')
     Left = 776
     Top = 8
     object FDQ_usuariosCOD_USU: TIntegerField
-      DisplayLabel = 'C'#243'digo:'
       FieldName = 'COD_USU'
       Origin = 'COD_USU'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object FDQ_usuariosNOME_USU: TStringField
-      DisplayLabel = 'Nome:'
+    object FDQ_usuariosNOME_USU: TWideStringField
       FieldName = 'NOME_USU'
       Origin = 'NOME_USU'
       Required = True
       Size = 10
     end
-    object FDQ_usuariosSENHA_USU: TStringField
-      DisplayLabel = 'Senha:'
+    object FDQ_usuariosSENHA_USU: TWideStringField
       FieldName = 'SENHA_USU'
       Origin = 'SENHA_USU'
       Required = True
-      Size = 6
+      Size = 25
     end
     object FDQ_usuariosCOD_GRUPO: TIntegerField
-      DisplayLabel = 'Codigo Grupo:'
       FieldName = 'COD_GRUPO'
       Origin = 'COD_GRUPO'
       Required = True
     end
-    object FDQ_usuariosOPERADOR_CAIXA: TStringField
-      DisplayLabel = 'Operador Caixa:'
+    object FDQ_usuariosOPERADOR_CAIXA: TWideStringField
       FieldName = 'OPERADOR_CAIXA'
       Origin = 'OPERADOR_CAIXA'
       Required = True
@@ -437,50 +452,45 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       Size = 1
     end
     object FDQ_usuariosTEMA_COR: TStringField
-      DisplayLabel = 'Tema cor:'
       FieldName = 'TEMA_COR'
       Origin = 'TEMA_COR'
       Size = 50
     end
     object FDQ_usuariosNOME_COMPLETO: TStringField
-      DisplayLabel = 'Nome Completo:'
       FieldName = 'NOME_COMPLETO'
       Origin = 'NOME_COMPLETO'
       Required = True
       Size = 60
     end
     object FDQ_usuariosEMAIL_USU: TStringField
-      DisplayLabel = 'Email:'
       FieldName = 'EMAIL_USU'
       Origin = 'EMAIL_USU'
       Size = 400
     end
     object FDQ_usuariosDATA_NASCIMENTO_USU: TDateField
-      DisplayLabel = 'Data Nascimento:'
       FieldName = 'DATA_NASCIMENTO_USU'
       Origin = 'DATA_NASCIMENTO_USU'
     end
     object FDQ_usuariosUSUARIO_ATIVO: TIntegerField
-      DisplayLabel = 'Usu'#225'rio Ativo:'
       FieldName = 'USUARIO_ATIVO'
       Origin = 'USUARIO_ATIVO'
     end
     object FDQ_usuariosMODELO_TEMA: TIntegerField
-      DisplayLabel = 'Modelo Tema Exibi'#231#227'o:'
       FieldName = 'MODELO_TEMA'
       Origin = 'MODELO_TEMA'
       Required = True
     end
     object FDQ_usuariosUSA_TEMAPADRAO: TIntegerField
-      DisplayLabel = 'Usar Tema Defaut'
       FieldName = 'USA_TEMAPADRAO'
       Origin = 'USA_TEMAPADRAO'
     end
     object FDQ_usuariosUSUARIO_MASTER: TIntegerField
-      DisplayLabel = 'Usu'#225'rio Master'
       FieldName = 'USUARIO_MASTER'
       Origin = 'USUARIO_MASTER'
       Required = True
     end
+  end
+  inherited ACBrEnterTab1: TACBrEnterTab
+    Left = 176
   end
 end

@@ -9,8 +9,8 @@ object DtmBcoErp: TDtmBcoErp
       'User_Name=sysdba'
       'Password=masterkey'
       
-        'Database=192.168.0.78:C:\BeniSoftware\BeniERP\DataBase\Gestao.FD' +
-        'B'
+        'Database=192.168.0.78:C:\BeniSoftware\BeniERP\DataBase\BENIGESTA' +
+        'O.FDB'
       'DriverID=FB')
     Connected = True
     LoginPrompt = False
@@ -29,7 +29,7 @@ object DtmBcoErp: TDtmBcoErp
   object Fdq_usuario: TFDQuery
     Connection = FDBcoERP
     SQL.Strings = (
-      'select * from usuario')
+      'select * from TB_USUARIO')
     Left = 112
     Top = 72
   end

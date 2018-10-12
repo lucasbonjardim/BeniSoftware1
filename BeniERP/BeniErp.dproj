@@ -165,6 +165,10 @@
             <Form>Form_Cadastro_usuario</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Relatorios\Unit_Relatorio_Produtos_Alterados.pas">
+            <Form>Form_Rel_Produtos_Alterados</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
