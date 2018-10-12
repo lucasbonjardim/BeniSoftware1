@@ -32,7 +32,8 @@ uses
   cxGridTableView, cxGridDBTableView, cxGrid, cxCheckBox, dxCore,
   dxGalleryControl, dxColorGallery, dxDBColorGallery, dxColorEdit, dxDBColorEdit,
   Vcl.DBCtrls,dxRibbonSkins, ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint,
-  cxHint;
+  cxHint, dxSkinsdxNavBarPainter, dxSkinsdxNavBarAccordionViewPainter,
+  dxNavBarCollns, dxNavBarBase, dxNavBar;
 
 type
   TForm_Cadastro_usuario = class(TForm_Cadastro_Modelo)
@@ -122,8 +123,9 @@ begin
 
   senha :=  f_dcrypdbf(cxDBTextEdit2.Text);
   cxDBTextEdit2.Text :=  f_dcrypdbf(cxDBTextEdit2.Text);
+
   if cbdbUsapadraotema.Checked then
-    dxDBColorEdit1.ColorValue := $00EBC100;
+    dxDBColorEdit1.ColorValue :=  StringToColor('$00EBC100');
 
   with Form_Principal do
   begin
@@ -145,7 +147,7 @@ procedure TForm_Cadastro_usuario.cbdbUsapadraotemaClick(Sender: TObject);
 begin
   inherited;
    if cbdbUsapadraotema.Checked then
-    dxDBColorEdit1.ColorValue := $00EBC100;
+    dxDBColorEdit1.ColorValue :=  StringToColor('$00EBC100') ;
 end;
 
 procedure TForm_Cadastro_usuario.cxDBusuarioativoClick(Sender: TObject);
@@ -279,7 +281,7 @@ begin
         pnlToolbar.Color            := $005353CC;
         catMenuItems.HotButtonColor := $005353CC;
         dxDBColorEdit1.ColorValue   := $005353CC;
-        Form_Principal.Color         := ClWhite;
+        Form_Principal.Color        := ClWhite;
         btn_lateral.Repaint;
       end;
     12:
@@ -289,7 +291,7 @@ begin
         pnlToolbar.Color            := $00EBC100;
         catMenuItems.HotButtonColor := $00EBC100;
         dxDBColorEdit1.ColorValue   := $00EBC100;
-        Form_Principal.Color         := ClWhite;
+        Form_Principal.Color        := ClWhite;
         btn_lateral.Repaint;
        end;
     end;

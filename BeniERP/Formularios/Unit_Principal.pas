@@ -417,6 +417,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure R019Click(Sender: TObject);
+    procedure CE000Click(Sender: TObject);
 
 
   private
@@ -443,7 +444,8 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   ParamControleTerminalECF, ParamControleTerminalPDV, UdtmACBR, UdtmImagens,
   Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_exibeefeitoespera,
   Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs,
-  Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados;
+  Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
+  Unit_Cadastro_de_Empresa;
 
 {$R *.dfm}
 
@@ -482,7 +484,6 @@ end;
 
 procedure TForm_Principal.CarregaConfiguracao;
 begin
-  COD_EMP :=1;
   pnl_lateral.Width :=53;
   dxRibbon1.ActiveTab := tabCadastro;
 
@@ -498,6 +499,11 @@ procedure TForm_Principal.catMenuItemsCategoryCollapase(Sender: TObject;
   const Category: TButtonCategory);
 begin
    catMenuItems.Categories[0].Collapsed := False;
+end;
+
+procedure TForm_Principal.CE000Click(Sender: TObject);
+begin
+   AbreForm(TForm_Cadastro_de_Empresa,Form_Cadastro_de_Empresa);
 end;
 
 procedure TForm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);

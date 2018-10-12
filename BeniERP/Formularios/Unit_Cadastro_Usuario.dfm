@@ -1,33 +1,34 @@
 inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
   Caption = 'Cadastro de Usu'#225'rio'
-  ClientHeight = 719
-  ClientWidth = 1211
-  ExplicitWidth = 1227
-  ExplicitHeight = 758
+  ClientHeight = 709
+  ClientWidth = 1201
+  ExplicitTop = -24
+  ExplicitWidth = 1217
+  ExplicitHeight = 748
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Width = 1211
+    Width = 1201
     ExplicitWidth = 1251
   end
   inherited ToolBar1: TToolBar
-    Width = 1211
-    ExplicitWidth = 1211
+    Width = 1201
+    ExplicitWidth = 1201
   end
   inherited cxPageControl1: TcxPageControl
-    Width = 1211
-    Height = 651
+    Width = 1051
+    Height = 601
     Properties.ActivePage = tbCadastro
-    ExplicitWidth = 1211
-    ExplicitHeight = 651
-    ClientRectBottom = 647
-    ClientRectRight = 1207
+    ExplicitWidth = 1051
+    ExplicitHeight = 601
+    ClientRectBottom = 597
+    ClientRectRight = 1047
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1203
-      ExplicitHeight = 623
+      ExplicitWidth = 1043
+      ExplicitHeight = 573
       inherited Panel1: TPanel
-        Width = 1203
-        ExplicitWidth = 1203
+        Width = 1043
+        ExplicitWidth = 1043
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           Visible = False
@@ -38,24 +39,11 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
           Visible = False
         end
       end
-      inherited Panel22: TPanel
-        Top = 606
-        Width = 1203
-        TabOrder = 3
-        ExplicitTop = 606
-        ExplicitWidth = 1203
-      end
-      inherited Panel23: TPanel
-        Top = 583
-        Width = 1203
-        ExplicitTop = 583
-        ExplicitWidth = 1203
-      end
       object cxGrid1: TcxGrid
         Left = 0
         Top = 41
-        Width = 1203
-        Height = 542
+        Width = 1043
+        Height = 532
         Align = alClient
         TabOrder = 1
         object cxGrid1DBTableView1: TcxGridDBTableView
@@ -98,13 +86,16 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1203
-      ExplicitHeight = 623
+      ExplicitLeft = 28
+      ExplicitTop = -28
+      ExplicitWidth = 1043
+      ExplicitHeight = 573
       inherited Shape3: TShape
-        Top = 266
-        Width = 1203
-        ExplicitTop = 276
-        ExplicitWidth = 1213
+        Top = 548
+        Width = 1043
+        ExplicitLeft = -56
+        ExplicitTop = 545
+        ExplicitWidth = 1043
       end
       object Label1: TLabel [1]
         Left = 53
@@ -163,11 +154,12 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         FocusControl = cxDBDateEdit1
       end
       inherited pnl_baixo: TPanel
-        Top = 274
-        Width = 1203
+        Top = 556
+        Width = 1043
         TabOrder = 9
-        ExplicitTop = 274
-        ExplicitWidth = 1203
+        ExplicitLeft = -2
+        ExplicitTop = 567
+        ExplicitWidth = 1043
       end
       object cxDBSpinEdit1: TcxDBSpinEdit
         Left = 104
@@ -210,7 +202,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         DataBinding.DataField = 'NOME_COMPLETO'
         DataBinding.DataSource = dsPrincipal
         TabOrder = 4
-        Width = 454
+        Width = 444
       end
       object cxDBTextEdit6: TcxDBTextEdit
         Left = 104
@@ -219,7 +211,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         DataBinding.DataField = 'EMAIL_USU'
         DataBinding.DataSource = dsPrincipal
         TabOrder = 5
-        Width = 454
+        Width = 444
       end
       object cxDBDateEdit1: TcxDBDateEdit
         Left = 104
@@ -231,20 +223,24 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
       object cxPageControl2: TcxPageControl
         Left = 0
-        Top = 291
-        Width = 1203
-        Height = 332
+        Top = 260
+        Width = 1043
+        Height = 285
         Align = alBottom
         TabOrder = 7
-        Properties.ActivePage = cxTabSheet1
+        Properties.ActivePage = cxTabSheet2
         Properties.CustomButtons.Buttons = <>
-        ClientRectBottom = 328
+        ExplicitLeft = 93
+        ExplicitTop = 242
+        ClientRectBottom = 281
         ClientRectLeft = 4
-        ClientRectRight = 1199
+        ClientRectRight = 1039
         ClientRectTop = 24
         object cxTabSheet1: TcxTabSheet
           Caption = 'Par'#226'metros '
           ImageIndex = 0
+          ExplicitLeft = 21
+          ExplicitTop = 80
           object cbdbUsapadraotema: TcxDBCheckBox
             Left = 3
             Top = 3
@@ -385,7 +381,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       object DBRadioGroup1: TDBRadioGroup
         Left = 10
         Top = 8
-        Width = 185
+        Width = 175
         Height = 32
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Exibi'#231#227'o da Ribon'
@@ -404,16 +400,59 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
     end
   end
   inherited pnl_top: TPanel
-    Width = 1211
-    ExplicitWidth = 1211
+    Width = 1201
+    ExplicitWidth = 1201
   end
-  inherited dsPrincipal: TDataSource
-    DataSet = FDQ_usuarios
-    Left = 845
-    Top = 9
+  inherited dxNavBar: TdxNavBar
+    Left = 1051
+    Height = 601
+    TabOrder = 5
+    ExplicitLeft = 1051
+    ExplicitHeight = 601
+    inherited dxNBGAtalhos: TdxNavBarGroup
+      Links = <
+        item
+          Item = dxbtn_Fechar
+        end
+        item
+          Item = dxbtn_CadFormulas
+        end
+        item
+          Item = dxbtn_RelCadOperadores
+        end
+        item
+          Item = dxbtn_EtiquetaGondula
+        end
+        item
+          Item = dxbtn_PrintCadProdutos
+        end
+        item
+          Item = dxbtn_CargaBalanca
+        end
+        item
+          Item = dxbtn_CVasilhame
+        end
+        item
+          Item = dxbtn_PVendaDAV
+        end
+        item
+          Item = dxbtn_PrecoQuantidade
+        end>
+    end
   end
-  inherited BarraMenu: TcxImageList
-    FormatVersion = 1
+  inherited Panel23: TPanel
+    Top = 669
+    Width = 1201
+    ExplicitTop = 669
+    ExplicitWidth = 1201
+  end
+  inherited Panel22: TPanel
+    Top = 692
+    Width = 1201
+    TabOrder = 3
+    ExplicitLeft = 0
+    ExplicitTop = 692
+    ExplicitWidth = 1201
   end
   object FDQ_usuarios: TFDQuery [7]
     Connection = DtmBcoErp.FDBcoERP
@@ -489,6 +528,14 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       Origin = 'USUARIO_MASTER'
       Required = True
     end
+  end
+  inherited dsPrincipal: TDataSource
+    DataSet = FDQ_usuarios
+    Left = 845
+    Top = 9
+  end
+  inherited BarraMenu: TcxImageList
+    FormatVersion = 1
   end
   inherited ACBrEnterTab1: TACBrEnterTab
     Left = 176

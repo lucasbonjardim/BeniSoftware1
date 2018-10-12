@@ -6869,6 +6869,7 @@ object Form_Principal: TForm_Principal
     TabOrder = 2
     TabStop = False
     object tabCadastro: TdxRibbonTab
+      Active = True
       Caption = 'Cadastros'
       Groups = <
         item
@@ -6926,7 +6927,6 @@ object Form_Principal: TForm_Principal
       Index = 3
     end
     object tabConsultas: TdxRibbonTab
-      Active = True
       Caption = 'Consultas/Relat'#243'rios'
       Groups = <
         item
@@ -6971,7 +6971,7 @@ object Form_Principal: TForm_Principal
     Height = 29
     Align = alTop
     BevelOuter = bvNone
-    Color = 6961398
+    Color = clWhite
     ParentBackground = False
     TabOrder = 8
   end
@@ -7000,7 +7000,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 260
     Bitmap = {
-      494C010104008000A00120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010104008000A40120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -23874,7 +23874,7 @@ object Form_Principal: TForm_Principal
           ItemName = 'CX000'
         end>
       OneOnRow = False
-      Row = 1
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -23898,7 +23898,7 @@ object Form_Principal: TForm_Principal
           ItemName = 'CX004'
         end>
       OneOnRow = False
-      Row = 1
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -23918,7 +23918,7 @@ object Form_Principal: TForm_Principal
           ItemName = 'CX005'
         end>
       OneOnRow = False
-      Row = 1
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -23973,7 +23973,7 @@ object Form_Principal: TForm_Principal
           Visible = True
           ItemName = 'dxBarLargeButton14'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -24116,6 +24116,7 @@ object Form_Principal: TForm_Principal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000}
       LargeImageIndex = 0
+      OnClick = CE000Click
       HotImageIndex = 0
     end
     object ADM000: TdxBarSubItem

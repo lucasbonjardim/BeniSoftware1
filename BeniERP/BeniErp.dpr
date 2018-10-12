@@ -24,7 +24,9 @@ uses
   Unit_Acesso in 'Formularios\Unit_Acesso.pas' {FAcesso},
   Unit_Alerta in 'Formularios\Unit_Alerta.pas' {Form_Alerta},
   Unit_Cadastro_Usuario in 'Formularios\Unit_Cadastro_Usuario.pas' {Form_Cadastro_usuario},
-  Unit_Relatorio_Produtos_Alterados in 'Relatorios\Unit_Relatorio_Produtos_Alterados.pas' {Form_Rel_Produtos_Alterados};
+  Unit_Relatorio_Produtos_Alterados in 'Relatorios\Unit_Relatorio_Produtos_Alterados.pas' {Form_Rel_Produtos_Alterados},
+  Unit_Cadastro_de_Empresa in 'Formularios\Unit_Cadastro_de_Empresa.pas' {Form_Cadastro_de_Empresa},
+  Unit_Configurar_Pis_Cofins in 'Formularios\Unit_Configurar_Pis_Cofins.pas' {form_Configurar_Pis_Cofins};
 
 {$R *.res}
 

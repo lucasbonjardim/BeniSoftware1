@@ -5,8 +5,8 @@
     <Transaction>2018/09/04 22:13:18.000.210,C:\Users\tura_\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\BeniSoftware\Projetos\Trunk\BeniErp.dproj</Transaction>
     <Transaction>2018/09/04 22:16:49.000.245,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\DataModulePrincipal.pas</Transaction>
     <Transaction>2018/09/04 22:16:49.000.245,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\DataModulePrincipal.dfm</Transaction>
-    <Transaction>2018/09/04 22:29:15.000.601,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmBcoErp.dfm</Transaction>
     <Transaction>2018/09/04 22:29:15.000.601,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmBcoErp.pas</Transaction>
+    <Transaction>2018/09/04 22:29:15.000.601,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\dtm\UdtmBcoErp.dfm</Transaction>
     <Transaction>2018/09/04 22:33:10.000.329,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Rotinas\Unit_Variaveis_Globais.pas</Transaction>
     <Transaction>2018/09/04 22:48:25.000.404,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Controle\ParamControleLicenca.pas</Transaction>
     <Transaction>2018/09/04 22:52:26.000.502,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Controle\ParamControleTerminalPDV.pas</Transaction>
@@ -18,8 +18,8 @@
     <Transaction>2018/09/10 19:51:01.000.820,D:\BeniSoftware\Projetos\Trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas</Transaction>
     <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.dfm=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm</Transaction>
     <Transaction>2018/09/10 19:53:04.000.435,D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_loja.pas=D:\BeniSoftware\Projetos\Trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas</Transaction>
-    <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm</Transaction>
     <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.pas=D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.pas</Transaction>
+    <Transaction>2018/09/17 18:22:27.000.713,D:\BeniSoftware\Projetos\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware\Projetos\trunk\BeniERP\Formularios\Unit_Cadastro_Modelo.dfm</Transaction>
     <Transaction>2018/09/22 10:54:31.000.597,D:\BeniSoftware1\trunk\BeniERP\dtm\UdtmImagens.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/09/22 18:04:48.000.565,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_exibeefeitoespera.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/09/22 18:57:49.000.678,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_Produtos.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
@@ -30,6 +30,8 @@
     <Transaction>2018/09/29 17:12:06.000.841,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Alerta.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/09/30 13:22:55.000.361,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_Usuario.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
     <Transaction>2018/10/12 00:02:09.000.482,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Relatorios\Unit_Relatorio_Produtos_Alterados.dfm</Transaction>
+    <Transaction>2018/10/12 11:29:32.790,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_de_Empresa.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
+    <Transaction>2018/10/12 12:06:48.952,D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Configurar_Pis_Cofins.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android="nexus"/>
@@ -67,6 +69,10 @@
     <File Path="Formularios\Unit_Alerta.dfm"/>
     <File Path="Formularios\Unit_Cadastro_Usuario.pas"/>
     <File Path="Formularios\Unit_Cadastro_Usuario.dfm"/>
+    <File Path="Formularios\Unit_Cadastro_de_Empresa.pas"/>
+    <File Path="Formularios\Unit_Cadastro_de_Empresa.dfm"/>
+    <File Path="Formularios\Unit_Configurar_Pis_Cofins.pas"/>
+    <File Path="Formularios\Unit_Configurar_Pis_Cofins.dfm"/>
     <File Path="Relatorios"/>
     <File Path="Relatorios\Unit_Relatorio_Produtos_Alterados.pas"/>
     <File Path="Relatorios\Unit_Relatorio_Produtos_Alterados.dfm"/>

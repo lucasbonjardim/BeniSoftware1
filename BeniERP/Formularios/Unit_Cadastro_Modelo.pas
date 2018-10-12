@@ -29,7 +29,7 @@ uses
   cxGrid,FireDAC.Comp.Client, cxPC, Vcl.ToolWin, cxContainer, Vcl.Mask,
   cxTextEdit, cxCurrencyEdit, cxLabel, dxSkinsdxNavBarPainter,
   dxSkinsdxNavBarAccordionViewPainter, dxNavBar, ACBrBase, ACBrEnterTab,
-  dxScreenTip, dxCustomHint, cxHint;
+  dxScreenTip, dxCustomHint, cxHint, dxNavBarCollns, dxNavBarBase;
 
 type
   TForm_Cadastro_Modelo = class(TForm)
@@ -70,9 +70,20 @@ type
     pnl_baixo: TPanel;
     Shape3: TShape;
     ACBrEnterTab1: TACBrEnterTab;
-    Panel22: TPanel;
-    Panel23: TPanel;
     cxHintStyleController1: TcxHintStyleController;
+    dxNavBar: TdxNavBar;
+    dxNBGAtalhos: TdxNavBarGroup;
+    dxbtn_Fechar: TdxNavBarItem;
+    dxbtn_CadFormulas: TdxNavBarItem;
+    dxbtn_EtiquetaGondula: TdxNavBarItem;
+    dxbtn_PrintCadProdutos: TdxNavBarItem;
+    dxbtn_CargaBalanca: TdxNavBarItem;
+    dxbtn_RelCadOperadores: TdxNavBarItem;
+    dxbtn_CVasilhame: TdxNavBarItem;
+    dxbtn_PVendaDAV: TdxNavBarItem;
+    dxbtn_PrecoQuantidade: TdxNavBarItem;
+    dxbtn_GerarEnviarNFe: TdxNavBarItem;
+    Panel22: TPanel;
     procedure btn_sairClick(Sender: TObject);
     procedure BtnPrimeiroRegistroClick(Sender: TObject);
     procedure BtnRegistroAnteriorClick(Sender: TObject);

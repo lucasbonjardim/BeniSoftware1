@@ -36,7 +36,7 @@ object DtmBcoErp: TDtmBcoErp
   object Fdq_Empresa: TFDQuery
     Connection = FDBcoERP
     SQL.Strings = (
-      'select * from empresa')
+      'select * from tb_empresa')
     Left = 40
     Top = 136
   end
