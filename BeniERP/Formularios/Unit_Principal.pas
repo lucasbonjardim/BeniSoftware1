@@ -403,6 +403,8 @@ type
     dxBarLargeButton13: TdxBarLargeButton;
     dxBarLargeButton14: TdxBarLargeButton;
     dxBarButton14: TdxBarButton;
+    dxBarButton15: TdxBarButton;
+    pnl_usu_nome: TPanel;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -418,6 +420,9 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure R019Click(Sender: TObject);
     procedure CE000Click(Sender: TObject);
+    procedure dxBarButton15Click(Sender: TObject);
+    procedure dxBarButton14Click(Sender: TObject);
+    procedure CX002Click(Sender: TObject);
 
 
   private
@@ -445,7 +450,8 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_exibeefeitoespera,
   Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs,
   Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
-  Unit_Cadastro_de_Empresa;
+  Unit_Cadastro_de_Empresa, Unit_Configurar_Pis_Cofins,
+  Unit_Cadastro_Aliquota_pdv, Unit_Cadastro_Terminais_Pdv;
 
 {$R *.dfm}
 
@@ -506,6 +512,21 @@ begin
    AbreForm(TForm_Cadastro_de_Empresa,Form_Cadastro_de_Empresa);
 end;
 
+procedure TForm_Principal.CX002Click(Sender: TObject);
+begin
+  AbreForm(TForm_Cadastro_Terminais_PDV,Form_Cadastro_Terminais_PDV);
+end;
+
+procedure TForm_Principal.dxBarButton14Click(Sender: TObject);
+begin
+  AbreForm(TForm_Cadastro_Aliquota_pdv,Form_Cadastro_Aliquota_pdv);
+end;
+
+procedure TForm_Principal.dxBarButton15Click(Sender: TObject);
+begin
+  AbreForm(Tform_baixa_ibpt,form_baixa_ibpt);
+end;
+
 procedure TForm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
    if KDialog( 'Deseja Mesmo Sair do Sistema?', 'Sair', tdtPergunta ) then
@@ -554,7 +575,7 @@ end;
 
 procedure TForm_Principal.R019Click(Sender: TObject);
 begin
-   Application.CreateForm(TForm_Rel_Produtos_Alterados, Form_Rel_Produtos_Alterados);
+  AbreForm(TForm_Rel_Produtos_Alterados,Form_Rel_Produtos_Alterados);
 end;
 
 procedure TForm_Principal.Exibeefeitoespera;

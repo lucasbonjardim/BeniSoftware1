@@ -31,7 +31,9 @@ uses
   cxCurrencyEdit, cxLabel, Vcl.ExtCtrls, cxPC, Vcl.ToolWin, cxDBEdit, cxDBLabel,
   Vcl.DBCtrls, cxDBExtLookupComboBox, Vcl.Buttons, cxDropDownEdit,
   cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,System.StrUtils, cxCalendar,
-  ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint, cxHint;
+  ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint, cxHint,
+  dxSkinsdxNavBarPainter, dxSkinsdxNavBarAccordionViewPainter, dxNavBarCollns,
+  dxNavBarBase, dxNavBar;
 
 type
   TForm_Cadastro_Produtos = class(TForm_Cadastro_Modelo)

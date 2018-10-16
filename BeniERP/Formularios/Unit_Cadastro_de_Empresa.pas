@@ -32,7 +32,7 @@ uses
   cxSpinEdit, Vcl.Buttons, Soap.InvokeRegistry, Soap.Rio,
   Soap.SOAPHTTPClient, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage,
   cxNavigator, cxDBData, cxGridLevel, cxGridCustomView, cxGridCustomTableView,
-  cxGridTableView, cxGridDBTableView, cxGrid;
+  cxGridTableView, cxGridDBTableView, cxGrid, Vcl.Grids, Vcl.DBGrids;
 
 type
   TForm_Cadastro_de_Empresa = class(TForm_Cadastro_Modelo)
@@ -125,7 +125,7 @@ type
     Panel3: TPanel;
     BtnFoto: TBitBtn;
     cod_emp: TcxDBSpinEdit;
-    cxDBTextEdit1: TcxDBTextEdit;
+    db_razao: TcxDBTextEdit;
     cxDBTextEdit2: TcxDBTextEdit;
     cxDBTextEdit3: TcxDBTextEdit;
     cxDBTextEdit4: TcxDBTextEdit;
@@ -137,14 +137,14 @@ type
     cxDBTextEdit12: TcxDBTextEdit;
     cxDBTextEdit15: TcxDBTextEdit;
     cxDBTextEdit6: TcxDBTextEdit;
-    DBComboBox2: TDBComboBox;
+    db_combo_tipo_empresa: TDBComboBox;
     DBComboBox1: TDBComboBox;
     cxDBMaskEdit1: TcxDBMaskEdit;
     DBImage1: TDBImage;
     DBImage2: TDBImage;
-    DBCheckBox1: TDBCheckBox;
-    DBCheckBox2: TDBCheckBox;
-    DBComboBox3: TDBComboBox;
+    db_chk_cli_prevenda: TDBCheckBox;
+    db_chk_cli_sem_cpf: TDBCheckBox;
+    db_carga_balanca_tipo: TDBComboBox;
     dbedit_caminhosintegravalidador: TcxDBTextEdit;
     cxDBTextEdit14: TcxDBTextEdit;
     cxDBTextEdit16: TcxDBTextEdit;
@@ -167,25 +167,15 @@ type
     Button1: TButton;
     Button2: TButton;
     HTTPRIO1: THTTPRIO;
-    cxGrid1DBTableView1: TcxGridDBTableView;
-    cxGrid1Level1: TcxGridLevel;
-    cxGrid1: TcxGrid;
-    cxGrid1DBTableView1COD_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1RAZAO_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1END_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1BAI_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1CID_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1CEP_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1EST_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1INSC_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1TEL_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1FAX_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1NUMERO_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1CNPJ_EMP: TcxGridDBColumn;
-    cxGrid1DBTableView1INSCRICAO_MUNICIPAL: TcxGridDBColumn;
+    DBGrid1: TDBGrid;
     procedure BtnCaminhoValidadorClick(Sender: TObject);
     procedure BConfigEFDClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
+    procedure DBGrid1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure BtnGravarClick(Sender: TObject);
   private
+    function F_Dados_ok: Boolean;
     { Private declarations }
   public
     { Public declarations }
@@ -225,6 +215,89 @@ begin
      begin
         dbedit_caminhosintegravalidador.Text:= OpenDialog.FileName;
      end;
+end;
+
+procedure TForm_Cadastro_de_Empresa.BtnGravarClick(Sender: TObject);
+begin
+  if f_dados_ok then
+    inherited;
+
+end;
+
+function TForm_Cadastro_de_Empresa.F_Dados_ok:Boolean;
+begin
+  Result :=False;
+  if Length(Trim(cod_emp.Text))<=0 then
+  begin
+    Result := false;
+    AlertCard('Código Loja pode estar vazio!','Atenção');
+    Abort;
+  end;
+
+  if Length(Trim(db_razao.Text))<=0 then
+  begin
+    Result := false;
+    AlertCard('Insira a Razão Social da Empresa!','Atenção');
+    Abort;
+  end;
+
+  if ( not db_chk_cli_prevenda.Checked) then
+  begin
+    db_chk_cli_prevenda.Checked := False;
+  end;
+
+  if ( not db_chk_cli_sem_cpf.Checked) then
+  begin
+    db_chk_cli_prevenda.Checked := False;
+  end;
+
+  if db_combo_tipo_empresa.ItemIndex < 0  then
+  begin
+    Result := false;
+    AlertCard('Selecione o tipo de Empresa!','Atenção');
+    Abort;
+  end;
+
+  if db_combo_tipo_empresa.ItemIndex >= 0  then
+  begin
+    dsPrincipal.DataSet.FieldByName('TIPO_EMP').AsInteger := db_combo_tipo_empresa.ItemIndex;
+  end;
+
+   if db_carga_balanca_tipo.ItemIndex < 0  then
+  begin
+    Result := false;
+    AlertCard('Selecione o tipo de Carga Balança!','Atenção');
+    Abort;
+  end;
+
+  if db_carga_balanca_tipo.ItemIndex >= 0  then
+  begin
+    dsPrincipal.DataSet.FieldByName('TIPO_CARGA_BALANCA').AsInteger := db_carga_balanca_tipo.ItemIndex;
+  end;
+
+
+
+
+
+
+
+
+
+
+end;
+
+procedure TForm_Cadastro_de_Empresa.DBGrid1DblClick(Sender: TObject);
+begin
+  inherited;
+   cxPageControl1.ActivePage := tbCadastro;
+end;
+
+procedure TForm_Cadastro_de_Empresa.DBGrid1KeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+  inherited;
+   if key = 13 then
+    cxPageControl1.ActivePage := tbCadastro;
 end;
 
 end.

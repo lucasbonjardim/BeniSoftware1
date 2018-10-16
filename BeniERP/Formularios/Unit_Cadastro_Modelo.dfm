@@ -4,8 +4,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 575
-  ClientWidth = 1405
+  ClientHeight = 555
+  ClientWidth = 1385
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,8 +25,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object Shape1: TShape
     AlignWithMargins = True
     Left = 0
-    Top = 40
-    Width = 1405
+    Top = 47
+    Width = 1385
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
@@ -39,8 +39,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1405
-    Height = 37
+    Width = 1385
+    Height = 44
     ButtonHeight = 38
     ButtonWidth = 115
     Caption = 'ToolBar1'
@@ -57,6 +57,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       Left = 0
       Top = 0
       Hint = 'Incluir Registro (F5)'
+      AutoSize = True
       Caption = 'Novo (F5) '
       ImageIndex = 0
       ParentShowHint = False
@@ -64,7 +65,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnNovoClick
     end
     object BtnSalvar: TToolButton
-      Left = 115
+      Left = 98
       Top = 0
       Hint = 'Salvar Registro (F6)'
       Caption = 'Gravar (F6) '
@@ -74,7 +75,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnGravarClick
     end
     object btnCancelar: TToolButton
-      Left = 230
+      Left = 213
       Top = 0
       Hint = 'Cancelar Registro (F7)'
       Caption = 'Cancelar (F7) '
@@ -84,7 +85,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnCancelarClick
     end
     object BtnAlterar: TToolButton
-      Left = 345
+      Left = 328
       Top = 0
       Hint = 'Alterar Registro (F8)'
       Caption = 'Alterar (F8) '
@@ -94,7 +95,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnAlterarClick
     end
     object BtnExcluir: TToolButton
-      Left = 460
+      Left = 443
       Top = 0
       Hint = 'Excluir Registro (F9)'
       Caption = 'Excluir (F9) '
@@ -104,7 +105,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnExcluirClick
     end
     object BtnPesquisar: TToolButton
-      Left = 575
+      Left = 558
       Top = 0
       Hint = 'Localizar Registro (F2)'
       Caption = 'Consultar (F3) '
@@ -114,7 +115,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnConsultarClick
     end
     object ToolButton6: TToolButton
-      Left = 690
+      Left = 673
       Top = 0
       Width = 15
       Caption = 'ToolButton6'
@@ -122,7 +123,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       Style = tbsSeparator
     end
     object BtnLimparPesquisa: TToolButton
-      Left = 705
+      Left = 688
       Top = 0
       Caption = 'Limpar'
       ImageIndex = 7
@@ -131,7 +132,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnLimparPesquisaClick
     end
     object ToolButton1: TToolButton
-      Left = 820
+      Left = 803
       Top = 0
       Caption = 'Impress'#227'o'
       ImageIndex = 8
@@ -139,7 +140,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       ShowHint = True
     end
     object btnFechar: TToolButton
-      Left = 935
+      Left = 918
       Top = 0
       Hint = 'Sair [ESC]'
       Caption = 'Sair (ESC) '
@@ -151,9 +152,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   end
   object cxPageControl1: TcxPageControl
     Left = 0
-    Top = 68
-    Width = 1255
-    Height = 490
+    Top = 75
+    Width = 1385
+    Height = 463
     Align = alClient
     Color = clWhite
     ParentBackground = False
@@ -161,23 +162,28 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     TabOrder = 1
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ExplicitHeight = 467
-    ClientRectBottom = 486
-    ClientRectLeft = 4
-    ClientRectRight = 1251
-    ClientRectTop = 24
+    ExplicitTop = 68
+    ExplicitHeight = 470
+    ClientRectBottom = 461
+    ClientRectLeft = 2
+    ClientRectRight = 1383
+    ClientRectTop = 28
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
       ImageIndex = 0
-      ExplicitHeight = 439
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1377
+      ExplicitHeight = 442
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1247
+        Width = 1381
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitWidth = 1377
         object lblPesquisa: TcxLabel
           AlignWithMargins = True
           Left = 3
@@ -390,12 +396,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitHeight = 439
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1377
+      ExplicitHeight = 442
       object Shape3: TShape
         AlignWithMargins = True
         Left = 0
-        Top = 437
-        Width = 1247
+        Top = 425
+        Width = 1381
         Height = 5
         Margins.Left = 0
         Margins.Right = 0
@@ -406,29 +415,18 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
         ExplicitTop = 423
         ExplicitWidth = 1161
       end
-      object pnl_baixo: TPanel
-        Left = 0
-        Top = 445
-        Width = 1247
-        Height = 17
-        Align = alBottom
-        BevelOuter = bvNone
-        Color = 4718629
-        ParentBackground = False
-        TabOrder = 0
-        ExplicitTop = 422
-      end
     end
   end
   object pnl_top: TPanel
     Left = 0
-    Top = 46
-    Width = 1405
+    Top = 53
+    Width = 1385
     Height = 22
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 46
     object BtnRegistroPosterior: TcxButton
       Left = 65
       Top = 0
@@ -626,106 +624,16 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       OnClick = BtnUltimoRegistroClick
     end
   end
-  object dxNavBar: TdxNavBar
-    Left = 1255
-    Top = 68
-    Width = 150
-    Height = 490
-    Align = alRight
-    Font.Charset = ANSI_CHARSET
-    Font.Color = 3682854
-    Font.Height = -11
-    Font.Name = 'Trebuchet MS'
-    Font.Style = []
-    ActiveGroupIndex = 0
-    TabOrder = 3
-    ViewReal = 17
-    ViewStyle.ColorSchemeName = 'Black'
-    OptionsBehavior.NavigationPane.Collapsible = True
-    OptionsBehavior.NavigationPane.ShowOverflowPanelHints = False
-    OptionsView.Common.ShowGroupCaptions = False
-    OptionsView.NavigationPane.ShowActiveGroupCaptionWhenCollapsed = True
-    OptionsView.NavigationPane.ShowOverflowPanel = False
-    ExplicitHeight = 467
-    object dxNBGAtalhos: TdxNavBarGroup
-      Caption = 'Atalhos'
-      LargeImageIndex = 21
-      SelectedLinkIndex = -1
-      ShowAsIconView = True
-      SmallImageIndex = 21
-      TopVisibleLinkIndex = 0
-      OptionsExpansion.Expandable = False
-      OptionsExpansion.Expanded = False
-      OptionsExpansion.ShowExpandButton = False
-      Links = <
-        item
-          Item = dxbtn_Fechar
-        end
-        item
-          Item = dxbtn_CadFormulas
-        end
-        item
-          Item = dxbtn_RelCadOperadores
-        end
-        item
-          Item = dxbtn_EtiquetaGondula
-        end
-        item
-          Item = dxbtn_PrintCadProdutos
-        end
-        item
-          Item = dxbtn_CargaBalanca
-        end
-        item
-          Item = dxbtn_CVasilhame
-        end
-        item
-          Item = dxbtn_PVendaDAV
-        end
-        item
-          Item = dxbtn_PrecoQuantidade
-        end>
-    end
-    object dxbtn_Fechar: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_CadFormulas: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_EtiquetaGondula: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_PrintCadProdutos: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_CargaBalanca: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_RelCadOperadores: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_CVasilhame: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_PVendaDAV: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_PrecoQuantidade: TdxNavBarItem
-      Visible = False
-    end
-    object dxbtn_GerarEnviarNFe: TdxNavBarItem
-    end
-  end
   object Panel22: TPanel
     Left = 0
-    Top = 558
-    Width = 1405
+    Top = 538
+    Width = 1385
     Height = 17
     Align = alBottom
     BevelOuter = bvNone
     Color = 4718629
     ParentBackground = False
-    TabOrder = 4
+    TabOrder = 3
   end
   object dsPrincipal: TDataSource
     OnStateChange = dsPrincipalStateChange
@@ -733,8 +641,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     Top = 7
   end
   object cxLookAndFeelController1: TcxLookAndFeelController
-    SkinName = 'Office2016Colorful'
-    Left = 1008
+    NativeStyle = False
+    SkinName = 'Metropolis'
+    Left = 1152
     Top = 8
   end
   object BarraMenu: TcxImageList

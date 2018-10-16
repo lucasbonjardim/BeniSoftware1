@@ -4,13 +4,14 @@ object form_baixa_ibpt: Tform_baixa_ibpt
   Caption = 'Atualizar IBPT'
   ClientHeight = 532
   ClientWidth = 756
-  Color = clBtnFace
+  Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
@@ -349,7 +350,7 @@ object form_baixa_ibpt: Tform_baixa_ibpt
     Transaction = TRProduto
     UpdateObject = UPProduto
     SQL.Strings = (
-      'select * from produto')
+      'select * from tb_produtos')
     Left = 536
     Top = 240
     object QProdutoCOD_PRO: TIntegerField

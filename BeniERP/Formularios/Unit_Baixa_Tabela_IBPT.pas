@@ -196,8 +196,8 @@ end;
 
 procedure Tform_baixa_ibpt.tmr1Timer(Sender: TObject);
 begin
- if pb1.Position >= pb1.Max then
-      Close;
+  if pb1.Position >= pb1.Max then
+    Close;
 end;
 
 end.

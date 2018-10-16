@@ -6869,7 +6869,6 @@ object Form_Principal: TForm_Principal
     TabOrder = 2
     TabStop = False
     object tabCadastro: TdxRibbonTab
-      Active = True
       Caption = 'Cadastros'
       Groups = <
         item
@@ -6906,6 +6905,7 @@ object Form_Principal: TForm_Principal
       Index = 2
     end
     object dxRibbon1Tab1: TdxRibbonTab
+      Active = True
       Caption = 'Frente de Caixa'
       Groups = <
         item
@@ -6974,6 +6974,24 @@ object Form_Principal: TForm_Principal
     Color = clWhite
     ParentBackground = False
     TabOrder = 8
+    object pnl_usu_nome: TPanel
+      Left = 1276
+      Top = 0
+      Width = 162
+      Height = 29
+      Align = alRight
+      BorderStyle = bsSingle
+      Caption = 'Us'#250'ario: '
+      Color = 4277822
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+    end
   end
   object ActionList1: TActionList
     Images = imlIcons
@@ -7000,7 +7018,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 260
     Bitmap = {
-      494C010104008000A40120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010104008000AC0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -23492,7 +23510,8 @@ object Form_Principal: TForm_Principal
       end>
   end
   object dxSkinController1: TdxSkinController
-    SkinName = 'Office2016Colorful'
+    NativeStyle = False
+    SkinName = 'Metropolis'
     Left = 1360
     Top = 200
   end
@@ -27757,6 +27776,10 @@ object Form_Principal: TForm_Principal
         item
           Visible = True
           ItemName = 'C005'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton15'
         end>
     end
     object C1042: TdxBarButton
@@ -27934,6 +27957,7 @@ object Form_Principal: TForm_Principal
       Category = 0
       Hint = 'Cadastro de Terminais PDV'
       Visible = ivAlways
+      OnClick = CX002Click
     end
     object dxBarButton2: TdxBarButton
       Caption = 'New Button'
@@ -29766,6 +29790,14 @@ object Form_Principal: TForm_Principal
       Category = 0
       Hint = 'Cadastro al'#237'quotas'
       Visible = ivAlways
+      OnClick = dxBarButton14Click
+    end
+    object dxBarButton15: TdxBarButton
+      Caption = 'Atualizar Tabela I.B.P.T'
+      Category = 0
+      Hint = 'Atualizar Tabela I.B.P.T'
+      Visible = ivAlways
+      OnClick = dxBarButton15Click
     end
     object CP000: TdxBarSubItem
       Caption = 'Produto'

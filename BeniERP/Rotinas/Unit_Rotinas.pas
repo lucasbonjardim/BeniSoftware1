@@ -85,8 +85,6 @@ begin
 
     end;
   end;
-
-
 end;
 
 function FormEstaCriado(AClass: TClass): Boolean;

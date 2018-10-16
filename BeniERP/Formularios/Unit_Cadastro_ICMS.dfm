@@ -1,25 +1,45 @@
 inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
   Caption = 'Cadastro de ICMS'
-  ClientHeight = 682
-  ClientWidth = 1283
-  ExplicitWidth = 1299
-  ExplicitHeight = 721
+  ClientHeight = 652
+  ClientWidth = 1253
+  ExplicitWidth = 1269
+  ExplicitHeight = 691
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Width = 1283
+    Top = 43
+    Width = 1253
+    Height = 4
+    ExplicitTop = 52
+    ExplicitWidth = 1253
+    ExplicitHeight = 4
   end
   inherited ToolBar1: TToolBar
-    Width = 1283
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1247
+    Height = 34
+    ExplicitLeft = 3
+    ExplicitTop = 3
+    ExplicitWidth = 1247
+    ExplicitHeight = 34
   end
   inherited cxPageControl1: TcxPageControl
-    Width = 1283
-    Height = 597
-    ClientRectBottom = 593
-    ClientRectRight = 1279
+    Top = 72
+    Width = 1253
+    Height = 563
+    ExplicitTop = 81
+    ExplicitWidth = 1253
+    ExplicitHeight = 553
+    ClientRectBottom = 561
+    ClientRectRight = 1251
     inherited tbPesquisa: TcxTabSheet
+      ExplicitWidth = 1245
+      ExplicitHeight = 539
       inherited Panel1: TPanel
-        Width = 1275
+        Width = 1249
+        ExplicitWidth = 1245
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
@@ -30,15 +50,15 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
         AlignWithMargins = True
         Left = 3
         Top = 44
-        Width = 1269
-        Height = 522
+        Width = 1243
+        Height = 486
         Align = alClient
         TabOrder = 1
         LookAndFeel.Kind = lfStandard
         LookAndFeel.NativeStyle = False
         RootLevelOptions.DetailFrameColor = clNone
-        ExplicitLeft = 75
-        ExplicitTop = 63
+        ExplicitWidth = 1239
+        ExplicitHeight = 492
         object cxGridDBTableView1: TcxGridDBTableView
           OnDblClick = cxGridDBTableView1DblClick
           Navigator.Buttons.CustomButtons = <>
@@ -95,22 +115,25 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 3
-      ExplicitTop = 25
-      ExplicitWidth = 1132
-      ExplicitHeight = 569
+      ExplicitWidth = 1245
+      ExplicitHeight = 539
+      inherited Shape3: TShape
+        Top = 525
+        Width = 1249
+        ExplicitTop = 544
+        ExplicitWidth = 1125
+      end
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1275
+        Width = 1249
         Height = 45
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
-        ExplicitTop = 8
-        ExplicitWidth = 1132
+        ExplicitWidth = 1245
         object cxLabel1: TcxLabel
           Left = 3
           Top = -1
@@ -126,6 +149,7 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
           CharCase = ecUpperCase
           DataField = 'COD_ICMS'
           DataSource = dsPrincipal
+          Enabled = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 16744448
           Font.Height = -12
@@ -139,15 +163,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel6: TPanel
         Left = 0
         Top = 90
-        Width = 1275
+        Width = 1249
         Height = 48
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 225
-        ExplicitWidth = 1094
+        ExplicitWidth = 1245
         object pnlIcms: TPanel
           Left = 0
           Top = 0
@@ -252,15 +275,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel5: TPanel
         Left = 0
         Top = 138
-        Width = 1275
+        Width = 1249
         Height = 135
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 90
-        ExplicitWidth = 1094
+        ExplicitWidth = 1245
         object dbrgrpCST: TDBRadioGroup
           AlignWithMargins = True
           Left = 5
@@ -304,14 +326,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel4: TPanel
         Left = 0
         Top = 45
-        Width = 1275
+        Width = 1249
         Height = 45
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 3
-        ExplicitWidth = 1094
+        ExplicitWidth = 1245
         object cxLabel2: TcxLabel
           Left = 3
           Top = -2
@@ -332,12 +354,21 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
     end
   end
   inherited pnl_top: TPanel
-    Width = 1283
+    Top = 50
+    Width = 1253
+    ExplicitTop = 59
+    ExplicitWidth = 1253
+  end
+  inherited Panel22: TPanel
+    Top = 635
+    Width = 1253
+    ExplicitTop = 635
+    ExplicitWidth = 1253
   end
   inherited dsPrincipal: TDataSource
     DataSet = QPrincipal
-    Left = 808
-    Top = 8
+    Left = 440
+    Top = 72
   end
   inherited cxLookAndFeelController1: TcxLookAndFeelController
     Top = 64
@@ -346,14 +377,22 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
     FormatVersion = 1
     DesignInfo = 66608
   end
+  inherited ACBrEnterTab1: TACBrEnterTab
+    Left = 752
+    Top = 78
+  end
+  inherited cxHintStyleController1: TcxHintStyleController
+    Left = 696
+    Top = 70
+  end
   object QPrincipal: TFDQuery
     AfterInsert = QPrincipalAfterInsert
     AfterScroll = QPrincipalAfterScroll
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
-      'SELECT * FROM TRIBUTACAO_ICMS WHERE COD_EMP=:COD_EMP')
-    Left = 752
-    Top = 8
+      'SELECT * FROM TB_TRIBUTACAO_ICMS WHERE COD_EMP=:COD_EMP')
+    Left = 400
+    Top = 72
     ParamData = <
       item
         Name = 'COD_EMP'
@@ -411,8 +450,8 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
     end
   end
   object cxStyleRepository1: TcxStyleRepository
-    Left = 888
-    Top = 8
+    Left = 936
+    Top = 72
     PixelsPerInch = 96
     object cxstylPadrao: TcxStyle
       AssignedValues = [svColor, svFont, svTextColor]
@@ -485,7 +524,7 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
   object cxImgsGrid: TcxImageList
     DrawingStyle = dsTransparent
     FormatVersion = 1
-    DesignInfo = 525272
+    DesignInfo = 4195312
     ImageInfo = <
       item
         Image.Data = {

@@ -33,13 +33,10 @@ uses
   dxGalleryControl, dxColorGallery, dxDBColorGallery, dxColorEdit, dxDBColorEdit,
   Vcl.DBCtrls,dxRibbonSkins, ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint,
   cxHint, dxSkinsdxNavBarPainter, dxSkinsdxNavBarAccordionViewPainter,
-  dxNavBarCollns, dxNavBarBase, dxNavBar;
+  dxNavBarCollns, dxNavBarBase, dxNavBar, Vcl.Grids, Vcl.DBGrids;
 
 type
   TForm_Cadastro_usuario = class(TForm_Cadastro_Modelo)
-    cxGrid1DBTableView1: TcxGridDBTableView;
-    cxGrid1Level1: TcxGridLevel;
-    cxGrid1: TcxGrid;
     FDQ_usuarios: TFDQuery;
     Label1: TLabel;
     cxDBSpinEdit1: TcxDBSpinEdit;
@@ -55,14 +52,6 @@ type
     cxDBTextEdit6: TcxDBTextEdit;
     Label9: TLabel;
     cxDBDateEdit1: TcxDBDateEdit;
-    cxGrid1DBTableView1COD_USU: TcxGridDBColumn;
-    cxGrid1DBTableView1NOME_USU: TcxGridDBColumn;
-    cxGrid1DBTableView1SENHA_USU: TcxGridDBColumn;
-    cxGrid1DBTableView1COD_GRUPO: TcxGridDBColumn;
-    cxGrid1DBTableView1OPERADOR_CAIXA: TcxGridDBColumn;
-    cxGrid1DBTableView1NOME_COMPLETO: TcxGridDBColumn;
-    cxGrid1DBTableView1EMAIL_USU: TcxGridDBColumn;
-    cxGrid1DBTableView1DATA_NASCIMENTO_USU: TcxGridDBColumn;
     cxPageControl2: TcxPageControl;
     cxTabSheet1: TcxTabSheet;
     cbdbUsapadraotema: TcxDBCheckBox;
@@ -72,9 +61,11 @@ type
     cxDBUsuarioMaster: TcxDBCheckBox;
     cxTabSheet2: TcxTabSheet;
     DBRadioGroup2: TDBRadioGroup;
+    DBGrid1: TDBGrid;
+    Label5: TLabel;
+    cxDBSpinEdit3: TcxDBSpinEdit;
     Label6: TLabel;
     dxDBColorEdit1: TdxDBColorEdit;
-    cxGrid1DBTableView1USUARIO_MASTER: TcxGridDBColumn;
     FDQ_usuariosCOD_USU: TIntegerField;
     FDQ_usuariosNOME_USU: TWideStringField;
     FDQ_usuariosSENHA_USU: TWideStringField;
@@ -88,10 +79,17 @@ type
     FDQ_usuariosMODELO_TEMA: TIntegerField;
     FDQ_usuariosUSA_TEMAPADRAO: TIntegerField;
     FDQ_usuariosUSUARIO_MASTER: TIntegerField;
+    FDQ_usuariosCOD_EMPRESA_USU: TIntegerField;
+    FDQAutoIncremento: TFDQuery;
     procedure BtnGravarClick(Sender: TObject);
     procedure cbdbUsapadraotemaClick(Sender: TObject);
     procedure cxDBusuarioativoClick(Sender: TObject);
     procedure DBRadioGroup2Change(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
+    procedure DBGrid1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure FDQ_usuariosAfterEdit(DataSet: TDataSet);
+    procedure BtnNovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -120,10 +118,9 @@ begin
     AlertCard('Não é possivel desativar usuário Master', 'Atenção!');
     abort;
   end;
-
-  senha :=  f_dcrypdbf(cxDBTextEdit2.Text);
-  cxDBTextEdit2.Text :=  f_dcrypdbf(cxDBTextEdit2.Text);
-
+  senha := f_crypdbf(cxDBTextEdit2.text);
+  cxDBTextEdit2.text := f_crypdbf(cxDBTextEdit2.text);
+  cxDBTextEdit1.Text := UpperCase(cxDBTextEdit1.Text);
   if cbdbUsapadraotema.Checked then
     dxDBColorEdit1.ColorValue :=  StringToColor('$00EBC100');
 
@@ -143,6 +140,17 @@ begin
   inherited;
 end;
 
+procedure TForm_Cadastro_usuario.BtnNovoClick(Sender: TObject);
+begin
+  inherited;
+  FDQAutoIncremento.Close;
+  FDQAutoIncremento.SQL.Clear;
+  FDQAutoIncremento.SQL.Text := ' select max(COD_USU) as COD_USU from TB_USUARIO';
+  FDQAutoIncremento.Open;
+  cxDBSpinEdit1.Text  := IntToStr((FDQAutoIncremento.FieldByName('COD_USU').AsInteger + 1)) ;
+  FDQAutoIncremento.Close;
+end;
+
 procedure TForm_Cadastro_usuario.cbdbUsapadraotemaClick(Sender: TObject);
 begin
   inherited;
@@ -157,6 +165,20 @@ begin
     AlertCard('O Usário ' +  'esta sendo desativado do sistema, para ativar novamente só será possivél com' +
     ' um usuário MASTER! ', 'Atenção!');
 
+end;
+
+procedure TForm_Cadastro_usuario.DBGrid1DblClick(Sender: TObject);
+begin
+  inherited;
+  cxPageControl1.ActivePage := tbCadastro;
+end;
+
+procedure TForm_Cadastro_usuario.DBGrid1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+   if key = 13 then
+    cxPageControl1.ActivePage := tbCadastro;
 end;
 
 procedure TForm_Cadastro_usuario.DBRadioGroup2Change(Sender: TObject);
@@ -296,6 +318,12 @@ begin
        end;
     end;
   end;
+end;
+
+procedure TForm_Cadastro_usuario.FDQ_usuariosAfterEdit(DataSet: TDataSet);
+begin
+  inherited;
+  cxDBTextEdit2.text := f_dcrypdbf(cxDBTextEdit2.Text);
 end;
 
 end.

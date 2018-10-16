@@ -28,7 +28,10 @@ uses
   cxClasses, FireDAC.Comp.DataSet, Vcl.DBCtrls, System.ImageList, Vcl.ImgList,
   Vcl.StdCtrls, Vcl.ExtCtrls, cxButtons, Vcl.Mask, Vcl.ComCtrls, cxTextEdit,
   cxCurrencyEdit, cxLabel, cxGridLevel, cxGridCustomView, cxGridCustomTableView,
-  cxGridTableView, cxGridDBTableView, cxGrid, cxPC, Vcl.ToolWin;
+  cxGridTableView, cxGridDBTableView, cxGrid, cxPC, Vcl.ToolWin,
+  dxSkinsdxNavBarPainter, dxSkinsdxNavBarAccordionViewPainter, dxScreenTip,
+  dxCustomHint, cxHint, ACBrBase, ACBrEnterTab, dxNavBarCollns, dxNavBarBase,
+  dxNavBar;
 
 type
   TForm_Cadastro_ICMS = class(TForm_Cadastro_Modelo)

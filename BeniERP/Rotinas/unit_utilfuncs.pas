@@ -22,6 +22,7 @@ interface
  function f_alltrim(campo:string):string;
  function f_dcrypdbf(l_font:string): string;
  function StrCrypt(const AString, StrChave: AnsiString): AnsiString;
+ function CryptografaSTR(Action, Src: String): String;
  function StringCrc16(AString : AnsiString ) : word;
  function f_CutChr(var Value: String; Count: Integer): String;
  function f_stod(datastr:string):TDateTime;
@@ -607,6 +608,69 @@ begin
     StrDispose(Data);
     end;
   StrDispose(Parquivo);
+end;
+
+function CryptografaSTR(Action, Src: String): String;
+Label Fim;
+var
+  KeyLen : Integer;
+  KeyPos : Integer;
+  OffSet : Integer;
+  Dest, Key : String;
+  SrcPos : Integer;
+  SrcAsc : Integer;
+  TmpSrcAsc : Integer;
+  Range : Integer;
+begin
+  if (Src = '') Then
+  begin
+         Result:= '';
+         Goto Fim;
+  end;
+  Key := 'AQUI VOCE CRIA SUA CHAVE PARA CRIPTOGRAFAR';
+  Dest := '';
+  KeyLen := Length(Key);
+  KeyPos := 0;
+  SrcPos := 0;
+  SrcAsc := 0;
+  Range := 256;
+  if (Action = UpperCase('C')) then
+  begin
+   // Randomize;
+   // OffSet := Random(Range);
+    OffSet := Range;
+    Dest := Format('%1.2x',[OffSet]);
+    for SrcPos := 1 to Length(Src) do
+    begin
+      Application.ProcessMessages;
+      SrcAsc := (Ord(Src[srcPos]) + OffSet) Mod 255;
+      if KeyPos < KeyLen then KeyPos := KeyPos + 1 else KeyPos := 1;
+
+      SrcAsc := SrcAsc Xor Ord(Key[KeyPos]);
+      Dest := Dest + Format('%1.2x',[srcAsc]);
+      OffSet := SrcAsc;
+    end;
+  end
+  Else if (Action = UpperCase('D')) then
+  begin
+    OffSet := StrToInt('$' + copy(Src,1,2));//<--------------- adiciona o $ entra as aspas simples
+    SrcPos := 3;
+    repeat
+      SrcAsc := StrToInt('$' + copy(Src,SrcPos,2));//<--------------- adiciona o $ entra as aspas simples
+      if (KeyPos < KeyLen) Then KeyPos := KeyPos + 1 else KeyPos := 1;
+
+      TmpSrcAsc := SrcAsc Xor Ord(Key[KeyPos]);
+
+      if TmpSrcAsc <= OffSet then TmpSrcAsc := 255 + TmpSrcAsc - OffSet
+        else TmpSrcAsc := TmpSrcAsc - OffSet;
+
+      Dest := Dest + Chr(TmpSrcAsc);
+      OffSet := SrcAsc;
+      SrcPos := SrcPos + 2;
+      until (SrcPos >= Length(Src));
+  end;
+  Result:= Dest;
+Fim:
 end;
 
 end.
