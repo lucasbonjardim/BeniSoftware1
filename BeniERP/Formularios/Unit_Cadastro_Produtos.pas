@@ -391,7 +391,7 @@ implementation
 {$R *.dfm}
 
 uses UdtmBcoErp, Unit_Variaveis_Globais, ParamControleLicenca,
-  ParamControleTerminalECF, ParamControleTerminalPDV, UdtmACBR, UdtmImagens,
+   UdtmACBR, UdtmImagens,
   Unit_Acesso, Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_Cadastro_ICMS,
   Unit_Cadastro_Usuario, Unit_exibeefeitoespera, Unit_F_mensagem_Dialog,
   Unit_Principal, Unit_Relatorios, Unit_Rotinas, unit_utilfuncs;

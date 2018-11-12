@@ -103,8 +103,8 @@ implementation
 
 {$R *.dfm}
 
-uses UdtmBcoErp, ParamControleLicenca, ParamControleTerminalECF,
-  ParamControleTerminalPDV, UdtmACBR, UdtmImagens, Unit_Acesso, Unit_Alerta,
+uses UdtmBcoErp, ParamControleLicenca,
+  UdtmACBR, UdtmImagens, Unit_Acesso, Unit_Alerta,
   Unit_Baixa_Tabela_IBPT, Unit_Cadastro_ICMS, Unit_Cadastro_Produtos,
   Unit_exibeefeitoespera, Unit_F_mensagem_Dialog, Unit_Principal,
   Unit_Relatorios, Unit_Rotinas, unit_utilfuncs, Unit_Variaveis_Globais;

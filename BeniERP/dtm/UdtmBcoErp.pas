@@ -35,8 +35,8 @@ implementation
 
 uses
 Unit_Variaveis_Globais,Unit_Rotinas, Unit_F_mensagem_Dialog, Unit_Acesso,
-  Unit_Principal, ParamControleTerminalPDV, ParamControleLicenca,
-  ParamControleTerminalECF, UdtmACBR, UdtmImagens, Unit_Baixa_Tabela_IBPT,
+  Unit_Principal, ParamControleLicenca,
+   UdtmACBR, UdtmImagens, Unit_Baixa_Tabela_IBPT,
   Unit_Cadastro_ICMS, Unit_Cadastro_Modelo, Unit_Cadastro_Produtos,
   Unit_exibeefeitoespera, Unit_Relatorios, unit_utilfuncs, Unit_Alerta;
 

@@ -12,48 +12,42 @@ inherited Form_Cadastro_Aliquota_pdv: TForm_Cadastro_Aliquota_pdv
     ExplicitTop = 49
     ExplicitWidth = 1375
   end
-  inherited ToolBar1: TToolBar
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 1369
-    Height = 37
-    ExplicitLeft = 3
-    ExplicitTop = 3
-    ExplicitWidth = 1369
-    ExplicitHeight = 37
-  end
   inherited cxPageControl1: TcxPageControl
     Top = 74
     Width = 1375
     Height = 454
-    ExplicitTop = 75
     ExplicitWidth = 1375
     ExplicitHeight = 453
-    ClientRectBottom = 452
-    ClientRectRight = 1373
+    ClientRectBottom = 450
+    ClientRectRight = 1371
     inherited tbPesquisa: TcxTabSheet
       ExplicitLeft = 2
       ExplicitTop = 28
       ExplicitWidth = 1371
       ExplicitHeight = 423
       inherited Panel1: TPanel
-        Width = 1371
+        Width = 1367
         ExplicitWidth = 1371
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
         end
+        inherited Panel2: TPanel
+          inherited edtCurr: TcxCurrencyEdit
+            ExplicitHeight = 21
+          end
+        end
       end
       object GroupBox1: TGroupBox
         Left = 0
         Top = 41
-        Width = 1371
-        Height = 383
+        Width = 1367
+        Height = 385
         Align = alClient
         Caption = 'Aliquotas PDV'
         TabOrder = 1
+        ExplicitWidth = 1371
         ExplicitHeight = 382
         object cxGrid1: TcxGrid
           Left = 2
@@ -110,6 +104,8 @@ inherited Form_Cadastro_Aliquota_pdv: TForm_Cadastro_Aliquota_pdv
       inherited Shape3: TShape
         Top = 416
         Width = 1371
+        ExplicitTop = 416
+        ExplicitWidth = 1371
       end
       object GroupBox2: TGroupBox
         AlignWithMargins = True
@@ -236,6 +232,17 @@ inherited Form_Cadastro_Aliquota_pdv: TForm_Cadastro_Aliquota_pdv
     Width = 1375
     ExplicitTop = 528
     ExplicitWidth = 1375
+  end
+  inherited ToolBar1: TToolBar
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1369
+    Height = 37
+    ExplicitLeft = 3
+    ExplicitTop = 3
+    ExplicitWidth = 1369
+    ExplicitHeight = 37
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_Principal

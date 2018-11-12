@@ -12,17 +12,6 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
     ExplicitTop = 43
     ExplicitWidth = 1251
   end
-  inherited ToolBar1: TToolBar
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 1398
-    Height = 34
-    ExplicitLeft = 3
-    ExplicitTop = 3
-    ExplicitWidth = 1135
-    ExplicitHeight = 34
-  end
   inherited cxPageControl1: TcxPageControl
     Top = 71
     Width = 1404
@@ -31,13 +20,15 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
     ExplicitTop = 71
     ExplicitWidth = 1141
     ExplicitHeight = 561
-    ClientRectBottom = 550
-    ClientRectRight = 1402
+    ClientRectBottom = 548
+    ClientRectRight = 1400
     inherited tbPesquisa: TcxTabSheet
+      ExplicitLeft = 0
+      ExplicitTop = 0
       ExplicitWidth = 1134
       ExplicitHeight = 531
       inherited Panel1: TPanel
-        Width = 1400
+        Width = 1396
         Height = 9
         Visible = False
         ExplicitWidth = 1134
@@ -53,7 +44,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
           Height = 9
           ExplicitHeight = 9
           inherited edtText: TEdit
-            Height = 0
+            Height = -9
+            ExplicitHeight = 0
           end
           inherited edtCurr: TcxCurrencyEdit
             ExplicitHeight = 0
@@ -63,7 +55,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
             ExplicitHeight = 0
           end
           inherited edtMask: TMaskEdit
-            Height = 0
+            Height = -18
+            ExplicitHeight = 0
           end
         end
         inherited cxButton1: TcxButton
@@ -87,8 +80,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       object DBGrid1: TDBGrid
         Left = 0
         Top = 9
-        Width = 1400
-        Height = 513
+        Width = 1396
+        Height = 515
         Align = alClient
         Color = clWhite
         DataSource = dsPrincipal
@@ -153,11 +146,13 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
     end
     inherited tbCadastro: TcxTabSheet
+      ExplicitLeft = 0
+      ExplicitTop = 0
       ExplicitWidth = 1134
       ExplicitHeight = 531
       inherited Shape3: TShape
-        Top = 514
-        Width = 1400
+        Top = 516
+        Width = 1396
         ExplicitLeft = -56
         ExplicitTop = 545
         ExplicitWidth = 1043
@@ -269,7 +264,6 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         DataBinding.DataField = 'NOME_COMPLETO'
         DataBinding.DataSource = dsPrincipal
         TabOrder = 4
-        ExplicitWidth = 384
         Width = 650
       end
       object cxDBTextEdit6: TcxDBTextEdit
@@ -279,7 +273,6 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         DataBinding.DataField = 'EMAIL_USU'
         DataBinding.DataSource = dsPrincipal
         TabOrder = 5
-        ExplicitWidth = 384
         Width = 650
       end
       object cxDBDateEdit1: TcxDBDateEdit
@@ -292,8 +285,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
       object cxPageControl2: TcxPageControl
         Left = 0
-        Top = 251
-        Width = 1400
+        Top = 253
+        Width = 1396
         Height = 260
         Align = alBottom
         TabOrder = 7
@@ -301,10 +294,10 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         Properties.CustomButtons.Buttons = <>
         ExplicitTop = 260
         ExplicitWidth = 1134
-        ClientRectBottom = 258
-        ClientRectLeft = 2
-        ClientRectRight = 1398
-        ClientRectTop = 28
+        ClientRectBottom = 256
+        ClientRectLeft = 4
+        ClientRectRight = 1392
+        ClientRectTop = 24
         object cxTabSheet1: TcxTabSheet
           Caption = 'Par'#226'metros '
           ImageIndex = 0
@@ -402,8 +395,10 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         object cxTabSheet2: TcxTabSheet
           Caption = 'Personaliza'#231#227'o'
           ImageIndex = 1
+          ExplicitLeft = 0
           ExplicitTop = 25
           ExplicitWidth = 1127
+          ExplicitHeight = 0
           object Label6: TLabel
             Left = 5
             Top = 191
@@ -494,6 +489,17 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
     Width = 1404
     ExplicitTop = 632
     ExplicitWidth = 1141
+  end
+  inherited ToolBar1: TToolBar
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1398
+    Height = 34
+    ExplicitLeft = 3
+    ExplicitTop = 3
+    ExplicitWidth = 1135
+    ExplicitHeight = 34
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_usuarios

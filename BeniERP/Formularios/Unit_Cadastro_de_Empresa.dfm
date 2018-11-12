@@ -12,17 +12,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
     ExplicitTop = 46
     ExplicitWidth = 1442
   end
-  inherited ToolBar1: TToolBar
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 1052
-    Height = 37
-    ExplicitLeft = 3
-    ExplicitTop = 3
-    ExplicitWidth = 1052
-    ExplicitHeight = 37
-  end
   inherited cxPageControl1: TcxPageControl
     Top = 74
     Width = 1058
@@ -34,8 +23,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
     ClientRectBottom = 547
     ClientRectRight = 1054
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 1050
       ExplicitHeight = 523
       inherited Panel1: TPanel
@@ -55,6 +42,7 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
           ExplicitHeight = 25
           inherited edtText: TEdit
             Height = 7
+            ExplicitHeight = 7
           end
           inherited edtCurr: TcxCurrencyEdit
             ExplicitHeight = 7
@@ -65,6 +53,7 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
           end
           inherited edtMask: TMaskEdit
             Height = 7
+            ExplicitHeight = 7
           end
         end
         inherited cxButton1: TcxButton
@@ -163,8 +152,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 1050
       ExplicitHeight = 523
       inherited Shape3: TShape
@@ -183,6 +170,10 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         TabOrder = 0
         object TabSheet1: TTabSheet
           Caption = 'Dados'
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object Label1: TLabel
             Left = 8
             Top = 8
@@ -461,6 +452,10 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet2: TTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 1
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object Label4: TLabel
             Left = 8
             Top = 128
@@ -686,6 +681,10 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object Contador: TTabSheet
           Caption = 'Contador'
           ImageIndex = 3
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object Label26: TLabel
             Left = 8
             Top = 8
@@ -870,6 +869,10 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet3: TTabSheet
           Caption = 'Imagem'
           ImageIndex = 2
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object GroupBox6: TGroupBox
             Left = 8
             Top = 12
@@ -981,6 +984,17 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
     Width = 1058
     ExplicitTop = 625
     ExplicitWidth = 1058
+  end
+  inherited ToolBar1: TToolBar
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1052
+    Height = 37
+    ExplicitLeft = 3
+    ExplicitTop = 3
+    ExplicitWidth = 1052
+    ExplicitHeight = 37
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_Principal

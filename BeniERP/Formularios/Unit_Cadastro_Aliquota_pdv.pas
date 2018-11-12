@@ -78,7 +78,7 @@ implementation
 {$R *.dfm}
 
 uses  ParamControleLicenca,
-  ParamControleTerminalPDV, UdtmBcoErp,
+  UdtmBcoErp,
   Unit_Relatorios, Unit_Rotinas,
   unit_utilfuncs, Unit_Variaveis_Globais;
 
