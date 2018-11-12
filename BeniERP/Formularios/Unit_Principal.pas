@@ -404,7 +404,10 @@ type
     dxBarLargeButton14: TdxBarLargeButton;
     dxBarButton14: TdxBarButton;
     dxBarButton15: TdxBarButton;
-    pnl_usu_nome: TPanel;
+    lbl_versao: TLabel;
+    lbl_usuario: TLabel;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -423,6 +426,7 @@ type
     procedure dxBarButton15Click(Sender: TObject);
     procedure dxBarButton14Click(Sender: TObject);
     procedure CX002Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
 
 
   private
@@ -445,8 +449,8 @@ implementation
 
 uses
 Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
-  Unit_Cadastro_Produtos, Unit_Cadastro_ICMS, Unit_Acesso, ParamControleLicenca,
-  ParamControleTerminalECF, ParamControleTerminalPDV, UdtmACBR, UdtmImagens,
+  Unit_Cadastro_Produtos, Unit_Cadastro_ICMS, Unit_Acesso,
+  UdtmACBR, UdtmImagens, ParamControleLicenca,
   Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_exibeefeitoespera,
   Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs,
   Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
@@ -464,6 +468,16 @@ end;
 procedure TForm_Principal.B003Click(Sender: TObject);
 begin
    AbreForm(TForm_Cadastro_usuario,Form_Cadastro_usuario);
+end;
+
+procedure TForm_Principal.BitBtn1Click(Sender: TObject);
+begin
+  if dxTabbedMDIManager1.TabProperties.PageCount > 0 then
+  begin
+   AlertCard('Feche Todas as janelas abertas e tente novamente.','Atenção!');
+   exit;
+  end;
+  DtmBcoErp.btn_AcessoExecute(Sender);
 end;
 
 procedure TForm_Principal.btn_lateralClick(Sender: TObject);
@@ -490,6 +504,16 @@ end;
 
 procedure TForm_Principal.CarregaConfiguracao;
 begin
+  DtmBcoErp    := TDtmBcoErp.Create(nil);
+  DtmBcoErp.p_conexao;
+  if DtmBcoErp.FDBcoERP.Connected then
+    DtmBcoErp.btn_AcessoExecute(Self)
+  else
+  begin
+   ShowMessage('Não foi possivel fazer conexão com o banco.');
+   Application.Terminate;
+  end;
+
   pnl_lateral.Width :=53;
   dxRibbon1.ActiveTab := tabCadastro;
 
@@ -529,10 +553,18 @@ end;
 
 procedure TForm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-   if KDialog( 'Deseja Mesmo Sair do Sistema?', 'Sair', tdtPergunta ) then
-    Application.Terminate
+  if dxTabbedMDIManager1.TabProperties.PageCount > 0 then
+  begin
+   AlertCard('Não é possivel fechar o Sistema enquanto houver janela abertas.','Atenção!');
+   abort;
+  end
+  else
+  begin
+    if KDialog( 'Deseja Mesmo Sair do Sistema?', 'Sair', tdtPergunta ) then
+      Application.Terminate
    else
     abort;
+  end;
 end;
 
 procedure TForm_Principal.FormCreate(Sender: TObject);

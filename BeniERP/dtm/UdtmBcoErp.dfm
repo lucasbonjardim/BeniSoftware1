@@ -1,6 +1,5 @@
 object DtmBcoErp: TDtmBcoErp
   OldCreateOrder = False
-  OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   Height = 868
   Width = 1304

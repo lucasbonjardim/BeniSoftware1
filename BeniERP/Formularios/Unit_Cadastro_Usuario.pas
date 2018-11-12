@@ -195,7 +195,7 @@ begin
         catMenuItems.HotButtonColor  := $00A47D07;
         dxDBColorEdit1.ColorValue    := $00A47D07;
         btn_lateral.Repaint;
-        Form_Principal.Color         := ClWhite;
+       // Form_Principal.Color         := ClWhite;
       end;
     1:
       begin
@@ -204,7 +204,7 @@ begin
         pnlToolbar.Color             := $005B1B4D;
         catMenuItems.HotButtonColor  := $005B1B4D;
         dxDBColorEdit1.ColorValue    := $005B1B4D;
-        Form_Principal.Color         := ClWhite;
+        // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     2:
@@ -214,7 +214,7 @@ begin
         pnlToolbar.Color             := $00DCAA04;
         catMenuItems.HotButtonColor  := $00DCAA04;
         dxDBColorEdit1.ColorValue    := $00DCAA04;
-        Form_Principal.Color         := ClWhite;
+        // Form_Principal.Color         := ClWhite;
          btn_lateral.Repaint;
       end;
     3:
@@ -224,7 +224,7 @@ begin
         pnlToolbar.Color             := $00A64707;
         catMenuItems.HotButtonColor  := $00A64707;
         dxDBColorEdit1.ColorValue    := $00A64707;
-        Form_Principal.Color         := ClWhite;
+       // Form_Principal.Color         := ClWhite;
          btn_lateral.Repaint;
       end;
     4:
@@ -234,7 +234,7 @@ begin
         pnlToolbar.Color             := $00889600;
         catMenuItems.HotButtonColor  := $00889600;
         dxDBColorEdit1.ColorValue    := $00889600;
-        Form_Principal.Color         := ClWhite;
+        // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     5:
@@ -244,7 +244,7 @@ begin
         pnlToolbar.Color             := $00191919;
         catMenuItems.HotButtonColor  := $00191919;
         dxDBColorEdit1.ColorValue    := $00191919;
-        Form_Principal.Color         := ClWhite;
+        // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     6:
@@ -254,7 +254,7 @@ begin
         pnlToolbar.Color             := $00A5BE1E;
         catMenuItems.HotButtonColor  := $00A5BE1E;
         dxDBColorEdit1.ColorValue    := $00A5BE1E;
-        Form_Principal.Color         := ClWhite;
+       // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     7:
@@ -264,7 +264,7 @@ begin
         pnlToolbar.Color             := $00DCAA04;
         catMenuItems.HotButtonColor  := $00DCAA04;
         dxDBColorEdit1.ColorValue    := $00DCAA04;
-        Form_Principal.Color         := ClWhite;
+        // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     8:
@@ -274,7 +274,7 @@ begin
         pnlToolbar.Color             := $00E0B10D;
         catMenuItems.HotButtonColor  := $00E0B10D;
         dxDBColorEdit1.ColorValue    := $00E0B10D;
-        Form_Principal.Color         := ClWhite;
+        // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     9:
@@ -284,7 +284,7 @@ begin
         pnlToolbar.Color             := $00DB9587;
         catMenuItems.HotButtonColor  := $00DB9587;
         dxDBColorEdit1.ColorValue    := $00DB9587;
-        Form_Principal.Color         := ClWhite;
+       // Form_Principal.Color         := ClWhite;
       end;
     10:
       begin
@@ -293,7 +293,7 @@ begin
         pnlToolbar.Color             := $0028A5F3;
         catMenuItems.HotButtonColor  := $0028A5F3;
         dxDBColorEdit1.ColorValue    := $0028A5F3;
-        Form_Principal.Color         := ClWhite;
+       // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     11:
@@ -303,7 +303,7 @@ begin
         pnlToolbar.Color            := $005353CC;
         catMenuItems.HotButtonColor := $005353CC;
         dxDBColorEdit1.ColorValue   := $005353CC;
-        Form_Principal.Color        := ClWhite;
+       // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
       end;
     12:
@@ -313,7 +313,7 @@ begin
         pnlToolbar.Color            := $00EBC100;
         catMenuItems.HotButtonColor := $00EBC100;
         dxDBColorEdit1.ColorValue   := $00EBC100;
-        Form_Principal.Color        := ClWhite;
+       // Form_Principal.Color         := ClWhite;
         btn_lateral.Repaint;
        end;
     end;

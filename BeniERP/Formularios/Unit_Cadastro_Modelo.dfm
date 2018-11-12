@@ -4,9 +4,9 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 555
-  ClientWidth = 1385
-  Color = clWhite
+  ClientHeight = 505
+  ClientWidth = 1335
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -25,165 +25,49 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object Shape1: TShape
     AlignWithMargins = True
     Left = 0
-    Top = 47
-    Width = 1385
+    Top = 3
+    Width = 1335
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
     Align = alTop
-    Brush.Color = 15450368
+    Brush.Color = 4044800
     Pen.Style = psClear
     ExplicitTop = 59
     ExplicitWidth = 1219
   end
-  object ToolBar1: TToolBar
-    Left = 0
-    Top = 0
-    Width = 1385
-    Height = 44
-    ButtonHeight = 38
-    ButtonWidth = 115
-    Caption = 'ToolBar1'
-    Color = clWhite
-    HotTrackColor = clBtnFace
-    Images = BarraMenu
-    List = True
-    ParentColor = False
-    ParentShowHint = False
-    ShowCaptions = True
-    ShowHint = False
-    TabOrder = 0
-    object BtnNovo: TToolButton
-      Left = 0
-      Top = 0
-      Hint = 'Incluir Registro (F5)'
-      AutoSize = True
-      Caption = 'Novo (F5) '
-      ImageIndex = 0
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = BtnNovoClick
-    end
-    object BtnSalvar: TToolButton
-      Left = 98
-      Top = 0
-      Hint = 'Salvar Registro (F6)'
-      Caption = 'Gravar (F6) '
-      ImageIndex = 1
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = BtnGravarClick
-    end
-    object btnCancelar: TToolButton
-      Left = 213
-      Top = 0
-      Hint = 'Cancelar Registro (F7)'
-      Caption = 'Cancelar (F7) '
-      ImageIndex = 2
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = BtnCancelarClick
-    end
-    object BtnAlterar: TToolButton
-      Left = 328
-      Top = 0
-      Hint = 'Alterar Registro (F8)'
-      Caption = 'Alterar (F8) '
-      ImageIndex = 3
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = BtnAlterarClick
-    end
-    object BtnExcluir: TToolButton
-      Left = 443
-      Top = 0
-      Hint = 'Excluir Registro (F9)'
-      Caption = 'Excluir (F9) '
-      ImageIndex = 4
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = BtnExcluirClick
-    end
-    object BtnPesquisar: TToolButton
-      Left = 558
-      Top = 0
-      Hint = 'Localizar Registro (F2)'
-      Caption = 'Consultar (F3) '
-      ImageIndex = 5
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = BtnConsultarClick
-    end
-    object ToolButton6: TToolButton
-      Left = 673
-      Top = 0
-      Width = 15
-      Caption = 'ToolButton6'
-      ImageIndex = 5
-      Style = tbsSeparator
-    end
-    object BtnLimparPesquisa: TToolButton
-      Left = 688
-      Top = 0
-      Caption = 'Limpar'
-      ImageIndex = 7
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = BtnLimparPesquisaClick
-    end
-    object ToolButton1: TToolButton
-      Left = 803
-      Top = 0
-      Caption = 'Impress'#227'o'
-      ImageIndex = 8
-      ParentShowHint = False
-      ShowHint = True
-    end
-    object btnFechar: TToolButton
-      Left = 918
-      Top = 0
-      Hint = 'Sair [ESC]'
-      Caption = 'Sair (ESC) '
-      ImageIndex = 6
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = btnFecharClick
-    end
-  end
   object cxPageControl1: TcxPageControl
     Left = 0
-    Top = 75
-    Width = 1385
-    Height = 463
+    Top = 83
+    Width = 1335
+    Height = 405
     Align = alClient
     Color = clWhite
     ParentBackground = False
     ParentColor = False
-    TabOrder = 1
+    TabOrder = 0
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ExplicitTop = 68
-    ExplicitHeight = 470
-    ClientRectBottom = 461
-    ClientRectLeft = 2
-    ClientRectRight = 1383
-    ClientRectTop = 28
+    ExplicitTop = 75
+    ExplicitHeight = 413
+    ClientRectBottom = 401
+    ClientRectLeft = 4
+    ClientRectRight = 1331
+    ClientRectTop = 24
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
+      Color = clBtnFace
       ImageIndex = 0
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1377
-      ExplicitHeight = 442
+      ParentColor = False
+      ExplicitHeight = 385
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1381
+        Width = 1327
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 1377
         object lblPesquisa: TcxLabel
           AlignWithMargins = True
           Left = 3
@@ -276,6 +160,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
           Height = 35
           Align = alLeft
           Caption = '(F3) '#13#10'Pesquisar'
+          LookAndFeel.NativeStyle = False
+          LookAndFeel.SkinName = 'clBtnFace'
           OptionsImage.Glyph.Data = {
             36090000424D3609000000000000360000002800000018000000180000000100
             2000000000000009000000000000000000000000000000000000000000000000
@@ -396,15 +282,12 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1377
-      ExplicitHeight = 442
+      ExplicitHeight = 385
       object Shape3: TShape
         AlignWithMargins = True
         Left = 0
-        Top = 425
-        Width = 1381
+        Top = 369
+        Width = 1327
         Height = 5
         Margins.Left = 0
         Margins.Right = 0
@@ -419,14 +302,15 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   end
   object pnl_top: TPanel
     Left = 0
-    Top = 53
-    Width = 1385
+    Top = 61
+    Width = 1335
     Height = 22
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
-    TabOrder = 2
-    ExplicitTop = 46
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitTop = 53
     object BtnRegistroPosterior: TcxButton
       Left = 65
       Top = 0
@@ -626,14 +510,111 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   end
   object Panel22: TPanel
     Left = 0
-    Top = 538
-    Width = 1385
+    Top = 488
+    Width = 1335
     Height = 17
     Align = alBottom
     BevelOuter = bvNone
     Color = 4718629
     ParentBackground = False
+    TabOrder = 2
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 9
+    Width = 1335
+    Height = 52
+    ButtonHeight = 52
+    ButtonWidth = 79
+    Caption = 'ToolBar1'
+    Color = clWhite
+    HotTrackColor = clBtnFace
+    Images = BarraMenu
+    ParentColor = False
+    ParentShowHint = False
+    ShowCaptions = True
+    ShowHint = False
     TabOrder = 3
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 1259
+    object BtnNovo: TToolButton
+      Left = 0
+      Top = 0
+      Hint = 'Incluir Registro (F5)'
+      Caption = 'Novo (F5) '
+      ImageIndex = 0
+      OnClick = BtnNovoClick
+    end
+    object BtnSalvar: TToolButton
+      Left = 79
+      Top = 0
+      Hint = 'Salvar Registro (F6)'
+      Caption = 'Gravar (F6) '
+      ImageIndex = 1
+      OnClick = BtnGravarClick
+    end
+    object btnCancelar: TToolButton
+      Left = 158
+      Top = 0
+      Hint = 'Cancelar Registro (F7)'
+      Caption = 'Cancelar (F7) '
+      ImageIndex = 2
+      OnClick = BtnCancelarClick
+    end
+    object BtnAlterar: TToolButton
+      Left = 237
+      Top = 0
+      Hint = 'Alterar Registro (F8)'
+      Caption = 'Alterar (F8) '
+      ImageIndex = 3
+      OnClick = BtnAlterarClick
+    end
+    object BtnExcluir: TToolButton
+      Left = 316
+      Top = 0
+      Hint = 'Excluir Registro (F9)'
+      Caption = 'Excluir (F9) '
+      ImageIndex = 4
+      OnClick = BtnExcluirClick
+    end
+    object BtnPesquisar: TToolButton
+      Left = 395
+      Top = 0
+      Hint = 'Localizar Registro (F2)'
+      Caption = 'Consultar (F3) '
+      ImageIndex = 5
+      OnClick = BtnConsultarClick
+    end
+    object ToolButton6: TToolButton
+      Left = 474
+      Top = 0
+      Width = 15
+      Caption = 'ToolButton6'
+      ImageIndex = 5
+      Style = tbsSeparator
+    end
+    object BtnLimparPesquisa: TToolButton
+      Left = 489
+      Top = 0
+      Caption = 'Limpar'
+      ImageIndex = 7
+      OnClick = BtnLimparPesquisaClick
+    end
+    object ToolButton1: TToolButton
+      Left = 568
+      Top = 0
+      Caption = 'Impress'#227'o'
+      ImageIndex = 8
+    end
+    object btnFechar: TToolButton
+      Left = 647
+      Top = 0
+      Hint = 'Sair [ESC]'
+      Caption = 'Sair (ESC) '
+      ImageIndex = 6
+      OnClick = btnFecharClick
+    end
   end
   object dsPrincipal: TDataSource
     OnStateChange = dsPrincipalStateChange
@@ -641,7 +622,6 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     Top = 7
   end
   object cxLookAndFeelController1: TcxLookAndFeelController
-    NativeStyle = False
     SkinName = 'Metropolis'
     Left = 1152
     Top = 8
@@ -5194,6 +5174,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       00000000000000000000000000000000000000000000}
     HintStyle.IconSize = cxisLarge
     HintStyle.Rounded = True
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = 'MoneyTwins'
     Left = 760
     Top = 54
   end

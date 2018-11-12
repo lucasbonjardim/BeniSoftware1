@@ -1,9 +1,9 @@
 object Form_Principal: TForm_Principal
   Left = 0
   Top = 216
-  Caption = 'Beni Style'
-  ClientHeight = 744
-  ClientWidth = 1438
+  Caption = 'Beni Style 1.1.5.3 / Vers'#227'o Gratis -  '
+  ClientHeight = 786
+  ClientWidth = 1472
   Color = 4718629
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -3343,9 +3343,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 178
-    Width = 1253
-    Height = 566
+    Top = 179
+    Width = 1287
+    Height = 607
     Align = alClient
     Center = True
     Picture.Data = {
@@ -6671,14 +6671,16 @@ object Form_Principal: TForm_Principal
       0000000000000000000000000000000000000000000000000000000000000000
       00000000000000000000000000000000000000000000000000000000}
     Transparent = True
-    ExplicitTop = 179
-    ExplicitHeight = 545
+    ExplicitLeft = 233
+    ExplicitTop = 210
+    ExplicitWidth = 1253
+    ExplicitHeight = 566
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 178
+    Top = 179
     Width = 185
-    Height = 566
+    Height = 607
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
@@ -6688,7 +6690,7 @@ object Form_Principal: TForm_Principal
       Left = 0
       Top = 0
       Width = 200
-      Height = 566
+      Height = 607
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
@@ -6749,7 +6751,7 @@ object Form_Principal: TForm_Principal
   object pnlToolbar: TPanel
     Left = 0
     Top = 2
-    Width = 1438
+    Width = 1472
     Height = 23
     Align = alTop
     BevelOuter = bvNone
@@ -6763,9 +6765,9 @@ object Form_Principal: TForm_Principal
     ParentFont = False
     TabOrder = 1
     object pnl_top_esquerdo: TPanel
-      Left = 1395
+      Left = 1312
       Top = 0
-      Width = 43
+      Width = 160
       Height = 23
       Align = alRight
       BevelOuter = bvNone
@@ -6774,9 +6776,96 @@ object Form_Principal: TForm_Principal
       ShowCaption = False
       ShowHint = False
       TabOrder = 0
+      object BitBtn1: TBitBtn
+        Left = 117
+        Top = 0
+        Width = 43
+        Height = 23
+        Align = alRight
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          00030000000C0000001300000015000000150000001600000016000000170000
+          00170000001800000018000000170000000F0000000400000000000000000000
+          000B2C517EC33C6BACFF3967A7FF3762A2FF345E9EFF335999FF315595FF2E51
+          90FF2C4D8CFF2A4A88FF2A4685FF1D305DC70000000F00000000000000000000
+          000F4176B5FF8DDDFEFF52C9FEFF4AC4FEFF40BEFDFF44C2FDFF60CFFEFF55CC
+          FEFF2BB3FCFF19A8FCFF12A4FBFF294786FF0000001500000000000000000000
+          000E437BBBFFA1E5FFFF5ED0FFFF57CCFFFF4BAAD3FF405357FF3C5156FF55AD
+          D3FF2DB6FFFF26B0FEFF1DA9FCFF2C4B8AFF0000001400000000000000000000
+          000D4680C0FFB4EBFFFF6BD7FFFF63D4FFFF5BCFFFFF48707DFF436D7CFF55CA
+          FFFF3ABCFFFF31B9FFFF28B2FCFF2E5090FF0000001300000000000000000000
+          000B4884C5FFC5F2FFFF78DDFFFF70D8FFFF69D5FFFF57A3BFFF529FBFFF78D9
+          FFFF47C4FFFF3FBFFFFF35BAFDFF305594FF0000001100000000000000000000
+          000A4A88C8FFD4F6FFFF81E3FFFF7CDFFFFF74DCFFFF527177FF4F6F76FF7CDB
+          FFFF54CBFFFF4CC7FFFF43BFFDFF335B9AFF0000000F00000000000000000000
+          00084C8BCBFFE0F9FFFF8CE6FFFF85E4FFFF7EE1FFFF5F8C95FF5B8995FF69D8
+          FFFF62D2FFFF5ACFFFFF4FC7FDFF36609FFF0000000E00000000000000000000
+          00064C8CCCFFE7FBFFFFE4FAFFFFDFF9FFFFD8F7FFFFD1F4FFFFC8F2FFFFBFEE
+          FFFFB4EBFFFFA8E7FFFF99E0FDFF3966A5FF0000000C00000000000000000000
+          0003386897C44C8CCCFF4C8CCCFF4B8ACAFF4A87C7FF4884C4FF4681C0FF447D
+          BCFF4279B9FF4075B4FF3E70B0FF2C507FC80000000700000000000000000000
+          000100000012564B3EFFD0CCC8FF665B4EFF0000001B00000007000000080000
+          001F726A5FFFB6AFA9FF4B3F30FF0000001C0000000200000000000000000000
+          00000000000D5E5447F3D8D3CFFF6D6256FF16130F5600000008000000091713
+          105A6F6557FFB6AEA5FF4B3F31F4000000150000000000000000000000000000
+          000000000008585046CBB9B3ACFFA0988FFF3D352BBA1613105616130F583A31
+          28BC91877DFF958C81FF3E352ACE0000000E0000000000000000000000000000
+          000000000003211F1C4D999187FDC3BEB8FFA19990FF72675BFF6F6557FF9289
+          7FFFACA59DFF766C60FE14110E53000000050000000000000000000000000000
+          00000000000000000005433F3A839E958CFFBDB7B0FFD9D5D1FFD6D2CDFFAFA8
+          A0FF7E7569FF2B261F890000000A000000010000000000000000000000000000
+          000000000000000000010000000524211F4A5B554CB96B6256E75B5144E8453D
+          34BA1815124E0000000800000001000000000000000000000000}
+        TabOrder = 0
+        OnClick = BitBtn1Click
+      end
+      object BitBtn2: TBitBtn
+        Left = 74
+        Top = 0
+        Width = 43
+        Height = 23
+        Align = alRight
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000513322B74C2C
+          1CB700000000412112B73E1D0EB7000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000000000005B3E2CBD5638
+          26BD000000004A2A1ABD452414BD000000000000000000000000000000000000
+          0000000000000000000002060B15102D58AE0E2952A8010307120000000D0000
+          0013000000160000001800000015000000070000000100000000000000000000
+          0000000000000A1C30541D4E89EC4D8EC4FF2069AFFF183969E2885032F98649
+          2CFF7D4226FF743920FF6C311AFD0B0502340000000200000000000000000308
+          0E1517416CAE2E72AFFF449BD5FF74B7E4FF257EC6FF3D6995FFA97150FFE0A9
+          7EFFD79868FFCF9061FF7C4629FF45210FD200000007000000000E273C57296A
+          A2EC4597CEFF4FAADFFF4BA6DDFF88C2E8FF2780C7FF646D7BFFC38E6BFFE5B6
+          92FFE5B692FFE1B28FFFAE7B5CFF5B2E1AFB03010114000000002B76B4FF5BB6
+          E2FF5AB6E4FF54B0E2FF50ABDFFF9DCEEDFF2883C9FF8D6D5DFFA16744FF9C60
+          3FFF955A39FF8D5233FF86492DFF683A22F9180C0749000000002D7BB9FF66C3
+          EBFF60BDE7FF5BB7E5FF56B1E2FFB1DAF1FF2986CCFF2781C8FF247BC4FF2176
+          C1FF1F70BDFF1D6BB7FF133571FF3A241988351E1388000000002F80BDFF6CCA
+          EEFF67C4EBFF61BEE8FF5CB8E5FFC3E4F5FF2A89CEFF2885CBFF2680C9FF237B
+          C6FF2077C4FF1F72C2FF153C7AFF1D140E3C70462FFF311C127C3085C1FF72D0
+          F0FF6DCBEDFF67C5EBFF77C8EBFFF3FAFDFFBADAF0FF3E94D2FF2782CAFF247E
+          C8FF2279C5FF2075C3FF16407FFF02010103774F38F770462EFF3288C5FF78D7
+          F2FF77D3F0FFADE2F4FFDBEFF7FF88CCE3FF81C8E3FFD1E9F5FF74B2DEFF2680
+          C9FF247CC6FF2177C4FF184483FF000000000000000000000000338DC7FF7FCE
+          EBFFC1E2F2FF8FC1E2FF4297CFFF3892CCFF3490CDFF3994CEFF97D0E8FFA3D0
+          EAFF3C8DCEFF237AC6FF1A4A88FF0000000000000000000000000C22303C2669
+          96C055ACD9FF7AD9F2FF7EDDF5FF7AD8F2FF78D3F0FF318FCCFF3CA8D5FF54B1
+          DAFF98CEE9FF60A6D9FF1C4F8EFF000000000000000000000000000000000000
+          00000C212F3C256693C050A8D5FF77D5F0FF7AD6F1FF318FCDFF3CA8D5FF35A3
+          D3FF309ED3FF4799CDFF1E5493FF000000000000000000000000000000000000
+          000000000000000000000C202E3C24628FC04198CEFF318FCCFF3AA2D2FF2D88
+          C3FF2467A3F514395F9906121F33000000000000000000000000000000000000
+          0000000000000000000000000000000000000B1E2D3C235D8CC0225E8FC9102C
+          44630205080C0000000000000000000000000000000000000000}
+        TabOrder = 1
+      end
     end
     object pnl_search: TPanel
-      Left = 1051
+      Left = 968
       Top = 0
       Width = 344
       Height = 23
@@ -6858,17 +6947,18 @@ object Form_Principal: TForm_Principal
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 25
-    Width = 1438
-    Height = 124
+    Width = 1472
+    Height = 125
     BarManager = dxBarManager1
     Style = rs2016
-    ColorSchemeAccent = rcsaBlue
-    ColorSchemeName = 'DevExpressStyle'
+    ColorSchemeAccent = rcsaPurple
+    ColorSchemeName = 'Office2016Colorful'
     ShowMinimizeButton = False
     Contexts = <>
     TabOrder = 2
     TabStop = False
     object tabCadastro: TdxRibbonTab
+      Active = True
       Caption = 'Cadastros'
       Groups = <
         item
@@ -6905,7 +6995,6 @@ object Form_Principal: TForm_Principal
       Index = 2
     end
     object dxRibbon1Tab1: TdxRibbonTab
-      Active = True
       Caption = 'Frente de Caixa'
       Groups = <
         item
@@ -6956,41 +7045,58 @@ object Form_Principal: TForm_Principal
   object pnl_info: TPanel
     Left = 0
     Top = 0
-    Width = 1438
+    Width = 1472
     Height = 2
     Align = alTop
     BevelOuter = bvNone
-    Color = 6961398
+    Color = 4718629
     ParentBackground = False
     TabOrder = 3
   end
   object pnl_infodados: TPanel
     Left = 0
-    Top = 149
-    Width = 1438
+    Top = 150
+    Width = 1472
     Height = 29
     Align = alTop
     BevelOuter = bvNone
-    Color = clWhite
     ParentBackground = False
     TabOrder = 8
-    object pnl_usu_nome: TPanel
-      Left = 1276
-      Top = 0
-      Width = 162
-      Height = 29
-      Align = alRight
-      BorderStyle = bsSingle
-      Caption = 'Us'#250'ario: '
-      Color = 4277822
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -12
+    object lbl_versao: TLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 104
+      Height = 23
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Vers'#227'o 1.1.2.3'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clMedGray
+      Font.Height = -16
       Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentBackground = False
+      Font.Style = []
+      ParentBiDiMode = False
       ParentFont = False
-      TabOrder = 0
+      ExplicitHeight = 19
+    end
+    object lbl_usuario: TLabel
+      AlignWithMargins = True
+      Left = 1409
+      Top = 3
+      Width = 60
+      Height = 23
+      Align = alRight
+      BiDiMode = bdLeftToRight
+      Caption = 'Usuario:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clMedGray
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentBiDiMode = False
+      ParentFont = False
+      ExplicitHeight = 19
     end
   end
   object ActionList1: TActionList
@@ -7013,12 +7119,13 @@ object Form_Principal: TForm_Principal
   end
   object imlIcons: TImageList
     ColorDepth = cd32Bit
+    DrawingStyle = dsTransparent
     Height = 32
     Width = 32
     Left = 1360
     Top = 260
     Bitmap = {
-      494C010104008000AC0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010104008000E00120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -23510,7 +23617,6 @@ object Form_Principal: TForm_Principal
       end>
   end
   object dxSkinController1: TdxSkinController
-    NativeStyle = False
     SkinName = 'Metropolis'
     Left = 1360
     Top = 200
@@ -23518,7 +23624,7 @@ object Form_Principal: TForm_Principal
   object dxTabbedMDIManager1: TdxTabbedMDIManager
     Active = True
     LookAndFeel.NativeStyle = False
-    LookAndFeel.SkinName = 'Office2016Colorful'
+    LookAndFeel.SkinName = 'DevExpressStyle'
     TabProperties.CloseButtonMode = cbmActiveTab
     TabProperties.CustomButtons.Buttons = <>
     Left = 1277
@@ -23646,7 +23752,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar3: TdxBar
       Caption = 'Gerais'
       CaptionButtons = <>
-      DockedLeft = 183
+      DockedLeft = 184
       DockedTop = 0
       FloatLeft = 784
       FloatTop = 8
@@ -32085,6 +32191,7 @@ object Form_Principal: TForm_Principal
   end
   object ACBrEnterTab1: TACBrEnterTab
     EnterAsTab = True
+    UseScreenControl = True
     Left = 1192
     Top = 200
   end
@@ -35426,6 +35533,7 @@ object Form_Principal: TForm_Principal
       00000000000000000000000000000000000000000000}
     HintStyle.IconSize = cxisLarge
     HintStyle.Rounded = True
+    LookAndFeel.SkinName = 'MoneyTwins'
     Left = 1176
     Top = 270
   end

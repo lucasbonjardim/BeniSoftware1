@@ -70,7 +70,7 @@ begin
        frmDialog.ICONE := Icone;
        Result := frmDialog.ShowModal = mrYes;
    finally
-        frmDialog.Free;
+        FreeAndNil(frmDialog);
    end;
 end;
 

@@ -3,8 +3,8 @@ object Form_Alerta: TForm_Alerta
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Alerta'
-  ClientHeight = 109
-  ClientWidth = 653
+  ClientHeight = 82
+  ClientWidth = 777
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,21 +18,22 @@ object Form_Alerta: TForm_Alerta
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 55
-    Width = 653
+    Top = 28
+    Width = 777
     Height = 54
     Align = alBottom
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 55
+    ExplicitWidth = 653
     object btnConfirmar: TcxButton
-      AlignWithMargins = True
-      Left = 3
-      Top = 3
-      Width = 647
-      Height = 48
-      Align = alClient
+      Left = 0
+      Top = 17
+      Width = 777
+      Height = 37
+      Align = alBottom
       Caption = 'Sair'
       OptionsImage.Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
@@ -170,15 +171,18 @@ object Form_Alerta: TForm_Alerta
       SpeedButtonOptions.Transparent = True
       TabOrder = 0
       OnClick = btnConfirmarClick
+      ExplicitTop = 16
+      ExplicitWidth = 855
     end
   end
-  object pnlMessage: TPanel
+  object lblMen: TPanel
     Left = 0
-    Top = 17
-    Width = 653
-    Height = 38
+    Top = 0
+    Width = 777
+    Height = 28
     Align = alClient
     BevelOuter = bvNone
+    Caption = 'Aten'#231#227'o! Mensagem Informativa'
     Color = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -188,51 +192,28 @@ object Form_Alerta: TForm_Alerta
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    object lblMen: TcxLabel
-      AlignWithMargins = True
-      Left = 43
-      Top = 10
-      Margins.Left = 5
-      Margins.Top = 10
-      Margins.Right = 5
-      Margins.Bottom = 5
-      Align = alClient
-      Caption = ' Confirmao Cancelamento?'
-    end
+    ExplicitWidth = 855
+    ExplicitHeight = 26
     object Panel2: TPanel
       Left = 0
       Top = 0
       Width = 38
-      Height = 38
+      Height = 28
       Align = alLeft
       BevelOuter = bvNone
-      TabOrder = 1
+      TabOrder = 0
+      ExplicitHeight = 38
     end
     object Panel4: TPanel
-      Left = 628
+      Left = 752
       Top = 0
       Width = 25
-      Height = 38
+      Height = 28
       Align = alRight
       BevelOuter = bvNone
-      TabOrder = 2
+      TabOrder = 1
+      ExplicitLeft = 628
+      ExplicitHeight = 38
     end
-  end
-  object Panel3: TPanel
-    Left = 0
-    Top = 0
-    Width = 653
-    Height = 17
-    Align = alTop
-    BevelOuter = bvNone
-    Color = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentBackground = False
-    ParentFont = False
-    TabOrder = 2
   end
 end

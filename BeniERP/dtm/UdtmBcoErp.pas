@@ -3,7 +3,7 @@ unit UdtmBcoErp;
 interface
 
 uses
-  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  System.SysUtils, Vcl.Controls, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
   FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
@@ -18,15 +18,14 @@ type
     fdq_auxiliar: TFDQuery;
     Fdq_usuario: TFDQuery;
     Fdq_Empresa: TFDQuery;
-    procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
-    procedure p_conexao;
     function Grava_MovEstoque(fIDProduto: Integer; fQuant: Double): Boolean;
     
     { Private declarations }
   public
   procedure btn_AcessoExecute(Sender: TObject);
+  procedure p_conexao;
   end;
 
 var
@@ -46,17 +45,6 @@ Unit_Variaveis_Globais,Unit_Rotinas, Unit_F_mensagem_Dialog, Unit_Acesso,
 {$R *.dfm}
 
 
-
-procedure TDtmBcoErp.DataModuleCreate(Sender: TObject);
-begin
-  p_conexao;
-  if FDBcoERP.Connected then
-  btn_AcessoExecute(Self)
-  else
-  begin
-   ShowMessage('Não foi possivel fazer conexão com o banco.');
-  end;
-end;
 
 procedure TDtmBcoErp.DataModuleDestroy(Sender: TObject);
 begin
@@ -125,7 +113,10 @@ end;
 procedure TDtmBcoErp.btn_AcessoExecute(Sender: TObject);
 var
   vSql: TStringList;
+  Lacesso: TFAcesso ;
 begin
+  Lacesso := nil;
+  vSql    :=nil;
   try
     with fdq_auxiliar do
     begin
@@ -136,26 +127,18 @@ begin
       Open;
       if not IsEmpty then
       begin
-        try
-         FAcesso := TFAcesso.Create(Application);
-         FAcesso.cxte_Usuario.Clear;
-         FAcesso.cxte_Senha.Clear;
-         FAcesso.ShowModal;
-        finally
-          FAcesso.Free;
-        end;
-      end else
+        Lacesso := TFAcesso.Create(nil);
+      end
+      else
       begin
         AlertCard('Parabéns por Adquirar o Software Beni E.R.P '+
-        sLineBreak+ 'Vamos Cadastrar o Primeiro usuário do Sistema.','Parabéns!!');
+        sLineBreak+ 'Vamos Cadastrar o Primeiro usuário do Sistema.','Parabéns!');
       end;
-
     end;
-
   finally
-    vSql.Free;
+    FreeAndNil(vSql);
+    Freeandnil(Lacesso);
   end;
-
 end;
 
 

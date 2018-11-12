@@ -7,8 +7,6 @@ uses
   UdtmBcoErp in 'dtm\UdtmBcoErp.pas' {DtmBcoErp: TDataModule},
   Unit_Variaveis_Globais in 'Rotinas\Unit_Variaveis_Globais.pas',
   ParamControleLicenca in 'Controle\ParamControleLicenca.pas',
-  ParamControleTerminalPDV in 'Controle\ParamControleTerminalPDV.pas',
-  ParamControleTerminalECF in 'Controle\ParamControleTerminalECF.pas',
   Unit_Relatorios in 'Rotinas\Unit_Relatorios.pas',
   unit_utilfuncs in 'Rotinas\unit_utilfuncs.pas',
   Vcl.Themes,
@@ -38,7 +36,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Principal, Form_Principal);
   Application.CreateForm(TdtmImagens, dtmImagens);
-  Application.CreateForm(TDtmBcoErp, DtmBcoErp);
   Application.CreateForm(TdtmACBR, dtmACBR);
   Application.Run;
 end.

@@ -115,8 +115,6 @@
         </DCCReference>
         <DCCReference Include="Rotinas\Unit_Variaveis_Globais.pas"/>
         <DCCReference Include="Controle\ParamControleLicenca.pas"/>
-        <DCCReference Include="Controle\ParamControleTerminalPDV.pas"/>
-        <DCCReference Include="Controle\ParamControleTerminalECF.pas"/>
         <DCCReference Include="Rotinas\Unit_Relatorios.pas"/>
         <DCCReference Include="Rotinas\unit_utilfuncs.pas"/>
         <DCCReference Include="dtm\UdtmACBR.pas">

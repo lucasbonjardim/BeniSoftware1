@@ -1,10 +1,11 @@
 object form_Configurar_Pis_Cofins: Tform_Configurar_Pis_Cofins
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Parametros EFD PIS COFINS'
-  ClientHeight = 355
-  ClientWidth = 325
+  ClientHeight = 364
+  ClientWidth = 319
   Color = clBtnHighlight
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

@@ -68,47 +68,8 @@ type
     cxGrid1: TcxGrid;
     cxGrid1DBTableView1TER_ID: TcxGridDBColumn;
     cxGrid1DBTableView1TER_TIPO_PDV: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_COM_LEITOR: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_TPO_TECLADO: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_COM_TECLADO: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HAB_MSG_TEC: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HABILITA_PINPAD: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_COM_PINPAD: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_TPO_BALANCA: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_COM_BALANCA: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HAB_VENDEDOR: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HAB_TEF: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_CHK_PROD_BAL: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_CHK_GAV_ABERTA: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_FLAG_GAV_FECHADA: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HAB_IMG_TELA: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HAB_TELA_TROCO: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_TROCO_COMP_DETALHADO: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HAB_CMC7: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_CARGA_PRO_GERAL: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_HAB_ROT_DESC_PDV: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_DH_ULT_CAR_PRODUTO: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_CARGA_CLI_GERAL: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_DH_ULT_CAR_CLIENTE: TcxGridDBColumn;
-    cxGrid1DBTableView1TER_CARGA_CONFIGURACAO: TcxGridDBColumn;
     cxGrid1DBTableView1TER_DT_ULT_ATUALIZACAO: TcxGridDBColumn;
     cxGrid1DBTableView1TER_HR_ULT_ATUALIZACAO: TcxGridDBColumn;
-    Label1: TLabel;
-    cxDBSpinEdit1: TcxDBSpinEdit;
-    Label2: TLabel;
-    cxDBTextEdit1: TcxDBTextEdit;
-    Label3: TLabel;
-    cxDBSpinEdit2: TcxDBSpinEdit;
-    Label4: TLabel;
-    cxDBSpinEdit3: TcxDBSpinEdit;
-    Label5: TLabel;
-    cxDBSpinEdit4: TcxDBSpinEdit;
-    Label9: TLabel;
-    cxDBSpinEdit8: TcxDBSpinEdit;
-    Label10: TLabel;
-    cxDBSpinEdit9: TcxDBSpinEdit;
-    Label11: TLabel;
-    cxDBSpinEdit10: TcxDBSpinEdit;
     GroupBox1: TGroupBox;
     DBCheckBox1: TDBCheckBox;
     DBCheckBox2: TDBCheckBox;
@@ -122,6 +83,23 @@ type
     DBCheckBox10: TDBCheckBox;
     DBCheckBox11: TDBCheckBox;
     DBCheckBox12: TDBCheckBox;
+    Label11: TLabel;
+    cxDBSpinEdit10: TcxDBSpinEdit;
+    cxDBSpinEdit9: TcxDBSpinEdit;
+    Label10: TLabel;
+    Label9: TLabel;
+    cxDBSpinEdit8: TcxDBSpinEdit;
+    Label5: TLabel;
+    cxDBSpinEdit4: TcxDBSpinEdit;
+    Label4: TLabel;
+    cxDBSpinEdit3: TcxDBSpinEdit;
+    Label3: TLabel;
+    cxDBSpinEdit2: TcxDBSpinEdit;
+    db_combo_tpo_pdv: TDBComboBox;
+    Label2: TLabel;
+    Label1: TLabel;
+    cxDBSpinEdit1: TcxDBSpinEdit;
+    BConfigEFD: TButton;
   private
     { Private declarations }
   public
@@ -135,7 +113,7 @@ implementation
 
 {$R *.dfm}
 
-uses ParamControleTerminalPDV, UdtmBcoErp, Unit_Alerta, Unit_F_mensagem_Dialog,
+uses UdtmBcoErp, Unit_Alerta, Unit_F_mensagem_Dialog,
   Unit_Principal, Unit_Rotinas, unit_utilfuncs;
 
 end.

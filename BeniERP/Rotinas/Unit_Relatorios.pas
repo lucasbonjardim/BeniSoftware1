@@ -6,29 +6,8 @@ uses System.Classes, System.SysUtils,  Vcl.Dialogs, Vcl.Forms, Vcl.Controls,
   DateUtils, System.Contnrs, Data.DB, ACBrUtil;
 
 type
-  TPROPDVTipoRelatoriosPendentes = (relCaixaOperador,     relReciboRecebimento,
-                                    relReciboConvenio,    relFechaCaixa,
-                                    relListaCheques,      relContraVale,
-                                    relSangria,           relReciboEntrega,
-                                    relListaConvenio,     relListaContraVale,
-                                    relCaixaECF,          relConsCliRetag,
-                                    relCartaoMasterPlus,  relExtrContaConvenio,
-                                    relCupomVasilhame,    relSuprimento,
-                                    relReciboPOS,         relReciboItemCancelado,
-                                    relReciboItemDesconto,relFechamentoCego,
-                                    relReciboCupomCancelado,
-                                    relReciboCupomDesconto,
-                                    relReciboPromocaoProdPatrocinado,
-                                    relReciboPromocaoLoja,
-                                    relReciboAprovacaoDMCard,
-                                    relReciboProdValeGas,
-                                    relReciboProdValeAgua,
-                                    relReciboCupomnaoenviado,
-                                    relReciboEntregaOnLine,
-                                    relReciboSisConvenio,
-                                    relComprovanteCancelamentoSisConvenio,
-                                    relReducaoZ,
-                                    relReciboEntregaDigitado) ;
+  TPROPDVTipoRelatoriosPendentes = (relReciboQuitacaoConvenio,
+                                    relRecibo) ;
 
   TPROPDVFormaPagamento = class
   private

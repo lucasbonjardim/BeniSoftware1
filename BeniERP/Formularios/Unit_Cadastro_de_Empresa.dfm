@@ -1,47 +1,48 @@
 inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   Caption = 'Cadastro de Loja'
-  ClientHeight = 652
-  ClientWidth = 1068
-  ExplicitWidth = 1084
-  ExplicitHeight = 691
+  ClientHeight = 642
+  ClientWidth = 1058
+  ExplicitWidth = 1074
+  ExplicitHeight = 681
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 46
-    Width = 1068
+    Width = 1058
+    ExplicitTop = 46
     ExplicitWidth = 1442
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1062
+    Width = 1052
     Height = 37
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1062
+    ExplicitWidth = 1052
     ExplicitHeight = 37
   end
   inherited cxPageControl1: TcxPageControl
     Top = 74
-    Width = 1068
-    Height = 561
+    Width = 1058
+    Height = 551
     Properties.ActivePage = tbCadastro
-    ExplicitTop = 75
-    ExplicitWidth = 1068
-    ExplicitHeight = 560
-    ClientRectBottom = 559
-    ClientRectRight = 1066
+    ExplicitTop = 74
+    ExplicitWidth = 1058
+    ExplicitHeight = 551
+    ClientRectBottom = 547
+    ClientRectRight = 1054
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 2
-      ExplicitTop = 28
-      ExplicitWidth = 1064
-      ExplicitHeight = 530
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1050
+      ExplicitHeight = 523
       inherited Panel1: TPanel
-        Width = 1064
+        Width = 1050
         Height = 25
         Visible = False
-        ExplicitWidth = 1064
+        ExplicitWidth = 1050
         ExplicitHeight = 25
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -86,8 +87,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       object DBGrid1: TDBGrid
         Left = 0
         Top = 25
-        Width = 1064
-        Height = 506
+        Width = 1050
+        Height = 498
         Align = alClient
         DataSource = dsPrincipal
         TabOrder = 1
@@ -162,28 +163,26 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 2
-      ExplicitTop = 28
-      ExplicitWidth = 1064
-      ExplicitHeight = 530
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1050
+      ExplicitHeight = 523
       inherited Shape3: TShape
-        Top = 523
-        Width = 1064
+        Top = 515
+        Width = 1050
         ExplicitTop = 818
         ExplicitWidth = 1284
       end
       object PC: TPageControl
         Left = 0
         Top = 0
-        Width = 1064
-        Height = 520
+        Width = 1050
+        Height = 512
         ActivePage = TabSheet2
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 519
         object TabSheet1: TTabSheet
           Caption = 'Dados'
-          ExplicitHeight = 491
           object Label1: TLabel
             Left = 8
             Top = 8
@@ -462,7 +461,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet2: TTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 1
-          ExplicitHeight = 491
           object Label4: TLabel
             Left = 8
             Top = 128
@@ -688,7 +686,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object Contador: TTabSheet
           Caption = 'Contador'
           ImageIndex = 3
-          ExplicitHeight = 491
           object Label26: TLabel
             Left = 8
             Top = 8
@@ -873,7 +870,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet3: TTabSheet
           Caption = 'Imagem'
           ImageIndex = 2
-          ExplicitHeight = 491
           object GroupBox6: TGroupBox
             Left = 8
             Top = 12
@@ -976,15 +972,15 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   end
   inherited pnl_top: TPanel
     Top = 52
-    Width = 1068
-    ExplicitTop = 53
-    ExplicitWidth = 1068
+    Width = 1058
+    ExplicitTop = 52
+    ExplicitWidth = 1058
   end
   inherited Panel22: TPanel
-    Top = 635
-    Width = 1068
-    ExplicitTop = 635
-    ExplicitWidth = 1068
+    Top = 625
+    Width = 1058
+    ExplicitTop = 625
+    ExplicitWidth = 1058
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_Principal

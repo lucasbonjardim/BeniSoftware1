@@ -25,9 +25,7 @@ uses
 type
   TForm_Alerta = class(TForm)
     Panel1: TPanel;
-    pnlMessage: TPanel;
-    lblMen: TcxLabel;
-    Panel3: TPanel;
+    lblMen: TPanel;
     btnConfirmar: TcxButton;
     Panel2: TPanel;
     Panel4: TPanel;

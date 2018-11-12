@@ -36,18 +36,7 @@ type
     dsPrincipal: TDataSource;
     cxLookAndFeelController1: TcxLookAndFeelController;
     BarraMenu: TcxImageList;
-    ToolBar1: TToolBar;
-    BtnNovo: TToolButton;
-    BtnSalvar: TToolButton;
-    btnCancelar: TToolButton;
-    BtnAlterar: TToolButton;
-    BtnExcluir: TToolButton;
-    ToolButton6: TToolButton;
-    BtnPesquisar: TToolButton;
-    btnFechar: TToolButton;
     Shape1: TShape;
-    BtnLimparPesquisa: TToolButton;
-    ToolButton1: TToolButton;
     cxPageControl1: TcxPageControl;
     tbPesquisa: TcxTabSheet;
     Panel1: TPanel;
@@ -71,6 +60,17 @@ type
     ACBrEnterTab1: TACBrEnterTab;
     cxHintStyleController1: TcxHintStyleController;
     Panel22: TPanel;
+    ToolBar1: TToolBar;
+    BtnNovo: TToolButton;
+    BtnSalvar: TToolButton;
+    btnCancelar: TToolButton;
+    BtnAlterar: TToolButton;
+    BtnExcluir: TToolButton;
+    BtnPesquisar: TToolButton;
+    ToolButton6: TToolButton;
+    BtnLimparPesquisa: TToolButton;
+    ToolButton1: TToolButton;
+    btnFechar: TToolButton;
     procedure btn_sairClick(Sender: TObject);
     procedure BtnPrimeiroRegistroClick(Sender: TObject);
     procedure BtnRegistroAnteriorClick(Sender: TObject);
@@ -141,7 +141,7 @@ begin
       TFDQuery(dsPrincipal.DataSet).Cancel;
   except on e:Exception do
     begin
-      AlertCard('Erro ao cancelar operação: '+e.Message,'Erro');
+      AlertCard('Ops... Nossos cavalos já irá trablhar para essa solução: '+e.Message,'Erro');
     end;
   end;
 end;
@@ -155,7 +155,7 @@ begin
 
   except on e:Exception do
     begin
-      AlertCard('Erro ao pesquisar Registro: '+e.Message,'Erro');
+      AlertCard('Ops... Nossos cavalos já irá trablhar para essa solução: '+e.Message,'Erro');
     end;
   end;
 
@@ -172,7 +172,7 @@ begin
 
   except on e:exception do
     begin
-      AlertCard('Erro ao Excluir Registro: '+e.Message,'Erro');
+      AlertCard('Ops... Nossos Motores já estão se aquecendo para trablhar  nessa solução: '+e.Message,'Erro');
     end;
 
   end;
@@ -213,7 +213,7 @@ begin
 
   except on e:Exception do
     begin
-      AlertCard('Erro ao Incluir Registro: '+e.Message, 'Erro');
+      AlertCard('Ops... Nossos Motores já estão se aquecendo para trablhar  nessa solução: '+e.Message, 'Erro');
     end;
   end;
 end;
