@@ -128,6 +128,7 @@ begin
       if not IsEmpty then
       begin
         Lacesso := TFAcesso.Create(nil);
+        Lacesso.ShowModal;
       end
       else
       begin

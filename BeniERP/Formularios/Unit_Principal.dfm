@@ -3335,6 +3335,7 @@ object Form_Principal: TForm_Principal
     00000000000000000000000000000000000000000000}
   OldCreateOrder = False
   Position = poDesigned
+  Visible = True
   WindowState = wsMaximized
   OnClose = FormClose
   OnCreate = FormCreate
