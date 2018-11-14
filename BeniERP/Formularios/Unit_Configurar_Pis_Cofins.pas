@@ -26,7 +26,7 @@ type
     Versao: TRadioGroup;
     ACBrEnterTab1: TACBrEnterTab;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure BitBtn1Click(Sender: TObject);
+    procedure Btn_ok(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
@@ -45,17 +45,22 @@ implementation
 
 uses UdtmBcoErp;
 
-procedure Tform_Configurar_Pis_Cofins.BitBtn1Click(Sender: TObject);
+procedure Tform_Configurar_Pis_Cofins.Btn_ok(Sender: TObject);
 begin
   Conf.Close;
    if Existe then
-         Conf.SQL.Text := 'update TB_EFD_PISCOFINS set VERSAO=:VERSAO,' +
-                                  'REGIME_APURACAO=:REGIME_APURACAO, METODO=:METODO,' +
-                                  'TIPO_CONT=:TIPO_CONT where COD_EMP=:COD_EMP'
+   begin
+     Conf.SQL.Text := 'update TB_EFD_PISCOFINS set VERSAO=:VERSAO,      ' +
+                      'REGIME_APURACAO=:REGIME_APURACAO, METODO=:METODO,' +
+                      'TIPO_CONT=:TIPO_CONT where COD_EMP=:COD_EMP      ' ;
+   end
    else
-       Conf.SQL.Text := 'insert into TB_EFD_PISCOFINS( COD_EMP, VERSAO, REGIME_APURACAO,' +
-                                'METODO, TIPO_CONT ) Values ( :COD_EMP, :VERSAO, :REGIME_APURACAO,' +
-                                ':METODO, :TIPO_CONT);';
+   begin
+    Conf.SQL.Text := 'insert into TB_EFD_PISCOFINS( COD_EMP, VERSAO, REGIME_APURACAO,   ' +
+                      'METODO, TIPO_CONT ) Values ( :COD_EMP, :VERSAO, :REGIME_APURACAO,' +
+                      ':METODO, :TIPO_CONT);                                            ' ;
+   end;
+
    Conf.ParamByName( 'COD_EMP' ).AsInteger := CODEMP;
    Conf.ParamByName( 'VERSAO').AsInteger := Versao.ItemIndex;
    Conf.ParamByName( 'REGIME_APURACAO').AsInteger := regime.ItemIndex;

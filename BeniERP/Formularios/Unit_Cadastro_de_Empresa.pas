@@ -205,7 +205,6 @@ begin
    Application.CreateForm( Tform_Configurar_Pis_Cofins, form_Configurar_Pis_Cofins);
    form_Configurar_Pis_Cofins.CODEMP := StrToInt( cod_emp.Text );
    form_Configurar_Pis_Cofins.ShowModal;
-
 end;
 
 procedure TForm_Cadastro_de_Empresa.BtnCaminhoValidadorClick(Sender: TObject);
@@ -274,15 +273,6 @@ begin
   begin
     dsPrincipal.DataSet.FieldByName('TIPO_CARGA_BALANCA').AsInteger := db_carga_balanca_tipo.ItemIndex;
   end;
-
-
-
-
-
-
-
-
-
 
 end;
 

@@ -1,35 +1,35 @@
 inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   Caption = 'Cadastro de Loja'
-  ClientHeight = 642
-  ClientWidth = 1058
-  ExplicitWidth = 1074
-  ExplicitHeight = 681
+  ClientHeight = 632
+  ClientWidth = 1048
+  ExplicitWidth = 1064
+  ExplicitHeight = 671
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 46
-    Width = 1058
+    Width = 1048
     ExplicitTop = 46
     ExplicitWidth = 1442
   end
   inherited cxPageControl1: TcxPageControl
     Top = 74
-    Width = 1058
-    Height = 551
+    Width = 1048
+    Height = 541
     Properties.ActivePage = tbCadastro
     ExplicitTop = 74
-    ExplicitWidth = 1058
-    ExplicitHeight = 551
-    ClientRectBottom = 547
-    ClientRectRight = 1054
+    ExplicitWidth = 1048
+    ExplicitHeight = 541
+    ClientRectBottom = 537
+    ClientRectRight = 1044
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1050
-      ExplicitHeight = 523
+      ExplicitWidth = 1040
+      ExplicitHeight = 513
       inherited Panel1: TPanel
-        Width = 1050
+        Width = 1040
         Height = 25
         Visible = False
-        ExplicitWidth = 1050
+        ExplicitWidth = 1040
         ExplicitHeight = 25
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -42,7 +42,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
           ExplicitHeight = 25
           inherited edtText: TEdit
             Height = 7
-            ExplicitHeight = 7
           end
           inherited edtCurr: TcxCurrencyEdit
             ExplicitHeight = 7
@@ -53,7 +52,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
           end
           inherited edtMask: TMaskEdit
             Height = 7
-            ExplicitHeight = 7
           end
         end
         inherited cxButton1: TcxButton
@@ -76,8 +74,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       object DBGrid1: TDBGrid
         Left = 0
         Top = 25
-        Width = 1050
-        Height = 498
+        Width = 1040
+        Height = 488
         Align = alClient
         DataSource = dsPrincipal
         TabOrder = 1
@@ -152,28 +150,24 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1050
-      ExplicitHeight = 523
+      ExplicitWidth = 1040
+      ExplicitHeight = 513
       inherited Shape3: TShape
-        Top = 515
-        Width = 1050
+        Top = 505
+        Width = 1040
         ExplicitTop = 818
         ExplicitWidth = 1284
       end
       object PC: TPageControl
         Left = 0
         Top = 0
-        Width = 1050
-        Height = 512
+        Width = 1040
+        Height = 502
         ActivePage = TabSheet2
         Align = alClient
         TabOrder = 0
         object TabSheet1: TTabSheet
           Caption = 'Dados'
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object Label1: TLabel
             Left = 8
             Top = 8
@@ -452,10 +446,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet2: TTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 1
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object Label4: TLabel
             Left = 8
             Top = 128
@@ -681,10 +671,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object Contador: TTabSheet
           Caption = 'Contador'
           ImageIndex = 3
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object Label26: TLabel
             Left = 8
             Top = 8
@@ -869,10 +855,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet3: TTabSheet
           Caption = 'Imagem'
           ImageIndex = 2
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 0
           object GroupBox6: TGroupBox
             Left = 8
             Top = 12
@@ -975,25 +957,25 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   end
   inherited pnl_top: TPanel
     Top = 52
-    Width = 1058
+    Width = 1048
     ExplicitTop = 52
-    ExplicitWidth = 1058
+    ExplicitWidth = 1048
   end
   inherited Panel22: TPanel
-    Top = 625
-    Width = 1058
-    ExplicitTop = 625
-    ExplicitWidth = 1058
+    Top = 615
+    Width = 1048
+    ExplicitTop = 615
+    ExplicitWidth = 1048
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1052
+    Width = 1042
     Height = 37
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1052
+    ExplicitWidth = 1042
     ExplicitHeight = 37
   end
   inherited dsPrincipal: TDataSource

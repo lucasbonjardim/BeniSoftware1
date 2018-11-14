@@ -26,7 +26,7 @@ object form_Configurar_Pis_Cofins: Tform_Configurar_Pis_Cofins
     Kind = bkOK
     NumGlyphs = 2
     TabOrder = 0
-    OnClick = BitBtn1Click
+    OnClick = Btn_ok
   end
   object Metodo: TRadioGroup
     Left = 8

@@ -20,11 +20,11 @@ type
     Fdq_Empresa: TFDQuery;
     procedure DataModuleDestroy(Sender: TObject);
   private
-    function Grava_MovEstoque(fIDProduto: Integer; fQuant: Double): Boolean;
+    function  Grava_MovEstoque(fIDProduto: Integer; fQuant: Double): Boolean;
     
     { Private declarations }
   public
-  procedure btn_AcessoExecute(Sender: TObject);
+  procedure AcessoExecute;
   procedure p_conexao;
   end;
 
@@ -53,7 +53,7 @@ end;
 
 procedure TDtmBcoErp.p_conexao;
 var
-  ArqINI,PathApplication,aux : String ;
+aux : String ;
   INI : TIniFile ;
 begin
   aux := ExtractFilePath(Application.ExeName) + 'Benicfg.ini';
@@ -67,7 +67,7 @@ begin
       FDBcoERP.Connected := false;
       FDBcoERP.Params.Clear;
       FDBcoERP.Params.Values['DriverID']  := 'FB';
-      FDBcoERP.Params.Values['database']  := INI.ReadString('LOGIN','Banco'      ,'127.0.0.1:c:\sotis\super\tabelas\bcosup.fdb');
+      FDBcoERP.Params.Values['database']  := INI.ReadString('LOGIN','Banco'      ,'127.0.0.1C:\BeniSoftware\BeniERP\DataBase\BENIGESTAO.FDB');
       FDBcoERP.Params.Values['user_name'] := INI.ReadString('LOGIN','USUARIO'    ,'SYSDBA');
       FDBcoERP.Params.Values['password']  := INI.ReadString('LOGIN','SENHA'      ,'masterkey');
       FDBcoERP.Connected   := true;
@@ -110,37 +110,35 @@ begin
   end;
 end;
 
-procedure TDtmBcoErp.btn_AcessoExecute(Sender: TObject);
+procedure TDtmBcoErp.AcessoExecute;
 var
-  vSql: TStringList;
-  Lacesso: TFAcesso ;
+  lSql: TStringList;
 begin
-  Lacesso := nil;
-  vSql    :=nil;
+  lSql :=nil;
   try
     with fdq_auxiliar do
     begin
       close;
-      vSql := TStringList.Create;
-      vSql.Add('select * from TB_USUARIO');
-      sql := vSql;
+      lSql := TStringList.Create;
+      lSql.Add('select * from TB_USUARIO');
+      sql := lSql;
       Open;
       if not IsEmpty then
       begin
-        Lacesso := TFAcesso.Create(nil);
-        Lacesso.ShowModal;
+        Application.CreateForm(TFAcesso, FAcesso);
+        FAcesso.ShowModal;
       end
       else
       begin
-        AlertCard('Parabéns por Adquirar o Software Beni E.R.P '+
+        AlertCard('Parabéns por Adquirir o Software Beni E.R.P '+
         sLineBreak+ 'Vamos Cadastrar o Primeiro usuário do Sistema.','Parabéns!');
       end;
     end;
   finally
-    FreeAndNil(vSql);
-    Freeandnil(Lacesso);
+    FreeAndNil(lSql);
   end;
 end;
+
 
 
 end.

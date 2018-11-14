@@ -406,8 +406,6 @@ type
     dxBarButton15: TdxBarButton;
     lbl_versao: TLabel;
     lbl_usuario: TLabel;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -426,7 +424,6 @@ type
     procedure dxBarButton15Click(Sender: TObject);
     procedure dxBarButton14Click(Sender: TObject);
     procedure CX002Click(Sender: TObject);
-    procedure BitBtn1Click(Sender: TObject);
 
 
   private
@@ -470,16 +467,6 @@ begin
    AbreForm(TForm_Cadastro_usuario,Form_Cadastro_usuario);
 end;
 
-procedure TForm_Principal.BitBtn1Click(Sender: TObject);
-begin
-  if dxTabbedMDIManager1.TabProperties.PageCount > 0 then
-  begin
-   AlertCard('Feche Todas as janelas abertas e tente novamente.','Atenção!');
-   exit;
-  end;
-  DtmBcoErp.btn_AcessoExecute(Sender);
-end;
-
 procedure TForm_Principal.btn_lateralClick(Sender: TObject);
 begin
   if pnl_lateral.Width =185 then
@@ -506,8 +493,11 @@ procedure TForm_Principal.CarregaConfiguracao;
 begin
   DtmBcoErp    := TDtmBcoErp.Create(nil);
   DtmBcoErp.p_conexao;
+
   if DtmBcoErp.FDBcoERP.Connected then
-    DtmBcoErp.btn_AcessoExecute(Self)
+  begin
+    DtmBcoErp.AcessoExecute;
+  end
   else
   begin
    ShowMessage('Não foi possivel fazer conexão com o banco.');
