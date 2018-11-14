@@ -491,7 +491,7 @@ end;
 
 procedure TForm_Principal.CarregaConfiguracao;
 begin
-  DtmBcoErp    := TDtmBcoErp.Create(nil);
+  DtmBcoErp    := TDtmBcoErp.Create(self);
   DtmBcoErp.p_conexao;
 
   if DtmBcoErp.FDBcoERP.Connected then

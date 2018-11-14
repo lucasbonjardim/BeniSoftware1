@@ -54,7 +54,7 @@ end;
 procedure TDtmBcoErp.p_conexao;
 var
 aux : String ;
-  INI : TIniFile ;
+INI : TIniFile ;
 begin
   aux := ExtractFilePath(Application.ExeName) + 'Benicfg.ini';
     if not FileExists(aux) then
@@ -113,6 +113,7 @@ end;
 procedure TDtmBcoErp.AcessoExecute;
 var
   lSql: TStringList;
+
 begin
   lSql :=nil;
   try
@@ -126,7 +127,8 @@ begin
       if not IsEmpty then
       begin
         Application.CreateForm(TFAcesso, FAcesso);
-        FAcesso.ShowModal;
+         if FAcesso.ShowModal = mrOk then
+          Form_Principal.Show;
       end
       else
       begin
@@ -136,6 +138,7 @@ begin
     end;
   finally
     FreeAndNil(lSql);
+    FreeAndNil(FAcesso);
   end;
 end;
 
