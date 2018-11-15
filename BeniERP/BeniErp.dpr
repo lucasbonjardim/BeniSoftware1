@@ -35,7 +35,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Principal, Form_Principal);
-  Application.CreateForm(TdtmImagens, dtmImagens);
   Application.CreateForm(TdtmACBR, dtmACBR);
   Application.Run;
 end.

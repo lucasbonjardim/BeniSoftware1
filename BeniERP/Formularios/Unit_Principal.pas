@@ -33,7 +33,7 @@ uses
 
 type
   TForm_Principal = class(TForm)
-    ActionList1: TActionList;
+    Act_BarraLateral: TActionList;
     actHome: TAction;
     actLayout: TAction;
     actPower: TAction;
@@ -406,6 +406,11 @@ type
     dxBarButton15: TdxBarButton;
     lbl_versao: TLabel;
     lbl_usuario: TLabel;
+    Act_Base: TActionList;
+    act_Cad_Empresa: TAction;
+    img_act_Base: TImageList;
+    dxBarSubItem12: TdxBarSubItem;
+    dxBarButton16: TdxBarButton;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -420,10 +425,10 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure R019Click(Sender: TObject);
-    procedure CE000Click(Sender: TObject);
     procedure dxBarButton15Click(Sender: TObject);
     procedure dxBarButton14Click(Sender: TObject);
     procedure CX002Click(Sender: TObject);
+    procedure act_Cad_EmpresaExecute(Sender: TObject);
 
 
   private
@@ -462,6 +467,11 @@ begin
   AbreForm(TForm_Cadastro_Produtos,Form_Cadastro_Produtos);
 end;
 
+procedure TForm_Principal.act_Cad_EmpresaExecute(Sender: TObject);
+begin
+   AbreForm(TForm_Cadastro_de_Empresa,Form_Cadastro_de_Empresa);
+end;
+
 procedure TForm_Principal.B003Click(Sender: TObject);
 begin
    AbreForm(TForm_Cadastro_usuario,Form_Cadastro_usuario);
@@ -490,40 +500,58 @@ begin
 end;
 
 procedure TForm_Principal.CarregaConfiguracao;
+var
+caminhoimgjpeg, caminhoimgpng: String;
 begin
-  DtmBcoErp    := TDtmBcoErp.Create(self);
-  DtmBcoErp.p_conexao;
 
-  if DtmBcoErp.FDBcoERP.Connected then
+  with DtmBcoErp do
   begin
-    DtmBcoErp.AcessoExecute;
-  end
-  else
-  begin
-   ShowMessage('Não foi possivel fazer conexão com o banco.');
-   Application.Terminate;
+    DtmBcoErp    := TDtmBcoErp.Create(self);
+    DtmBcoErp.p_conexao;
+
+    if DtmBcoErp.FDBcoERP.Connected then
+    begin
+      DtmBcoErp.AcessoExecute;
+    end
+    else
+    begin
+     ShowMessage('Não foi possivel fazer conexão com o banco.');
+     Application.Terminate;
+    end;
+
+    pnl_lateral.Width :=53;
+
+    dxRibbon1.ActiveTab := tabCadastro;
+
+
+    // Carrega Imagem fundo
+    caminhoimgpng  := ExtractFilePath(Application.ExeName) + 'imagens\fundo.png';
+    caminhoimgjpeg := ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpeg';
+
+    if FileExists(caminhoimgpng) then
+    begin
+      img_fundo.Picture.LoadFromFile(caminhoimgpng);
+      img_fundo.Visible := true;
+    end
+    else
+    if FileExists(caminhoimgjpeg) then
+    begin
+      img_fundo.Picture.LoadFromFile(caminhoimgjpeg);
+      img_fundo.Stretch := True;
+      img_fundo.Visible := true;
+    end;
+
+
+    Ajusta_Cadastro_Empresa;
   end;
 
-  pnl_lateral.Width :=53;
-  dxRibbon1.ActiveTab := tabCadastro;
-
-  if FileExists(ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpg') then
-  begin
-    img_fundo.Picture.LoadFromFile(ExtractFilePath(Application.ExeName) +
-    'imagens\fundo.jpg');
-    img_fundo.Visible := true;
-  end;
 end;
+
 
 procedure TForm_Principal.catMenuItemsCategoryCollapase(Sender: TObject;
   const Category: TButtonCategory);
 begin
    catMenuItems.Categories[0].Collapsed := False;
-end;
-
-procedure TForm_Principal.CE000Click(Sender: TObject);
-begin
-   AbreForm(TForm_Cadastro_de_Empresa,Form_Cadastro_de_Empresa);
 end;
 
 procedure TForm_Principal.CX002Click(Sender: TObject);
@@ -543,6 +571,7 @@ end;
 
 procedure TForm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
+  if BolBloqueiaFechaERPJaberta then
   if dxTabbedMDIManager1.TabProperties.PageCount > 0 then
   begin
    AlertCard('Não é possivel fechar o Sistema enquanto houver janela abertas.','Atenção!');
