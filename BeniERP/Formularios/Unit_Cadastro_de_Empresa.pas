@@ -143,7 +143,7 @@ type
     DBImage1: TDBImage;
     DBImage2: TDBImage;
     db_chk_cli_prevenda: TDBCheckBox;
-    db_chk_cli_sem_cpf: TDBCheckBox;
+    db_chk_fecherpJaberta: TDBCheckBox;
     db_carga_balanca_tipo: TDBComboBox;
     dbedit_caminhosintegravalidador: TcxDBTextEdit;
     cxDBTextEdit14: TcxDBTextEdit;
@@ -168,6 +168,9 @@ type
     Button2: TButton;
     HTTPRIO1: THTTPRIO;
     DBGrid1: TDBGrid;
+    db_chk_cli_sem_cpf: TDBCheckBox;
+    DBCheckBox1: TDBCheckBox;
+    FDQ_PrincipalPERMITE_FECHA_ERP_JANELA_ABERTA: TWideStringField;
     procedure BtnCaminhoValidadorClick(Sender: TObject);
     procedure BConfigEFDClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);

@@ -76,11 +76,14 @@ const
   fsRelatoriosPendentes       : TObjectList ;
   fsRelatoriosPendentesCount  : Integer ;
 
-
+  COD_EMP             : Integer ;
   intSequenciaItem    : Integer ;
   intAuxiliar         : Integer ;
+  BolBloqueiaFechaERPJaberta  : Boolean ;
   strAuxiliar         : String  ;
-  COD_EMP             : Integer;
+
+
+
 
 
 implementation

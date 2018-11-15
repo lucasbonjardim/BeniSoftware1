@@ -1,35 +1,37 @@
 inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   Caption = 'Cadastro de Loja'
-  ClientHeight = 632
-  ClientWidth = 1048
-  ExplicitWidth = 1064
-  ExplicitHeight = 671
+  ClientHeight = 658
+  ClientWidth = 1440
+  ExplicitWidth = 1456
+  ExplicitHeight = 697
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 46
-    Width = 1048
+    Width = 1440
     ExplicitTop = 46
     ExplicitWidth = 1442
   end
   inherited cxPageControl1: TcxPageControl
     Top = 74
-    Width = 1048
-    Height = 541
+    Width = 1440
+    Height = 567
     Properties.ActivePage = tbCadastro
     ExplicitTop = 74
-    ExplicitWidth = 1048
-    ExplicitHeight = 541
-    ClientRectBottom = 537
-    ClientRectRight = 1044
+    ExplicitWidth = 1440
+    ExplicitHeight = 567
+    ClientRectBottom = 563
+    ClientRectRight = 1436
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1040
-      ExplicitHeight = 513
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1432
+      ExplicitHeight = 539
       inherited Panel1: TPanel
-        Width = 1040
+        Width = 1432
         Height = 25
         Visible = False
-        ExplicitWidth = 1040
+        ExplicitWidth = 1432
         ExplicitHeight = 25
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -74,8 +76,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       object DBGrid1: TDBGrid
         Left = 0
         Top = 25
-        Width = 1040
-        Height = 488
+        Width = 1432
+        Height = 514
         Align = alClient
         DataSource = dsPrincipal
         TabOrder = 1
@@ -150,19 +152,21 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1040
-      ExplicitHeight = 513
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1432
+      ExplicitHeight = 539
       inherited Shape3: TShape
-        Top = 505
-        Width = 1040
+        Top = 531
+        Width = 1432
         ExplicitTop = 818
         ExplicitWidth = 1284
       end
       object PC: TPageControl
         Left = 0
         Top = 0
-        Width = 1040
-        Height = 502
+        Width = 1432
+        Height = 528
         ActivePage = TabSheet2
         Align = alClient
         TabOrder = 0
@@ -572,8 +576,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
             TabOrder = 3
           end
           object db_chk_cli_prevenda: TDBCheckBox
-            Left = 8
-            Top = 3
+            Left = 12
+            Top = 329
             Width = 281
             Height = 17
             Caption = 'Mostrar Situa'#231#227'o do Cliente nas Pre-Vendas'
@@ -583,13 +587,13 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
             ValueChecked = 'S'
             ValueUnchecked = 'N'
           end
-          object db_chk_cli_sem_cpf: TDBCheckBox
-            Left = 8
-            Top = 26
-            Width = 194
+          object db_chk_fecherpJaberta: TDBCheckBox
+            Left = 12
+            Top = 352
+            Width = 281
             Height = 17
-            Caption = 'Cadastrar Cliente sem CPF'
-            DataField = 'CADASTRAR_CLIENTE_SEM_CPF'
+            Caption = 'Bloqueia encerramento do sistema com Janela aberta'
+            DataField = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
             DataSource = dsPrincipal
             TabOrder = 5
             ValueChecked = 'S'
@@ -666,6 +670,30 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
             ImageIndex = 9
             Images = BarraMenu
             TabOrder = 12
+          end
+          object db_chk_cli_sem_cpf: TDBCheckBox
+            Left = 12
+            Top = 306
+            Width = 194
+            Height = 17
+            Caption = 'Cadastrar Cliente sem CPF'
+            DataField = 'CADASTRAR_CLIENTE_SEM_CPF'
+            DataSource = dsPrincipal
+            TabOrder = 13
+            ValueChecked = 'S'
+            ValueUnchecked = 'N'
+          end
+          object DBCheckBox1: TDBCheckBox
+            Left = 12
+            Top = 375
+            Width = 293
+            Height = 17
+            Caption = 'Permite Fechar o Sistema com Janelas Abertas'
+            DataField = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
+            DataSource = dsPrincipal
+            TabOrder = 14
+            ValueChecked = 'S'
+            ValueUnchecked = 'N'
           end
         end
         object Contador: TTabSheet
@@ -957,25 +985,25 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   end
   inherited pnl_top: TPanel
     Top = 52
-    Width = 1048
+    Width = 1440
     ExplicitTop = 52
-    ExplicitWidth = 1048
+    ExplicitWidth = 1440
   end
   inherited Panel22: TPanel
-    Top = 615
-    Width = 1048
-    ExplicitTop = 615
-    ExplicitWidth = 1048
+    Top = 641
+    Width = 1440
+    ExplicitTop = 641
+    ExplicitWidth = 1440
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1042
+    Width = 1434
     Height = 37
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1042
+    ExplicitWidth = 1434
     ExplicitHeight = 37
   end
   inherited dsPrincipal: TDataSource
@@ -2531,6 +2559,13 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       FieldName = 'EMAIL_CONTADOR'
       Origin = 'EMAIL_CONTADOR'
       Size = 255
+    end
+    object FDQ_PrincipalPERMITE_FECHA_ERP_JANELA_ABERTA: TWideStringField
+      FieldName = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
+      Origin = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
+      Required = True
+      FixedChar = True
+      Size = 1
     end
   end
   object OpenDialog: TOpenDialog

@@ -20,12 +20,11 @@ type
     Fdq_Empresa: TFDQuery;
     procedure DataModuleDestroy(Sender: TObject);
   private
-    function  Grava_MovEstoque(fIDProduto: Integer; fQuant: Double): Boolean;
-    
-    { Private declarations }
+
   public
   procedure AcessoExecute;
   procedure p_conexao;
+  procedure Ajusta_Cadastro_Empresa;
   end;
 
 var
@@ -45,6 +44,35 @@ Unit_Variaveis_Globais,Unit_Rotinas, Unit_F_mensagem_Dialog, Unit_Acesso,
 {$R *.dfm}
 
 
+
+procedure TDtmBcoErp.Ajusta_Cadastro_Empresa;
+var
+FdqCadastro_empresa : TFDQuery;
+LSql : String;
+begin
+  FdqCadastro_empresa := nil;
+
+  try
+    FdqCadastro_empresa := TFDQuery.Create(nil);
+    FdqCadastro_empresa.Active := False;
+    FdqCadastro_empresa.Connection := ConexaoDados;
+    LSql := 'Select * from tb_empresa';
+    FdqCadastro_empresa.SQL.Add(LSql);
+    FdqCadastro_empresa.open;
+
+    if not FdqCadastro_empresa.IsEmpty then
+    begin
+      if (FdqCadastro_empresa.FieldByName('PERMITE_FECHA_ERP_JANELA_ABERTA').AsString = 'S') then
+        BolBloqueiaFechaERPJaberta := False
+      else
+        BolBloqueiaFechaERPJaberta := True;
+    end;
+
+  finally
+    FreeAndNil(FdqCadastro_empresa);
+  end;
+
+end;
 
 procedure TDtmBcoErp.DataModuleDestroy(Sender: TObject);
 begin
@@ -83,31 +111,6 @@ begin
     INI.Free ;
   end ;
 
-end;
-
-function TDtmBcoErp.Grava_MovEstoque(fIDProduto: Integer; fQuant: Double): Boolean;
-var
-  Q: TFdQuery;
-begin
-  Result := true;
-  Q := TFdQuery.Create(nil);
-  try
-    Q.Connection := ConexaoDados;
-    Q.Close;
-    Q.Params.Clear;
-    Q.SQL.Clear;
-    Q.SQL.Add('update estoque set');
-    Q.SQL.Add('estoque.quantidade = :pQuant');
-    Q.SQL.Add('where estoque.idproduto = :pIDProd');
-    Q.SQL.Add('and estoque.idempresa = :pIDempresa');
-    Q.Params.ParamByName('pIDProd').AsInteger := fIDProduto;
-    Q.Params.ParamByName('pIDEmpresa').AsInteger := 1;
-    Q.Params.ParamByName('pQuant').AsFloat := fQuant;
-    Q.ExecSQL;
-  finally
-    Q.Close;
-    Q.Free;
-  end;
 end;
 
 procedure TDtmBcoErp.AcessoExecute;
