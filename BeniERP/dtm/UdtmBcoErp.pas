@@ -116,7 +116,6 @@ end;
 procedure TDtmBcoErp.AcessoExecute;
 var
   lSql: TStringList;
-
 begin
   lSql :=nil;
   try

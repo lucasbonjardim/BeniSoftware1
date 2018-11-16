@@ -12,7 +12,7 @@ object Form_Alerta: TForm_Alerta
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
   OnKeyDown = FormKeyDown
   PixelsPerInch = 96
   TextHeight = 13
@@ -26,8 +26,6 @@ object Form_Alerta: TForm_Alerta
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 55
-    ExplicitWidth = 653
     object btnConfirmar: TcxButton
       Left = 0
       Top = 17
@@ -171,8 +169,6 @@ object Form_Alerta: TForm_Alerta
       SpeedButtonOptions.Transparent = True
       TabOrder = 0
       OnClick = btnConfirmarClick
-      ExplicitTop = 16
-      ExplicitWidth = 855
     end
   end
   object lblMen: TPanel
@@ -192,8 +188,6 @@ object Form_Alerta: TForm_Alerta
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 855
-    ExplicitHeight = 26
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -202,7 +196,6 @@ object Form_Alerta: TForm_Alerta
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitHeight = 38
     end
     object Panel4: TPanel
       Left = 752
@@ -212,8 +205,6 @@ object Form_Alerta: TForm_Alerta
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 628
-      ExplicitHeight = 38
     end
   end
 end

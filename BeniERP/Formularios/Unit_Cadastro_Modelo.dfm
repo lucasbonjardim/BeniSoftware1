@@ -4,8 +4,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 505
-  ClientWidth = 1335
+  ClientHeight = 495
+  ClientWidth = 1325
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -26,7 +26,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     AlignWithMargins = True
     Left = 0
     Top = 3
-    Width = 1335
+    Width = 1325
     Height = 3
     Margins.Left = 0
     Margins.Right = 0
@@ -39,8 +39,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object cxPageControl1: TcxPageControl
     Left = 0
     Top = 83
-    Width = 1335
-    Height = 405
+    Width = 1325
+    Height = 395
     Align = alClient
     Color = clWhite
     ParentBackground = False
@@ -48,22 +48,19 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     TabOrder = 0
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ExplicitTop = 75
-    ExplicitHeight = 413
-    ClientRectBottom = 401
+    ClientRectBottom = 391
     ClientRectLeft = 4
-    ClientRectRight = 1331
+    ClientRectRight = 1321
     ClientRectTop = 24
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
       Color = clBtnFace
       ImageIndex = 0
       ParentColor = False
-      ExplicitHeight = 385
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1327
+        Width = 1317
         Height = 41
         Align = alTop
         BevelOuter = bvNone
@@ -282,12 +279,11 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitHeight = 385
       object Shape3: TShape
         AlignWithMargins = True
         Left = 0
-        Top = 369
-        Width = 1327
+        Top = 359
+        Width = 1317
         Height = 5
         Margins.Left = 0
         Margins.Right = 0
@@ -303,14 +299,13 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object pnl_top: TPanel
     Left = 0
     Top = 61
-    Width = 1335
+    Width = 1325
     Height = 22
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 53
     object BtnRegistroPosterior: TcxButton
       Left = 65
       Top = 0
@@ -510,8 +505,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   end
   object Panel22: TPanel
     Left = 0
-    Top = 488
-    Width = 1335
+    Top = 478
+    Width = 1325
     Height = 17
     Align = alBottom
     BevelOuter = bvNone
@@ -522,7 +517,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object ToolBar1: TToolBar
     Left = 0
     Top = 9
-    Width = 1335
+    Width = 1325
     Height = 52
     ButtonHeight = 52
     ButtonWidth = 79
@@ -535,9 +530,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     ShowCaptions = True
     ShowHint = False
     TabOrder = 3
-    ExplicitLeft = 8
     ExplicitTop = 8
-    ExplicitWidth = 1259
     object BtnNovo: TToolButton
       Left = 0
       Top = 0

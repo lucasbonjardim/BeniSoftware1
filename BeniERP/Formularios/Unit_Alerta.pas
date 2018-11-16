@@ -20,7 +20,8 @@ uses
   dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxLabel, Vcl.ExtCtrls;
+  dxSkinXmas2008Blue, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxLabel, Vcl.ExtCtrls,
+  Winapi.MMSystem;
 
 type
   TForm_Alerta = class(TForm)
@@ -68,6 +69,7 @@ function AlertCard( Texto: String;  Texto1: String ): Boolean;
 var
    Form_Alerta: TForm_Alerta;
 begin
+  PlaySound(PChar('SystemExclamation'), 0, SND_ASYNC);
   Form_Alerta := TForm_Alerta.Create( nil );
   try
     Form_Alerta.lblMen.Caption := Texto;

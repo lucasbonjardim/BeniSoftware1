@@ -1,37 +1,35 @@
 inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   Caption = 'Cadastro de Loja'
-  ClientHeight = 658
-  ClientWidth = 1440
-  ExplicitWidth = 1456
-  ExplicitHeight = 697
+  ClientHeight = 648
+  ClientWidth = 1430
+  ExplicitWidth = 1446
+  ExplicitHeight = 687
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Top = 46
-    Width = 1440
+    Top = 56
+    Width = 1430
     ExplicitTop = 46
     ExplicitWidth = 1442
   end
   inherited cxPageControl1: TcxPageControl
-    Top = 74
-    Width = 1440
-    Height = 567
+    Top = 84
+    Width = 1430
+    Height = 547
     Properties.ActivePage = tbCadastro
     ExplicitTop = 74
-    ExplicitWidth = 1440
-    ExplicitHeight = 567
-    ClientRectBottom = 563
-    ClientRectRight = 1436
+    ExplicitWidth = 1430
+    ExplicitHeight = 557
+    ClientRectBottom = 543
+    ClientRectRight = 1426
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1432
-      ExplicitHeight = 539
+      ExplicitWidth = 1422
+      ExplicitHeight = 529
       inherited Panel1: TPanel
-        Width = 1432
+        Width = 1422
         Height = 25
         Visible = False
-        ExplicitWidth = 1432
+        ExplicitWidth = 1422
         ExplicitHeight = 25
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -76,8 +74,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       object DBGrid1: TDBGrid
         Left = 0
         Top = 25
-        Width = 1432
-        Height = 514
+        Width = 1422
+        Height = 494
         Align = alClient
         DataSource = dsPrincipal
         TabOrder = 1
@@ -152,26 +150,26 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1432
-      ExplicitHeight = 539
+      ExplicitWidth = 1422
+      ExplicitHeight = 529
       inherited Shape3: TShape
-        Top = 531
-        Width = 1432
+        Top = 511
+        Width = 1422
         ExplicitTop = 818
         ExplicitWidth = 1284
       end
       object PC: TPageControl
         Left = 0
         Top = 0
-        Width = 1432
-        Height = 528
+        Width = 1422
+        Height = 508
         ActivePage = TabSheet2
         Align = alClient
         TabOrder = 0
+        ExplicitHeight = 518
         object TabSheet1: TTabSheet
           Caption = 'Dados'
+          ExplicitHeight = 490
           object Label1: TLabel
             Left = 8
             Top = 8
@@ -450,6 +448,7 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet2: TTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 1
+          ExplicitHeight = 490
           object Label4: TLabel
             Left = 8
             Top = 128
@@ -699,6 +698,7 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object Contador: TTabSheet
           Caption = 'Contador'
           ImageIndex = 3
+          ExplicitHeight = 490
           object Label26: TLabel
             Left = 8
             Top = 8
@@ -883,6 +883,7 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet3: TTabSheet
           Caption = 'Imagem'
           ImageIndex = 2
+          ExplicitHeight = 490
           object GroupBox6: TGroupBox
             Left = 8
             Top = 12
@@ -984,27 +985,27 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
     end
   end
   inherited pnl_top: TPanel
-    Top = 52
-    Width = 1440
+    Top = 62
+    Width = 1430
     ExplicitTop = 52
-    ExplicitWidth = 1440
+    ExplicitWidth = 1430
   end
   inherited Panel22: TPanel
-    Top = 641
-    Width = 1440
-    ExplicitTop = 641
-    ExplicitWidth = 1440
+    Top = 631
+    Width = 1430
+    ExplicitTop = 631
+    ExplicitWidth = 1430
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1434
-    Height = 37
+    Width = 1424
+    Height = 47
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1434
-    ExplicitHeight = 37
+    ExplicitWidth = 1424
+    ExplicitHeight = 47
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_Principal

@@ -457,7 +457,7 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs,
   Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
   Unit_Cadastro_de_Empresa, Unit_Configurar_Pis_Cofins,
-  Unit_Cadastro_Aliquota_pdv, Unit_Cadastro_Terminais_Pdv;
+  Unit_Cadastro_Aliquota_pdv, Unit_Cadastro_Terminais_Pdv, Unit_Splach;
 
 {$R *.dfm}
 
@@ -503,10 +503,9 @@ procedure TForm_Principal.CarregaConfiguracao;
 var
 caminhoimgjpeg, caminhoimgpng: String;
 begin
-
   with DtmBcoErp do
   begin
-    DtmBcoErp    := TDtmBcoErp.Create(self);
+    DtmBcoErp := TDtmBcoErp.Create(self);
     DtmBcoErp.p_conexao;
 
     if DtmBcoErp.FDBcoERP.Connected then
@@ -515,7 +514,8 @@ begin
     end
     else
     begin
-     ShowMessage('Não foi possivel fazer conexão com o banco.');
+     AlertCard('Não foi possivel fazer conexão com o banco de Dados. Entre em contato com o Suporte. ' +
+     'O Sistema será encerrado.', 'Erro');
      Application.Terminate;
     end;
 
@@ -524,7 +524,7 @@ begin
     dxRibbon1.ActiveTab := tabCadastro;
 
 
-    // Carrega Imagem fundo
+          // Carrega Imagem fundo
     caminhoimgpng  := ExtractFilePath(Application.ExeName) + 'imagens\fundo.png';
     caminhoimgjpeg := ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpeg';
 
@@ -541,12 +541,9 @@ begin
       img_fundo.Visible := true;
     end;
 
-
     Ajusta_Cadastro_Empresa;
   end;
-
 end;
-
 
 procedure TForm_Principal.catMenuItemsCategoryCollapase(Sender: TObject;
   const Category: TButtonCategory);
@@ -588,6 +585,13 @@ end;
 
 procedure TForm_Principal.FormCreate(Sender: TObject);
 begin
+  frm_Splach := Tfrm_Splach.Create(nil);
+  try
+    frm_Splach.ShowModal;
+  finally
+    FreeAndNil(frm_Splach);
+  end;
+
   CarregaConfiguracao;
 end;
 
