@@ -1,39 +1,45 @@
 inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   Caption = 'Cadastro de Produtos'
-  ClientHeight = 527
-  ClientWidth = 1294
+  ClientHeight = 637
+  ClientWidth = 1345
   OnShow = FormShow
-  ExplicitWidth = 1310
-  ExplicitHeight = 566
+  ExplicitWidth = 1361
+  ExplicitHeight = 676
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Top = 56
-    Width = 1294
+    Top = 62
+    Width = 1345
     ExplicitTop = 62
     ExplicitWidth = 1307
   end
   inherited cxPageControl1: TcxPageControl
-    Top = 90
-    Width = 1294
-    Height = 420
-    ExplicitTop = 77
-    ExplicitWidth = 1294
-    ExplicitHeight = 433
-    ClientRectBottom = 416
-    ClientRectRight = 1290
+    Top = 96
+    Width = 1345
+    Height = 524
+    Properties.ActivePage = tbCadastro
+    ExplicitTop = 96
+    ExplicitWidth = 1345
+    ExplicitHeight = 524
+    ClientRectBottom = 520
+    ClientRectRight = 1341
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1286
-      ExplicitHeight = 405
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1337
+      ExplicitHeight = 496
       inherited Panel1: TPanel
-        Width = 1286
-        ExplicitWidth = 1286
+        Width = 1337
+        ExplicitWidth = 1337
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
         end
         inherited Panel2: TPanel
+          inherited edtCurr: TcxCurrencyEdit
+            ExplicitHeight = 23
+          end
           inherited edtMask: TMaskEdit
             Text = ''
             Visible = True
@@ -72,7 +78,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           TabOrder = 5
         end
         object chk_mostrafiltrogrid: TCheckBox
-          Left = 1189
+          Left = 1240
           Top = 0
           Width = 97
           Height = 41
@@ -86,8 +92,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         AlignWithMargins = True
         Left = 3
         Top = 44
-        Width = 1280
-        Height = 345
+        Width = 1331
+        Height = 449
         Align = alClient
         TabOrder = 1
         LockedStateImageOptions.Text = 'Aguarde!'
@@ -95,7 +101,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         LookAndFeel.NativeStyle = False
         LookAndFeel.SkinName = 'Metropolis'
         RootLevelOptions.DetailFrameColor = clNone
-        ExplicitHeight = 358
         object cxVisualizaDBTableView1: TcxGridDBTableView
           OnDblClick = cxVisualizaDBTableView1DblClick
           OnKeyDown = cxVisualizaDBTableView1KeyDown
@@ -387,111 +392,141 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1286
-      ExplicitHeight = 405
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1337
+      ExplicitHeight = 496
       inherited Shape3: TShape
-        Top = 384
-        Width = 1286
+        Top = 488
+        Width = 1337
         ExplicitTop = 464
         ExplicitWidth = 1366
       end
       object cxPaginas2: TcxPageControl
         Left = 0
-        Top = 0
-        Width = 1286
-        Height = 381
+        Top = 139
+        Width = 1337
+        Height = 346
         Align = alClient
         TabOrder = 0
         Properties.ActivePage = cxDadosProduto
         Properties.CustomButtons.Buttons = <>
-        ExplicitHeight = 394
-        ClientRectBottom = 377
+        ExplicitLeft = 62
+        ExplicitTop = 216
+        ExplicitHeight = 485
+        ClientRectBottom = 342
         ClientRectLeft = 4
-        ClientRectRight = 1282
+        ClientRectRight = 1333
         ClientRectTop = 24
         object cxDadosProduto: TcxTabSheet
           Caption = 'Dados do produto'
           ImageIndex = 0
-          ExplicitHeight = 366
-          object pnlLateral1: TPanel
-            Left = 970
-            Top = 0
-            Width = 308
-            Height = 353
-            Align = alRight
-            BevelOuter = bvNone
-            TabOrder = 1
-            ExplicitHeight = 366
-            object Panel11: TPanel
-              Left = 0
-              Top = 0
-              Width = 308
-              Height = 47
-              Align = alTop
-              BevelOuter = bvNone
-              Color = clWhite
-              ParentBackground = False
-              TabOrder = 0
-            end
-          end
-          object pnlCentral1: TPanel
+          ExplicitLeft = 30
+          ExplicitTop = 80
+          ExplicitHeight = 457
+          object GroupBox1: TGroupBox
             Left = 0
             Top = 0
-            Width = 849
-            Height = 353
-            Align = alLeft
-            BevelOuter = bvNone
+            Width = 1329
+            Height = 95
+            Align = alTop
+            Caption = 'Tributa'#231#245'es'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Trebuchet MS'
+            Font.Style = [fsBold]
+            ParentFont = False
             TabOrder = 0
-            ExplicitHeight = 366
+            ExplicitTop = 122
+            object Label10: TLabel
+              Left = 12
+              Top = 26
+              Width = 71
+              Height = 16
+              Caption = 'Aliquota ICMS:'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Trebuchet MS'
+              Font.Style = []
+              ParentFont = False
+            end
+            object cxDBLookupComboBox9: TcxDBLookupComboBox
+              Left = 12
+              Top = 41
+              DataBinding.DataField = 'PRO_ALIQ_ICMS'
+              DataBinding.DataSource = dsPrincipal
+              ParentFont = False
+              Properties.Alignment.Horz = taRightJustify
+              Properties.DropDownListStyle = lsFixedList
+              Properties.KeyFieldNames = 'ID'
+              Properties.ListColumns = <
+                item
+                  FieldName = 'ID'
+                end
+                item
+                  FieldName = 'Descricao'
+                end
+                item
+                  FieldName = 'ICMS'
+                end>
+              Properties.ListSource = dsmam_cod_trib_pro
+              Properties.MaxLength = 2
+              Properties.PostPopupValueOnTab = True
+              Style.Font.Charset = ANSI_CHARSET
+              Style.Font.Color = clBlack
+              Style.Font.Height = -11
+              Style.Font.Name = 'Trebuchet MS'
+              Style.Font.Style = []
+              Style.IsFontAssigned = True
+              TabOrder = 0
+              Width = 141
+            end
           end
         end
         object cxBalanca: TcxTabSheet
           Caption = 'Balan'#231'a'
           ImageIndex = 1
-          ExplicitHeight = 366
+          ExplicitHeight = 457
         end
         object cxObs: TcxTabSheet
           Caption = 'Observa'#231#245'es'
           ImageIndex = 2
-          ExplicitHeight = 366
+          ExplicitHeight = 457
           object dbmmoOBS: TDBMemo
             Left = 0
             Top = 0
-            Width = 1278
-            Height = 353
+            Width = 1329
+            Height = 318
             Align = alClient
             BorderStyle = bsNone
             DataField = 'PRO_OBS'
             DataSource = dsPrincipal
             TabOrder = 0
-            ExplicitHeight = 366
+            ExplicitHeight = 457
           end
-        end
-        object cxFoto: TcxTabSheet
-          Caption = 'Foto'
-          ImageIndex = 3
-          ExplicitHeight = 366
         end
         object cxCompra: TcxTabSheet
           Caption = 'Compras / Venda'
           ImageIndex = 4
-          ExplicitHeight = 366
+          ExplicitHeight = 457
           object Panel17: TPanel
             Left = 0
             Top = 217
-            Width = 1278
-            Height = 136
+            Width = 1329
+            Height = 101
             Align = alClient
             BevelOuter = bvNone
             Color = clWhite
             ParentBackground = False
             TabOrder = 0
-            ExplicitHeight = 149
+            ExplicitHeight = 240
             object shp2: TShape
               AlignWithMargins = True
               Left = 0
               Top = 29
-              Width = 1278
+              Width = 1329
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -506,7 +541,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 0
               Top = 3
-              Width = 1278
+              Width = 1329
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -521,11 +556,11 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 3
               Top = 38
-              Width = 1272
-              Height = 95
+              Width = 1323
+              Height = 60
               Align = alClient
               TabOrder = 0
-              ExplicitHeight = 108
+              ExplicitHeight = 199
               object cxComprasDBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
                 DataController.Summary.DefaultGroupSummaryItems = <>
@@ -608,14 +643,14 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Style.TextStyle = [fsBold, fsItalic]
               Properties.Alignment.Horz = taCenter
               Properties.Alignment.Vert = taVCenter
-              AnchorX = 639
+              AnchorX = 665
               AnchorY = 18
             end
           end
           object Panel18: TPanel
             Left = 0
             Top = 0
-            Width = 1278
+            Width = 1329
             Height = 217
             Align = alTop
             BevelOuter = bvNone
@@ -997,15 +1032,15 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object tabFornecedores: TcxTabSheet
           Caption = 'Fornecedores'
           ImageIndex = 5
-          ExplicitHeight = 366
+          ExplicitHeight = 457
           object cxFornecedores: TcxGrid
             Left = 0
             Top = 0
-            Width = 1278
-            Height = 312
+            Width = 1329
+            Height = 277
             Align = alClient
             TabOrder = 0
-            ExplicitHeight = 325
+            ExplicitHeight = 416
             object cxFornecedoresDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -1038,29 +1073,29 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object pnl3: TPanel
             Left = 0
-            Top = 312
-            Width = 1278
+            Top = 277
+            Width = 1329
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             Color = 4718629
             ParentBackground = False
             TabOrder = 1
-            ExplicitTop = 325
+            ExplicitTop = 416
           end
         end
         object tabComposicao: TcxTabSheet
           Caption = 'Composi'#231#227'o'
           ImageIndex = 6
-          ExplicitHeight = 366
+          ExplicitHeight = 457
           object cxComposicao: TcxGrid
             Left = 0
             Top = 0
-            Width = 1278
-            Height = 312
+            Width = 1329
+            Height = 277
             Align = alClient
             TabOrder = 0
-            ExplicitHeight = 325
+            ExplicitHeight = 416
             object cxGridDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -1110,39 +1145,189 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object Panel19: TPanel
             Left = 0
-            Top = 312
-            Width = 1278
+            Top = 277
+            Width = 1329
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             Color = 4718629
             ParentBackground = False
             TabOrder = 1
-            ExplicitTop = 325
+            ExplicitTop = 416
           end
         end
-        object cxTabSheet1: TcxTabSheet
-          Caption = 'Cupom Fiscal'
-          ImageIndex = 7
-          ExplicitHeight = 366
+      end
+      object GBDadosProduto: TGroupBox
+        Left = 0
+        Top = 0
+        Width = 1337
+        Height = 139
+        Align = alTop
+        Caption = 'Dados produtos'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Trebuchet MS'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+        ExplicitTop = 8
+        DesignSize = (
+          1337
+          139)
+        object Label104: TLabel
+          Left = 12
+          Top = 72
+          Width = 76
+          Height = 16
+          Caption = 'Descri'#231#227'o PDV:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Trebuchet MS'
+          Font.Style = []
+          ParentFont = False
         end
-        object cxTabSheet2: TcxTabSheet
-          Caption = 'Medicamento'
-          ImageIndex = 8
-          ExplicitHeight = 366
+        object Label105: TLabel
+          Left = 410
+          Top = 18
+          Width = 74
+          Height = 16
+          Caption = 'Un Refer'#234'ncia:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Trebuchet MS'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label53: TLabel
+          Left = 611
+          Top = 18
+          Width = 67
+          Height = 16
+          Caption = 'Tipo Produto:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Trebuchet MS'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label133: TLabel
+          Left = 516
+          Top = 18
+          Width = 71
+          Height = 16
+          Caption = 'Estoque Atual:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Trebuchet MS'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label9: TLabel
+          Left = 12
+          Top = 23
+          Width = 90
+          Height = 16
+          Caption = 'Descri'#231#227'o Cupom:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Trebuchet MS'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label8: TLabel
+          Left = 879
+          Top = 18
+          Width = 63
+          Height = 16
+          Caption = 'C'#243'digo PLU:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Trebuchet MS'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object combodb_un_referencia: TcxDBLookupComboBox
+          Left = 410
+          Top = 40
+          DataBinding.DataField = 'PRO_UN_REFERENCIA'
+          DataBinding.DataSource = dsPrincipal
+          ParentFont = False
+          Properties.CharCase = ecUpperCase
+          Properties.DropDownListStyle = lsFixedList
+          Properties.GridMode = True
+          Properties.KeyFieldNames = 'Nome'
+          Properties.ListColumns = <
+            item
+              Caption = 'Nome'
+              Fixed = True
+              SortOrder = soAscending
+              FieldName = 'Nome'
+            end>
+          Properties.ListOptions.ShowHeader = False
+          Properties.ListSource = dsUNReferencia
+          Properties.PostPopupValueOnTab = True
+          Style.Font.Charset = ANSI_CHARSET
+          Style.Font.Color = clBlack
+          Style.Font.Height = -11
+          Style.Font.Name = 'Trebuchet MS'
+          Style.Font.Style = []
+          Style.IsFontAssigned = True
+          TabOrder = 0
+          Width = 88
+        end
+        object edt_descr_pdv: TcxDBTextEdit
+          Left = 12
+          Top = 92
+          Anchors = [akLeft, akTop, akRight]
+          DataBinding.DataField = 'PRO_DESCRICAO_PDV'
+          DataBinding.DataSource = dsPrincipal
+          TabOrder = 1
+          Width = 1314
+        end
+        object cxDBTextEdit1: TcxDBTextEdit
+          Left = 12
+          Top = 40
+          DataBinding.DataField = 'PRO_DESCRICAO_CUPOM'
+          DataBinding.DataSource = dsPrincipal
+          TabOrder = 2
+          Width = 382
+        end
+        object cxDBMEsqlCadProdutosPRO_ID: TcxDBMaskEdit
+          Left = 879
+          Top = 32
+          DataBinding.DataField = 'PRO_ID'
+          ParentFont = False
+          Properties.Alignment.Horz = taRightJustify
+          Properties.BeepOnError = True
+          Properties.MaxLength = 14
+          Style.Font.Charset = ANSI_CHARSET
+          Style.Font.Color = clBlack
+          Style.Font.Height = -11
+          Style.Font.Name = 'Trebuchet MS'
+          Style.Font.Style = []
+          Style.IsFontAssigned = True
+          TabOrder = 3
+          Width = 100
         end
       end
     end
   end
   inherited pnl_top: TPanel
-    Top = 62
-    Width = 1294
+    Top = 68
+    Width = 1345
     Height = 28
-    ExplicitTop = 49
-    ExplicitWidth = 1294
+    ExplicitTop = 68
+    ExplicitWidth = 1345
     ExplicitHeight = 28
     object lbl_qnt_produtos: TLabel [0]
-      Left = 1152
+      Left = 1203
       Top = 0
       Width = 142
       Height = 28
@@ -1155,7 +1340,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False
-      ExplicitLeft = 1162
+      ExplicitLeft = 1213
       ExplicitHeight = 13
     end
     inherited BtnRegistroPosterior: TcxButton
@@ -1176,37 +1361,37 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
     end
   end
   inherited Panel22: TPanel
-    Top = 510
-    Width = 1294
-    ExplicitTop = 510
-    ExplicitWidth = 1294
+    Top = 620
+    Width = 1345
+    ExplicitTop = 620
+    ExplicitWidth = 1345
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1288
-    Height = 47
+    Width = 1339
+    Height = 53
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1288
-    ExplicitHeight = 47
+    ExplicitWidth = 1339
+    ExplicitHeight = 53
   end
   inherited dsPrincipal: TDataSource
     DataSet = FdqProdutos
-    Left = 206
-    Top = 51
+    Left = 1070
+    Top = 67
   end
   inherited cxLookAndFeelController1: TcxLookAndFeelController
-    Left = 1160
-    Top = 65528
+    Left = 1096
+    Top = 0
   end
   object FdqProdutos: TFDQuery [7]
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'SELECT * FROM TB_PRODUTOS')
-    Left = 251
-    Top = 51
+    Left = 1027
+    Top = 67
     object FdqProdutosPRO_ID: TLargeintField
       FieldName = 'PRO_ID'
       Origin = 'PRO_ID'
@@ -1572,127 +1757,10 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Origin = 'PRO_COD_SEC'
     end
   end
-  object cxImgsGrid: TcxImageList [8]
+  object cxGridImg: TcxImageList [8]
     DrawingStyle = dsTransparent
     FormatVersion = 1
-    DesignInfo = -523064
-    ImageInfo = <
-      item
-        Image.Data = {
-          36040000424D3604000000000000360000002800000010000000100000000100
-          2000000000000004000000000000000000000000000000000000000000000000
-          00000000000000000000131313264747478D686868CF797979F17A7A7AF36A6A
-          6AD3494949911616162C00000000000000000000000000000000000000000000
-          0000020202044646468B7E7E7EFB808080FF808080FF808080FF808080FF8080
-          80FF808080FF7F7F7FFD4C4C4C97040404080000000000000000000000000202
-          0204585858AF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF5F5F5FBD0404040800000000000000004545
-          4589808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF4D4D4D9900000000111111227E7E
-          7EFB808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF7F7F7FFD18181830444444878080
-          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF808080FF4C4C4C97656565C98080
-          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF808080FF6D6D6DD9757575E98080
-          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF808080FF7B7B7BF5757575E98080
-          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF808080FF7B7B7BF5646464C78080
-          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF808080FF6D6D6DD9444444878080
-          80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF808080FF4C4C4C97121212247E7E
-          7EFB808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF7F7F7FFD1717172E000000004444
-          4487808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF808080FF4D4D4D9900000000000000000202
-          0204585858AF808080FF808080FF808080FF808080FF808080FF808080FF8080
-          80FF808080FF808080FF808080FF5E5E5EBB0404040800000000000000000000
-          000002020204454545897E7E7EFB808080FF808080FF808080FF808080FF8080
-          80FF808080FF7F7F7FFD4B4B4B95040404080000000000000000000000000000
-          00000000000000000000131313264646468B686868CF797979F1797979F16A6A
-          6AD3494949911515152A00000000000000000000000000000000}
-      end
-      item
-        Image.Data = {
-          36040000424D3604000000000000360000002800000010000000100000000100
-          2000000000000004000000000000000000000000000000000000000000000000
-          00000000000000000000152415264C854C8D70C470CF82E482F184E684F372C7
-          72D34E894E91182A182C00000000000000000000000000000000000000000000
-          0000020402044B834B8B88ED88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF89EF89FD528F5297040804080000000000000000000000000204
-          02045FA55FAF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF66B366BD0408040800000000000000004A81
-          4A898AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF53915399000000001220122288ED
-          88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF89EF89FD1A2D1A30498049878AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF528F52976DBE6DC98AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF75CD75D97EDC7EE98AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF85E885F57EDC7EE98AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF85E885F56CBC6CC78AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF75CD75D9498049878AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF528F52971322132488ED
-          88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF89EF89FD192B192E000000004980
-          49878AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF5391539900000000000000000204
-          02045FA55FAF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF8AF18AFF8AF18AFF65B165BB0408040800000000000000000000
-          0000020402044A814A8988ED88FB8AF18AFF8AF18AFF8AF18AFF8AF18AFF8AF1
-          8AFF8AF18AFF89EF89FD518D5195040804080000000000000000000000000000
-          00000000000000000000152415264B834B8B70C470CF82E482F182E482F172C7
-          72D34E894E911728172A00000000000000000000000000000000}
-      end
-      item
-        Image.Data = {
-          36040000424D3604000000000000360000002800000010000000100000000100
-          2000000000000004000000000000000000000000000000000000000000000000
-          00000000000000000000151524264C4C858D7070C4CF8282E4F18484E6F37272
-          C7D34E4E899118182A2C00000000000000000000000000000000000000000000
-          0000020204044B4B838B8888EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8989EFFD52528F97040408080000000000000000000000000202
-          04045F5FA5AF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF6666B3BD0404080800000000000000004A4A
-          81898A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF5353919900000000121220228888
-          EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8989EFFD1A1A2D30494980878A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF52528F976D6DBEC98A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF7575CDD97E7EDCE98A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8585E8F57E7EDCE98A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8585E8F56C6CBCC78A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF7575CDD9494980878A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF52528F97131322248888
-          EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8989EFFD19192B2E000000004949
-          80878A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF5353919900000000000000000202
-          04045F5FA5AF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8A8AF1FF8A8AF1FF6565B1BB0404080800000000000000000000
-          0000020204044A4A81898888EDFB8A8AF1FF8A8AF1FF8A8AF1FF8A8AF1FF8A8A
-          F1FF8A8AF1FF8989EFFD51518D95040408080000000000000000000000000000
-          00000000000000000000151524264B4B838B7070C4CF8282E4F18282E4F17272
-          C7D34E4E89911717282A00000000000000000000000000000000}
-      end>
-  end
-  object cxGridImg: TcxImageList [9]
-    DrawingStyle = dsTransparent
-    FormatVersion = 1
-    DesignInfo = -522992
+    DesignInfo = 1008
     ImageInfo = <
       item
         Image.Data = {
@@ -1806,7 +1874,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           01010101010103020E1101010101010101010101010101010101}
       end>
   end
-  object FDQuxiliar: TFDQuery [10]
+  object FDQuxiliar: TFDQuery [9]
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'SELECT * FROM TB_PRODUTOS')
@@ -2177,19 +2245,64 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Origin = 'PRO_COD_SEC'
     end
   end
-  object ACBrEnterTab: TACBrEnterTab [11]
+  object ACBrEnterTab: TACBrEnterTab [10]
     EnterAsTab = True
-    Left = 1096
+    Left = 880
+    Top = 8
   end
   inherited BarraMenu: TcxImageList
     FormatVersion = 1
     DesignInfo = 197360
   end
   inherited ACBrEnterTab1: TACBrEnterTab
-    Left = 1048
-    Top = 65534
+    Left = 816
+    Top = 6
   end
   inherited cxHintStyleController1: TcxHintStyleController
     Left = 552
+  end
+  object dsUNReferencia: TDataSource
+    DataSet = dxmem_UNReferencia
+    Left = 856
+    Top = 65
+  end
+  object dxmem_UNReferencia: TdxMemData
+    Active = True
+    Indexes = <>
+    SortOptions = []
+    AfterOpen = dxmem_UNReferenciaAfterOpen
+    Left = 824
+    Top = 70
+    object dxmem_UNReferenciaID: TIntegerField
+      FieldName = 'ID'
+    end
+    object StringField34: TStringField
+      FieldName = 'Nome'
+      Size = 100
+    end
+  end
+  object dxmem_cod_tributacao_Pro: TdxMemData
+    Indexes = <>
+    SortOptions = []
+    AfterOpen = dxmem_cod_tributacao_ProAfterOpen
+    Left = 664
+    Top = 72
+    object dxmem_cod_tributacao_ProID: TStringField
+      FieldName = 'ID'
+      Size = 2
+    end
+    object dxmem_cod_tributacao_ProDescricao: TStringField
+      FieldName = 'Descricao'
+      Size = 100
+    end
+    object dxmem_cod_tributacao_ProAliquota: TStringField
+      FieldName = 'ICMS'
+      Size = 100
+    end
+  end
+  object dsmam_cod_trib_pro: TDataSource
+    DataSet = dxmem_cod_tributacao_Pro
+    Left = 712
+    Top = 72
   end
 end

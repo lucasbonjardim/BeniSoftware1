@@ -32,12 +32,18 @@ object DtmBcoErp: TDtmBcoErp
     Left = 112
     Top = 72
   end
-  object Fdq_Empresa: TFDQuery
-    Active = True
+  object Fdq_TB_EMPRESA: TFDQuery
     Connection = FDBcoERP
     SQL.Strings = (
       'select * from tb_empresa')
-    Left = 40
-    Top = 136
+    Left = 72
+    Top = 160
+  end
+  object Fdq_TB_TRIBUTACAO_ICMS: TFDQuery
+    Connection = FDBcoERP
+    SQL.Strings = (
+      'select * from TB_TRIBUTACAO_ICMS')
+    Left = 72
+    Top = 208
   end
 end

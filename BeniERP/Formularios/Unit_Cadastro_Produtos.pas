@@ -33,20 +33,16 @@ uses
   cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,System.StrUtils, cxCalendar,
   ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint, cxHint,
   dxSkinsdxNavBarPainter, dxSkinsdxNavBarAccordionViewPainter, dxNavBarCollns,
-  dxNavBarBase, dxNavBar;
+  dxNavBarBase, dxNavBar, dxmdaset;
 
 type
   TForm_Cadastro_Produtos = class(TForm_Cadastro_Modelo)
     FdqProdutos: TFDQuery;
     cxPaginas2: TcxPageControl;
     cxDadosProduto: TcxTabSheet;
-    pnlLateral1: TPanel;
-    Panel11: TPanel;
-    pnlCentral1: TPanel;
     cxBalanca: TcxTabSheet;
     cxObs: TcxTabSheet;
     dbmmoOBS: TDBMemo;
-    cxFoto: TcxTabSheet;
     cxCompra: TcxTabSheet;
     Panel17: TPanel;
     shp2: TShape;
@@ -129,9 +125,6 @@ type
     cxComposicaoDBTableView1ESTOQUE: TcxGridDBColumn;
     cxComposicaoLevel1: TcxGridLevel;
     Panel19: TPanel;
-    cxTabSheet1: TcxTabSheet;
-    cxTabSheet2: TcxTabSheet;
-    cxImgsGrid: TcxImageList;
     cxGridImg: TcxImageList;
     cxVisualiza: TcxGrid;
     cxVisualizaDBTableView1: TcxGridDBTableView;
@@ -149,77 +142,6 @@ type
     lbl_qnt_produtos: TLabel;
     chk_mostrafiltrogrid: TCheckBox;
     ACBrEnterTab: TACBrEnterTab;
-    FDQuxiliarPRO_ID: TLargeintField;
-    FDQuxiliarPRO_COD_BARRA: TLargeintField;
-    FDQuxiliarPRO_DESCRICAO_CUPOM: TWideStringField;
-    FDQuxiliarPRO_DESCRICAO_PDV: TWideStringField;
-    FDQuxiliarPRO_ATIVO: TWideStringField;
-    FDQuxiliarPRO_TIPO_PRODUTO: TWideStringField;
-    FDQuxiliarPRO_CONTROLA_ESTOQUE_PRO: TWideStringField;
-    FDQuxiliarPRO_ESTOQUE_MINIMO: TBCDField;
-    FDQuxiliarPRO_SALDO_ESTOQUE: TBCDField;
-    FDQuxiliarPRO_DATA_VALIDADE: TDateField;
-    FDQuxiliarPRO_FORMULA: TWideStringField;
-    FDQuxiliarPRO_UN_REFERENCIA: TWideStringField;
-    FDQuxiliarPRO_VLR_CUSTO: TFloatField;
-    FDQuxiliarPRO_PRECO_V_ATACADO: TCurrencyField;
-    FDQuxiliarPRO_VLR_PADRAO: TCurrencyField;
-    FDQuxiliarPRO_VLR_PROMOC: TCurrencyField;
-    FDQuxiliarPRO_VLR_PRECO2: TCurrencyField;
-    FDQuxiliarPRO_VLR_PRECO3: TCurrencyField;
-    FDQuxiliarPRO_VLR_PRECO4: TCurrencyField;
-    FDQuxiliarPRO_QTD_MIN_VLR_ATACADO: TBCDField;
-    FDQuxiliarPRO_QTD_MIN_VLR_PROMOC: TBCDField;
-    FDQuxiliarPRO_DIAS_VALIDADE: TIntegerField;
-    FDQuxiliarPRO_PERMITE_FRAC: TIntegerField;
-    FDQuxiliarPRO_ALCOOLICO: TWideStringField;
-    FDQuxiliarPRO_COD_VASILHAME: TLargeintField;
-    FDQuxiliarPRO_PEDE_LIBERACAO_FSC: TIntegerField;
-    FDQuxiliarPRO_QUANT_UNIDADE_ENTRADA: TBCDField;
-    FDQuxiliarPRO_QTD_MAXIMA_COMPRA: TIntegerField;
-    FDQuxiliarPRO_QTD_MAX_VARIAVEL: TWideStringField;
-    FDQuxiliarPRO_PER_ALTERA_PRECO_PDV: TWideStringField;
-    FDQuxiliarPRO_BLOQQUEIA_MULTIPLICACAO: TWideStringField;
-    FDQuxiliarPRO_LEVEX_PAGUEY: TWideStringField;
-    FDQuxiliarPRO_COR: TWideStringField;
-    FDQuxiliarPRO_LOCALIZACAO: TWideStringField;
-    FDQuxiliarPRO_OBS: TMemoField;
-    FDQuxiliarPRO_CLASSIFICACAO_FISCAL: TWideStringField;
-    FDQuxiliarPRO_COD_ALIQUOTA: TIntegerField;
-    FDQuxiliarPRO_COMISSAO: TBCDField;
-    FDQuxiliarPRO_ALIQUOTA_CSLL: TBCDField;
-    FDQuxiliarPRO_ALIQUOTA_OUTRAS: TBCDField;
-    FDQuxiliarPRO_ISENTO_PIS_COFINS_PRO: TWideStringField;
-    FDQuxiliarPRO_CREDITO_ICMS: TBCDField;
-    FDQuxiliarPRO_TIPO_PRODUCAO: TWideStringField;
-    FDQuxiliarPRO_COD_GRUPO: TIntegerField;
-    FDQuxiliarPRO_SUB_GRUPO: TIntegerField;
-    FDQuxiliarPRO_SIT_TRIBUTARIA: TWideStringField;
-    FDQuxiliarPRO_CEST: TWideStringField;
-    FDQuxiliarPRO_CFOP: TWideStringField;
-    FDQuxiliarPRO_NCM: TFloatField;
-    FDQuxiliarPRO_CHAVE_IBPT: TWideStringField;
-    FDQuxiliarPRO_CST_ICMS: TWideStringField;
-    FDQuxiliarPRO_CST_PIS: TWideStringField;
-    FDQuxiliarPRO_CST_COFINS: TWideStringField;
-    FDQuxiliarPRO_ALIQ_ICMS: TBCDField;
-    FDQuxiliarPRO_ALIQ_PIS: TBCDField;
-    FDQuxiliarPRO_ALIQ_COFINS: TBCDField;
-    FDQuxiliarPRO_PERC_IMPOSTOS: TFloatField;
-    FDQuxiliarPRO_PERC_IMPOSTOS_E: TFloatField;
-    FDQuxiliarPRO_PERC_IMPOSTOS_M: TFloatField;
-    FDQuxiliarPRO_ULTIMO_USUARIO_ALTERACAO: TWideStringField;
-    FDQuxiliarPRO_PERMITE_PARCELAMENTO_PDV: TIntegerField;
-    FDQuxiliarPRO_ORIGEM_MERCA: TIntegerField;
-    FDQuxiliarPRO_IMP_VALE_GAS: TIntegerField;
-    FDQuxiliarPRO_IMP_VALE_AGUA: TIntegerField;
-    FDQuxiliarPRO_ALERTA_COZINHA: TWideStringField;
-    FDQuxiliarPRO_ANDROID_VISUALIZA: TWideStringField;
-    FDQuxiliarPRO_NUMERO_LOTE: TWideStringField;
-    FDQuxiliarPRO_TEMPO_PREPARO: TTimeField;
-    FDQuxiliarPRO_DT_ATUALIZACAO_CADASTRO: TDateField;
-    FDQuxiliarPRO_HR__ATUALIZACAO_CADASTRO: TTimeField;
-    FDQuxiliarPRO_COD_SEC: TIntegerField;
     FdqProdutosPRO_ID: TLargeintField;
     FdqProdutosPRO_COD_BARRA: TLargeintField;
     FdqProdutosPRO_DESCRICAO_CUPOM: TWideStringField;
@@ -362,6 +284,100 @@ type
     cxVisualizaDBTableView1PRO_DT_ATUALIZACAO_CADASTRO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_HR__ATUALIZACAO_CADASTRO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_COD_SEC: TcxGridDBColumn;
+    FDQuxiliarPRO_ID: TLargeintField;
+    FDQuxiliarPRO_COD_BARRA: TLargeintField;
+    FDQuxiliarPRO_DESCRICAO_CUPOM: TWideStringField;
+    FDQuxiliarPRO_DESCRICAO_PDV: TWideStringField;
+    FDQuxiliarPRO_ATIVO: TWideStringField;
+    FDQuxiliarPRO_TIPO_PRODUTO: TWideStringField;
+    FDQuxiliarPRO_CONTROLA_ESTOQUE_PRO: TWideStringField;
+    FDQuxiliarPRO_ESTOQUE_MINIMO: TBCDField;
+    FDQuxiliarPRO_SALDO_ESTOQUE: TBCDField;
+    FDQuxiliarPRO_DATA_VALIDADE: TDateField;
+    FDQuxiliarPRO_FORMULA: TWideStringField;
+    FDQuxiliarPRO_UN_REFERENCIA: TWideStringField;
+    FDQuxiliarPRO_VLR_CUSTO: TFloatField;
+    FDQuxiliarPRO_PRECO_V_ATACADO: TCurrencyField;
+    FDQuxiliarPRO_VLR_PADRAO: TCurrencyField;
+    FDQuxiliarPRO_VLR_PROMOC: TCurrencyField;
+    FDQuxiliarPRO_VLR_PRECO2: TCurrencyField;
+    FDQuxiliarPRO_VLR_PRECO3: TCurrencyField;
+    FDQuxiliarPRO_VLR_PRECO4: TCurrencyField;
+    FDQuxiliarPRO_QTD_MIN_VLR_ATACADO: TBCDField;
+    FDQuxiliarPRO_QTD_MIN_VLR_PROMOC: TBCDField;
+    FDQuxiliarPRO_DIAS_VALIDADE: TIntegerField;
+    FDQuxiliarPRO_PERMITE_FRAC: TIntegerField;
+    FDQuxiliarPRO_ALCOOLICO: TWideStringField;
+    FDQuxiliarPRO_COD_VASILHAME: TLargeintField;
+    FDQuxiliarPRO_PEDE_LIBERACAO_FSC: TIntegerField;
+    FDQuxiliarPRO_QUANT_UNIDADE_ENTRADA: TBCDField;
+    FDQuxiliarPRO_QTD_MAXIMA_COMPRA: TIntegerField;
+    FDQuxiliarPRO_QTD_MAX_VARIAVEL: TWideStringField;
+    FDQuxiliarPRO_PER_ALTERA_PRECO_PDV: TWideStringField;
+    FDQuxiliarPRO_BLOQQUEIA_MULTIPLICACAO: TWideStringField;
+    FDQuxiliarPRO_LEVEX_PAGUEY: TWideStringField;
+    FDQuxiliarPRO_COR: TWideStringField;
+    FDQuxiliarPRO_LOCALIZACAO: TWideStringField;
+    FDQuxiliarPRO_OBS: TMemoField;
+    FDQuxiliarPRO_CLASSIFICACAO_FISCAL: TWideStringField;
+    FDQuxiliarPRO_COD_ALIQUOTA: TIntegerField;
+    FDQuxiliarPRO_COMISSAO: TBCDField;
+    FDQuxiliarPRO_ALIQUOTA_CSLL: TBCDField;
+    FDQuxiliarPRO_ALIQUOTA_OUTRAS: TBCDField;
+    FDQuxiliarPRO_ISENTO_PIS_COFINS_PRO: TWideStringField;
+    FDQuxiliarPRO_CREDITO_ICMS: TBCDField;
+    FDQuxiliarPRO_TIPO_PRODUCAO: TWideStringField;
+    FDQuxiliarPRO_COD_GRUPO: TIntegerField;
+    FDQuxiliarPRO_SUB_GRUPO: TIntegerField;
+    FDQuxiliarPRO_SIT_TRIBUTARIA: TWideStringField;
+    FDQuxiliarPRO_CEST: TWideStringField;
+    FDQuxiliarPRO_CFOP: TWideStringField;
+    FDQuxiliarPRO_NCM: TFloatField;
+    FDQuxiliarPRO_CHAVE_IBPT: TWideStringField;
+    FDQuxiliarPRO_CST_ICMS: TWideStringField;
+    FDQuxiliarPRO_CST_PIS: TWideStringField;
+    FDQuxiliarPRO_CST_COFINS: TWideStringField;
+    FDQuxiliarPRO_ALIQ_ICMS: TBCDField;
+    FDQuxiliarPRO_ALIQ_PIS: TBCDField;
+    FDQuxiliarPRO_ALIQ_COFINS: TBCDField;
+    FDQuxiliarPRO_PERC_IMPOSTOS: TFloatField;
+    FDQuxiliarPRO_PERC_IMPOSTOS_E: TFloatField;
+    FDQuxiliarPRO_PERC_IMPOSTOS_M: TFloatField;
+    FDQuxiliarPRO_ULTIMO_USUARIO_ALTERACAO: TWideStringField;
+    FDQuxiliarPRO_PERMITE_PARCELAMENTO_PDV: TIntegerField;
+    FDQuxiliarPRO_ORIGEM_MERCA: TIntegerField;
+    FDQuxiliarPRO_IMP_VALE_GAS: TIntegerField;
+    FDQuxiliarPRO_IMP_VALE_AGUA: TIntegerField;
+    FDQuxiliarPRO_ALERTA_COZINHA: TWideStringField;
+    FDQuxiliarPRO_ANDROID_VISUALIZA: TWideStringField;
+    FDQuxiliarPRO_NUMERO_LOTE: TWideStringField;
+    FDQuxiliarPRO_TEMPO_PREPARO: TTimeField;
+    FDQuxiliarPRO_DT_ATUALIZACAO_CADASTRO: TDateField;
+    FDQuxiliarPRO_HR__ATUALIZACAO_CADASTRO: TTimeField;
+    FDQuxiliarPRO_COD_SEC: TIntegerField;
+    dsUNReferencia: TDataSource;
+    dxmem_UNReferencia: TdxMemData;
+    dxmem_UNReferenciaID: TIntegerField;
+    StringField34: TStringField;
+    dxmem_cod_tributacao_Pro: TdxMemData;
+    dsmam_cod_trib_pro: TDataSource;
+    dxmem_cod_tributacao_ProID: TStringField;
+    dxmem_cod_tributacao_ProAliquota: TStringField;
+    dxmem_cod_tributacao_ProDescricao: TStringField;
+    GroupBox1: TGroupBox;
+    Label10: TLabel;
+    GBDadosProduto: TGroupBox;
+    Label104: TLabel;
+    Label105: TLabel;
+    Label53: TLabel;
+    Label133: TLabel;
+    Label9: TLabel;
+    Label8: TLabel;
+    combodb_un_referencia: TcxDBLookupComboBox;
+    edt_descr_pdv: TcxDBTextEdit;
+    cxDBTextEdit1: TcxDBTextEdit;
+    cxDBMEsqlCadProdutosPRO_ID: TcxDBMaskEdit;
+    cxDBLookupComboBox9: TcxDBLookupComboBox;
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
     procedure BtnConsultarClick(Sender: TObject);
@@ -374,6 +390,8 @@ type
     procedure rgOptionGridClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure dxmem_UNReferenciaAfterOpen(DataSet: TDataSet);
+    procedure dxmem_cod_tributacao_ProAfterOpen(DataSet: TDataSet);
   private
     procedure MostraProdutos;
     function retornabusca: string;
@@ -382,6 +400,22 @@ type
   public
     { Public declarations }
   end;
+
+  const
+  CNS_UN_REFERENCIA: array[0..13] of string = ( 'UN',
+                                                'PC',
+                                                'KG',
+                                                'MT',
+                                                'LT',
+                                                'CX',
+                                                'FD',
+                                                'SC',
+                                                'PT',
+                                                'GR',
+                                                'HG',
+                                                'NG',
+                                                'MG',
+                                                'DR' );
 
 var
   Form_Cadastro_Produtos: TForm_Cadastro_Produtos;
@@ -442,6 +476,67 @@ begin
     cxPageControl1.ActivePage := tbCadastro;
 end;
 
+procedure TForm_Cadastro_Produtos.dxmem_cod_tributacao_ProAfterOpen(
+  DataSet: TDataSet);
+  var
+  LID, LDescricaoAliq, LStringAlq : string;
+begin
+  inherited;
+  try
+    with DtmBcoErp do
+    begin
+      Fdq_TB_TRIBUTACAO_ICMS.Close;
+      Fdq_TB_TRIBUTACAO_ICMS.Open;
+
+      if not Fdq_TB_TRIBUTACAO_ICMS.IsEmpty then
+      begin
+        Fdq_TB_TRIBUTACAO_ICMS.First;
+
+        while not Fdq_TB_TRIBUTACAO_ICMS.Eof do
+        begin
+          LID            := Fdq_TB_TRIBUTACAO_ICMS.FieldByName('COD_ICMS').AsString;
+          LDescricaoAliq := Fdq_TB_TRIBUTACAO_ICMS.FieldByName('DESCRICAO').AsString;
+          LStringAlq     := Fdq_TB_TRIBUTACAO_ICMS.FieldByName('ICMS').AsString;
+
+          with dsmam_cod_trib_pro do
+          begin
+            DataSet.Insert;
+            DataSet.FieldByName('ID').AsString         := LID;
+            DataSet.FieldByName('Descricao').AsString  := LDescricaoAliq;
+            DataSet.FieldByName('ICMS').AsString   := LStringAlq;
+            DataSet.Post;
+          end;
+          Fdq_TB_TRIBUTACAO_ICMS.Next;
+        end;
+      end;
+    end;
+
+  except on e: exception do
+    begin
+      AlertCard(e.Message,'Erro');
+    end;
+  end;
+end;
+
+
+procedure TForm_Cadastro_Produtos.dxmem_UNReferenciaAfterOpen(DataSet: TDataSet);
+var
+i : Integer;
+begin
+  inherited;
+  with dsUNReferencia do
+  begin
+    for i := 0 to 13 do
+    begin
+      DataSet.Insert;
+      DataSet.FieldByName('ID').AsInteger := i;
+      DataSet.FieldByName('Nome').AsString := CNS_UN_REFERENCIA[i];
+      DataSet.Post;
+    end;
+  end;
+
+end;
+
 procedure TForm_Cadastro_Produtos.edtMaskKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -466,6 +561,19 @@ end;
 procedure TForm_Cadastro_Produtos.FormShow(Sender: TObject);
 begin
   inherited;
+  try
+    if not dxmem_UNReferencia.Active then
+      dxmem_UNReferencia.Active := True;
+
+    if not  dxmem_cod_tributacao_Pro.Active then
+      dxmem_cod_tributacao_Pro.Active := True;
+  except on e:exception do
+    begin
+
+    end;
+  end;
+
+
   edtMask.SetFocus;
 end;
 

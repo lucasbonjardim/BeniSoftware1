@@ -1,62 +1,55 @@
 inherited Form_Cadastro_Aliquota_pdv: TForm_Cadastro_Aliquota_pdv
   Caption = 'Cadastro de Al'#237'quotas PDV'
-  ClientHeight = 545
-  ClientWidth = 1375
-  ExplicitWidth = 1391
-  ExplicitHeight = 584
+  ClientHeight = 535
+  ClientWidth = 1365
+  ExplicitWidth = 1381
+  ExplicitHeight = 574
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 46
-    Width = 1375
+    Width = 1365
     ExplicitTop = 49
     ExplicitWidth = 1375
   end
   inherited cxPageControl1: TcxPageControl
     Top = 74
-    Width = 1375
-    Height = 454
-    ExplicitWidth = 1375
-    ExplicitHeight = 453
-    ClientRectBottom = 450
-    ClientRectRight = 1371
+    Width = 1365
+    Height = 444
+    ExplicitTop = 74
+    ExplicitWidth = 1365
+    ExplicitHeight = 444
+    ClientRectBottom = 440
+    ClientRectRight = 1361
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 2
-      ExplicitTop = 28
-      ExplicitWidth = 1371
-      ExplicitHeight = 423
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1357
+      ExplicitHeight = 416
       inherited Panel1: TPanel
-        Width = 1367
-        ExplicitWidth = 1371
+        Width = 1357
+        ExplicitWidth = 1357
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
         end
-        inherited Panel2: TPanel
-          inherited edtCurr: TcxCurrencyEdit
-            ExplicitHeight = 21
-          end
-        end
       end
       object GroupBox1: TGroupBox
         Left = 0
         Top = 41
-        Width = 1367
-        Height = 385
+        Width = 1357
+        Height = 375
         Align = alClient
         Caption = 'Aliquotas PDV'
         TabOrder = 1
-        ExplicitWidth = 1371
-        ExplicitHeight = 382
         object cxGrid1: TcxGrid
           Left = 2
           Top = 15
-          Width = 1367
-          Height = 366
+          Width = 1353
+          Height = 358
           Align = alClient
           TabOrder = 0
-          ExplicitHeight = 365
           object cxGrid1DBTableView1: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             DataController.DataSource = dsPrincipal
@@ -223,25 +216,25 @@ inherited Form_Cadastro_Aliquota_pdv: TForm_Cadastro_Aliquota_pdv
   end
   inherited pnl_top: TPanel
     Top = 52
-    Width = 1375
-    ExplicitTop = 57
-    ExplicitWidth = 1375
+    Width = 1365
+    ExplicitTop = 52
+    ExplicitWidth = 1365
   end
   inherited Panel22: TPanel
-    Top = 528
-    Width = 1375
-    ExplicitTop = 528
-    ExplicitWidth = 1375
+    Top = 518
+    Width = 1365
+    ExplicitTop = 518
+    ExplicitWidth = 1365
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1369
+    Width = 1359
     Height = 37
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1369
+    ExplicitWidth = 1359
     ExplicitHeight = 37
   end
   inherited dsPrincipal: TDataSource

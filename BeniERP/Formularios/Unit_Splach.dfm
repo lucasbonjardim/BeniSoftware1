@@ -3,8 +3,8 @@ object frm_splach: Tfrm_splach
   Top = 0
   BorderStyle = bsNone
   Caption = 'frm_splach'
-  ClientHeight = 569
-  ClientWidth = 336
+  ClientHeight = 373
+  ClientWidth = 640
   Color = 4718629
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,26 +15,12 @@ object frm_splach: Tfrm_splach
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 24
-    Top = 316
-    Width = 321
-    Height = 23
-    Caption = 'Carregando as dll...'
-    Color = clBlack
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
-    Font.Height = -19
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
-  end
   object img_logo: TImage
-    Left = 80
-    Top = 30
-    Width = 177
-    Height = 152
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 300
+    Align = alClient
     Center = True
     Picture.Data = {
       055449636F6E000001000100AB96000001002000009F01001600000028000000
@@ -3358,30 +3344,51 @@ object frm_splach: Tfrm_splach
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       00000000000000000000000000000000000000000000000000000000}
-    Stretch = True
-  end
-  object ProgressBar1: TProgressBar
-    Left = 24
-    Top = 355
-    Width = 304
-    Height = 22
-    TabOrder = 0
+    ExplicitLeft = 152
+    ExplicitTop = 48
+    ExplicitWidth = 352
+    ExplicitHeight = 192
   end
   object Panel1: TPanel
     Left = 0
-    Top = 440
-    Width = 336
-    Height = 129
+    Top = 300
+    Width = 640
+    Height = 73
     Align = alBottom
     BevelOuter = bvNone
     Color = 15450368
     ParentBackground = False
-    TabOrder = 1
+    TabOrder = 0
+    ExplicitTop = 336
+    ExplicitWidth = 624
+    object Label1: TLabel
+      Left = 8
+      Top = 10
+      Width = 593
+      Height = 23
+      Caption = 'Carregando as dll...'
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object ProgressBar1: TProgressBar
+      Left = 0
+      Top = 64
+      Width = 640
+      Height = 9
+      Align = alBottom
+      TabOrder = 0
+    end
   end
   object Timer1: TTimer
     Interval = 25
     OnTimer = Timer1Timer
-    Left = 136
-    Top = 256
+    Left = 48
+    Top = 136
   end
 end

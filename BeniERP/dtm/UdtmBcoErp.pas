@@ -17,7 +17,8 @@ type
     FDPhysFBDriverLink1: TFDPhysFBDriverLink;
     fdq_auxiliar: TFDQuery;
     Fdq_usuario: TFDQuery;
-    Fdq_Empresa: TFDQuery;
+    Fdq_TB_EMPRESA: TFDQuery;
+    Fdq_TB_TRIBUTACAO_ICMS: TFDQuery;
     procedure DataModuleDestroy(Sender: TObject);
   private
 

@@ -9,11 +9,11 @@ uses
 
 type
   Tfrm_splach = class(TForm)
-    Label1: TLabel;
-    ProgressBar1: TProgressBar;
     Timer1: TTimer;
     Panel1: TPanel;
     img_logo: TImage;
+    Label1: TLabel;
+    ProgressBar1: TProgressBar;
     procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }

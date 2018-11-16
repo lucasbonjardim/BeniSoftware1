@@ -90,7 +90,7 @@ begin
     SQL.Clear;
     SQL.Text := ' Select * from tb_aliquota_pdv  '+
     'where tb_aliquota_pdv.aliquota_estado = :Estado';
-    ParamByName('Estado').AsString := Fdq_Empresa.FieldByName('EST_EMP').AsString;
+    ParamByName('Estado').AsString := Fdq_TB_EMPRESA.FieldByName('EST_EMP').AsString;
     Open;
   end;
 end;
