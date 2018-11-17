@@ -4,7 +4,7 @@ object form_baixa_ibpt: Tform_baixa_ibpt
   BorderStyle = bsDialog
   Caption = 'Atualizar IBPT'
   ClientHeight = 645
-  ClientWidth = 928
+  ClientWidth = 825
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -33,33 +33,26 @@ object form_baixa_ibpt: Tform_baixa_ibpt
   object pb1: TProgressBar
     Left = 0
     Top = 625
-    Width = 928
+    Width = 825
     Height = 20
     Align = alBottom
+    BarColor = clHighlight
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 504
-    ExplicitWidth = 491
   end
   object GroupBox1: TGroupBox
     Left = 0
     Top = 0
-    Width = 928
-    Height = 91
+    Width = 825
+    Height = 113
     Align = alTop
-    Caption = 'Arquivo Tabela_CNIEE.bin'
+    Caption = 'IBPT'
     TabOrder = 1
-    ExplicitLeft = 40
-    ExplicitTop = 136
-    ExplicitWidth = 1013
     object Label2: TLabel
       Left = 12
       Top = 24
-      Width = 484
+      Width = 97
       Height = 13
-      Caption = 
-        'Nome do Arquivo em disco (Deixe em branco para baixar ou informe' +
-        ' o caminho do arquivo para abrir)'
+      Caption = 'Selecione o arquivo:'
       Color = clBtnFace
       ParentColor = False
     end
@@ -92,21 +85,28 @@ object form_baixa_ibpt: Tform_baixa_ibpt
       Caption = 'Chave: '
     end
     object lblFonte: TLabel
-      Left = 674
+      Left = 655
       Top = 67
-      Width = 32
+      Width = 146
       Height = 13
       Caption = 'Fonte:'
+    end
+    object lbl_info: TLabel
+      Left = 12
+      Top = 88
+      Width = 93
+      Height = 13
+      Caption = 'NCM IMPORTADO: '
     end
     object edt_local_arquivo: TEdit
       Left = 8
       Top = 40
-      Width = 729
+      Width = 761
       Height = 21
       TabOrder = 0
     end
     object BitBtn1: TBitBtn
-      Left = 743
+      Left = 775
       Top = 38
       Width = 33
       Height = 25
@@ -117,23 +117,19 @@ object form_baixa_ibpt: Tform_baixa_ibpt
   end
   object PageControl1: TPageControl
     Left = 0
-    Top = 91
-    Width = 928
-    Height = 534
-    ActivePage = TabSheet1
+    Top = 113
+    Width = 825
+    Height = 512
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 822
-    ExplicitHeight = 303
     object TabSheet1: TTabSheet
       Caption = 'Dados importados'
-      ExplicitWidth = 814
-      ExplicitHeight = 275
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 920
-        Height = 365
+        Width = 817
+        Height = 328
         Align = alClient
         DataSource = dtsCadastro
         ReadOnly = True
@@ -146,20 +142,18 @@ object form_baixa_ibpt: Tform_baixa_ibpt
       end
       object GroupBox2: TGroupBox
         Left = 0
-        Top = 365
-        Width = 920
-        Height = 68
+        Top = 328
+        Width = 817
+        Height = 83
         Align = alBottom
-        Caption = 'Pesquisar no componente'
+        Caption = 'Pesquisar NCM'
         TabOrder = 1
-        ExplicitTop = 394
-        ExplicitWidth = 822
         object Label3: TLabel
           Left = 12
           Top = 19
-          Width = 69
+          Width = 62
           Height = 13
-          Caption = 'C'#243'digo (NCM, '
+          Caption = 'C'#243'digo NCM:'
           Color = clBtnFace
           ParentColor = False
         end
@@ -171,17 +165,17 @@ object form_baixa_ibpt: Tform_baixa_ibpt
           TabOrder = 0
         end
         object btnPesquisar: TBitBtn
-          Left = 307
-          Top = 33
-          Width = 99
-          Height = 26
-          Caption = 'Pesquisar...'
+          Left = 192
+          Top = 35
+          Width = 66
+          Height = 21
+          Caption = 'Pesquisar'
           TabOrder = 1
           OnClick = btnPesquisarClick
         end
         object ckbBuscaNCMParcial: TCheckBox
-          Left = 192
-          Top = 37
+          Left = 12
+          Top = 60
           Width = 97
           Height = 17
           Caption = 'Busca parcial'
@@ -190,8 +184,8 @@ object form_baixa_ibpt: Tform_baixa_ibpt
       end
       object rgTipoExportacao: TRadioGroup
         Left = 0
-        Top = 433
-        Width = 920
+        Top = 411
+        Width = 817
         Height = 39
         Align = alBottom
         Caption = 'Tipo de exporta'#231#227'o'
@@ -205,21 +199,17 @@ object form_baixa_ibpt: Tform_baixa_ibpt
           'Formato TXT'
           'Demilitado')
         TabOrder = 2
-        ExplicitTop = 459
-        ExplicitWidth = 822
       end
       object Panel1: TPanel
         Left = 0
-        Top = 472
-        Width = 920
+        Top = 450
+        Width = 817
         Height = 34
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 3
-        ExplicitTop = 501
-        ExplicitWidth = 822
         DesignSize = (
-          920
+          817
           34)
         object DBNavigator1: TDBNavigator
           Left = 0
@@ -232,8 +222,8 @@ object form_baixa_ibpt: Tform_baixa_ibpt
           TabOrder = 0
         end
         object btExportar: TBitBtn
-          Left = 560
-          Top = 3
+          Left = 638
+          Top = 4
           Width = 80
           Height = 28
           Anchors = [akTop, akRight]
@@ -275,11 +265,10 @@ object form_baixa_ibpt: Tform_baixa_ibpt
             FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
           TabOrder = 2
           OnClick = btExportarClick
-          ExplicitLeft = 645
         end
         object btSair: TBitBtn
-          Left = 646
-          Top = 3
+          Left = 724
+          Top = 4
           Width = 80
           Height = 28
           Anchors = [akTop, akRight]
@@ -313,11 +302,10 @@ object form_baixa_ibpt: Tform_baixa_ibpt
             40404040404040404040402020207F7F3F2B2B2BFFFFFFFFFFFF}
           TabOrder = 3
           OnClick = btSairClick
-          ExplicitLeft = 731
         end
         object btProxy: TBitBtn
-          Left = 474
-          Top = 3
+          Left = 552
+          Top = 4
           Width = 80
           Height = 28
           Anchors = [akTop, akRight]
@@ -359,38 +347,27 @@ object form_baixa_ibpt: Tform_baixa_ibpt
             5C9E767542450000000000000000000000000000000000000000}
           TabOrder = 1
           OnClick = btProxyClick
-          ExplicitLeft = 559
         end
       end
     end
     object TabSheet2: TTabSheet
       Caption = 'Erros'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Memo1: TMemo
         Left = 0
         Top = 0
-        Width = 920
-        Height = 506
+        Width = 817
+        Height = 484
         Align = alClient
         Lines.Strings = (
           'Memo1')
         ScrollBars = ssBoth
         TabOrder = 0
-        ExplicitWidth = 1005
-        ExplicitHeight = 489
       end
     end
     object TabSheet3: TTabSheet
       Caption = 'API Consulta produto'
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label1: TLabel
         Left = 25
         Top = 9
@@ -399,15 +376,15 @@ object form_baixa_ibpt: Tform_baixa_ibpt
         Caption = 'CNPJ da Empresa'
       end
       object Label5: TLabel
-        Left = 217
-        Top = 9
+        Left = 153
+        Top = 6
         Width = 73
         Height = 13
         Caption = 'Token Empresa'
       end
       object btnAPIConsultarProduto: TButton
-        Left = 655
-        Top = 21
+        Left = 495
+        Top = 23
         Width = 141
         Height = 25
         Caption = 'Consultar'
@@ -417,22 +394,22 @@ object form_baixa_ibpt: Tform_baixa_ibpt
       object edtCNPJ: TEdit
         Left = 25
         Top = 25
-        Width = 186
+        Width = 104
         Height = 21
         TabOrder = 1
       end
       object edtToken: TEdit
-        Left = 217
+        Left = 153
         Top = 25
-        Width = 432
+        Width = 336
         Height = 21
         TabOrder = 2
       end
       object Memo2: TMemo
         Left = 25
         Top = 72
-        Width = 771
-        Height = 184
+        Width = 611
+        Height = 409
         ReadOnly = True
         TabOrder = 3
       end
@@ -442,16 +419,14 @@ object form_baixa_ibpt: Tform_baixa_ibpt
     ProxyPort = '80'
     OnErroImportacao = BaixaTabelaErroImportacao
     URLDownload = 'http://www.kadoshiautomacao.com.br/ibpt/tabela.csv'
-    Left = 792
-    Top = 24
+    Left = 656
   end
   object Fdq_TB_NCM: TFDQuery
-    Active = True
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'select * from TB_NCM')
-    Left = 840
-    Top = 24
+    Left = 536
+    Top = 65528
     object Fdq_TB_NCMCOD_EMP: TIntegerField
       FieldName = 'COD_EMP'
       Origin = 'COD_EMP'
@@ -468,6 +443,7 @@ object form_baixa_ibpt: Tform_baixa_ibpt
       FieldName = 'EX'
       Origin = 'EX'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object Fdq_TB_NCMTIPO: TIntegerField
       FieldName = 'TIPO'
@@ -475,7 +451,7 @@ object form_baixa_ibpt: Tform_baixa_ibpt
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object Fdq_TB_NCMDESCRICAO: TWideStringField
+    object Fdq_TB_NCMDESCRICAO: TStringField
       FieldName = 'DESCRICAO'
       Origin = 'DESCRICAO'
       Size = 250
@@ -512,17 +488,17 @@ object form_baixa_ibpt: Tform_baixa_ibpt
       FieldName = 'VIGENCIA_DT_FIM'
       Origin = 'VIGENCIA_DT_FIM'
     end
-    object Fdq_TB_NCMCHAVE: TWideStringField
+    object Fdq_TB_NCMCHAVE: TStringField
       FieldName = 'CHAVE'
       Origin = 'CHAVE'
       Size = 15
     end
-    object Fdq_TB_NCMVERSAO: TWideStringField
+    object Fdq_TB_NCMVERSAO: TStringField
       FieldName = 'VERSAO'
       Origin = 'VERSAO'
       Size = 15
     end
-    object Fdq_TB_NCMFONTE_DADOS: TWideStringField
+    object Fdq_TB_NCMFONTE_DADOS: TStringField
       FieldName = 'FONTE_DADOS'
       Origin = 'FONTE_DADOS'
       Size = 50
@@ -531,65 +507,17 @@ object form_baixa_ibpt: Tform_baixa_ibpt
   object OpenDialog1: TOpenDialog
     DefaultExt = 'csv'
     Filter = 'csv'
-    Left = 872
-    Top = 24
-  end
-  object tmpCadastro: TClientDataSet
-    Aggregates = <>
-    Params = <>
-    Left = 515
-    Top = 140
-    object tmpCadastroNCM: TStringField
-      DisplayWidth = 10
-      FieldName = 'NCM'
-      Size = 8
-    end
-    object tmpCadastroEx: TIntegerField
-      DisplayWidth = 3
-      FieldName = 'Ex'
-    end
-    object tmpCadastroTabela: TIntegerField
-      DisplayWidth = 8
-      FieldName = 'Tabela'
-    end
-    object tmpCadastroDescricao: TStringField
-      DisplayWidth = 50
-      FieldName = 'Descricao'
-      Size = 250
-    end
-    object tmpCadastroAliqFedNacional: TFloatField
-      DisplayLabel = 'Nacional'
-      DisplayWidth = 12
-      FieldName = 'AliqFedNacional'
-      DisplayFormat = ',#0.00 %'
-    end
-    object tmpCadastroAliqFedImportado: TFloatField
-      DisplayLabel = 'Importado'
-      DisplayWidth = 12
-      FieldName = 'AliqFedImportado'
-      DisplayFormat = ',#0.00 %'
-    end
-    object tmpCadastroAliqEstadual: TFloatField
-      DisplayLabel = 'Estadual'
-      DisplayWidth = 12
-      FieldName = 'AliqEstadual'
-      DisplayFormat = ',#0.00 %'
-    end
-    object tmpCadastroAliqMunicipal: TFloatField
-      DisplayLabel = 'Municipal'
-      DisplayWidth = 12
-      FieldName = 'AliqMunicipal'
-      DisplayFormat = ',#0.00 %'
-    end
+    Left = 592
+    Top = 65528
   end
   object dtsCadastro: TDataSource
-    DataSet = tmpCadastro
-    Left = 529
-    Top = 194
+    DataSet = Fdq_TB_NCM
+    Left = 585
+    Top = 242
   end
   object SaveDialog1: TSaveDialog
     Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
-    Left = 697
-    Top = 135
+    Left = 577
+    Top = 191
   end
 end

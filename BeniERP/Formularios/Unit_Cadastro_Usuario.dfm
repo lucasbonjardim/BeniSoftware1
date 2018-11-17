@@ -1,37 +1,37 @@
 inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
   Caption = 'Cadastro de Usu'#225'rio'
-  ClientHeight = 620
-  ClientWidth = 1384
-  ExplicitWidth = 1400
-  ExplicitHeight = 659
+  ClientHeight = 610
+  ClientWidth = 1374
+  ExplicitWidth = 1390
+  ExplicitHeight = 649
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 56
-    Width = 1384
+    Width = 1374
     ExplicitTop = 43
     ExplicitWidth = 1251
   end
   inherited cxPageControl1: TcxPageControl
     Top = 84
-    Width = 1384
-    Height = 519
+    Width = 1374
+    Height = 509
     Properties.ActivePage = tbCadastro
     ExplicitTop = 84
-    ExplicitWidth = 1384
-    ExplicitHeight = 519
-    ClientRectBottom = 517
-    ClientRectRight = 1382
+    ExplicitWidth = 1374
+    ExplicitHeight = 509
+    ClientRectBottom = 505
+    ClientRectRight = 1370
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 2
-      ExplicitTop = 28
-      ExplicitWidth = 1380
-      ExplicitHeight = 489
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1366
+      ExplicitHeight = 481
       inherited Panel1: TPanel
-        Width = 1380
+        Width = 1366
         Height = 9
         Visible = False
-        ExplicitWidth = 1380
+        ExplicitWidth = 1366
         ExplicitHeight = 9
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -78,8 +78,8 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       object DBGrid1: TDBGrid
         Left = 0
         Top = 9
-        Width = 1380
-        Height = 480
+        Width = 1366
+        Height = 472
         Align = alClient
         Color = clWhite
         DataSource = dsPrincipal
@@ -144,13 +144,13 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 1
+      ExplicitLeft = 4
       ExplicitTop = 24
-      ExplicitWidth = 1380
-      ExplicitHeight = 489
+      ExplicitWidth = 1366
+      ExplicitHeight = 481
       inherited Shape3: TShape
-        Top = 481
-        Width = 1380
+        Top = 473
+        Width = 1366
         ExplicitLeft = -56
         ExplicitTop = 545
         ExplicitWidth = 1043
@@ -281,21 +281,20 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
       object cxPageControl2: TcxPageControl
         Left = 0
-        Top = 207
-        Width = 1380
+        Top = 199
+        Width = 1366
         Height = 271
         Align = alBottom
         TabOrder = 7
         Properties.ActivePage = cxTabSheet2
         Properties.CustomButtons.Buttons = <>
-        ClientRectBottom = 269
-        ClientRectLeft = 2
-        ClientRectRight = 1378
-        ClientRectTop = 28
+        ClientRectBottom = 267
+        ClientRectLeft = 4
+        ClientRectRight = 1362
+        ClientRectTop = 24
         object cxTabSheet1: TcxTabSheet
           Caption = 'Par'#226'metros '
           ImageIndex = 0
-          ExplicitHeight = 230
           object cbdbUsapadraotema: TcxDBCheckBox
             Left = 3
             Top = 3
@@ -386,7 +385,6 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
         object cxTabSheet2: TcxTabSheet
           Caption = 'Personaliza'#231#227'o'
           ImageIndex = 1
-          ExplicitHeight = 230
           object Label6: TLabel
             Left = 5
             Top = 191
@@ -397,7 +395,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
           object DBRadioGroup2: TDBRadioGroup
             Left = 0
             Top = 0
-            Width = 1376
+            Width = 1358
             Height = 189
             Align = alTop
             Caption = 'Cor Pr'#233' Definidas.'
@@ -424,7 +422,6 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
               '1'
               '2')
             OnChange = DBRadioGroup2Change
-            ExplicitTop = -4
           end
           object dxDBColorEdit1: TdxDBColorEdit
             Left = 6
@@ -439,7 +436,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       object DBRadioGroup1: TDBRadioGroup
         Left = 10
         Top = 8
-        Width = 417
+        Width = 407
         Height = 32
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Exibi'#231#227'o da Ribon'
@@ -467,25 +464,25 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
   end
   inherited pnl_top: TPanel
     Top = 62
-    Width = 1384
+    Width = 1374
     ExplicitTop = 62
-    ExplicitWidth = 1384
+    ExplicitWidth = 1374
   end
   inherited Panel22: TPanel
-    Top = 603
-    Width = 1384
-    ExplicitTop = 603
-    ExplicitWidth = 1384
+    Top = 593
+    Width = 1374
+    ExplicitTop = 593
+    ExplicitWidth = 1374
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1378
+    Width = 1368
     Height = 47
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1378
+    ExplicitWidth = 1368
     ExplicitHeight = 47
   end
   inherited dsPrincipal: TDataSource
@@ -494,6 +491,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
     Top = 41
   end
   object FDQ_usuarios: TFDQuery [7]
+    Active = True
     AfterEdit = FDQ_usuariosAfterEdit
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
@@ -506,13 +504,13 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object FDQ_usuariosNOME_USU: TWideStringField
+    object FDQ_usuariosNOME_USU: TStringField
       FieldName = 'NOME_USU'
       Origin = 'NOME_USU'
       Required = True
       Size = 10
     end
-    object FDQ_usuariosSENHA_USU: TWideStringField
+    object FDQ_usuariosSENHA_USU: TStringField
       FieldName = 'SENHA_USU'
       Origin = 'SENHA_USU'
       Required = True
@@ -523,7 +521,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       Origin = 'COD_GRUPO'
       Required = True
     end
-    object FDQ_usuariosOPERADOR_CAIXA: TWideStringField
+    object FDQ_usuariosOPERADOR_CAIXA: TStringField
       FieldName = 'OPERADOR_CAIXA'
       Origin = 'OPERADOR_CAIXA'
       Required = True

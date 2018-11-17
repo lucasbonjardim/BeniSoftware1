@@ -18,20 +18,6 @@ type
     BaixaTabela: TACBrIBPTax;
     Fdq_TB_NCM: TFDQuery;
     OpenDialog1: TOpenDialog;
-    Fdq_TB_NCMCOD_EMP: TIntegerField;
-    Fdq_TB_NCMNCM: TIntegerField;
-    Fdq_TB_NCMEX: TIntegerField;
-    Fdq_TB_NCMTIPO: TIntegerField;
-    Fdq_TB_NCMDESCRICAO: TWideStringField;
-    Fdq_TB_NCMALI_NACIONAL_FEDERAL: TBCDField;
-    Fdq_TB_NCMALI_IMPORTADO_FEDERAL: TBCDField;
-    Fdq_TB_NCMALI_ESTADUAL: TBCDField;
-    Fdq_TB_NCMALI_MUNICIPAL: TBCDField;
-    Fdq_TB_NCMVIGENCIA_DT_INI: TDateField;
-    Fdq_TB_NCMVIGENCIA_DT_FIM: TDateField;
-    Fdq_TB_NCMCHAVE: TWideStringField;
-    Fdq_TB_NCMVERSAO: TWideStringField;
-    Fdq_TB_NCMFONTE_DADOS: TWideStringField;
     GroupBox1: TGroupBox;
     Label2: TLabel;
     lVersao: TLabel;
@@ -64,17 +50,23 @@ type
     btExportar: TBitBtn;
     btSair: TBitBtn;
     btProxy: TBitBtn;
-    tmpCadastro: TClientDataSet;
-    tmpCadastroNCM: TStringField;
-    tmpCadastroEx: TIntegerField;
-    tmpCadastroTabela: TIntegerField;
-    tmpCadastroDescricao: TStringField;
-    tmpCadastroAliqFedNacional: TFloatField;
-    tmpCadastroAliqFedImportado: TFloatField;
-    tmpCadastroAliqEstadual: TFloatField;
-    tmpCadastroAliqMunicipal: TFloatField;
     dtsCadastro: TDataSource;
     SaveDialog1: TSaveDialog;
+    Fdq_TB_NCMCOD_EMP: TIntegerField;
+    Fdq_TB_NCMNCM: TIntegerField;
+    Fdq_TB_NCMEX: TIntegerField;
+    Fdq_TB_NCMTIPO: TIntegerField;
+    Fdq_TB_NCMDESCRICAO: TStringField;
+    Fdq_TB_NCMALI_NACIONAL_FEDERAL: TBCDField;
+    Fdq_TB_NCMALI_IMPORTADO_FEDERAL: TBCDField;
+    Fdq_TB_NCMALI_ESTADUAL: TBCDField;
+    Fdq_TB_NCMALI_MUNICIPAL: TBCDField;
+    Fdq_TB_NCMVIGENCIA_DT_INI: TDateField;
+    Fdq_TB_NCMVIGENCIA_DT_FIM: TDateField;
+    Fdq_TB_NCMCHAVE: TStringField;
+    Fdq_TB_NCMVERSAO: TStringField;
+    Fdq_TB_NCMFONTE_DADOS: TStringField;
+    lbl_info: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnPesquisarClick(Sender: TObject);
@@ -131,6 +123,7 @@ begin
   OpenDialog1.Filter     := 'Arquivos CSV|*.csv';
   If OpenDialog1.Execute then
   begin
+
     edt_local_arquivo.Text  := OpenDialog1.FileName;
 
     if not FileExists(edt_local_arquivo.Text) then
@@ -181,12 +174,18 @@ begin
                   Fdq_TB_NCM.FieldByName('FONTE_DADOS').AsString           := BaixaTabela.Fonte;
                   Fdq_TB_NCM.Post;
                   pb1.Position := pb1.Position + 1;
+                  Application.ProcessMessages;
                 end;
               finally
                 Fdq_TB_NCM.First;
                 Fdq_TB_NCM.EnableControls;
                 Label4.Caption := 'Quantidade de itens: ' + IntToStr(Fdq_TB_NCM.RecordCount);
+                lbl_info.Font.Color :=clGreen;
+
+                lbl_info.Caption :='Importação concluida! ' +  IntToStr(Fdq_TB_NCM.RecordCount) + ' Registros.';
+                pb1.Position := 0;
                 Memo1.Lines.EndUpdate;
+                AlertCard('Importação de ' + IntToStr(Fdq_TB_NCM.RecordCount) + ' Registros concluido com sucesso!','Atenção');
               end;
             end;
           end
@@ -199,7 +198,15 @@ begin
         AlertCard('Operação Cancelada pelo úsuario.','Erro');
       except on E: exception do
         begin
-          AlertCard(e.Message,'Erro');
+          Fdq_TB_NCM.close;
+          Fdq_TB_NCM.Open;
+          DtmBcoErp.f_Auditoria('Tform_baixa_ibpt.BitBtn1Click',E.Message);
+          lbl_info.Caption :='';
+          pb1.Position := 0;
+          AlertCard('Ocorreu um erro ao importar! Verifique o log contate Suporte.','Erro');
+          Memo1.Lines.EndUpdate;
+          Memo1.Lines.Add(e.Message);
+          PageControl1.ActivePageIndex := 1;
         end;
       end;
     end;
@@ -390,6 +397,7 @@ end;
 procedure Tform_baixa_ibpt.FormCreate(Sender: TObject);
 begin
    PageControl1.ActivePageIndex := 0;
+   lbl_info.Caption :='';
 end;
 
 end.

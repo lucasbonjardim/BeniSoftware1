@@ -35,34 +35,6 @@ uses
 type
   TForm_Cadastro_Terminais_PDV = class(TForm_Cadastro_Modelo)
     FDQ_Principal: TFDQuery;
-    FDQ_PrincipalTER_ID: TIntegerField;
-    FDQ_PrincipalTER_TIPO_PDV: TWideStringField;
-    FDQ_PrincipalTER_COM_LEITOR: TIntegerField;
-    FDQ_PrincipalTER_TPO_TECLADO: TIntegerField;
-    FDQ_PrincipalTER_COM_TECLADO: TIntegerField;
-    FDQ_PrincipalTER_HAB_DISP_TEC: TIntegerField;
-    FDQ_PrincipalTER_HAB_MSG_TEC: TIntegerField;
-    FDQ_PrincipalTER_HABILITA_PINPAD: TIntegerField;
-    FDQ_PrincipalTER_COM_PINPAD: TIntegerField;
-    FDQ_PrincipalTER_TPO_BALANCA: TIntegerField;
-    FDQ_PrincipalTER_COM_BALANCA: TIntegerField;
-    FDQ_PrincipalTER_HAB_VENDEDOR: TIntegerField;
-    FDQ_PrincipalTER_HAB_TEF: TIntegerField;
-    FDQ_PrincipalTER_CHK_PROD_BAL: TIntegerField;
-    FDQ_PrincipalTER_CHK_GAV_ABERTA: TIntegerField;
-    FDQ_PrincipalTER_FLAG_GAV_FECHADA: TIntegerField;
-    FDQ_PrincipalTER_HAB_IMG_TELA: TIntegerField;
-    FDQ_PrincipalTER_HAB_TELA_TROCO: TIntegerField;
-    FDQ_PrincipalTER_TROCO_COMP_DETALHADO: TWideStringField;
-    FDQ_PrincipalTER_HAB_CMC7: TIntegerField;
-    FDQ_PrincipalTER_CARGA_PRO_GERAL: TIntegerField;
-    FDQ_PrincipalTER_HAB_ROT_DESC_PDV: TIntegerField;
-    FDQ_PrincipalTER_DH_ULT_CAR_PRODUTO: TSQLTimeStampField;
-    FDQ_PrincipalTER_CARGA_CLI_GERAL: TIntegerField;
-    FDQ_PrincipalTER_DH_ULT_CAR_CLIENTE: TSQLTimeStampField;
-    FDQ_PrincipalTER_CARGA_CONFIGURACAO: TIntegerField;
-    FDQ_PrincipalTER_DT_ULT_ATUALIZACAO: TDateField;
-    FDQ_PrincipalTER_HR_ULT_ATUALIZACAO: TTimeField;
     cxGrid1DBTableView1: TcxGridDBTableView;
     cxGrid1Level1: TcxGridLevel;
     cxGrid1: TcxGrid;
@@ -100,6 +72,35 @@ type
     Label1: TLabel;
     cxDBSpinEdit1: TcxDBSpinEdit;
     BConfigEFD: TButton;
+    FDQ_PrincipalTER_ID: TIntegerField;
+    FDQ_PrincipalTER_TIPO_PDV: TStringField;
+    FDQ_PrincipalTER_COM_LEITOR: TIntegerField;
+    FDQ_PrincipalTER_TPO_TECLADO: TIntegerField;
+    FDQ_PrincipalTER_COM_TECLADO: TIntegerField;
+    FDQ_PrincipalTER_HAB_DISP_TEC: TIntegerField;
+    FDQ_PrincipalTER_HAB_MSG_TEC: TIntegerField;
+    FDQ_PrincipalTER_HABILITA_PINPAD: TIntegerField;
+    FDQ_PrincipalTER_COM_PINPAD: TIntegerField;
+    FDQ_PrincipalTER_TPO_BALANCA: TIntegerField;
+    FDQ_PrincipalTER_COM_BALANCA: TIntegerField;
+    FDQ_PrincipalTER_HAB_VENDEDOR: TIntegerField;
+    FDQ_PrincipalTER_HAB_TEF: TIntegerField;
+    FDQ_PrincipalTER_CHK_PROD_BAL: TIntegerField;
+    FDQ_PrincipalTER_CHK_GAV_ABERTA: TIntegerField;
+    FDQ_PrincipalTER_FLAG_GAV_FECHADA: TIntegerField;
+    FDQ_PrincipalTER_HAB_IMG_TELA: TIntegerField;
+    FDQ_PrincipalTER_HAB_TELA_TROCO: TIntegerField;
+    FDQ_PrincipalTER_TROCO_COMP_DETALHADO: TStringField;
+    FDQ_PrincipalTER_HAB_CMC7: TIntegerField;
+    FDQ_PrincipalTER_CARGA_PRO_GERAL: TIntegerField;
+    FDQ_PrincipalTER_HAB_ROT_DESC_PDV: TIntegerField;
+    FDQ_PrincipalTER_DH_ULT_CAR_PRODUTO: TSQLTimeStampField;
+    FDQ_PrincipalTER_CARGA_CLI_GERAL: TIntegerField;
+    FDQ_PrincipalTER_DH_ULT_CAR_CLIENTE: TSQLTimeStampField;
+    FDQ_PrincipalTER_CARGA_CONFIGURACAO: TIntegerField;
+    FDQ_PrincipalTER_DT_ULT_ATUALIZACAO: TDateField;
+    FDQ_PrincipalTER_HR_ULT_ATUALIZACAO: TTimeField;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -115,5 +116,11 @@ implementation
 
 uses UdtmBcoErp, Unit_Alerta, Unit_F_mensagem_Dialog,
   Unit_Principal, Unit_Rotinas, unit_utilfuncs;
+
+procedure TForm_Cadastro_Terminais_PDV.FormCreate(Sender: TObject);
+begin
+  inherited;
+  FDQ_Principal.Active := False;
+end;
 
 end.

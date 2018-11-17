@@ -28,7 +28,8 @@ uses
   Unit_Cadastro_Terminais_Pdv in 'Formularios\Unit_Cadastro_Terminais_Pdv.pas' {Form_Cadastro_Terminais_PDV},
   Unit_Splach in 'Formularios\Unit_Splach.pas' {frm_splach},
   UdtmCadProdutos in 'dtm\UdtmCadProdutos.pas' {dtm_cad_Produtos: TDataModule},
-  unit_ProxyConfigIBPT_NCM in 'Formularios\unit_ProxyConfigIBPT_NCM.pas' {frProxyConfig};
+  unit_ProxyConfigIBPT_NCM in 'Formularios\unit_ProxyConfigIBPT_NCM.pas' {frProxyConfig},
+  ufrmCadastroNcm in 'Formularios\ufrmCadastroNcm.pas' {frm_cadastro_ncm};
 
 {$R *.res}
 

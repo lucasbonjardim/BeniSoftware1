@@ -70,4 +70,28 @@ object dtm_cad_Produtos: Tdtm_cad_Produtos
     Left = 56
     Top = 304
   end
+  object dxMemNCM: TdxMemData
+    Indexes = <>
+    SortOptions = []
+    AfterOpen = dxMemNCMAfterOpen
+    Left = 56
+    Top = 368
+    object StringField3: TStringField
+      FieldName = 'CHAVE'
+      Size = 2
+    end
+    object StringField4: TStringField
+      DisplayLabel = 'Tipo'
+      FieldName = 'Descricao'
+      Size = 100
+    end
+    object dxMemNCMCodigoNCM: TStringField
+      FieldName = 'CodigoNCM'
+    end
+  end
+  object ds_NCM: TDataSource
+    DataSet = dxMemNCM
+    Left = 56
+    Top = 424
+  end
 end

@@ -10,6 +10,7 @@ object DtmBcoErp: TDtmBcoErp
       
         'Database=192.168.0.78:C:\BeniSoftware\BeniERP\DataBase\BENIGESTA' +
         'O.FDB'
+      'CharacterSet=WIN1252'
       'DriverID=FB')
     Connected = True
     LoginPrompt = False
@@ -36,14 +37,21 @@ object DtmBcoErp: TDtmBcoErp
     Connection = FDBcoERP
     SQL.Strings = (
       'select * from tb_empresa')
-    Left = 72
-    Top = 160
+    Left = 33
+    Top = 151
   end
   object Fdq_TB_TRIBUTACAO_ICMS: TFDQuery
     Connection = FDBcoERP
     SQL.Strings = (
       'select * from TB_TRIBUTACAO_ICMS')
-    Left = 72
-    Top = 208
+    Left = 32
+    Top = 200
+  end
+  object FDQ_NCM: TFDQuery
+    Connection = FDBcoERP
+    SQL.Strings = (
+      'select * from TB_NCM')
+    Left = 32
+    Top = 248
   end
 end

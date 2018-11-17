@@ -79,26 +79,27 @@ type
     cxGridDBTableView1REDUCAO: TcxGridDBColumn;
     cxGridDBTableView1DIF: TcxGridDBColumn;
     cxGridDBTableView1MVA: TcxGridDBColumn;
-    QPrincipalCOD_ICMS: TIntegerField;
-    QPrincipalCOD_EMP: TIntegerField;
-    QPrincipalDESCRICAO: TWideStringField;
-    QPrincipalCST: TWideStringField;
-    QPrincipalICMS: TBCDField;
-    QPrincipalREDUCAO: TBCDField;
-    QPrincipalDIF: TBCDField;
-    QPrincipalMVA: TBCDField;
-    QPrincipalTIPO_GRP: TWideStringField;
-    QPrincipalUSUARIO_ALTERACAO: TStringField;
-    QPrincipalDT_ULT_ATUALIZACAO: TSQLTimeStampField;
-    QPrincipalHR_ULT_ATUALIZACAO: TSQLTimeStampField;
     cxGridDBTableView1TIPO_GRP: TcxGridDBColumn;
     cxGridDBTableView1USUARIO_ALTERACAO: TcxGridDBColumn;
     cxGridDBTableView1DT_ULT_ATUALIZACAO: TcxGridDBColumn;
     cxGridDBTableView1HR_ULT_ATUALIZACAO: TcxGridDBColumn;
+    QPrincipalCOD_ICMS: TIntegerField;
+    QPrincipalCOD_EMP: TIntegerField;
+    QPrincipalDESCRICAO: TStringField;
+    QPrincipalCST: TStringField;
+    QPrincipalICMS: TBCDField;
+    QPrincipalREDUCAO: TBCDField;
+    QPrincipalDIF: TBCDField;
+    QPrincipalMVA: TBCDField;
+    QPrincipalTIPO_GRP: TStringField;
+    QPrincipalUSUARIO_ALTERACAO: TStringField;
+    QPrincipalDT_ULT_ATUALIZACAO: TSQLTimeStampField;
+    QPrincipalHR_ULT_ATUALIZACAO: TSQLTimeStampField;
     procedure cxGridDBTableView1DblClick(Sender: TObject);
     procedure QPrincipalAfterInsert(DataSet: TDataSet);
     procedure QPrincipalAfterScroll(DataSet: TDataSet);
     procedure BtnGravarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure MostraCampos;
     { Private declarations }
@@ -125,6 +126,12 @@ procedure TForm_Cadastro_ICMS.cxGridDBTableView1DblClick(Sender: TObject);
 begin
   cxPageControl1.ActivePage := tbCadastro;
 
+end;
+
+procedure TForm_Cadastro_ICMS.FormCreate(Sender: TObject);
+begin
+  inherited;
+  QPrincipal.Active := False;
 end;
 
 procedure TForm_Cadastro_ICMS.QPrincipalAfterInsert(DataSet: TDataSet);

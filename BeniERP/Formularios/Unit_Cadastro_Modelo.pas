@@ -123,6 +123,7 @@ begin
     dsPrincipal.DataSet.Edit;
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnAlterarClick',E.Message);
       AlertCard('Erro em alterar Registro: '+e.Message,'Erro');
     end;
   end;
@@ -141,6 +142,7 @@ begin
       TFDQuery(dsPrincipal.DataSet).Cancel;
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnCancelarClick',E.Message);
       AlertCard('Ops... Nossos cavalos já irá trablhar para essa solução: '+e.Message,'Erro');
     end;
   end;
@@ -155,10 +157,10 @@ begin
 
   except on e:Exception do
     begin
+       DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnConsultarClick',E.Message);
       AlertCard('Ops... Nossos cavalos já irá trablhar para essa solução: '+e.Message,'Erro');
     end;
   end;
-
 end;
 
 procedure TForm_Cadastro_Modelo.BtnExcluirClick(Sender: TObject);
@@ -172,9 +174,9 @@ begin
 
   except on e:exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnExcluirClick',E.Message);
       AlertCard('Ops... Nossos Motores já estão se aquecendo para trablhar  nessa solução: '+e.Message,'Erro');
     end;
-
   end;
 end;
 
@@ -190,7 +192,8 @@ begin
 
   except on e:Exception do
     begin
-     AlertCard('Erro ao Salvar Registro: '+e.Message, 'Erro');
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnGravarClick',E.Message);
+      AlertCard('Erro ao Salvar Registro: '+e.Message, 'Erro');
     end;
 
   end;
@@ -213,6 +216,7 @@ begin
 
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnNovoClick',E.Message);
       AlertCard('Ops... Nossos Motores já estão se aquecendo para trablhar  nessa solução: '+e.Message, 'Erro');
     end;
   end;
@@ -225,6 +229,7 @@ begin
 
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnPrimeiroRegistroClick',E.Message);
       AlertCard('Erro para ir no primeiro Registro: '+e.Message,'Erro');
     end;
   end;
@@ -236,6 +241,7 @@ begin
     dsPrincipal.DataSet.Prior;
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnRegistroAnteriorClick',E.Message);
       AlertCard('Erro para ir no registro anterior: '+e.Message,'Erro');
     end;
   end;
@@ -248,6 +254,7 @@ begin
 
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnRegistroPosteriorClick',E.Message);
       AlertCard('Erro para ir ao proximo Registro: '+e.Message,'Erro');
     end;
   end;
@@ -260,9 +267,9 @@ begin
 
   except on e:Exception do
     begin
+     DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnSalvarClick',E.Message);
      AlertCard('Erro ao Salvar Registro: '+e.Message,'Erro');
     end;
-
   end;
 end;
 
@@ -272,6 +279,7 @@ begin
     dsPrincipal.DataSet.Last;
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnUltimoRegistroClick',E.Message);
       AlertCard('Erro para ir ao ultimo Registro: '+e.Message,'Erro');
     end;
   end;
@@ -403,6 +411,7 @@ begin
     dsPrincipal.DataSet.Close;
   except on e:Exception do
     begin
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnLimparPesquisaClick',E.Message);
       AlertCard('Erro ao cancelar pesquisa: '+e.Message,'Erro');
     end;
   end;

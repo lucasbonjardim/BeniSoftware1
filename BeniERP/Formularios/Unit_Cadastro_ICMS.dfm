@@ -445,6 +445,7 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
     Top = 70
   end
   object QPrincipal: TFDQuery
+    Active = True
     AfterInsert = QPrincipalAfterInsert
     AfterScroll = QPrincipalAfterScroll
     Connection = DtmBcoErp.FDBcoERP
@@ -460,25 +461,24 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
         Value = 1
       end>
     object QPrincipalCOD_ICMS: TIntegerField
-      DisplayLabel = 'C'#211'DIGO ICMS:'
       FieldName = 'COD_ICMS'
       Origin = 'COD_ICMS'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object QPrincipalCOD_EMP: TIntegerField
-      DisplayLabel = 'C'#211'DIGO EMPRESA'
       FieldName = 'COD_EMP'
       Origin = 'COD_EMP'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object QPrincipalDESCRICAO: TWideStringField
+    object QPrincipalDESCRICAO: TStringField
       FieldName = 'DESCRICAO'
       Origin = 'DESCRICAO'
       Required = True
       Size = 100
     end
-    object QPrincipalCST: TWideStringField
+    object QPrincipalCST: TStringField
       FieldName = 'CST'
       Origin = 'CST'
       Size = 2
@@ -507,7 +507,7 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       Precision = 18
       Size = 2
     end
-    object QPrincipalTIPO_GRP: TWideStringField
+    object QPrincipalTIPO_GRP: TStringField
       FieldName = 'TIPO_GRP'
       Origin = 'TIPO_GRP'
       Size = 3

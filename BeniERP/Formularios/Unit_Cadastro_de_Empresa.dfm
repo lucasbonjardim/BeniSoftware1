@@ -1,35 +1,37 @@
 inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   Caption = 'Cadastro de Loja'
-  ClientHeight = 648
-  ClientWidth = 1430
-  ExplicitWidth = 1446
-  ExplicitHeight = 687
+  ClientHeight = 628
+  ClientWidth = 1410
+  ExplicitWidth = 1426
+  ExplicitHeight = 667
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 56
-    Width = 1430
+    Width = 1410
     ExplicitTop = 46
     ExplicitWidth = 1442
   end
   inherited cxPageControl1: TcxPageControl
     Top = 84
-    Width = 1430
-    Height = 547
+    Width = 1410
+    Height = 527
     Properties.ActivePage = tbCadastro
-    ExplicitTop = 74
-    ExplicitWidth = 1430
-    ExplicitHeight = 557
-    ClientRectBottom = 543
-    ClientRectRight = 1426
+    ExplicitTop = 84
+    ExplicitWidth = 1410
+    ExplicitHeight = 527
+    ClientRectBottom = 523
+    ClientRectRight = 1406
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1422
-      ExplicitHeight = 529
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1402
+      ExplicitHeight = 499
       inherited Panel1: TPanel
-        Width = 1422
+        Width = 1402
         Height = 25
         Visible = False
-        ExplicitWidth = 1422
+        ExplicitWidth = 1402
         ExplicitHeight = 25
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -74,8 +76,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       object DBGrid1: TDBGrid
         Left = 0
         Top = 25
-        Width = 1422
-        Height = 494
+        Width = 1402
+        Height = 474
         Align = alClient
         DataSource = dsPrincipal
         TabOrder = 1
@@ -150,26 +152,26 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1422
-      ExplicitHeight = 529
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1402
+      ExplicitHeight = 499
       inherited Shape3: TShape
-        Top = 511
-        Width = 1422
+        Top = 491
+        Width = 1402
         ExplicitTop = 818
         ExplicitWidth = 1284
       end
       object PC: TPageControl
         Left = 0
         Top = 0
-        Width = 1422
-        Height = 508
-        ActivePage = TabSheet2
+        Width = 1402
+        Height = 488
+        ActivePage = TabSheet1
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 518
         object TabSheet1: TTabSheet
           Caption = 'Dados'
-          ExplicitHeight = 490
           object Label1: TLabel
             Left = 8
             Top = 8
@@ -448,7 +450,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet2: TTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 1
-          ExplicitHeight = 490
           object Label4: TLabel
             Left = 8
             Top = 128
@@ -698,7 +699,10 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object Contador: TTabSheet
           Caption = 'Contador'
           ImageIndex = 3
-          ExplicitHeight = 490
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object Label26: TLabel
             Left = 8
             Top = 8
@@ -883,7 +887,10 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
         object TabSheet3: TTabSheet
           Caption = 'Imagem'
           ImageIndex = 2
-          ExplicitHeight = 490
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object GroupBox6: TGroupBox
             Left = 8
             Top = 12
@@ -986,25 +993,25 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   end
   inherited pnl_top: TPanel
     Top = 62
-    Width = 1430
-    ExplicitTop = 52
-    ExplicitWidth = 1430
+    Width = 1410
+    ExplicitTop = 62
+    ExplicitWidth = 1410
   end
   inherited Panel22: TPanel
-    Top = 631
-    Width = 1430
-    ExplicitTop = 631
-    ExplicitWidth = 1430
+    Top = 611
+    Width = 1410
+    ExplicitTop = 611
+    ExplicitWidth = 1410
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1424
+    Width = 1404
     Height = 47
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1424
+    ExplicitWidth = 1404
     ExplicitHeight = 47
   end
   inherited dsPrincipal: TDataSource
@@ -2347,108 +2354,98 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end>
   end
   object FDQ_Principal: TFDQuery
+    Active = True
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'select * from tb_empresa')
     Left = 288
     Top = 46
     object FDQ_PrincipalCOD_EMP: TIntegerField
-      DisplayLabel = 'C'#243'digo:'
       FieldName = 'COD_EMP'
       Origin = 'COD_EMP'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object FDQ_PrincipalRAZAO_EMP: TStringField
-      DisplayLabel = 'Raz'#227'o:'
       FieldName = 'RAZAO_EMP'
       Origin = 'RAZAO_EMP'
       Required = True
       Size = 50
     end
-    object FDQ_PrincipalEND_EMP: TWideStringField
-      DisplayLabel = 'Endere'#231'o:'
+    object FDQ_PrincipalEND_EMP: TStringField
       FieldName = 'END_EMP'
       Origin = 'END_EMP'
       Size = 50
     end
-    object FDQ_PrincipalBAI_EMP: TWideStringField
-      DisplayLabel = 'Bairro:'
+    object FDQ_PrincipalBAI_EMP: TStringField
       FieldName = 'BAI_EMP'
       Origin = 'BAI_EMP'
       Size = 30
     end
-    object FDQ_PrincipalCID_EMP: TWideStringField
-      DisplayLabel = 'Cidade:'
+    object FDQ_PrincipalCID_EMP: TStringField
       FieldName = 'CID_EMP'
       Origin = 'CID_EMP'
       Size = 30
     end
-    object FDQ_PrincipalCEP_EMP: TWideStringField
-      DisplayLabel = 'CEP:'
+    object FDQ_PrincipalCEP_EMP: TStringField
       FieldName = 'CEP_EMP'
       Origin = 'CEP_EMP'
       FixedChar = True
       Size = 9
     end
-    object FDQ_PrincipalEST_EMP: TWideStringField
+    object FDQ_PrincipalEST_EMP: TStringField
       FieldName = 'EST_EMP'
       Origin = 'EST_EMP'
       FixedChar = True
       Size = 2
     end
-    object FDQ_PrincipalINSC_EMP: TWideStringField
-      DisplayLabel = 'I.E:'
+    object FDQ_PrincipalINSC_EMP: TStringField
       FieldName = 'INSC_EMP'
       Origin = 'INSC_EMP'
     end
-    object FDQ_PrincipalTEL_EMP: TWideStringField
-      DisplayLabel = 'Telefone:'
+    object FDQ_PrincipalTEL_EMP: TStringField
       FieldName = 'TEL_EMP'
       Origin = 'TEL_EMP'
       Size = 13
     end
-    object FDQ_PrincipalFAX_EMP: TWideStringField
-      DisplayLabel = 'Fax:'
+    object FDQ_PrincipalFAX_EMP: TStringField
       FieldName = 'FAX_EMP'
       Origin = 'FAX_EMP'
       Size = 13
     end
-    object FDQ_PrincipalNOME_EMP_ETIQUETA: TWideStringField
+    object FDQ_PrincipalNOME_EMP_ETIQUETA: TStringField
       FieldName = 'NOME_EMP_ETIQUETA'
       Origin = 'NOME_EMP_ETIQUETA'
       Size = 15
     end
-    object FDQ_PrincipalNUMERO_EMP: TWideStringField
-      DisplayLabel = 'N'#186':'
+    object FDQ_PrincipalNUMERO_EMP: TStringField
       FieldName = 'NUMERO_EMP'
       Origin = 'NUMERO_EMP'
       Size = 10
     end
-    object FDQ_PrincipalRESP_EMP: TWideStringField
+    object FDQ_PrincipalRESP_EMP: TStringField
       FieldName = 'RESP_EMP'
       Origin = 'RESP_EMP'
       Size = 50
     end
-    object FDQ_PrincipalCAMINHO_FOTO_EMP: TWideStringField
+    object FDQ_PrincipalCAMINHO_FOTO_EMP: TStringField
       FieldName = 'CAMINHO_FOTO_EMP'
       Origin = 'CAMINHO_FOTO_EMP'
       Size = 150
     end
-    object FDQ_PrincipalFANTASIA_EMP: TWideStringField
-      DisplayLabel = 'Fantasia:'
+    object FDQ_PrincipalFANTASIA_EMP: TStringField
       FieldName = 'FANTASIA_EMP'
       Origin = 'FANTASIA_EMP'
       Size = 50
     end
-    object FDQ_PrincipalMOSTRAR_SITCLI_PREVENDA: TWideStringField
+    object FDQ_PrincipalMOSTRAR_SITCLI_PREVENDA: TStringField
       FieldName = 'MOSTRAR_SITCLI_PREVENDA'
       Origin = 'MOSTRAR_SITCLI_PREVENDA'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object FDQ_PrincipalCADASTRAR_CLIENTE_SEM_CPF: TWideStringField
+    object FDQ_PrincipalCADASTRAR_CLIENTE_SEM_CPF: TStringField
       FieldName = 'CADASTRAR_CLIENTE_SEM_CPF'
       Origin = 'CADASTRAR_CLIENTE_SEM_CPF'
       Required = True
@@ -2465,29 +2462,27 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       Origin = 'TIPO_CARGA_BALANCA'
       Required = True
     end
-    object FDQ_PrincipalCNPJ_EMP: TWideStringField
-      DisplayLabel = 'CNPJ:'
+    object FDQ_PrincipalCNPJ_EMP: TStringField
       FieldName = 'CNPJ_EMP'
       Origin = 'CNPJ_EMP'
       Size = 14
     end
-    object FDQ_PrincipalCAMINHO_VALIDADOR_SINTEGRA: TWideStringField
+    object FDQ_PrincipalCAMINHO_VALIDADOR_SINTEGRA: TStringField
       FieldName = 'CAMINHO_VALIDADOR_SINTEGRA'
       Origin = 'CAMINHO_VALIDADOR_SINTEGRA'
       Size = 80
     end
-    object FDQ_PrincipalINSCRICAO_MUNICIPAL: TWideStringField
-      DisplayLabel = 'I.M:'
+    object FDQ_PrincipalINSCRICAO_MUNICIPAL: TStringField
       FieldName = 'INSCRICAO_MUNICIPAL'
       Origin = 'INSCRICAO_MUNICIPAL'
     end
-    object FDQ_PrincipalPERFIL_EFD: TWideStringField
+    object FDQ_PrincipalPERFIL_EFD: TStringField
       FieldName = 'PERFIL_EFD'
       Origin = 'PERFIL_EFD'
       FixedChar = True
       Size = 1
     end
-    object FDQ_PrincipalCODIGO_MUNICIPIO: TWideStringField
+    object FDQ_PrincipalCODIGO_MUNICIPIO: TStringField
       FieldName = 'CODIGO_MUNICIPIO'
       Origin = 'CODIGO_MUNICIPIO'
       Size = 7
@@ -2496,58 +2491,58 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       FieldName = 'TIPO_ATIVIDADE_EFD'
       Origin = 'TIPO_ATIVIDADE_EFD'
     end
-    object FDQ_PrincipalNOME_CONTADOR: TWideStringField
+    object FDQ_PrincipalNOME_CONTADOR: TStringField
       FieldName = 'NOME_CONTADOR'
       Origin = 'NOME_CONTADOR'
       Size = 80
     end
-    object FDQ_PrincipalCPF_CONTADOR: TWideStringField
+    object FDQ_PrincipalCPF_CONTADOR: TStringField
       FieldName = 'CPF_CONTADOR'
       Origin = 'CPF_CONTADOR'
       Size = 14
     end
-    object FDQ_PrincipalCRC_CONTADOR: TWideStringField
+    object FDQ_PrincipalCRC_CONTADOR: TStringField
       FieldName = 'CRC_CONTADOR'
       Origin = 'CRC_CONTADOR'
       Size = 15
     end
-    object FDQ_PrincipalCNPJ_CONTADOR: TWideStringField
+    object FDQ_PrincipalCNPJ_CONTADOR: TStringField
       FieldName = 'CNPJ_CONTADOR'
       Origin = 'CNPJ_CONTADOR'
       Size = 18
     end
-    object FDQ_PrincipalCEP_CONTADOR: TWideStringField
+    object FDQ_PrincipalCEP_CONTADOR: TStringField
       FieldName = 'CEP_CONTADOR'
       Origin = 'CEP_CONTADOR'
       FixedChar = True
       Size = 9
     end
-    object FDQ_PrincipalEND_CONTADOR: TWideStringField
+    object FDQ_PrincipalEND_CONTADOR: TStringField
       FieldName = 'END_CONTADOR'
       Origin = 'END_CONTADOR'
       Size = 60
     end
-    object FDQ_PrincipalNUMERO_CONTADOR: TWideStringField
+    object FDQ_PrincipalNUMERO_CONTADOR: TStringField
       FieldName = 'NUMERO_CONTADOR'
       Origin = 'NUMERO_CONTADOR'
       Size = 10
     end
-    object FDQ_PrincipalBAIRRO_CONTADOR: TWideStringField
+    object FDQ_PrincipalBAIRRO_CONTADOR: TStringField
       FieldName = 'BAIRRO_CONTADOR'
       Origin = 'BAIRRO_CONTADOR'
       Size = 50
     end
-    object FDQ_PrincipalTEL_CONTADOR: TWideStringField
+    object FDQ_PrincipalTEL_CONTADOR: TStringField
       FieldName = 'TEL_CONTADOR'
       Origin = 'TEL_CONTADOR'
       Size = 10
     end
-    object FDQ_PrincipalFAX_CONTADOR: TWideStringField
+    object FDQ_PrincipalFAX_CONTADOR: TStringField
       FieldName = 'FAX_CONTADOR'
       Origin = 'FAX_CONTADOR'
       Size = 10
     end
-    object FDQ_PrincipalCODIGO_MUNICIPIO_CONTADOR: TWideStringField
+    object FDQ_PrincipalCODIGO_MUNICIPIO_CONTADOR: TStringField
       FieldName = 'CODIGO_MUNICIPIO_CONTADOR'
       Origin = 'CODIGO_MUNICIPIO_CONTADOR'
       Size = 7
@@ -2556,12 +2551,12 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       FieldName = 'VERSAO_EFD'
       Origin = 'VERSAO_EFD'
     end
-    object FDQ_PrincipalEMAIL_CONTADOR: TWideStringField
+    object FDQ_PrincipalEMAIL_CONTADOR: TStringField
       FieldName = 'EMAIL_CONTADOR'
       Origin = 'EMAIL_CONTADOR'
       Size = 255
     end
-    object FDQ_PrincipalPERMITE_FECHA_ERP_JANELA_ABERTA: TWideStringField
+    object FDQ_PrincipalPERMITE_FECHA_ERP_JANELA_ABERTA: TStringField
       FieldName = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
       Origin = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
       Required = True

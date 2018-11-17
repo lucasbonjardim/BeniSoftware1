@@ -66,11 +66,12 @@ type
     cxDBSpinEdit3: TcxDBSpinEdit;
     Label6: TLabel;
     dxDBColorEdit1: TdxDBColorEdit;
+    FDQAutoIncremento: TFDQuery;
     FDQ_usuariosCOD_USU: TIntegerField;
-    FDQ_usuariosNOME_USU: TWideStringField;
-    FDQ_usuariosSENHA_USU: TWideStringField;
+    FDQ_usuariosNOME_USU: TStringField;
+    FDQ_usuariosSENHA_USU: TStringField;
     FDQ_usuariosCOD_GRUPO: TIntegerField;
-    FDQ_usuariosOPERADOR_CAIXA: TWideStringField;
+    FDQ_usuariosOPERADOR_CAIXA: TStringField;
     FDQ_usuariosTEMA_COR: TStringField;
     FDQ_usuariosNOME_COMPLETO: TStringField;
     FDQ_usuariosEMAIL_USU: TStringField;
@@ -80,7 +81,6 @@ type
     FDQ_usuariosUSA_TEMAPADRAO: TIntegerField;
     FDQ_usuariosUSUARIO_MASTER: TIntegerField;
     FDQ_usuariosCOD_EMPRESA_USU: TIntegerField;
-    FDQAutoIncremento: TFDQuery;
     procedure BtnGravarClick(Sender: TObject);
     procedure cbdbUsapadraotemaClick(Sender: TObject);
     procedure cxDBusuarioativoClick(Sender: TObject);
@@ -90,6 +90,7 @@ type
       Shift: TShiftState);
     procedure FDQ_usuariosAfterEdit(DataSet: TDataSet);
     procedure BtnNovoClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -324,6 +325,12 @@ procedure TForm_Cadastro_usuario.FDQ_usuariosAfterEdit(DataSet: TDataSet);
 begin
   inherited;
   cxDBTextEdit2.text := f_dcrypdbf(cxDBTextEdit2.Text);
+end;
+
+procedure TForm_Cadastro_usuario.FormCreate(Sender: TObject);
+begin
+  inherited;
+  FDQ_usuarios.Active := False;
 end;
 
 end.

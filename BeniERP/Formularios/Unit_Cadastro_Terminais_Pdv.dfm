@@ -1,28 +1,27 @@
 inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
   Caption = 'Cadastro de Terminais PDV - SAT/ NFCe'
-  ClientHeight = 1050
-  ClientWidth = 1366
-  ExplicitWidth = 1382
-  ExplicitHeight = 1089
+  ClientHeight = 1040
+  ClientWidth = 1356
+  ExplicitWidth = 1372
+  ExplicitHeight = 1079
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Width = 1366
+    Width = 1356
     ExplicitTop = 52
     ExplicitWidth = 1386
   end
   inherited cxPageControl1: TcxPageControl
     Top = 75
-    Width = 1366
-    Height = 958
+    Width = 1356
+    Height = 948
     Properties.ActivePage = tbCadastro
-    ExplicitWidth = 1366
-    ExplicitHeight = 958
-    ClientRectBottom = 954
-    ClientRectRight = 1362
+    ExplicitTop = 75
+    ExplicitWidth = 1356
+    ExplicitHeight = 948
+    ClientRectBottom = 944
+    ClientRectRight = 1352
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 0
-      ExplicitTop = 0
       ExplicitWidth = 1358
       ExplicitHeight = 930
       inherited Panel1: TPanel
@@ -33,20 +32,17 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
           AnchorX = 34
           AnchorY = 21
         end
-        inherited Panel2: TPanel
-          inherited edtCurr: TcxCurrencyEdit
-            ExplicitHeight = 21
-          end
-        end
       end
       object cxGrid1: TcxGrid
         Left = 0
         Top = 41
-        Width = 1358
-        Height = 889
+        Width = 1348
+        Height = 879
         Align = alClient
         BorderStyle = cxcbsNone
         TabOrder = 1
+        ExplicitWidth = 1358
+        ExplicitHeight = 889
         object cxGrid1DBTableView1: TcxGridDBTableView
           Navigator.Buttons.CustomButtons = <>
           DataController.DataSource = dsPrincipal
@@ -80,13 +76,13 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 1358
-      ExplicitHeight = 930
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1348
+      ExplicitHeight = 920
       inherited Shape3: TShape
-        Top = 922
-        Width = 1358
+        Top = 912
+        Width = 1348
         ExplicitTop = 940
         ExplicitWidth = 1382
       end
@@ -155,8 +151,8 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       end
       object GroupBox1: TGroupBox
         Left = 0
-        Top = 648
-        Width = 1358
+        Top = 638
+        Width = 1348
         Height = 271
         Align = alBottom
         Caption = 'Valores'
@@ -357,7 +353,7 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       object db_combo_tpo_pdv: TDBComboBox
         Left = 82
         Top = 56
-        Width = 1239
+        Width = 1229
         Height = 21
         Style = csDropDownList
         Anchors = [akLeft, akTop, akRight]
@@ -376,7 +372,7 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
         DataBinding.DataSource = dsPrincipal
         Enabled = False
         TabOrder = 8
-        Width = 1239
+        Width = 1229
       end
       object BConfigEFD: TButton
         Left = 3
@@ -390,24 +386,25 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
   end
   inherited pnl_top: TPanel
     Top = 53
-    Width = 1366
-    ExplicitWidth = 1366
+    Width = 1356
+    ExplicitTop = 53
+    ExplicitWidth = 1356
   end
   inherited Panel22: TPanel
-    Top = 1033
-    Width = 1366
-    ExplicitTop = 1033
-    ExplicitWidth = 1366
+    Top = 1023
+    Width = 1356
+    ExplicitTop = 1023
+    ExplicitWidth = 1356
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 12
-    Width = 1360
+    Width = 1350
     Height = 38
     ExplicitLeft = 3
-    ExplicitTop = 3
-    ExplicitWidth = 1360
+    ExplicitTop = 12
+    ExplicitWidth = 1350
     ExplicitHeight = 38
   end
   inherited dsPrincipal: TDataSource
@@ -422,37 +419,33 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
     Left = 744
   end
   object FDQ_Principal: TFDQuery
+    Active = True
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'SELECT * FROM TB_TERMINAL_PDV')
     Left = 264
     Top = 63
     object FDQ_PrincipalTER_ID: TIntegerField
-      DisplayLabel = 'ID'
       FieldName = 'TER_ID'
       Origin = 'TER_ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object FDQ_PrincipalTER_TIPO_PDV: TWideStringField
-      DisplayLabel = 'TIPO'
+    object FDQ_PrincipalTER_TIPO_PDV: TStringField
       FieldName = 'TER_TIPO_PDV'
       Origin = 'TER_TIPO_PDV'
       Required = True
       Size = 5
     end
     object FDQ_PrincipalTER_COM_LEITOR: TIntegerField
-      DisplayLabel = 'PORTA LEITOR'
       FieldName = 'TER_COM_LEITOR'
       Origin = 'TER_COM_LEITOR'
     end
     object FDQ_PrincipalTER_TPO_TECLADO: TIntegerField
-      DisplayLabel = 'TIPO TECLADO'
       FieldName = 'TER_TPO_TECLADO'
       Origin = 'TER_TPO_TECLADO'
     end
     object FDQ_PrincipalTER_COM_TECLADO: TIntegerField
-      DisplayLabel = 'PORTA TECLADO'
       FieldName = 'TER_COM_TECLADO'
       Origin = 'TER_COM_TECLADO'
     end
@@ -465,42 +458,34 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       Origin = 'TER_HAB_MSG_TEC'
     end
     object FDQ_PrincipalTER_HABILITA_PINPAD: TIntegerField
-      DisplayLabel = 'HABILITA PINPAD'
       FieldName = 'TER_HABILITA_PINPAD'
       Origin = 'TER_HABILITA_PINPAD'
     end
     object FDQ_PrincipalTER_COM_PINPAD: TIntegerField
-      DisplayLabel = 'PORTA PINPAD'
       FieldName = 'TER_COM_PINPAD'
       Origin = 'TER_COM_PINPAD'
     end
     object FDQ_PrincipalTER_TPO_BALANCA: TIntegerField
-      DisplayLabel = 'TIPO BALAN'#199'A'
       FieldName = 'TER_TPO_BALANCA'
       Origin = 'TER_TPO_BALANCA'
     end
     object FDQ_PrincipalTER_COM_BALANCA: TIntegerField
-      DisplayLabel = 'PORTA BALAN'#199'A'
       FieldName = 'TER_COM_BALANCA'
       Origin = 'TER_COM_BALANCA'
     end
     object FDQ_PrincipalTER_HAB_VENDEDOR: TIntegerField
-      DisplayLabel = 'HABILITA VENDEDOR'
       FieldName = 'TER_HAB_VENDEDOR'
       Origin = 'TER_HAB_VENDEDOR'
     end
     object FDQ_PrincipalTER_HAB_TEF: TIntegerField
-      DisplayLabel = 'HABILITA TEF'
       FieldName = 'TER_HAB_TEF'
       Origin = 'TER_HAB_TEF'
     end
     object FDQ_PrincipalTER_CHK_PROD_BAL: TIntegerField
-      DisplayLabel = 'VERIFICA PRODUTO BALAN'#199'A'
       FieldName = 'TER_CHK_PROD_BAL'
       Origin = 'TER_CHK_PROD_BAL'
     end
     object FDQ_PrincipalTER_CHK_GAV_ABERTA: TIntegerField
-      DisplayLabel = 'VERIFICA GAVETA ABERTA'
       FieldName = 'TER_CHK_GAV_ABERTA'
       Origin = 'TER_CHK_GAV_ABERTA'
     end
@@ -513,18 +498,15 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       Origin = 'TER_HAB_IMG_TELA'
     end
     object FDQ_PrincipalTER_HAB_TELA_TROCO: TIntegerField
-      DisplayLabel = 'HABILITA TELA TROCO'
       FieldName = 'TER_HAB_TELA_TROCO'
       Origin = 'TER_HAB_TELA_TROCO'
     end
-    object FDQ_PrincipalTER_TROCO_COMP_DETALHADO: TWideStringField
-      DisplayLabel = 'HABILITA TROCO DETALHADO'
+    object FDQ_PrincipalTER_TROCO_COMP_DETALHADO: TStringField
       FieldName = 'TER_TROCO_COMP_DETALHADO'
       Origin = 'TER_TROCO_COMP_DETALHADO'
       Size = 1
     end
     object FDQ_PrincipalTER_HAB_CMC7: TIntegerField
-      DisplayLabel = 'HABILITA LEITORA CHEQUE'
       FieldName = 'TER_HAB_CMC7'
       Origin = 'TER_HAB_CMC7'
     end
@@ -553,12 +535,10 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       Origin = 'TER_CARGA_CONFIGURACAO'
     end
     object FDQ_PrincipalTER_DT_ULT_ATUALIZACAO: TDateField
-      DisplayLabel = 'DATA ATUALIZA'#199#195'O'
       FieldName = 'TER_DT_ULT_ATUALIZACAO'
       Origin = 'TER_DT_ULT_ATUALIZACAO'
     end
     object FDQ_PrincipalTER_HR_ULT_ATUALIZACAO: TTimeField
-      DisplayLabel = 'HORA ATUALIZA'#199#195'O'
       FieldName = 'TER_HR_ULT_ATUALIZACAO'
       Origin = 'TER_HR_ULT_ATUALIZACAO'
     end

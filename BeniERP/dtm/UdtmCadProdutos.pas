@@ -20,10 +20,16 @@ type
     StringField1: TStringField;
     StringField2: TStringField;
     ds_tpo_produto: TDataSource;
+    dxMemNCM: TdxMemData;
+    StringField3: TStringField;
+    StringField4: TStringField;
+    ds_NCM: TDataSource;
+    dxMemNCMCodigoNCM: TStringField;
     procedure dxmem_cod_tributacao_ProAfterOpen(DataSet: TDataSet);
     procedure dxmem_UNReferenciaAfterOpen(DataSet: TDataSet);
     procedure DataModuleCreate(Sender: TObject);
     procedure dxmem_tpo_produtoAfterOpen(DataSet: TDataSet);
+    procedure dxMemNCMAfterOpen(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -73,6 +79,38 @@ begin
   end;
 end;
 
+procedure Tdtm_cad_Produtos.dxMemNCMAfterOpen(DataSet: TDataSet);
+var
+  LCHAVE, LDescricaoNCM, LCodigoNCM : string;
+begin
+  with DtmBcoErp do
+  begin
+    FDQ_NCM.Close;
+    FDQ_NCM.Open;
+
+    if not FDQ_NCM.IsEmpty then
+    begin
+      FDQ_NCM.First;
+      while not FDQ_NCM.Eof do
+      begin
+        LCHAVE         := FDQ_NCM.FieldByName('CHAVE').AsString;
+        LDescricaoNCM  := FDQ_NCM.FieldByName('DESCRICAO').AsString;
+        LCodigoNCM     := FDQ_NCM.FieldByName('NCM').AsString;
+
+        with ds_NCM do
+        begin
+          DataSet.Insert;
+          DataSet.FieldByName('CHAVE').AsString      := LCHAVE;
+          DataSet.FieldByName('Descricao').AsString  := LDescricaoNCM;
+          DataSet.FieldByName('CodigoNCM').AsString  := LCodigoNCM;
+          DataSet.Post;
+          end;
+        FDQ_NCM.Next;
+      end;
+    end;
+  end;
+end;
+
 procedure Tdtm_cad_Produtos.dxmem_cod_tributacao_ProAfterOpen(
   DataSet: TDataSet);
 var
@@ -80,6 +118,7 @@ var
 begin
   inherited;
   try
+
     with DtmBcoErp do
     begin
       Fdq_TB_TRIBUTACAO_ICMS.Close;

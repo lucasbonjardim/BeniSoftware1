@@ -428,6 +428,7 @@ type
     procedure dxBarButton15Click(Sender: TObject);
     procedure CX002Click(Sender: TObject);
     procedure act_Cad_EmpresaExecute(Sender: TObject);
+    procedure C1040Click(Sender: TObject);
 
 
   private
@@ -457,7 +458,7 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
   Unit_Cadastro_de_Empresa, Unit_Configurar_Pis_Cofins,
   Unit_Cadastro_Terminais_Pdv, Unit_Splach,
-  UdtmCadProdutos;
+  UdtmCadProdutos, ufrmCadastroNcm;
 
 {$R *.dfm}
 
@@ -492,6 +493,11 @@ end;
 procedure TForm_Principal.C007Click(Sender: TObject);
 begin
    AbreForm(TForm_Cadastro_Produtos,Form_Cadastro_Produtos);
+end;
+
+procedure TForm_Principal.C1040Click(Sender: TObject);
+begin
+   AbreForm(tfrm_cadastro_ncm,frm_cadastro_ncm);
 end;
 
 procedure TForm_Principal.C1042Click(Sender: TObject);

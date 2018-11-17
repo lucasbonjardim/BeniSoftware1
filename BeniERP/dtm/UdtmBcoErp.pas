@@ -19,13 +19,17 @@ type
     Fdq_usuario: TFDQuery;
     Fdq_TB_EMPRESA: TFDQuery;
     Fdq_TB_TRIBUTACAO_ICMS: TFDQuery;
+    FDQ_NCM: TFDQuery;
     procedure DataModuleDestroy(Sender: TObject);
   private
 
   public
+
   procedure AcessoExecute;
   procedure p_conexao;
   procedure Ajusta_Cadastro_Empresa;
+  function f_Auditoria(PI_FUNCAO,
+  PI_MENSAGEM: String): Boolean;
   end;
 
 var
@@ -95,10 +99,11 @@ begin
       FDPhysFBDriverLink1.VendorLib  := 'fbclient.dll';
       FDBcoERP.Connected := false;
       FDBcoERP.Params.Clear;
-      FDBcoERP.Params.Values['DriverID']  := 'FB';
-      FDBcoERP.Params.Values['database']  := INI.ReadString('LOGIN','Banco'      ,'127.0.0.1C:\BeniSoftware\BeniERP\DataBase\BENIGESTAO.FDB');
-      FDBcoERP.Params.Values['user_name'] := INI.ReadString('LOGIN','USUARIO'    ,'SYSDBA');
-      FDBcoERP.Params.Values['password']  := INI.ReadString('LOGIN','SENHA'      ,'masterkey');
+      FDBcoERP.Params.Values['CharacterSet'] :='WIN1252';
+      FDBcoERP.Params.Values['DriverID']     := 'FB';
+      FDBcoERP.Params.Values['database']     := INI.ReadString('LOGIN','Banco'      ,'127.0.0.1C:\BeniSoftware\BeniERP\DataBase\BENIGESTAO.FDB');
+      FDBcoERP.Params.Values['user_name']    := INI.ReadString('LOGIN','USUARIO'    ,'SYSDBA');
+      FDBcoERP.Params.Values['password']     := INI.ReadString('LOGIN','SENHA'      ,'masterkey');
       FDBcoERP.Connected   := true;
       ConexaoDados         := DtmBcoErp.FDBcoERP;
 
@@ -142,6 +147,23 @@ begin
   finally
     FreeAndNil(lSql);
     FreeAndNil(FAcesso);
+  end;
+end;
+
+function TDtmBcoErp.f_Auditoria(PI_FUNCAO,
+  PI_MENSAGEM: String): Boolean;
+begin
+  try
+    Result := False;
+    
+
+    Result := True;
+  except
+    on Es: Exception do
+    begin
+      Result := False;
+      AlertCard(Es.message,'Erro.')
+    end;
   end;
 end;
 

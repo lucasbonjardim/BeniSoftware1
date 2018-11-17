@@ -14,17 +14,17 @@ type
   Tform_Configurar_Pis_Cofins = class(TForm)
     BitBtn1: TBitBtn;
     Conf: TFDQuery;
+    Metodo: TRadioGroup;
+    Regime: TRadioGroup;
+    Tipo: TRadioGroup;
+    Versao: TRadioGroup;
+    ACBrEnterTab1: TACBrEnterTab;
     ConfCOD: TIntegerField;
     ConfCOD_EMP: TIntegerField;
     ConfVERSAO: TIntegerField;
     ConfREGIME_APURACAO: TIntegerField;
     ConfMETODO: TIntegerField;
     ConfTIPO_CONT: TIntegerField;
-    Metodo: TRadioGroup;
-    Regime: TRadioGroup;
-    Tipo: TRadioGroup;
-    Versao: TRadioGroup;
-    ACBrEnterTab1: TACBrEnterTab;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Btn_ok(Sender: TObject);
     procedure FormShow(Sender: TObject);

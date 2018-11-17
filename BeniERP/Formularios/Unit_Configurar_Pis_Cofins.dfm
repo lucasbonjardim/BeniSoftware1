@@ -91,29 +91,29 @@ object form_Configurar_Pis_Cofins: Tform_Configurar_Pis_Cofins
       end>
     object ConfCOD: TIntegerField
       FieldName = 'COD'
-      Origin = '"EFD_PISCOFINS"."COD"'
+      Origin = 'COD'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object ConfCOD_EMP: TIntegerField
       FieldName = 'COD_EMP'
-      Origin = '"EFD_PISCOFINS"."COD_EMP"'
+      Origin = 'COD_EMP'
     end
     object ConfVERSAO: TIntegerField
       FieldName = 'VERSAO'
-      Origin = '"EFD_PISCOFINS"."VERSAO"'
+      Origin = 'VERSAO'
     end
     object ConfREGIME_APURACAO: TIntegerField
       FieldName = 'REGIME_APURACAO'
-      Origin = '"EFD_PISCOFINS"."REGIME_APURACAO"'
+      Origin = 'REGIME_APURACAO'
     end
     object ConfMETODO: TIntegerField
       FieldName = 'METODO'
-      Origin = '"EFD_PISCOFINS"."METODO"'
+      Origin = 'METODO'
     end
     object ConfTIPO_CONT: TIntegerField
       FieldName = 'TIPO_CONT'
-      Origin = '"EFD_PISCOFINS"."TIPO_CONT"'
+      Origin = 'TIPO_CONT'
     end
   end
   object ACBrEnterTab1: TACBrEnterTab

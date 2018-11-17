@@ -37,44 +37,6 @@ uses
 type
   TForm_Cadastro_de_Empresa = class(TForm_Cadastro_Modelo)
     FDQ_Principal: TFDQuery;
-    FDQ_PrincipalCOD_EMP: TIntegerField;
-    FDQ_PrincipalRAZAO_EMP: TStringField;
-    FDQ_PrincipalEND_EMP: TWideStringField;
-    FDQ_PrincipalBAI_EMP: TWideStringField;
-    FDQ_PrincipalCID_EMP: TWideStringField;
-    FDQ_PrincipalCEP_EMP: TWideStringField;
-    FDQ_PrincipalEST_EMP: TWideStringField;
-    FDQ_PrincipalINSC_EMP: TWideStringField;
-    FDQ_PrincipalTEL_EMP: TWideStringField;
-    FDQ_PrincipalFAX_EMP: TWideStringField;
-    FDQ_PrincipalNOME_EMP_ETIQUETA: TWideStringField;
-    FDQ_PrincipalNUMERO_EMP: TWideStringField;
-    FDQ_PrincipalRESP_EMP: TWideStringField;
-    FDQ_PrincipalCAMINHO_FOTO_EMP: TWideStringField;
-    FDQ_PrincipalFANTASIA_EMP: TWideStringField;
-    FDQ_PrincipalMOSTRAR_SITCLI_PREVENDA: TWideStringField;
-    FDQ_PrincipalCADASTRAR_CLIENTE_SEM_CPF: TWideStringField;
-    FDQ_PrincipalTIPO_EMP: TIntegerField;
-    FDQ_PrincipalTIPO_CARGA_BALANCA: TIntegerField;
-    FDQ_PrincipalCNPJ_EMP: TWideStringField;
-    FDQ_PrincipalCAMINHO_VALIDADOR_SINTEGRA: TWideStringField;
-    FDQ_PrincipalINSCRICAO_MUNICIPAL: TWideStringField;
-    FDQ_PrincipalPERFIL_EFD: TWideStringField;
-    FDQ_PrincipalCODIGO_MUNICIPIO: TWideStringField;
-    FDQ_PrincipalTIPO_ATIVIDADE_EFD: TIntegerField;
-    FDQ_PrincipalNOME_CONTADOR: TWideStringField;
-    FDQ_PrincipalCPF_CONTADOR: TWideStringField;
-    FDQ_PrincipalCRC_CONTADOR: TWideStringField;
-    FDQ_PrincipalCNPJ_CONTADOR: TWideStringField;
-    FDQ_PrincipalCEP_CONTADOR: TWideStringField;
-    FDQ_PrincipalEND_CONTADOR: TWideStringField;
-    FDQ_PrincipalNUMERO_CONTADOR: TWideStringField;
-    FDQ_PrincipalBAIRRO_CONTADOR: TWideStringField;
-    FDQ_PrincipalTEL_CONTADOR: TWideStringField;
-    FDQ_PrincipalFAX_CONTADOR: TWideStringField;
-    FDQ_PrincipalCODIGO_MUNICIPIO_CONTADOR: TWideStringField;
-    FDQ_PrincipalVERSAO_EFD: TIntegerField;
-    FDQ_PrincipalEMAIL_CONTADOR: TWideStringField;
     PC: TPageControl;
     TabSheet1: TTabSheet;
     Label1: TLabel;
@@ -170,13 +132,52 @@ type
     DBGrid1: TDBGrid;
     db_chk_cli_sem_cpf: TDBCheckBox;
     DBCheckBox1: TDBCheckBox;
-    FDQ_PrincipalPERMITE_FECHA_ERP_JANELA_ABERTA: TWideStringField;
+    FDQ_PrincipalCOD_EMP: TIntegerField;
+    FDQ_PrincipalRAZAO_EMP: TStringField;
+    FDQ_PrincipalEND_EMP: TStringField;
+    FDQ_PrincipalBAI_EMP: TStringField;
+    FDQ_PrincipalCID_EMP: TStringField;
+    FDQ_PrincipalCEP_EMP: TStringField;
+    FDQ_PrincipalEST_EMP: TStringField;
+    FDQ_PrincipalINSC_EMP: TStringField;
+    FDQ_PrincipalTEL_EMP: TStringField;
+    FDQ_PrincipalFAX_EMP: TStringField;
+    FDQ_PrincipalNOME_EMP_ETIQUETA: TStringField;
+    FDQ_PrincipalNUMERO_EMP: TStringField;
+    FDQ_PrincipalRESP_EMP: TStringField;
+    FDQ_PrincipalCAMINHO_FOTO_EMP: TStringField;
+    FDQ_PrincipalFANTASIA_EMP: TStringField;
+    FDQ_PrincipalMOSTRAR_SITCLI_PREVENDA: TStringField;
+    FDQ_PrincipalCADASTRAR_CLIENTE_SEM_CPF: TStringField;
+    FDQ_PrincipalTIPO_EMP: TIntegerField;
+    FDQ_PrincipalTIPO_CARGA_BALANCA: TIntegerField;
+    FDQ_PrincipalCNPJ_EMP: TStringField;
+    FDQ_PrincipalCAMINHO_VALIDADOR_SINTEGRA: TStringField;
+    FDQ_PrincipalINSCRICAO_MUNICIPAL: TStringField;
+    FDQ_PrincipalPERFIL_EFD: TStringField;
+    FDQ_PrincipalCODIGO_MUNICIPIO: TStringField;
+    FDQ_PrincipalTIPO_ATIVIDADE_EFD: TIntegerField;
+    FDQ_PrincipalNOME_CONTADOR: TStringField;
+    FDQ_PrincipalCPF_CONTADOR: TStringField;
+    FDQ_PrincipalCRC_CONTADOR: TStringField;
+    FDQ_PrincipalCNPJ_CONTADOR: TStringField;
+    FDQ_PrincipalCEP_CONTADOR: TStringField;
+    FDQ_PrincipalEND_CONTADOR: TStringField;
+    FDQ_PrincipalNUMERO_CONTADOR: TStringField;
+    FDQ_PrincipalBAIRRO_CONTADOR: TStringField;
+    FDQ_PrincipalTEL_CONTADOR: TStringField;
+    FDQ_PrincipalFAX_CONTADOR: TStringField;
+    FDQ_PrincipalCODIGO_MUNICIPIO_CONTADOR: TStringField;
+    FDQ_PrincipalVERSAO_EFD: TIntegerField;
+    FDQ_PrincipalEMAIL_CONTADOR: TStringField;
+    FDQ_PrincipalPERMITE_FECHA_ERP_JANELA_ABERTA: TStringField;
     procedure BtnCaminhoValidadorClick(Sender: TObject);
     procedure BConfigEFDClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure DBGrid1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure BtnGravarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     function F_Dados_ok: Boolean;
     { Private declarations }
@@ -224,6 +225,12 @@ begin
   if f_dados_ok then
     inherited;
 
+end;
+
+procedure TForm_Cadastro_de_Empresa.FormCreate(Sender: TObject);
+begin
+  inherited;
+  FDQ_Principal.Active := False;
 end;
 
 function TForm_Cadastro_de_Empresa.F_Dados_ok:Boolean;
