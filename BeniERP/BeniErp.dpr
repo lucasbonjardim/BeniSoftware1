@@ -27,7 +27,8 @@ uses
   Unit_Configurar_Pis_Cofins in 'Formularios\Unit_Configurar_Pis_Cofins.pas' {form_Configurar_Pis_Cofins},
   Unit_Cadastro_Aliquota_pdv in 'Formularios\Unit_Cadastro_Aliquota_pdv.pas' {Form_Cadastro_Aliquota_pdv},
   Unit_Cadastro_Terminais_Pdv in 'Formularios\Unit_Cadastro_Terminais_Pdv.pas' {Form_Cadastro_Terminais_PDV},
-  Unit_Splach in 'Formularios\Unit_Splach.pas' {frm_splach};
+  Unit_Splach in 'Formularios\Unit_Splach.pas' {frm_splach},
+  UdtmCadProdutos in 'dtm\UdtmCadProdutos.pas' {dtm_cad_Produtos: TDataModule};
 
 {$R *.res}
 

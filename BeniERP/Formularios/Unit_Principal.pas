@@ -457,7 +457,8 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs,
   Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
   Unit_Cadastro_de_Empresa, Unit_Configurar_Pis_Cofins,
-  Unit_Cadastro_Aliquota_pdv, Unit_Cadastro_Terminais_Pdv, Unit_Splach;
+  Unit_Cadastro_Aliquota_pdv, Unit_Cadastro_Terminais_Pdv, Unit_Splach,
+  UdtmCadProdutos;
 
 {$R *.dfm}
 
@@ -507,6 +508,7 @@ begin
   begin
     DtmBcoErp := TDtmBcoErp.Create(self);
     DtmBcoErp.p_conexao;
+    dtm_cad_Produtos := Tdtm_cad_Produtos.Create(self);
 
     if DtmBcoErp.FDBcoERP.Connected then
     begin

@@ -33,7 +33,7 @@ uses
   cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,System.StrUtils, cxCalendar,
   ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint, cxHint,
   dxSkinsdxNavBarPainter, dxSkinsdxNavBarAccordionViewPainter, dxNavBarCollns,
-  dxNavBarBase, dxNavBar, dxmdaset;
+  dxNavBarBase, dxNavBar, dxmdaset, cxCalc, cxSpinEdit, cxTimeEdit;
 
 type
   TForm_Cadastro_Produtos = class(TForm_Cadastro_Modelo)
@@ -355,17 +355,7 @@ type
     FDQuxiliarPRO_DT_ATUALIZACAO_CADASTRO: TDateField;
     FDQuxiliarPRO_HR__ATUALIZACAO_CADASTRO: TTimeField;
     FDQuxiliarPRO_COD_SEC: TIntegerField;
-    dsUNReferencia: TDataSource;
-    dxmem_UNReferencia: TdxMemData;
-    dxmem_UNReferenciaID: TIntegerField;
-    StringField34: TStringField;
-    dxmem_cod_tributacao_Pro: TdxMemData;
-    dsmam_cod_trib_pro: TDataSource;
-    dxmem_cod_tributacao_ProID: TStringField;
-    dxmem_cod_tributacao_ProAliquota: TStringField;
-    dxmem_cod_tributacao_ProDescricao: TStringField;
-    GroupBox1: TGroupBox;
-    Label10: TLabel;
+    grp_produto: TGroupBox;
     GBDadosProduto: TGroupBox;
     Label105: TLabel;
     Label133: TLabel;
@@ -374,14 +364,87 @@ type
     combodb_un_referencia: TcxDBLookupComboBox;
     cxDBTextEdit1: TcxDBTextEdit;
     cxDBMEsqlCadProdutosPRO_ID: TcxDBMaskEdit;
-    cxDBLookupComboBox9: TcxDBLookupComboBox;
     edt_descr_pdv: TcxDBTextEdit;
     Label104: TLabel;
     cxDBMaskEdit1: TcxDBMaskEdit;
     Label11: TLabel;
     cxDBCurrencyEdit1: TcxDBCurrencyEdit;
     Label12: TLabel;
+    cxDBLookupComboBox1: TcxDBLookupComboBox;
+    DataSource1: TDataSource;
+    cxDBDateEdit1: TcxDBDateEdit;
+    Label13: TLabel;
+    cxTabSheet1: TcxTabSheet;
+    DBCheckBox1: TDBCheckBox;
+    DBCheckBox2: TDBCheckBox;
+    DBCheckBox3: TDBCheckBox;
+    DBCheckBox4: TDBCheckBox;
+    DBCheckBox5: TDBCheckBox;
+    DBCheckBox6: TDBCheckBox;
+    DBCheckBox7: TDBCheckBox;
+    DBCheckBox8: TDBCheckBox;
+    DBCheckBox9: TDBCheckBox;
+    cxTabSheet2: TcxTabSheet;
+    GroupBox4: TGroupBox;
+    Label37: TLabel;
+    cxDBTextEdit8: TcxDBTextEdit;
+    Label38: TLabel;
+    cxDBTextEdit9: TcxDBTextEdit;
+    cxDBCurrencyEdit6: TcxDBCurrencyEdit;
+    Label41: TLabel;
+    Label42: TLabel;
+    cxDBCurrencyEdit7: TcxDBCurrencyEdit;
+    cxDBLookupComboBox9: TcxDBLookupComboBox;
+    Label10: TLabel;
+    cxDBTextEdit10: TcxDBTextEdit;
+    Label39: TLabel;
+    DBCheckBox10: TDBCheckBox;
+    GroupBox5: TGroupBox;
+    Label27: TLabel;
     cxDBTextEdit2: TcxDBTextEdit;
+    Label28: TLabel;
+    Label33: TLabel;
+    cxDBCalcEdit1: TcxDBCalcEdit;
+    Label35: TLabel;
+    cxDBTextEdit5: TcxDBTextEdit;
+    cxDBCurrencyEdit3: TcxDBCurrencyEdit;
+    Label29: TLabel;
+    Label31: TLabel;
+    cxDBCurrencyEdit4: TcxDBCurrencyEdit;
+    cxDBCurrencyEdit2: TcxDBCurrencyEdit;
+    Label36: TLabel;
+    cxDBTextEdit7: TcxDBTextEdit;
+    Label43: TLabel;
+    cxDBCalcEdit2: TcxDBCalcEdit;
+    Label44: TLabel;
+    cxDBCalcEdit3: TcxDBCalcEdit;
+    Label45: TLabel;
+    cxDBCalcEdit4: TcxDBCalcEdit;
+    cxDBTextEdit6: TcxDBTextEdit;
+    Label34: TLabel;
+    cxDBTextEdit4: TcxDBTextEdit;
+    Label32: TLabel;
+    Label30: TLabel;
+    cxDBTimeEdit1: TcxDBTimeEdit;
+    Label40: TLabel;
+    cxDBTextEdit3: TcxDBTextEdit;
+    Label46: TLabel;
+    cxDBCalcEdit5: TcxDBCalcEdit;
+    Label47: TLabel;
+    cxDBCurrencyEdit5: TcxDBCurrencyEdit;
+    Label48: TLabel;
+    cxDBCurrencyEdit8: TcxDBCurrencyEdit;
+    Label49: TLabel;
+    cxDBCurrencyEdit9: TcxDBCurrencyEdit;
+    Label50: TLabel;
+    cxDBCurrencyEdit10: TcxDBCurrencyEdit;
+    Label51: TLabel;
+    cxDBCurrencyEdit11: TcxDBCurrencyEdit;
+    Label52: TLabel;
+    cxDBCurrencyEdit12: TcxDBCurrencyEdit;
+    Label53: TLabel;
+    cxDBSpinEdit1: TcxDBSpinEdit;
+    DBCheckBox11: TDBCheckBox;
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
     procedure BtnConsultarClick(Sender: TObject);
@@ -394,8 +457,7 @@ type
     procedure rgOptionGridClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure dxmem_UNReferenciaAfterOpen(DataSet: TDataSet);
-    procedure dxmem_cod_tributacao_ProAfterOpen(DataSet: TDataSet);
+   
   private
     procedure MostraProdutos;
     function retornabusca: string;
@@ -405,21 +467,7 @@ type
     { Public declarations }
   end;
 
-  const
-  CNS_UN_REFERENCIA: array[0..13] of string = ( 'UN',
-                                                'PC',
-                                                'KG',
-                                                'MT',
-                                                'LT',
-                                                'CX',
-                                                'FD',
-                                                'SC',
-                                                'PT',
-                                                'GR',
-                                                'HG',
-                                                'NG',
-                                                'MG',
-                                                'DR' );
+
 
 var
   Form_Cadastro_Produtos: TForm_Cadastro_Produtos;
@@ -432,7 +480,8 @@ uses UdtmBcoErp, Unit_Variaveis_Globais, ParamControleLicenca,
    UdtmACBR, UdtmImagens,
   Unit_Acesso, Unit_Alerta, Unit_Baixa_Tabela_IBPT, Unit_Cadastro_ICMS,
   Unit_Cadastro_Usuario, Unit_exibeefeitoespera, Unit_F_mensagem_Dialog,
-  Unit_Principal, Unit_Relatorios, Unit_Rotinas, unit_utilfuncs;
+  Unit_Principal, Unit_Relatorios, Unit_Rotinas, unit_utilfuncs,
+  UdtmCadProdutos;
 
 procedure TForm_Cadastro_Produtos.BtnConsultarClick(Sender: TObject);
 begin
@@ -480,67 +529,6 @@ begin
     cxPageControl1.ActivePage := tbCadastro;
 end;
 
-procedure TForm_Cadastro_Produtos.dxmem_cod_tributacao_ProAfterOpen(
-  DataSet: TDataSet);
-  var
-  LID, LDescricaoAliq, LStringAlq : string;
-begin
-  inherited;
-  try
-    with DtmBcoErp do
-    begin
-      Fdq_TB_TRIBUTACAO_ICMS.Close;
-      Fdq_TB_TRIBUTACAO_ICMS.Open;
-
-      if not Fdq_TB_TRIBUTACAO_ICMS.IsEmpty then
-      begin
-        Fdq_TB_TRIBUTACAO_ICMS.First;
-
-        while not Fdq_TB_TRIBUTACAO_ICMS.Eof do
-        begin
-          LID            := Fdq_TB_TRIBUTACAO_ICMS.FieldByName('COD_ICMS').AsString;
-          LDescricaoAliq := Fdq_TB_TRIBUTACAO_ICMS.FieldByName('DESCRICAO').AsString;
-          LStringAlq     := Fdq_TB_TRIBUTACAO_ICMS.FieldByName('ICMS').AsString;
-
-          with dsmam_cod_trib_pro do
-          begin
-            DataSet.Insert;
-            DataSet.FieldByName('ID').AsString         := LID;
-            DataSet.FieldByName('Descricao').AsString  := LDescricaoAliq;
-            DataSet.FieldByName('ICMS').AsString   := LStringAlq;
-            DataSet.Post;
-          end;
-          Fdq_TB_TRIBUTACAO_ICMS.Next;
-        end;
-      end;
-    end;
-
-  except on e: exception do
-    begin
-      AlertCard(e.Message,'Erro');
-    end;
-  end;
-end;
-
-
-procedure TForm_Cadastro_Produtos.dxmem_UNReferenciaAfterOpen(DataSet: TDataSet);
-var
-i : Integer;
-begin
-  inherited;
-  with dsUNReferencia do
-  begin
-    for i := 0 to 13 do
-    begin
-      DataSet.Insert;
-      DataSet.FieldByName('ID').AsInteger := i;
-      DataSet.FieldByName('Nome').AsString := CNS_UN_REFERENCIA[i];
-      DataSet.Post;
-    end;
-  end;
-
-end;
-
 procedure TForm_Cadastro_Produtos.edtMaskKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -565,19 +553,6 @@ end;
 procedure TForm_Cadastro_Produtos.FormShow(Sender: TObject);
 begin
   inherited;
-  try
-    if not dxmem_UNReferencia.Active then
-      dxmem_UNReferencia.Active := True;
-
-    if not  dxmem_cod_tributacao_Pro.Active then
-      dxmem_cod_tributacao_Pro.Active := True;
-  except on e:exception do
-    begin
-
-    end;
-  end;
-
-
   edtMask.SetFocus;
 end;
 

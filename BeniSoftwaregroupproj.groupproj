@@ -6,6 +6,12 @@
         <Projects Include="BeniERP\BeniErp.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="ePdv\ePdv.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ConfigPDV\PdvConfig\PdvConfig.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +29,32 @@
     <Target Name="BeniErp:Make">
         <MSBuild Projects="BeniERP\BeniErp.dproj" Targets="Make"/>
     </Target>
+    <Target Name="ePdv">
+        <MSBuild Projects="ePdv\ePdv.dproj"/>
+    </Target>
+    <Target Name="ePdv:Clean">
+        <MSBuild Projects="ePdv\ePdv.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ePdv:Make">
+        <MSBuild Projects="ePdv\ePdv.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PdvConfig">
+        <MSBuild Projects="ConfigPDV\PdvConfig\PdvConfig.dproj"/>
+    </Target>
+    <Target Name="PdvConfig:Clean">
+        <MSBuild Projects="ConfigPDV\PdvConfig\PdvConfig.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PdvConfig:Make">
+        <MSBuild Projects="ConfigPDV\PdvConfig\PdvConfig.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="BeniErp"/>
+        <CallTarget Targets="BeniErp;ePdv;PdvConfig"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="BeniErp:Clean"/>
+        <CallTarget Targets="BeniErp:Clean;ePdv:Clean;PdvConfig:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="BeniErp:Make"/>
+        <CallTarget Targets="BeniErp:Make;ePdv:Make;PdvConfig:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

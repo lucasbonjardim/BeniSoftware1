@@ -186,6 +186,11 @@
             <Form>frm_splach</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="dtm\UdtmCadProdutos.pas">
+            <Form>dtm_cad_Produtos</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

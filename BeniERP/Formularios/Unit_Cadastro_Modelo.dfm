@@ -48,23 +48,28 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     TabOrder = 0
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ClientRectBottom = 391
-    ClientRectLeft = 4
-    ClientRectRight = 1321
-    ClientRectTop = 24
+    ClientRectBottom = 393
+    ClientRectLeft = 2
+    ClientRectRight = 1323
+    ClientRectTop = 28
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
       Color = clBtnFace
       ImageIndex = 0
       ParentColor = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1317
+        Width = 1321
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitWidth = 1317
         object lblPesquisa: TcxLabel
           AlignWithMargins = True
           Left = 3
@@ -117,6 +122,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
             Properties.Nullable = False
             TabOrder = 1
             Visible = False
+            ExplicitHeight = 21
             Width = 397
           end
           object edtData: TDateTimePicker
@@ -279,6 +285,10 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Shape3: TShape
         AlignWithMargins = True
         Left = 0
@@ -615,6 +625,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     Top = 7
   end
   object cxLookAndFeelController1: TcxLookAndFeelController
+    NativeStyle = False
     SkinName = 'Metropolis'
     Left = 1152
     Top = 8
