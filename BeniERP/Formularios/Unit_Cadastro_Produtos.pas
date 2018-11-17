@@ -480,7 +480,6 @@ uses UdtmBcoErp, Unit_Variaveis_Globais, ParamControleLicenca,
 procedure TForm_Cadastro_Produtos.BtnConsultarClick(Sender: TObject);
 begin
   MostraProdutos;
-
 end;
 
 procedure TForm_Cadastro_Produtos.BtnLimparPesquisaClick(Sender: TObject);
@@ -543,6 +542,11 @@ begin
   FdqProdutos.Active := False;
   cxPageControl1.Pages[0].brush.Color :=clWhite;
   cxPageControl1.Pages[1].brush.Color :=clWhite;
+
+  dtm_cad_Produtos.dxmem_cod_tributacao_Pro.close;
+  dtm_cad_Produtos.dxmem_cod_tributacao_Pro.Open;
+
+
 end;
 
 procedure TForm_Cadastro_Produtos.FormShow(Sender: TObject);

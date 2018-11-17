@@ -100,7 +100,7 @@ implementation
 {$R *.dfm}
 
 uses UdtmBcoErp, Unit_F_mensagem_Dialog, Unit_Variaveis_Globais, Unit_Alerta,
-ACBrUtil, unit_ProxyConfigIBPT_NCM;
+ACBrUtil, unit_ProxyConfigIBPT_NCM, UdtmCadProdutos;
 
 
 procedure Tform_baixa_ibpt.BaixaTabelaErroImportacao(const ALinha,
@@ -114,6 +114,7 @@ end;
 procedure Tform_baixa_ibpt.BitBtn1Click(Sender: TObject);
 var
   ex, Decricao: String;
+  LCHAVE, LDescricaoNCM, LCodigoNCM : string;
   I, tabela: Integer;
   aliqNac, aliqImp, AliqEst, AliqMun: Double;
 begin
@@ -181,11 +182,41 @@ begin
                 Fdq_TB_NCM.EnableControls;
                 Label4.Caption := 'Quantidade de itens: ' + IntToStr(Fdq_TB_NCM.RecordCount);
                 lbl_info.Font.Color :=clGreen;
-
                 lbl_info.Caption :='Importação concluida! ' +  IntToStr(Fdq_TB_NCM.RecordCount) + ' Registros.';
-                pb1.Position := 0;
                 Memo1.Lines.EndUpdate;
-                AlertCard('Importação de ' + IntToStr(Fdq_TB_NCM.RecordCount) + ' Registros concluido com sucesso!','Atenção');
+                AlertCard('Primeira Etapa da importação concluido com sucesso!','Atenção');
+
+                // Atualiza DxmemNCM para nao ter que reinicar exe para carregar novos NCMS...
+                with DtmBcoErp do
+                begin
+                  pb1.Position := 0;
+                  pb1.Max := BaixaTabela.Itens.Count;
+                  FDQ_NCM.Close;
+                  FDQ_NCM.Open;
+
+                  if not FDQ_NCM.IsEmpty then
+                  begin
+                    FDQ_NCM.First;
+                    while not FDQ_NCM.Eof do
+                    begin
+                      LCHAVE         := FDQ_NCM.FieldByName('CHAVE').AsString;
+                      LDescricaoNCM  := FDQ_NCM.FieldByName('DESCRICAO').AsString;
+                      LCodigoNCM     := FDQ_NCM.FieldByName('NCM').AsString;
+
+                      with dtm_cad_Produtos.ds_NCM do
+                      begin
+                        DataSet.Insert;
+                        DataSet.FieldByName('CHAVE').AsString      := LCHAVE;
+                        DataSet.FieldByName('Descricao').AsString  := LDescricaoNCM;
+                        DataSet.FieldByName('CodigoNCM').AsString  := LCodigoNCM;
+                        DataSet.Post;
+                        end;
+                      pb1.Position := pb1.Position + 1;
+                      FDQ_NCM.Next;
+                    end;
+                  end;
+                end;
+                 AlertCard('Importação Concluida com sucesso! ' + IntToStr(Fdq_TB_NCM.RecordCount) + ' Registros importados.','Atenção');
               end;
             end;
           end

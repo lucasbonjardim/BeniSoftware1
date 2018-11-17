@@ -71,14 +71,16 @@ object dtm_cad_Produtos: Tdtm_cad_Produtos
     Top = 304
   end
   object dxMemNCM: TdxMemData
+    Active = True
     Indexes = <>
     SortOptions = []
     AfterOpen = dxMemNCMAfterOpen
     Left = 56
     Top = 368
     object StringField3: TStringField
+      DisplayWidth = 15
       FieldName = 'CHAVE'
-      Size = 2
+      Size = 15
     end
     object StringField4: TStringField
       DisplayLabel = 'Tipo'

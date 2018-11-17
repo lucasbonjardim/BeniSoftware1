@@ -87,7 +87,7 @@ object form_baixa_ibpt: Tform_baixa_ibpt
     object lblFonte: TLabel
       Left = 655
       Top = 67
-      Width = 146
+      Width = 32
       Height = 13
       Caption = 'Fonte:'
     end

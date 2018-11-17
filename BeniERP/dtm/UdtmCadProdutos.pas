@@ -71,7 +71,14 @@ procedure Tdtm_cad_Produtos.DataModuleCreate(Sender: TObject);
 begin
 
   try
+    if not dxmem_cod_tributacao_Pro.Active then
+      dxmem_cod_tributacao_Pro.Active := True;
 
+    if not dxmem_UNReferencia.Active then
+      dxmem_UNReferencia.Active := True;
+
+    if not dxMemNCM.Active then
+      dxMemNCM.Active := True;
   except on e:exception do
     begin
       AlertCard(e.Message,'Erro');
