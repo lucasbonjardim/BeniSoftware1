@@ -174,10 +174,6 @@
             <Form>form_Configurar_Pis_Cofins</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Formularios\Unit_Cadastro_Aliquota_pdv.pas">
-            <Form>Form_Cadastro_Aliquota_pdv</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Formularios\Unit_Cadastro_Terminais_Pdv.pas">
             <Form>Form_Cadastro_Terminais_PDV</Form>
             <FormType>dfm</FormType>
@@ -190,6 +186,10 @@
             <Form>dtm_cad_Produtos</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Formularios\unit_ProxyConfigIBPT_NCM.pas">
+            <Form>frProxyConfig</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

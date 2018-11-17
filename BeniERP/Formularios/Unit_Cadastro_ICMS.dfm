@@ -1,14 +1,14 @@
 inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
   Caption = 'Cadastro de ICMS'
-  ClientHeight = 642
-  ClientWidth = 1433
-  ExplicitWidth = 1449
-  ExplicitHeight = 681
+  ClientHeight = 632
+  ClientWidth = 1423
+  ExplicitWidth = 1439
+  ExplicitHeight = 671
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 58
-    Width = 1433
+    Width = 1423
     Height = 4
     ExplicitTop = 52
     ExplicitWidth = 1253
@@ -16,21 +16,22 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
   end
   inherited cxPageControl1: TcxPageControl
     Top = 87
-    Width = 1433
-    Height = 538
-    ExplicitTop = 72
-    ExplicitWidth = 1243
-    ExplicitHeight = 553
-    ClientRectBottom = 534
-    ClientRectRight = 1429
+    Width = 1423
+    Height = 528
+    Properties.ActivePage = tbCadastro
+    ExplicitTop = 87
+    ExplicitWidth = 1423
+    ExplicitHeight = 528
+    ClientRectBottom = 524
+    ClientRectRight = 1419
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1235
-      ExplicitHeight = 525
+      ExplicitLeft = 2
+      ExplicitTop = 28
+      ExplicitWidth = 1419
+      ExplicitHeight = 498
       inherited Panel1: TPanel
-        Width = 1425
-        ExplicitWidth = 1235
+        Width = 1415
+        ExplicitWidth = 1419
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
@@ -46,15 +47,15 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
         AlignWithMargins = True
         Left = 3
         Top = 44
-        Width = 1419
-        Height = 463
+        Width = 1409
+        Height = 453
         Align = alClient
         TabOrder = 1
         LookAndFeel.Kind = lfStandard
         LookAndFeel.NativeStyle = False
         RootLevelOptions.DetailFrameColor = clNone
-        ExplicitWidth = 1229
-        ExplicitHeight = 478
+        ExplicitWidth = 1413
+        ExplicitHeight = 451
         object cxGridDBTableView1: TcxGridDBTableView
           OnDblClick = cxGridDBTableView1DblClick
           Navigator.Buttons.CustomButtons = <>
@@ -135,27 +136,27 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1235
-      ExplicitHeight = 525
+      ExplicitLeft = 2
+      ExplicitTop = 28
+      ExplicitWidth = 1419
+      ExplicitHeight = 498
       inherited Shape3: TShape
-        Top = 502
-        Width = 1425
+        Top = 492
+        Width = 1415
         ExplicitTop = 544
         ExplicitWidth = 1125
       end
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1425
+        Width = 1415
         Height = 45
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1235
+        ExplicitWidth = 1419
         object cxLabel1: TcxLabel
           Left = 5
           Top = -3
@@ -210,14 +211,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel6: TPanel
         Left = 0
         Top = 90
-        Width = 1425
+        Width = 1415
         Height = 48
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1235
+        ExplicitWidth = 1419
         object pnlIcms: TPanel
           Left = 0
           Top = 0
@@ -322,14 +323,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel5: TPanel
         Left = 0
         Top = 138
-        Width = 1425
+        Width = 1415
         Height = 135
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 1235
+        ExplicitWidth = 1419
         object dbrgrpCST: TDBRadioGroup
           AlignWithMargins = True
           Left = 5
@@ -373,14 +374,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel4: TPanel
         Left = 0
         Top = 45
-        Width = 1425
+        Width = 1415
         Height = 45
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 3
-        ExplicitWidth = 1235
+        ExplicitWidth = 1419
         object cxLabel2: TcxLabel
           Left = 3
           Top = -2
@@ -402,25 +403,25 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
   end
   inherited pnl_top: TPanel
     Top = 65
-    Width = 1433
-    ExplicitTop = 50
-    ExplicitWidth = 1243
+    Width = 1423
+    ExplicitTop = 65
+    ExplicitWidth = 1423
   end
   inherited Panel22: TPanel
-    Top = 625
-    Width = 1433
-    ExplicitTop = 625
-    ExplicitWidth = 1243
+    Top = 615
+    Width = 1423
+    ExplicitTop = 615
+    ExplicitWidth = 1423
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1427
+    Width = 1417
     Height = 49
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1237
+    ExplicitWidth = 1417
     ExplicitHeight = 49
   end
   inherited dsPrincipal: TDataSource

@@ -48,10 +48,10 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     TabOrder = 0
     Properties.ActivePage = tbPesquisa
     Properties.CustomButtons.Buttons = <>
-    ClientRectBottom = 393
-    ClientRectLeft = 2
-    ClientRectRight = 1323
-    ClientRectTop = 28
+    ClientRectBottom = 391
+    ClientRectLeft = 4
+    ClientRectRight = 1321
+    ClientRectTop = 24
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta'
       Color = clBtnFace
@@ -64,12 +64,11 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1321
+        Width = 1317
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 1317
         object lblPesquisa: TcxLabel
           AlignWithMargins = True
           Left = 3
@@ -625,7 +624,6 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     Top = 7
   end
   object cxLookAndFeelController1: TcxLookAndFeelController
-    NativeStyle = False
     SkinName = 'Metropolis'
     Left = 1152
     Top = 8

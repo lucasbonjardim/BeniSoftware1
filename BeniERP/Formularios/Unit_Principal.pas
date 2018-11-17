@@ -426,7 +426,6 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure R019Click(Sender: TObject);
     procedure dxBarButton15Click(Sender: TObject);
-    procedure dxBarButton14Click(Sender: TObject);
     procedure CX002Click(Sender: TObject);
     procedure act_Cad_EmpresaExecute(Sender: TObject);
 
@@ -457,7 +456,7 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   Unit_F_mensagem_Dialog, Unit_Relatorios, unit_utilfuncs,
   Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
   Unit_Cadastro_de_Empresa, Unit_Configurar_Pis_Cofins,
-  Unit_Cadastro_Aliquota_pdv, Unit_Cadastro_Terminais_Pdv, Unit_Splach,
+  Unit_Cadastro_Terminais_Pdv, Unit_Splach,
   UdtmCadProdutos;
 
 {$R *.dfm}
@@ -558,10 +557,6 @@ begin
   AbreForm(TForm_Cadastro_Terminais_PDV,Form_Cadastro_Terminais_PDV);
 end;
 
-procedure TForm_Principal.dxBarButton14Click(Sender: TObject);
-begin
-  AbreForm(TForm_Cadastro_Aliquota_pdv,Form_Cadastro_Aliquota_pdv);
-end;
 
 procedure TForm_Principal.dxBarButton15Click(Sender: TObject);
 begin

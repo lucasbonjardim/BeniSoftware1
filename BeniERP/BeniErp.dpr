@@ -25,10 +25,10 @@ uses
   Unit_Relatorio_Produtos_Alterados in 'Relatorios\Unit_Relatorio_Produtos_Alterados.pas' {Form_Rel_Produtos_Alterados},
   Unit_Cadastro_de_Empresa in 'Formularios\Unit_Cadastro_de_Empresa.pas' {Form_Cadastro_de_Empresa},
   Unit_Configurar_Pis_Cofins in 'Formularios\Unit_Configurar_Pis_Cofins.pas' {form_Configurar_Pis_Cofins},
-  Unit_Cadastro_Aliquota_pdv in 'Formularios\Unit_Cadastro_Aliquota_pdv.pas' {Form_Cadastro_Aliquota_pdv},
   Unit_Cadastro_Terminais_Pdv in 'Formularios\Unit_Cadastro_Terminais_Pdv.pas' {Form_Cadastro_Terminais_PDV},
   Unit_Splach in 'Formularios\Unit_Splach.pas' {frm_splach},
-  UdtmCadProdutos in 'dtm\UdtmCadProdutos.pas' {dtm_cad_Produtos: TDataModule};
+  UdtmCadProdutos in 'dtm\UdtmCadProdutos.pas' {dtm_cad_Produtos: TDataModule},
+  unit_ProxyConfigIBPT_NCM in 'Formularios\unit_ProxyConfigIBPT_NCM.pas' {frProxyConfig};
 
 {$R *.res}
 
@@ -38,5 +38,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Principal, Form_Principal);
   Application.CreateForm(TdtmACBR, dtmACBR);
+  Application.CreateForm(TfrProxyConfig, frProxyConfig);
   Application.Run;
 end.

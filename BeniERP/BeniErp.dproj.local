@@ -36,6 +36,7 @@
     <Transaction>2018/10/15 21:01:32.000.130,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Cadastro_Terminais_Pdv.dfm</Transaction>
     <Transaction>2018/11/15 12:13:54.000.184,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\Formularios\Unit_Splach.dfm</Transaction>
     <Transaction>2018/11/16 22:57:41.000.381,D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm=D:\BeniSoftware1\trunk\BeniERP\dtm\UdtmCadProdutos.dfm</Transaction>
+    <Transaction>2018/11/17 13:00:55.095,D:\BeniSoftware1\trunk\BeniERP\Formularios\unit_ProxyConfigIBPT_NCM.dfm=D:\BeniSoftware1\trunk\BeniERP\Unit1.dfm</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android="nexus"/>
@@ -77,12 +78,12 @@
     <File Path="Formularios\Unit_Cadastro_de_Empresa.dfm"/>
     <File Path="Formularios\Unit_Configurar_Pis_Cofins.pas"/>
     <File Path="Formularios\Unit_Configurar_Pis_Cofins.dfm"/>
-    <File Path="Formularios\Unit_Cadastro_Aliquota_pdv.pas"/>
-    <File Path="Formularios\Unit_Cadastro_Aliquota_pdv.dfm"/>
     <File Path="Formularios\Unit_Cadastro_Terminais_Pdv.pas"/>
     <File Path="Formularios\Unit_Cadastro_Terminais_Pdv.dfm"/>
     <File Path="Formularios\Unit_Splach.pas"/>
     <File Path="Formularios\Unit_Splach.dfm"/>
+    <File Path="Formularios\unit_ProxyConfigIBPT_NCM.pas"/>
+    <File Path="Formularios\unit_ProxyConfigIBPT_NCM.dfm"/>
     <File Path="Relatorios"/>
     <File Path="Relatorios\Unit_Relatorio_Produtos_Alterados.pas"/>
     <File Path="Relatorios\Unit_Relatorio_Produtos_Alterados.dfm"/>

@@ -177,10 +177,7 @@ type
     FdqProdutosPRO_COR: TWideStringField;
     FdqProdutosPRO_LOCALIZACAO: TWideStringField;
     FdqProdutosPRO_OBS: TMemoField;
-    FdqProdutosPRO_CLASSIFICACAO_FISCAL: TWideStringField;
-    FdqProdutosPRO_COD_ALIQUOTA: TIntegerField;
     FdqProdutosPRO_COMISSAO: TBCDField;
-    FdqProdutosPRO_ALIQUOTA_CSLL: TBCDField;
     FdqProdutosPRO_ALIQUOTA_OUTRAS: TBCDField;
     FdqProdutosPRO_ISENTO_PIS_COFINS_PRO: TWideStringField;
     FdqProdutosPRO_CREDITO_ICMS: TBCDField;
@@ -400,9 +397,6 @@ type
     Label39: TLabel;
     DBCheckBox10: TDBCheckBox;
     GroupBox5: TGroupBox;
-    Label27: TLabel;
-    cxDBTextEdit2: TcxDBTextEdit;
-    Label28: TLabel;
     Label33: TLabel;
     cxDBCalcEdit1: TcxDBCalcEdit;
     Label35: TLabel;
@@ -411,7 +405,6 @@ type
     Label29: TLabel;
     Label31: TLabel;
     cxDBCurrencyEdit4: TcxDBCurrencyEdit;
-    cxDBCurrencyEdit2: TcxDBCurrencyEdit;
     Label36: TLabel;
     cxDBTextEdit7: TcxDBTextEdit;
     Label43: TLabel;
@@ -442,9 +435,9 @@ type
     cxDBCurrencyEdit11: TcxDBCurrencyEdit;
     Label52: TLabel;
     cxDBCurrencyEdit12: TcxDBCurrencyEdit;
-    Label53: TLabel;
-    cxDBSpinEdit1: TcxDBSpinEdit;
     DBCheckBox11: TDBCheckBox;
+    cxDBSpinEdit1: TcxDBSpinEdit;
+    Label53: TLabel;
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
     procedure BtnConsultarClick(Sender: TObject);

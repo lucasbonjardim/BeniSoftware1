@@ -1,37 +1,36 @@
 inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   Caption = 'Cadastro de Produtos'
-  ClientHeight = 769
-  ClientWidth = 1305
+  ClientHeight = 749
+  ClientWidth = 1285
   OnShow = FormShow
-  ExplicitTop = -84
-  ExplicitWidth = 1321
-  ExplicitHeight = 808
+  ExplicitWidth = 1301
+  ExplicitHeight = 788
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
     Top = 62
-    Width = 1305
+    Width = 1285
     ExplicitTop = 62
     ExplicitWidth = 1307
   end
   inherited cxPageControl1: TcxPageControl
     Top = 96
-    Width = 1305
-    Height = 656
+    Width = 1285
+    Height = 636
     Properties.ActivePage = tbCadastro
     ExplicitTop = 96
-    ExplicitWidth = 1305
-    ExplicitHeight = 474
-    ClientRectBottom = 654
-    ClientRectRight = 1303
+    ExplicitWidth = 1285
+    ExplicitHeight = 636
+    ClientRectBottom = 632
+    ClientRectRight = 1281
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1297
-      ExplicitHeight = 446
+      ExplicitLeft = 2
+      ExplicitTop = 28
+      ExplicitWidth = 1281
+      ExplicitHeight = 606
       inherited Panel1: TPanel
-        Width = 1301
-        ExplicitWidth = 1297
+        Width = 1277
+        ExplicitWidth = 1281
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
@@ -79,7 +78,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           TabOrder = 5
         end
         object chk_mostrafiltrogrid: TCheckBox
-          Left = 1204
+          Left = 1180
           Top = 0
           Width = 97
           Height = 41
@@ -87,15 +86,15 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           Caption = 'Mostra Filtros'
           TabOrder = 6
           OnClick = chk_mostrafiltrogridClick
-          ExplicitLeft = 1200
+          ExplicitLeft = 1184
         end
       end
       object cxVisualiza: TcxGrid
         AlignWithMargins = True
         Left = 3
         Top = 44
-        Width = 1295
-        Height = 579
+        Width = 1271
+        Height = 561
         Align = alClient
         TabOrder = 1
         LockedStateImageOptions.Text = 'Aguarde!'
@@ -103,8 +102,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         LookAndFeel.NativeStyle = False
         LookAndFeel.SkinName = 'Metropolis'
         RootLevelOptions.DetailFrameColor = clNone
-        ExplicitWidth = 1291
-        ExplicitHeight = 399
+        ExplicitWidth = 1275
+        ExplicitHeight = 559
         object cxVisualizaDBTableView1: TcxGridDBTableView
           OnDblClick = cxVisualizaDBTableView1DblClick
           OnKeyDown = cxVisualizaDBTableView1KeyDown
@@ -396,42 +395,43 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1297
-      ExplicitHeight = 446
+      ExplicitLeft = 2
+      ExplicitTop = 28
+      ExplicitWidth = 1281
+      ExplicitHeight = 606
       inherited Shape3: TShape
-        Top = 618
-        Width = 1301
+        Top = 600
+        Width = 1277
         ExplicitTop = 464
         ExplicitWidth = 1366
       end
       object cxPaginas2: TcxPageControl
         Left = 0
-        Top = 113
-        Width = 1301
-        Height = 502
+        Top = 100
+        Width = 1277
+        Height = 497
         Align = alClient
         TabOrder = 0
         Properties.ActivePage = cxDadosProduto
         Properties.CustomButtons.Buttons = <>
-        ExplicitWidth = 1297
-        ExplicitHeight = 322
-        ClientRectBottom = 500
-        ClientRectLeft = 2
-        ClientRectRight = 1299
-        ClientRectTop = 28
+        ExplicitTop = 113
+        ExplicitWidth = 1281
+        ExplicitHeight = 482
+        ClientRectBottom = 493
+        ClientRectLeft = 4
+        ClientRectRight = 1273
+        ClientRectTop = 24
         object cxDadosProduto: TcxTabSheet
           Caption = 'Dados do produto'
           ImageIndex = 0
-          ExplicitLeft = 4
-          ExplicitTop = 24
-          ExplicitWidth = 1289
-          ExplicitHeight = 294
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
           object grp_produto: TGroupBox
             Left = 0
             Top = 0
-            Width = 1297
+            Width = 1269
             Height = 417
             Align = alTop
             Caption = 'Base'
@@ -442,10 +442,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 1289
-            DesignSize = (
-              1297
-              417)
+            ExplicitWidth = 1277
             object Label104: TLabel
               Left = 8
               Top = 18
@@ -460,7 +457,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               ParentFont = False
             end
             object Label30: TLabel
-              Left = 140
+              Left = 274
               Top = 72
               Width = 103
               Height = 16
@@ -468,8 +465,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBTimeEdit1
             end
             object Label40: TLabel
-              Left = 140
-              Top = 120
+              Left = 274
+              Top = 116
               Width = 23
               Height = 16
               Caption = 'Cor:'
@@ -484,73 +481,63 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBCalcEdit5
             end
             object Label47: TLabel
-              Left = 8
-              Top = 120
+              Left = 142
+              Top = 72
               Width = 83
               Height = 16
               Caption = 'Pre'#231'o Atacado:'
               FocusControl = cxDBCurrencyEdit5
             end
             object Label48: TLabel
-              Left = 8
-              Top = 168
+              Left = 10
+              Top = 116
               Width = 75
               Height = 16
               Caption = 'Pre'#231'o Padr'#227'o:'
               FocusControl = cxDBCurrencyEdit8
             end
             object Label49: TLabel
-              Left = 8
-              Top = 216
+              Left = 142
+              Top = 116
               Width = 93
               Height = 16
               Caption = 'Pre'#231'o Promo'#231#227'o:'
               FocusControl = cxDBCurrencyEdit9
             end
             object Label50: TLabel
-              Left = 8
-              Top = 264
+              Left = 10
+              Top = 160
               Width = 45
               Height = 16
               Caption = 'Pre'#231'o 2:'
               FocusControl = cxDBCurrencyEdit10
             end
             object Label51: TLabel
-              Left = 8
-              Top = 312
+              Left = 142
+              Top = 160
               Width = 45
               Height = 16
               Caption = 'Pre'#231'o 3:'
               FocusControl = cxDBCurrencyEdit11
             end
             object Label52: TLabel
-              Left = 8
-              Top = 360
+              Left = 274
+              Top = 160
               Width = 45
               Height = 16
               Caption = 'Pre'#231'o 4:'
               FocusControl = cxDBCurrencyEdit12
             end
-            object Label53: TLabel
-              Left = 280
-              Top = 72
-              Width = 157
-              Height = 16
-              Caption = 'C'#243'digo Vasilhame Engradado:'
-              FocusControl = cxDBSpinEdit1
-            end
             object edt_descr_pdv: TcxDBTextEdit
               Left = 8
               Top = 38
-              Anchors = [akLeft, akTop, akRight]
               DataBinding.DataField = 'PRO_DESCRICAO_PDV'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 0
-              ExplicitWidth = 1274
-              Width = 1282
+              Width = 386
             end
             object cxDBTimeEdit1: TcxDBTimeEdit
-              Left = 140
+              Left = 274
               Top = 88
               DataBinding.DataField = 'PRO_TEMPO_PREPARO'
               DataBinding.DataSource = dsPrincipal
@@ -558,8 +545,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Width = 121
             end
             object cxDBTextEdit3: TcxDBTextEdit
-              Left = 140
-              Top = 136
+              Left = 274
+              Top = 132
               DataBinding.DataField = 'PRO_COR'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 2
@@ -574,59 +561,51 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Width = 121
             end
             object cxDBCurrencyEdit5: TcxDBCurrencyEdit
-              Left = 8
-              Top = 136
+              Left = 142
+              Top = 88
               DataBinding.DataField = 'PRO_PRECO_V_ATACADO'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 4
               Width = 121
             end
             object cxDBCurrencyEdit8: TcxDBCurrencyEdit
-              Left = 8
-              Top = 184
+              Left = 10
+              Top = 132
               DataBinding.DataField = 'PRO_VLR_PADRAO'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 5
               Width = 121
             end
             object cxDBCurrencyEdit9: TcxDBCurrencyEdit
-              Left = 8
-              Top = 232
+              Left = 142
+              Top = 132
               DataBinding.DataField = 'PRO_VLR_PROMOC'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 6
               Width = 121
             end
             object cxDBCurrencyEdit10: TcxDBCurrencyEdit
-              Left = 8
-              Top = 280
+              Left = 10
+              Top = 176
               DataBinding.DataField = 'PRO_VLR_PRECO2'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 7
               Width = 121
             end
             object cxDBCurrencyEdit11: TcxDBCurrencyEdit
-              Left = 8
-              Top = 328
+              Left = 142
+              Top = 176
               DataBinding.DataField = 'PRO_VLR_PRECO3'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 8
               Width = 121
             end
             object cxDBCurrencyEdit12: TcxDBCurrencyEdit
-              Left = 8
-              Top = 376
+              Left = 274
+              Top = 176
               DataBinding.DataField = 'PRO_VLR_PRECO4'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 9
-              Width = 121
-            end
-            object cxDBSpinEdit1: TcxDBSpinEdit
-              Left = 280
-              Top = 88
-              DataBinding.DataField = 'PRO_COD_VASILHAME'
-              DataBinding.DataSource = dsPrincipal
-              TabOrder = 10
               Width = 121
             end
           end
@@ -634,56 +613,56 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxBalanca: TcxTabSheet
           Caption = 'Balan'#231'a'
           ImageIndex = 1
-          ExplicitLeft = 4
-          ExplicitTop = 24
-          ExplicitWidth = 1289
-          ExplicitHeight = 294
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
         end
         object cxObs: TcxTabSheet
           Caption = 'Observa'#231#245'es'
           ImageIndex = 2
-          ExplicitLeft = 4
-          ExplicitTop = 24
-          ExplicitWidth = 1289
-          ExplicitHeight = 294
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
           object dbmmoOBS: TDBMemo
             Left = 0
             Top = 0
-            Width = 1297
-            Height = 472
+            Width = 1269
+            Height = 469
             Align = alClient
             BorderStyle = bsNone
             DataField = 'PRO_OBS'
             DataSource = dsPrincipal
             TabOrder = 0
-            ExplicitWidth = 1289
-            ExplicitHeight = 294
+            ExplicitWidth = 1277
+            ExplicitHeight = 452
           end
         end
         object cxCompra: TcxTabSheet
           Caption = 'Compras / Venda'
           ImageIndex = 4
-          ExplicitLeft = 4
-          ExplicitTop = 24
-          ExplicitWidth = 1289
-          ExplicitHeight = 294
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
           object Panel17: TPanel
             Left = 0
             Top = 217
-            Width = 1297
-            Height = 255
+            Width = 1269
+            Height = 252
             Align = alClient
             BevelOuter = bvNone
             Color = clWhite
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 1289
-            ExplicitHeight = 77
+            ExplicitWidth = 1277
+            ExplicitHeight = 235
             object shp2: TShape
               AlignWithMargins = True
               Left = 0
               Top = 29
-              Width = 1297
+              Width = 1269
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -698,7 +677,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 0
               Top = 3
-              Width = 1297
+              Width = 1269
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -713,12 +692,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               AlignWithMargins = True
               Left = 3
               Top = 38
-              Width = 1291
-              Height = 214
+              Width = 1263
+              Height = 211
               Align = alClient
               TabOrder = 0
-              ExplicitWidth = 1283
-              ExplicitHeight = 36
+              ExplicitWidth = 1271
+              ExplicitHeight = 194
               object cxComprasDBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
                 DataController.Summary.DefaultGroupSummaryItems = <>
@@ -801,22 +780,22 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               Style.TextStyle = [fsBold, fsItalic]
               Properties.Alignment.Horz = taCenter
               Properties.Alignment.Vert = taVCenter
-              ExplicitWidth = 1289
-              AnchorX = 649
+              ExplicitWidth = 1277
+              AnchorX = 635
               AnchorY = 18
             end
           end
           object Panel18: TPanel
             Left = 0
             Top = 0
-            Width = 1297
+            Width = 1269
             Height = 217
             Align = alTop
             BevelOuter = bvNone
             Color = clWhite
             ParentBackground = False
             TabOrder = 1
-            ExplicitWidth = 1289
+            ExplicitWidth = 1277
             object GroupBox3: TGroupBox
               AlignWithMargins = True
               Left = 3
@@ -1192,19 +1171,19 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object tabFornecedores: TcxTabSheet
           Caption = 'Fornecedores'
           ImageIndex = 5
-          ExplicitLeft = 4
-          ExplicitTop = 24
-          ExplicitWidth = 1289
-          ExplicitHeight = 294
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
           object cxFornecedores: TcxGrid
             Left = 0
             Top = 0
-            Width = 1297
-            Height = 431
+            Width = 1269
+            Height = 428
             Align = alClient
             TabOrder = 0
-            ExplicitWidth = 1289
-            ExplicitHeight = 253
+            ExplicitWidth = 1277
+            ExplicitHeight = 411
             object cxFornecedoresDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -1237,34 +1216,34 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object pnl3: TPanel
             Left = 0
-            Top = 431
-            Width = 1297
+            Top = 428
+            Width = 1269
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             Color = 4718629
             ParentBackground = False
             TabOrder = 1
-            ExplicitTop = 253
-            ExplicitWidth = 1289
+            ExplicitTop = 411
+            ExplicitWidth = 1277
           end
         end
         object tabComposicao: TcxTabSheet
           Caption = 'Composi'#231#227'o'
           ImageIndex = 6
-          ExplicitLeft = 4
-          ExplicitTop = 24
-          ExplicitWidth = 1289
-          ExplicitHeight = 294
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
           object cxComposicao: TcxGrid
             Left = 0
             Top = 0
-            Width = 1297
-            Height = 431
+            Width = 1269
+            Height = 428
             Align = alClient
             TabOrder = 0
-            ExplicitWidth = 1289
-            ExplicitHeight = 253
+            ExplicitWidth = 1277
+            ExplicitHeight = 411
             object cxGridDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -1314,25 +1293,25 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object Panel19: TPanel
             Left = 0
-            Top = 431
-            Width = 1297
+            Top = 428
+            Width = 1269
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             Color = 4718629
             ParentBackground = False
             TabOrder = 1
-            ExplicitTop = 253
-            ExplicitWidth = 1289
+            ExplicitTop = 411
+            ExplicitWidth = 1277
           end
         end
         object cxTabSheet1: TcxTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 6
-          ExplicitLeft = 4
-          ExplicitTop = 24
-          ExplicitWidth = 1289
-          ExplicitHeight = 294
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
           object DBCheckBox1: TDBCheckBox
             Left = 8
             Top = 3
@@ -1457,19 +1436,19 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxTabSheet2: TcxTabSheet
           Caption = 'Fiscal'
           ImageIndex = 7
-          ExplicitLeft = 5
-          ExplicitTop = 25
-          ExplicitWidth = 1289
-          ExplicitHeight = 549
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1277
+          ExplicitHeight = 452
           object GroupBox4: TGroupBox
             Left = 0
             Top = 0
-            Width = 1297
+            Width = 1269
             Height = 201
             Align = alTop
             Caption = 'Fiscal'
             TabOrder = 0
-            ExplicitWidth = 1289
+            ExplicitWidth = 1277
             object Label37: TLabel
               Left = 146
               Top = 64
@@ -1613,30 +1592,14 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object GroupBox5: TGroupBox
             Left = 0
             Top = 201
-            Width = 1297
+            Width = 1269
             Height = 344
             Align = alTop
             Caption = 'ePDV'
             TabOrder = 1
-            ExplicitWidth = 1289
-            object Label27: TLabel
-              Left = 4
-              Top = 14
-              Width = 90
-              Height = 13
-              Caption = 'Classifica'#231#227'o Fiscal'
-              FocusControl = cxDBTextEdit2
-            end
-            object Label28: TLabel
-              Left = 4
-              Top = 54
-              Width = 65
-              Height = 13
-              Caption = 'Aliquota CSLL'
-              FocusControl = cxDBCurrencyEdit2
-            end
+            ExplicitWidth = 1277
             object Label33: TLabel
-              Left = 131
+              Left = 14
               Top = 14
               Width = 25
               Height = 13
@@ -1644,7 +1607,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBTextEdit5
             end
             object Label35: TLabel
-              Left = 264
+              Left = 147
               Top = 14
               Width = 22
               Height = 13
@@ -1652,7 +1615,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBCalcEdit1
             end
             object Label29: TLabel
-              Left = 129
+              Left = 12
               Top = 57
               Width = 80
               Height = 13
@@ -1660,7 +1623,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBCurrencyEdit3
             end
             object Label31: TLabel
-              Left = 258
+              Left = 141
               Top = 57
               Width = 63
               Height = 13
@@ -1668,15 +1631,15 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBCurrencyEdit4
             end
             object Label36: TLabel
-              Left = 2
-              Top = 99
+              Left = 395
+              Top = 11
               Width = 56
               Height = 13
               Caption = 'Chave IBPT'
               FocusControl = cxDBTextEdit7
             end
             object Label43: TLabel
-              Left = 130
+              Left = 13
               Top = 99
               Width = 113
               Height = 13
@@ -1684,7 +1647,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBCalcEdit2
             end
             object Label44: TLabel
-              Left = 258
+              Left = 141
               Top = 100
               Width = 122
               Height = 13
@@ -1692,7 +1655,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBCalcEdit3
             end
             object Label45: TLabel
-              Left = 386
+              Left = 269
               Top = 99
               Width = 124
               Height = 13
@@ -1700,7 +1663,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBCalcEdit4
             end
             object Label34: TLabel
-              Left = 391
+              Left = 274
               Top = 14
               Width = 27
               Height = 13
@@ -1708,107 +1671,91 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
               FocusControl = cxDBTextEdit6
             end
             object Label32: TLabel
-              Left = 386
+              Left = 269
               Top = 56
               Width = 90
               Height = 13
               Caption = 'Situa'#231#227'o Tribut'#225'ria'
               FocusControl = cxDBTextEdit4
             end
-            object cxDBTextEdit2: TcxDBTextEdit
-              Left = 4
-              Top = 34
-              DataBinding.DataField = 'PRO_CLASSIFICACAO_FISCAL'
+            object cxDBCalcEdit1: TcxDBCalcEdit
+              Left = 141
+              Top = 30
+              DataBinding.DataField = 'PRO_NCM'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 0
               Width = 121
             end
-            object cxDBCalcEdit1: TcxDBCalcEdit
-              Left = 258
+            object cxDBTextEdit5: TcxDBTextEdit
+              Left = 14
               Top = 30
-              DataBinding.DataField = 'PRO_NCM'
+              DataBinding.DataField = 'PRO_CEST'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 1
               Width = 121
             end
-            object cxDBTextEdit5: TcxDBTextEdit
-              Left = 131
-              Top = 30
-              DataBinding.DataField = 'PRO_CEST'
+            object cxDBCurrencyEdit3: TcxDBCurrencyEdit
+              Left = 12
+              Top = 73
+              DataBinding.DataField = 'PRO_ALIQUOTA_OUTRAS'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 2
               Width = 121
             end
-            object cxDBCurrencyEdit3: TcxDBCurrencyEdit
-              Left = 129
+            object cxDBCurrencyEdit4: TcxDBCurrencyEdit
+              Left = 141
               Top = 73
-              DataBinding.DataField = 'PRO_ALIQUOTA_OUTRAS'
+              DataBinding.DataField = 'PRO_CREDITO_ICMS'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 3
               Width = 121
             end
-            object cxDBCurrencyEdit4: TcxDBCurrencyEdit
-              Left = 258
-              Top = 73
-              DataBinding.DataField = 'PRO_CREDITO_ICMS'
+            object cxDBTextEdit7: TcxDBTextEdit
+              Left = 396
+              Top = 30
+              DataBinding.DataField = 'PRO_CHAVE_IBPT'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 4
               Width = 121
             end
-            object cxDBCurrencyEdit2: TcxDBCurrencyEdit
-              Left = 3
-              Top = 73
-              DataBinding.DataField = 'PRO_ALIQUOTA_CSLL'
+            object cxDBCalcEdit2: TcxDBCalcEdit
+              Left = 13
+              Top = 115
+              DataBinding.DataField = 'PRO_PERC_IMPOSTOS'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 5
               Width = 121
             end
-            object cxDBTextEdit7: TcxDBTextEdit
-              Left = 3
-              Top = 115
-              DataBinding.DataField = 'PRO_CHAVE_IBPT'
+            object cxDBCalcEdit3: TcxDBCalcEdit
+              Left = 141
+              Top = 117
+              DataBinding.DataField = 'PRO_PERC_IMPOSTOS_E'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 6
               Width = 121
             end
-            object cxDBCalcEdit2: TcxDBCalcEdit
-              Left = 130
-              Top = 115
-              DataBinding.DataField = 'PRO_PERC_IMPOSTOS'
+            object cxDBCalcEdit4: TcxDBCalcEdit
+              Left = 269
+              Top = 117
+              DataBinding.DataField = 'PRO_PERC_IMPOSTOS_M'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 7
               Width = 121
             end
-            object cxDBCalcEdit3: TcxDBCalcEdit
-              Left = 258
-              Top = 117
-              DataBinding.DataField = 'PRO_PERC_IMPOSTOS_E'
+            object cxDBTextEdit6: TcxDBTextEdit
+              Left = 269
+              Top = 30
+              DataBinding.DataField = 'PRO_CFOP'
               DataBinding.DataSource = dsPrincipal
               TabOrder = 8
               Width = 121
             end
-            object cxDBCalcEdit4: TcxDBCalcEdit
-              Left = 386
-              Top = 117
-              DataBinding.DataField = 'PRO_PERC_IMPOSTOS_M'
-              DataBinding.DataSource = dsPrincipal
-              TabOrder = 9
-              Width = 121
-            end
-            object cxDBTextEdit6: TcxDBTextEdit
-              Left = 386
-              Top = 30
-              DataBinding.DataField = 'PRO_CFOP'
-              DataBinding.DataSource = dsPrincipal
-              TabOrder = 10
-              Width = 121
-            end
             object cxDBTextEdit4: TcxDBTextEdit
-              Left = 386
+              Left = 269
               Top = 72
               DataBinding.DataField = 'PRO_SIT_TRIBUTARIA'
               DataBinding.DataSource = dsPrincipal
-              TabOrder = 11
+              TabOrder = 9
               Width = 121
             end
           end
@@ -1817,8 +1764,8 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       object GBDadosProduto: TGroupBox
         Left = 0
         Top = 0
-        Width = 1301
-        Height = 113
+        Width = 1277
+        Height = 100
         Align = alTop
         Caption = 'Dados produtos'
         Font.Charset = DEFAULT_CHARSET
@@ -1828,7 +1775,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
-        ExplicitWidth = 1297
+        ExplicitWidth = 1281
         object Label105: TLabel
           Left = 271
           Top = 18
@@ -1843,7 +1790,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           ParentFont = False
         end
         object Label133: TLabel
-          Left = 378
+          Left = 365
           Top = 18
           Width = 71
           Height = 16
@@ -1857,7 +1804,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         end
         object Label9: TLabel
           Left = 12
-          Top = 63
+          Top = 57
           Width = 90
           Height = 16
           Caption = 'Descri'#231#227'o Cupom:'
@@ -1909,6 +1856,14 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           Caption = 'Data Validade:'
           FocusControl = cxDBDateEdit1
         end
+        object Label53: TLabel
+          Left = 726
+          Top = 16
+          Width = 157
+          Height = 16
+          Caption = 'C'#243'digo Vasilhame Engradado:'
+          FocusControl = cxDBSpinEdit1
+        end
         object combodb_un_referencia: TcxDBLookupComboBox
           Left = 271
           Top = 32
@@ -1940,7 +1895,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         end
         object cxDBTextEdit1: TcxDBTextEdit
           Left = 12
-          Top = 80
+          Top = 74
           DataBinding.DataField = 'PRO_DESCRICAO_CUPOM'
           DataBinding.DataSource = dsPrincipal
           TabOrder = 1
@@ -1982,13 +1937,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           Width = 147
         end
         object cxDBCurrencyEdit1: TcxDBCurrencyEdit
-          Left = 378
+          Left = 365
           Top = 32
           DataBinding.DataField = 'PRO_SALDO_ESTOQUE'
           DataBinding.DataSource = dsPrincipal
           Properties.DisplayFormat = 'QTD ,0.00;-QTD ,0.00'
           TabOrder = 4
-          Width = 71
+          Width = 84
         end
         object cxDBLookupComboBox1: TcxDBLookupComboBox
           Left = 455
@@ -2031,18 +1986,26 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           TabOrder = 6
           Width = 121
         end
+        object cxDBSpinEdit1: TcxDBSpinEdit
+          Left = 726
+          Top = 32
+          DataBinding.DataField = 'PRO_COD_VASILHAME'
+          DataBinding.DataSource = dsPrincipal
+          TabOrder = 7
+          Width = 121
+        end
       end
     end
   end
   inherited pnl_top: TPanel
     Top = 68
-    Width = 1305
+    Width = 1285
     Height = 28
     ExplicitTop = 68
-    ExplicitWidth = 1305
+    ExplicitWidth = 1285
     ExplicitHeight = 28
     object lbl_qnt_produtos: TLabel [0]
-      Left = 1163
+      Left = 1143
       Top = 0
       Width = 142
       Height = 28
@@ -2055,7 +2018,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Font.Style = [fsBold]
       ParentFont = False
       Visible = False
-      ExplicitLeft = 1173
+      ExplicitLeft = 1153
       ExplicitHeight = 13
     end
     inherited BtnRegistroPosterior: TcxButton
@@ -2076,20 +2039,20 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
     end
   end
   inherited Panel22: TPanel
-    Top = 752
-    Width = 1305
-    ExplicitTop = 570
-    ExplicitWidth = 1305
+    Top = 732
+    Width = 1285
+    ExplicitTop = 732
+    ExplicitWidth = 1285
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1299
+    Width = 1279
     Height = 53
     ExplicitLeft = 3
     ExplicitTop = 3
-    ExplicitWidth = 1299
+    ExplicitWidth = 1279
     ExplicitHeight = 53
   end
   inherited dsPrincipal: TDataSource
@@ -2288,25 +2251,9 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Origin = 'PRO_OBS'
       BlobType = ftMemo
     end
-    object FdqProdutosPRO_CLASSIFICACAO_FISCAL: TWideStringField
-      FieldName = 'PRO_CLASSIFICACAO_FISCAL'
-      Origin = 'PRO_CLASSIFICACAO_FISCAL'
-      FixedChar = True
-      Size = 1
-    end
-    object FdqProdutosPRO_COD_ALIQUOTA: TIntegerField
-      FieldName = 'PRO_COD_ALIQUOTA'
-      Origin = 'PRO_COD_ALIQUOTA'
-    end
     object FdqProdutosPRO_COMISSAO: TBCDField
       FieldName = 'PRO_COMISSAO'
       Origin = 'PRO_COMISSAO'
-      Precision = 18
-      Size = 2
-    end
-    object FdqProdutosPRO_ALIQUOTA_CSLL: TBCDField
-      FieldName = 'PRO_ALIQUOTA_CSLL'
-      Origin = 'PRO_ALIQUOTA_CSLL'
       Precision = 18
       Size = 2
     end
