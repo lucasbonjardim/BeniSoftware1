@@ -57,14 +57,6 @@ type
     cxLabel2: TcxLabel;
     dbedtDESCRICAO: TDBEdit;
     QPrincipal: TFDQuery;
-    QPrincipalCOD_ICMS: TIntegerField;
-    QPrincipalCOD_EMP: TIntegerField;
-    QPrincipalDESCRICAO: TStringField;
-    QPrincipalCST: TStringField;
-    QPrincipalICMS: TBCDField;
-    QPrincipalREDUCAO: TBCDField;
-    QPrincipalDIF: TBCDField;
-    QPrincipalMVA: TBCDField;
     cxStyleRepository1: TcxStyleRepository;
     cxstylPadrao: TcxStyle;
     cxstylOdd: TcxStyle;
@@ -76,17 +68,37 @@ type
     cxImgsGrid: TcxImageList;
     cxGrid1: TcxGrid;
     cxGridDBTableView1: TcxGridDBTableView;
-    cxVisualizaDBTableView1COD_ICMS: TcxGridDBColumn;
-    cxVisualizaDBTableView1DESCRICAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1CST: TcxGridDBColumn;
-    cxVisualizaDBTableView1ICMS: TcxGridDBColumn;
-    cxVisualizaDBTableView1REDUCAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1DIF: TcxGridDBColumn;
-    cxVisualizaDBTableView1MVA: TcxGridDBColumn;
     cxGridLevel1: TcxGridLevel;
+    DBEdit1: TDBEdit;
+    cxLabel7: TcxLabel;
+    cxGridDBTableView1COD_ICMS: TcxGridDBColumn;
+    cxGridDBTableView1COD_EMP: TcxGridDBColumn;
+    cxGridDBTableView1DESCRICAO: TcxGridDBColumn;
+    cxGridDBTableView1CST: TcxGridDBColumn;
+    cxGridDBTableView1ICMS: TcxGridDBColumn;
+    cxGridDBTableView1REDUCAO: TcxGridDBColumn;
+    cxGridDBTableView1DIF: TcxGridDBColumn;
+    cxGridDBTableView1MVA: TcxGridDBColumn;
+    QPrincipalCOD_ICMS: TIntegerField;
+    QPrincipalCOD_EMP: TIntegerField;
+    QPrincipalDESCRICAO: TWideStringField;
+    QPrincipalCST: TWideStringField;
+    QPrincipalICMS: TBCDField;
+    QPrincipalREDUCAO: TBCDField;
+    QPrincipalDIF: TBCDField;
+    QPrincipalMVA: TBCDField;
+    QPrincipalTIPO_GRP: TWideStringField;
+    QPrincipalUSUARIO_ALTERACAO: TStringField;
+    QPrincipalDT_ULT_ATUALIZACAO: TSQLTimeStampField;
+    QPrincipalHR_ULT_ATUALIZACAO: TSQLTimeStampField;
+    cxGridDBTableView1TIPO_GRP: TcxGridDBColumn;
+    cxGridDBTableView1USUARIO_ALTERACAO: TcxGridDBColumn;
+    cxGridDBTableView1DT_ULT_ATUALIZACAO: TcxGridDBColumn;
+    cxGridDBTableView1HR_ULT_ATUALIZACAO: TcxGridDBColumn;
     procedure cxGridDBTableView1DblClick(Sender: TObject);
     procedure QPrincipalAfterInsert(DataSet: TDataSet);
     procedure QPrincipalAfterScroll(DataSet: TDataSet);
+    procedure BtnGravarClick(Sender: TObject);
   private
     procedure MostraCampos;
     { Private declarations }
@@ -102,6 +114,12 @@ implementation
 {$R *.dfm}
 
 uses UdtmBcoErp, Unit_Variaveis_Globais;
+
+procedure TForm_Cadastro_ICMS.BtnGravarClick(Sender: TObject);
+begin
+  inherited;
+  dsPrincipal.DataSet.Refresh;
+end;
 
 procedure TForm_Cadastro_ICMS.cxGridDBTableView1DblClick(Sender: TObject);
 begin

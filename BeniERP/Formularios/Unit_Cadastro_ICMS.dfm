@@ -1,64 +1,60 @@
 inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
   Caption = 'Cadastro de ICMS'
-  ClientHeight = 652
-  ClientWidth = 1253
-  ExplicitWidth = 1269
-  ExplicitHeight = 691
+  ClientHeight = 642
+  ClientWidth = 1433
+  ExplicitWidth = 1449
+  ExplicitHeight = 681
   PixelsPerInch = 96
   TextHeight = 13
   inherited Shape1: TShape
-    Top = 43
-    Width = 1253
+    Top = 58
+    Width = 1433
     Height = 4
     ExplicitTop = 52
     ExplicitWidth = 1253
     ExplicitHeight = 4
   end
-  inherited ToolBar1: TToolBar
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 1247
-    Height = 34
-    ExplicitLeft = 3
-    ExplicitTop = 3
-    ExplicitWidth = 1247
-    ExplicitHeight = 34
-  end
   inherited cxPageControl1: TcxPageControl
-    Top = 72
-    Width = 1253
-    Height = 563
-    ExplicitTop = 81
-    ExplicitWidth = 1253
+    Top = 87
+    Width = 1433
+    Height = 538
+    ExplicitTop = 72
+    ExplicitWidth = 1243
     ExplicitHeight = 553
-    ClientRectBottom = 561
-    ClientRectRight = 1251
+    ClientRectBottom = 534
+    ClientRectRight = 1429
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1245
-      ExplicitHeight = 539
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1235
+      ExplicitHeight = 525
       inherited Panel1: TPanel
-        Width = 1249
-        ExplicitWidth = 1245
+        Width = 1425
+        ExplicitWidth = 1235
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
+        end
+        inherited Panel2: TPanel
+          inherited edtCurr: TcxCurrencyEdit
+            ExplicitHeight = 23
+          end
         end
       end
       object cxGrid1: TcxGrid
         AlignWithMargins = True
         Left = 3
         Top = 44
-        Width = 1243
-        Height = 486
+        Width = 1419
+        Height = 463
         Align = alClient
         TabOrder = 1
         LookAndFeel.Kind = lfStandard
         LookAndFeel.NativeStyle = False
         RootLevelOptions.DetailFrameColor = clNone
-        ExplicitWidth = 1239
-        ExplicitHeight = 492
+        ExplicitWidth = 1229
+        ExplicitHeight = 478
         object cxGridDBTableView1: TcxGridDBTableView
           OnDblClick = cxGridDBTableView1DblClick
           Navigator.Buttons.CustomButtons = <>
@@ -79,34 +75,58 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
           Styles.Group = cxstylGrupos
           Styles.Header = cxstylHeader
           Styles.Inactive = cxstylInactive
-          object cxVisualizaDBTableView1COD_ICMS: TcxGridDBColumn
-            Caption = 'C'#243'digo'
+          object cxGridDBTableView1COD_ICMS: TcxGridDBColumn
+            Caption = 'C'#211'DIGO ICMS'
             DataBinding.FieldName = 'COD_ICMS'
-            Width = 75
+            Width = 88
           end
-          object cxVisualizaDBTableView1DESCRICAO: TcxGridDBColumn
-            Caption = 'Descri'#231#227'o'
+          object cxGridDBTableView1COD_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'COD_EMP'
+            Width = 109
+          end
+          object cxGridDBTableView1DESCRICAO: TcxGridDBColumn
             DataBinding.FieldName = 'DESCRICAO'
-            Width = 300
+            Width = 185
           end
-          object cxVisualizaDBTableView1CST: TcxGridDBColumn
+          object cxGridDBTableView1CST: TcxGridDBColumn
             DataBinding.FieldName = 'CST'
-            Width = 30
+            Width = 57
           end
-          object cxVisualizaDBTableView1ICMS: TcxGridDBColumn
-            Caption = 'Aliquota'
+          object cxGridDBTableView1ICMS: TcxGridDBColumn
             DataBinding.FieldName = 'ICMS'
+            Width = 54
           end
-          object cxVisualizaDBTableView1REDUCAO: TcxGridDBColumn
-            Caption = 'Redu'#231#227'o'
+          object cxGridDBTableView1REDUCAO: TcxGridDBColumn
             DataBinding.FieldName = 'REDUCAO'
+            Width = 79
           end
-          object cxVisualizaDBTableView1DIF: TcxGridDBColumn
-            Caption = 'Diferido'
+          object cxGridDBTableView1DIF: TcxGridDBColumn
             DataBinding.FieldName = 'DIF'
+            Width = 44
           end
-          object cxVisualizaDBTableView1MVA: TcxGridDBColumn
+          object cxGridDBTableView1MVA: TcxGridDBColumn
             DataBinding.FieldName = 'MVA'
+            Width = 110
+          end
+          object cxGridDBTableView1TIPO_GRP: TcxGridDBColumn
+            Caption = 'TIPO GRP'
+            DataBinding.FieldName = 'TIPO_GRP'
+            Width = 73
+          end
+          object cxGridDBTableView1USUARIO_ALTERACAO: TcxGridDBColumn
+            Caption = #218'SUARIO ALTERA'#199#195'O'
+            DataBinding.FieldName = 'USUARIO_ALTERACAO'
+            Width = 212
+          end
+          object cxGridDBTableView1DT_ULT_ATUALIZACAO: TcxGridDBColumn
+            Caption = 'DATA MODIFICA'#199#195'O'
+            DataBinding.FieldName = 'DT_ULT_ATUALIZACAO'
+            Width = 229
+          end
+          object cxGridDBTableView1HR_ULT_ATUALIZACAO: TcxGridDBColumn
+            Caption = 'HORA ATUALIZA'#199#195'O'
+            DataBinding.FieldName = 'HR_ULT_ATUALIZACAO'
+            Width = 165
           end
         end
         object cxGridLevel1: TcxGridLevel
@@ -115,28 +135,30 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitWidth = 1245
-      ExplicitHeight = 539
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 1235
+      ExplicitHeight = 525
       inherited Shape3: TShape
-        Top = 525
-        Width = 1249
+        Top = 502
+        Width = 1425
         ExplicitTop = 544
         ExplicitWidth = 1125
       end
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1249
+        Width = 1425
         Height = 45
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1245
+        ExplicitWidth = 1235
         object cxLabel1: TcxLabel
-          Left = 3
-          Top = -1
+          Left = 5
+          Top = -3
           Caption = 'C'#243'digo :'
           Transparent = True
         end
@@ -159,18 +181,43 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
           ReadOnly = True
           TabOrder = 1
         end
+        object DBEdit1: TDBEdit
+          Left = 147
+          Top = 16
+          Width = 121
+          Height = 23
+          TabStop = False
+          CharCase = ecUpperCase
+          DataField = 'COD_EMP'
+          DataSource = dsPrincipal
+          Enabled = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 16744448
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 2
+        end
+        object cxLabel7: TcxLabel
+          Left = 147
+          Top = -3
+          Caption = 'C'#243'digo Empresa :'
+          Transparent = True
+        end
       end
       object Panel6: TPanel
         Left = 0
         Top = 90
-        Width = 1249
+        Width = 1425
         Height = 48
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1245
+        ExplicitWidth = 1235
         object pnlIcms: TPanel
           Left = 0
           Top = 0
@@ -275,14 +322,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel5: TPanel
         Left = 0
         Top = 138
-        Width = 1249
+        Width = 1425
         Height = 135
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 1245
+        ExplicitWidth = 1235
         object dbrgrpCST: TDBRadioGroup
           AlignWithMargins = True
           Left = 5
@@ -326,14 +373,14 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
       object Panel4: TPanel
         Left = 0
         Top = 45
-        Width = 1249
+        Width = 1425
         Height = 45
         Align = alTop
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 3
-        ExplicitWidth = 1245
+        ExplicitWidth = 1235
         object cxLabel2: TcxLabel
           Left = 3
           Top = -2
@@ -354,16 +401,27 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
     end
   end
   inherited pnl_top: TPanel
-    Top = 50
-    Width = 1253
-    ExplicitTop = 59
-    ExplicitWidth = 1253
+    Top = 65
+    Width = 1433
+    ExplicitTop = 50
+    ExplicitWidth = 1243
   end
   inherited Panel22: TPanel
-    Top = 635
-    Width = 1253
-    ExplicitTop = 635
-    ExplicitWidth = 1253
+    Top = 625
+    Width = 1433
+    ExplicitTop = 625
+    ExplicitWidth = 1243
+  end
+  inherited ToolBar1: TToolBar
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1427
+    Height = 49
+    ExplicitLeft = 3
+    ExplicitTop = 3
+    ExplicitWidth = 1237
+    ExplicitHeight = 49
   end
   inherited dsPrincipal: TDataSource
     DataSet = QPrincipal
@@ -401,21 +459,25 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
         Value = 1
       end>
     object QPrincipalCOD_ICMS: TIntegerField
+      DisplayLabel = 'C'#211'DIGO ICMS:'
       FieldName = 'COD_ICMS'
       Origin = 'COD_ICMS'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
     object QPrincipalCOD_EMP: TIntegerField
+      DisplayLabel = 'C'#211'DIGO EMPRESA'
       FieldName = 'COD_EMP'
       Origin = 'COD_EMP'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object QPrincipalDESCRICAO: TStringField
+    object QPrincipalDESCRICAO: TWideStringField
       FieldName = 'DESCRICAO'
       Origin = 'DESCRICAO'
+      Required = True
       Size = 100
     end
-    object QPrincipalCST: TStringField
+    object QPrincipalCST: TWideStringField
       FieldName = 'CST'
       Origin = 'CST'
       Size = 2
@@ -423,30 +485,44 @@ inherited Form_Cadastro_ICMS: TForm_Cadastro_ICMS
     object QPrincipalICMS: TBCDField
       FieldName = 'ICMS'
       Origin = 'ICMS'
-      DisplayFormat = '0.00'
       Precision = 18
       Size = 2
     end
     object QPrincipalREDUCAO: TBCDField
       FieldName = 'REDUCAO'
       Origin = 'REDUCAO'
-      DisplayFormat = '0.00'
       Precision = 18
       Size = 2
     end
     object QPrincipalDIF: TBCDField
       FieldName = 'DIF'
       Origin = 'DIF'
-      DisplayFormat = '0.00'
       Precision = 18
       Size = 2
     end
     object QPrincipalMVA: TBCDField
       FieldName = 'MVA'
       Origin = 'MVA'
-      DisplayFormat = '0.00'
       Precision = 18
       Size = 2
+    end
+    object QPrincipalTIPO_GRP: TWideStringField
+      FieldName = 'TIPO_GRP'
+      Origin = 'TIPO_GRP'
+      Size = 3
+    end
+    object QPrincipalUSUARIO_ALTERACAO: TStringField
+      FieldName = 'USUARIO_ALTERACAO'
+      Origin = 'USUARIO_ALTERACAO'
+      Size = 60
+    end
+    object QPrincipalDT_ULT_ATUALIZACAO: TSQLTimeStampField
+      FieldName = 'DT_ULT_ATUALIZACAO'
+      Origin = 'DT_ULT_ATUALIZACAO'
+    end
+    object QPrincipalHR_ULT_ATUALIZACAO: TSQLTimeStampField
+      FieldName = 'HR_ULT_ATUALIZACAO'
+      Origin = 'HR_ULT_ATUALIZACAO'
     end
   end
   object cxStyleRepository1: TcxStyleRepository
