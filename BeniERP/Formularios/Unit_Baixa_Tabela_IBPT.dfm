@@ -120,7 +120,7 @@ object form_baixa_ibpt: Tform_baixa_ibpt
     Top = 113
     Width = 825
     Height = 512
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Align = alClient
     TabOrder = 2
     object TabSheet1: TTabSheet
@@ -425,8 +425,7 @@ object form_baixa_ibpt: Tform_baixa_ibpt
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'select * from TB_NCM')
-    Left = 536
-    Top = 65528
+    Left = 488
     object Fdq_TB_NCMCOD_EMP: TIntegerField
       FieldName = 'COD_EMP'
       Origin = 'COD_EMP'

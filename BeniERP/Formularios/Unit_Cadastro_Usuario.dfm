@@ -1,37 +1,29 @@
 inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
   Caption = 'Cadastro de Usu'#225'rio'
-  ClientHeight = 610
-  ClientWidth = 1374
-  ExplicitWidth = 1390
-  ExplicitHeight = 649
+  ClientHeight = 653
+  ClientWidth = 1166
+  ExplicitWidth = 1182
+  ExplicitHeight = 692
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Shape1: TShape
-    Top = 56
-    Width = 1374
-    ExplicitTop = 43
-    ExplicitWidth = 1251
-  end
   inherited cxPageControl1: TcxPageControl
-    Top = 84
-    Width = 1374
-    Height = 509
+    Top = 85
+    Width = 1166
+    Height = 556
     Properties.ActivePage = tbCadastro
     ExplicitTop = 84
-    ExplicitWidth = 1374
-    ExplicitHeight = 509
-    ClientRectBottom = 505
-    ClientRectRight = 1370
+    ExplicitWidth = 1166
+    ExplicitHeight = 557
+    ClientRectBottom = 554
+    ClientRectRight = 1164
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1366
-      ExplicitHeight = 481
+      ExplicitWidth = 1162
+      ExplicitHeight = 510
       inherited Panel1: TPanel
-        Width = 1366
+        Width = 1162
         Height = 9
         Visible = False
-        ExplicitWidth = 1366
+        ExplicitWidth = 1162
         ExplicitHeight = 9
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -75,11 +67,26 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
           ExplicitHeight = 3
         end
       end
-      object DBGrid1: TDBGrid
-        Left = 0
+      inherited pnl_esq: TPanel
         Top = 9
-        Width = 1366
-        Height = 472
+        Height = 500
+        TabOrder = 3
+        ExplicitTop = 9
+        ExplicitHeight = 501
+      end
+      inherited pnl_dire: TPanel
+        Left = 1113
+        Top = 9
+        Height = 500
+        ExplicitLeft = 1113
+        ExplicitTop = 9
+        ExplicitHeight = 501
+      end
+      object DBGrid1: TDBGrid
+        Left = 49
+        Top = 9
+        Width = 1064
+        Height = 500
         Align = alClient
         Color = clWhite
         DataSource = dsPrincipal
@@ -144,13 +151,11 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1366
-      ExplicitHeight = 481
+      ExplicitWidth = 1162
+      ExplicitHeight = 510
       inherited Shape3: TShape
-        Top = 473
-        Width = 1366
+        Top = 501
+        Width = 1162
         ExplicitLeft = -56
         ExplicitTop = 545
         ExplicitWidth = 1043
@@ -281,16 +286,17 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       end
       object cxPageControl2: TcxPageControl
         Left = 0
-        Top = 199
-        Width = 1366
+        Top = 227
+        Width = 1162
         Height = 271
         Align = alBottom
         TabOrder = 7
         Properties.ActivePage = cxTabSheet2
         Properties.CustomButtons.Buttons = <>
+        ExplicitTop = 228
         ClientRectBottom = 267
         ClientRectLeft = 4
-        ClientRectRight = 1362
+        ClientRectRight = 1158
         ClientRectTop = 24
         object cxTabSheet1: TcxTabSheet
           Caption = 'Par'#226'metros '
@@ -395,7 +401,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
           object DBRadioGroup2: TDBRadioGroup
             Left = 0
             Top = 0
-            Width = 1358
+            Width = 1154
             Height = 189
             Align = alTop
             Caption = 'Cor Pr'#233' Definidas.'
@@ -436,7 +442,7 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       object DBRadioGroup1: TDBRadioGroup
         Left = 10
         Top = 8
-        Width = 407
+        Width = 199
         Height = 32
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Exibi'#231#227'o da Ribon'
@@ -463,32 +469,46 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
     end
   end
   inherited pnl_top: TPanel
-    Top = 62
-    Width = 1374
-    ExplicitTop = 62
-    ExplicitWidth = 1374
+    Top = 54
+    Width = 1166
+    ExplicitTop = 53
+    ExplicitWidth = 1166
+    inherited pbl_de_cima: TPanel
+      Width = 1166
+      ExplicitTop = 2
+      ExplicitWidth = 1166
+      inherited shape_cima: TShape
+        Width = 1006
+        ExplicitWidth = 1026
+      end
+      inherited pnl_info_direita: TPanel
+        Left = 884
+        ExplicitLeft = 884
+        inherited lblregistros: TLabel
+          ExplicitLeft = 167
+        end
+      end
+    end
   end
-  inherited Panel22: TPanel
-    Top = 593
-    Width = 1374
-    ExplicitTop = 593
-    ExplicitWidth = 1374
+  inherited pnl_baixo: TPanel
+    Top = 641
+    Width = 1166
+    ExplicitTop = 641
+    ExplicitWidth = 1166
   end
   inherited ToolBar1: TToolBar
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 1368
-    Height = 47
-    ExplicitLeft = 3
-    ExplicitTop = 3
-    ExplicitWidth = 1368
-    ExplicitHeight = 47
+    Width = 1160
+    Height = 48
+    ExplicitWidth = 1160
+    ExplicitHeight = 48
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_usuarios
     Left = 405
     Top = 41
+  end
+  inherited BarraMenu: TcxImageList
+    FormatVersion = 1
   end
   object FDQ_usuarios: TFDQuery [7]
     Active = True
@@ -571,9 +591,6 @@ inherited Form_Cadastro_usuario: TForm_Cadastro_usuario
       Origin = 'COD_EMPRESA_USU'
       Required = True
     end
-  end
-  inherited BarraMenu: TcxImageList
-    FormatVersion = 1
   end
   inherited ACBrEnterTab1: TACBrEnterTab
     Left = 176

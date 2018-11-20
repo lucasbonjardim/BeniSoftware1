@@ -1,45 +1,33 @@
 inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
   Caption = 'Cadastro de Produtos'
-  ClientHeight = 709
-  ClientWidth = 1245
+  ClientHeight = 659
+  ClientWidth = 1359
   OnShow = FormShow
-  ExplicitWidth = 1261
-  ExplicitHeight = 748
+  ExplicitWidth = 1375
+  ExplicitHeight = 698
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Shape1: TShape
-    Top = 62
-    Width = 1245
-    ExplicitTop = 62
-    ExplicitWidth = 1307
-  end
   inherited cxPageControl1: TcxPageControl
-    Top = 96
-    Width = 1245
-    Height = 604
-    Properties.ActivePage = tbCadastro
-    ExplicitTop = 96
-    ExplicitWidth = 1245
-    ExplicitHeight = 604
-    ClientRectBottom = 600
-    ClientRectRight = 1241
+    Top = 192
+    Width = 1359
+    Height = 455
+    ExplicitTop = 192
+    ExplicitWidth = 1359
+    ExplicitHeight = 455
+    ClientRectBottom = 453
+    ClientRectRight = 1357
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1237
-      ExplicitHeight = 576
+      ExplicitWidth = 1355
+      ExplicitHeight = 408
       inherited Panel1: TPanel
-        Width = 1237
-        ExplicitWidth = 1237
+        Width = 1355
+        ExplicitWidth = 1355
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
         end
         inherited Panel2: TPanel
-          inherited edtCurr: TcxCurrencyEdit
-            ExplicitHeight = 23
-          end
           inherited edtMask: TMaskEdit
             Text = ''
             Visible = True
@@ -49,7 +37,6 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         inherited cxButton1: TcxButton
           Hint = 'F3 Pesquisar'
           ParentShowHint = False
-          ShowHint = True
           OnClick = cxButton1Click
         end
         inherited rgOptionGrid: TRadioGroup
@@ -78,7 +65,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           TabOrder = 5
         end
         object chk_mostrafiltrogrid: TCheckBox
-          Left = 1140
+          Left = 1258
           Top = 0
           Width = 97
           Height = 41
@@ -88,12 +75,19 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           OnClick = chk_mostrafiltrogridClick
         end
       end
-      object cxVisualiza: TcxGrid
+      inherited pnl_esq: TPanel
+        Width = 46
+        Height = 367
+        TabOrder = 2
+        ExplicitWidth = 46
+        ExplicitHeight = 367
+      end
+      object cxVisualiza: TcxGrid [2]
         AlignWithMargins = True
-        Left = 3
+        Left = 49
         Top = 44
-        Width = 1231
-        Height = 529
+        Width = 1254
+        Height = 361
         Align = alClient
         TabOrder = 1
         LockedStateImageOptions.Text = 'Aguarde!'
@@ -132,14 +126,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object cxVisualizaDBTableView1PRO_DESCRICAO_PDV: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_DESCRICAO_PDV'
           end
-          object cxVisualizaDBTableView1PRO_ATIVO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ATIVO'
-          end
           object cxVisualizaDBTableView1PRO_TIPO_PRODUTO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_TIPO_PRODUTO'
+            Width = 80
           end
           object cxVisualizaDBTableView1PRO_CONTROLA_ESTOQUE_PRO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_CONTROLA_ESTOQUE_PRO'
+            Width = 103
           end
           object cxVisualizaDBTableView1PRO_ESTOQUE_MINIMO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_ESTOQUE_MINIMO'
@@ -147,191 +140,63 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object cxVisualizaDBTableView1PRO_SALDO_ESTOQUE: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_SALDO_ESTOQUE'
           end
-          object cxVisualizaDBTableView1PRO_DATA_VALIDADE: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_DATA_VALIDADE'
-          end
-          object cxVisualizaDBTableView1PRO_FORMULA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_FORMULA'
-          end
-          object cxVisualizaDBTableView1PRO_UN_REFERENCIA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_UN_REFERENCIA'
-          end
           object cxVisualizaDBTableView1PRO_VLR_CUSTO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_VLR_CUSTO'
           end
           object cxVisualizaDBTableView1PRO_PRECO_V_ATACADO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_PRECO_V_ATACADO'
+            Width = 85
           end
           object cxVisualizaDBTableView1PRO_VLR_PADRAO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_VLR_PADRAO'
+            Width = 112
           end
           object cxVisualizaDBTableView1PRO_VLR_PROMOC: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_VLR_PROMOC'
+            Width = 106
           end
           object cxVisualizaDBTableView1PRO_VLR_PRECO2: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_VLR_PRECO2'
+            Width = 97
           end
           object cxVisualizaDBTableView1PRO_VLR_PRECO3: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_VLR_PRECO3'
+            Width = 80
           end
           object cxVisualizaDBTableView1PRO_VLR_PRECO4: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_VLR_PRECO4'
+            Width = 92
           end
           object cxVisualizaDBTableView1PRO_QTD_MIN_VLR_ATACADO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_QTD_MIN_VLR_ATACADO'
+            Width = 187
           end
           object cxVisualizaDBTableView1PRO_QTD_MIN_VLR_PROMOC: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_QTD_MIN_VLR_PROMOC'
-          end
-          object cxVisualizaDBTableView1PRO_DIAS_VALIDADE: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_DIAS_VALIDADE'
-          end
-          object cxVisualizaDBTableView1PRO_PERMITE_FRAC: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_PERMITE_FRAC'
-          end
-          object cxVisualizaDBTableView1PRO_ALCOOLICO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ALCOOLICO'
-          end
-          object cxVisualizaDBTableView1PRO_COD_VASILHAME: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_COD_VASILHAME'
-          end
-          object cxVisualizaDBTableView1PRO_PEDE_LIBERACAO_FSC: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_PEDE_LIBERACAO_FSC'
-          end
-          object cxVisualizaDBTableView1PRO_QUANT_UNIDADE_ENTRADA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_QUANT_UNIDADE_ENTRADA'
-          end
-          object cxVisualizaDBTableView1PRO_QTD_MAXIMA_COMPRA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_QTD_MAXIMA_COMPRA'
-          end
-          object cxVisualizaDBTableView1PRO_QTD_MAX_VARIAVEL: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_QTD_MAX_VARIAVEL'
-          end
-          object cxVisualizaDBTableView1PRO_PER_ALTERA_PRECO_PDV: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_PER_ALTERA_PRECO_PDV'
-          end
-          object cxVisualizaDBTableView1PRO_BLOQQUEIA_MULTIPLICACAO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_BLOQQUEIA_MULTIPLICACAO'
-          end
-          object cxVisualizaDBTableView1PRO_LEVEX_PAGUEY: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_LEVEX_PAGUEY'
-          end
-          object cxVisualizaDBTableView1PRO_COR: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_COR'
-          end
-          object cxVisualizaDBTableView1PRO_LOCALIZACAO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_LOCALIZACAO'
-          end
-          object cxVisualizaDBTableView1PRO_OBS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_OBS'
-          end
-          object cxVisualizaDBTableView1PRO_CLASSIFICACAO_FISCAL: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_CLASSIFICACAO_FISCAL'
-          end
-          object cxVisualizaDBTableView1PRO_COD_ALIQUOTA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_COD_ALIQUOTA'
-          end
-          object cxVisualizaDBTableView1PRO_COMISSAO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_COMISSAO'
-          end
-          object cxVisualizaDBTableView1PRO_ALIQUOTA_CSLL: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ALIQUOTA_CSLL'
-          end
-          object cxVisualizaDBTableView1PRO_ALIQUOTA_OUTRAS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ALIQUOTA_OUTRAS'
-          end
-          object cxVisualizaDBTableView1PRO_ISENTO_PIS_COFINS_PRO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ISENTO_PIS_COFINS_PRO'
-          end
-          object cxVisualizaDBTableView1PRO_CREDITO_ICMS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_CREDITO_ICMS'
-          end
-          object cxVisualizaDBTableView1PRO_TIPO_PRODUCAO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_TIPO_PRODUCAO'
-          end
-          object cxVisualizaDBTableView1PRO_COD_GRUPO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_COD_GRUPO'
-          end
-          object cxVisualizaDBTableView1PRO_SUB_GRUPO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_SUB_GRUPO'
-          end
-          object cxVisualizaDBTableView1PRO_SIT_TRIBUTARIA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_SIT_TRIBUTARIA'
+            Width = 196
           end
           object cxVisualizaDBTableView1PRO_CEST: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_CEST'
+            Width = 112
           end
           object cxVisualizaDBTableView1PRO_CFOP: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_CFOP'
+            Width = 76
           end
           object cxVisualizaDBTableView1PRO_NCM: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_NCM'
           end
           object cxVisualizaDBTableView1PRO_CHAVE_IBPT: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_CHAVE_IBPT'
-          end
-          object cxVisualizaDBTableView1PRO_CST_ICMS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_CST_ICMS'
-          end
-          object cxVisualizaDBTableView1PRO_CST_PIS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_CST_PIS'
-          end
-          object cxVisualizaDBTableView1PRO_CST_COFINS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_CST_COFINS'
-          end
-          object cxVisualizaDBTableView1PRO_ALIQ_ICMS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ALIQ_ICMS'
-          end
-          object cxVisualizaDBTableView1PRO_ALIQ_PIS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ALIQ_PIS'
-          end
-          object cxVisualizaDBTableView1PRO_ALIQ_COFINS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ALIQ_COFINS'
-          end
-          object cxVisualizaDBTableView1PRO_PERC_IMPOSTOS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_PERC_IMPOSTOS'
-          end
-          object cxVisualizaDBTableView1PRO_PERC_IMPOSTOS_E: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_PERC_IMPOSTOS_E'
-          end
-          object cxVisualizaDBTableView1PRO_PERC_IMPOSTOS_M: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_PERC_IMPOSTOS_M'
-          end
-          object cxVisualizaDBTableView1PRO_ULTIMO_USUARIO_ALTERACAO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ULTIMO_USUARIO_ALTERACAO'
-          end
-          object cxVisualizaDBTableView1PRO_PERMITE_PARCELAMENTO_PDV: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_PERMITE_PARCELAMENTO_PDV'
-          end
-          object cxVisualizaDBTableView1PRO_ORIGEM_MERCA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ORIGEM_MERCA'
-          end
-          object cxVisualizaDBTableView1PRO_IMP_VALE_GAS: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_IMP_VALE_GAS'
-          end
-          object cxVisualizaDBTableView1PRO_IMP_VALE_AGUA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_IMP_VALE_AGUA'
-          end
-          object cxVisualizaDBTableView1PRO_ALERTA_COZINHA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ALERTA_COZINHA'
-          end
-          object cxVisualizaDBTableView1PRO_ANDROID_VISUALIZA: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_ANDROID_VISUALIZA'
-          end
-          object cxVisualizaDBTableView1PRO_NUMERO_LOTE: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_NUMERO_LOTE'
-          end
-          object cxVisualizaDBTableView1PRO_TEMPO_PREPARO: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_TEMPO_PREPARO'
+            Width = 129
           end
           object cxVisualizaDBTableView1PRO_DT_ATUALIZACAO_CADASTRO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_DT_ATUALIZACAO_CADASTRO'
+            Width = 152
           end
           object cxVisualizaDBTableView1PRO_HR__ATUALIZACAO_CADASTRO: TcxGridDBColumn
             DataBinding.FieldName = 'PRO_HR__ATUALIZACAO_CADASTRO'
-          end
-          object cxVisualizaDBTableView1PRO_COD_SEC: TcxGridDBColumn
-            DataBinding.FieldName = 'PRO_COD_SEC'
+            Width = 162
           end
         end
         object cxNCMs: TcxGridDBTableView
@@ -390,38 +255,47 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           GridView = cxVisualizaDBTableView1
         end
       end
+      inherited pnl_dire: TPanel
+        Left = 1306
+        Height = 367
+        TabOrder = 3
+        ExplicitLeft = 1306
+        ExplicitHeight = 367
+      end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1237
-      ExplicitHeight = 576
+      ExplicitWidth = 1355
+      ExplicitHeight = 408
       inherited Shape3: TShape
-        Top = 568
-        Width = 1237
+        Top = 400
+        Width = 1355
         ExplicitTop = 582
         ExplicitWidth = 1267
       end
       object cxPaginas2: TcxPageControl
         Left = 0
-        Top = 103
-        Width = 1237
-        Height = 462
+        Top = 0
+        Width = 1355
+        Height = 397
         Align = alClient
         TabOrder = 0
-        Properties.ActivePage = cxTabSheet2
+        Properties.ActivePage = cxDadosProduto
         Properties.CustomButtons.Buttons = <>
-        ClientRectBottom = 458
+        ClientRectBottom = 393
         ClientRectLeft = 4
-        ClientRectRight = 1233
+        ClientRectRight = 1351
         ClientRectTop = 24
         object cxDadosProduto: TcxTabSheet
           Caption = 'Dados do produto'
           ImageIndex = 0
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
           object grp_produto: TGroupBox
             Left = 0
             Top = 0
-            Width = 1229
+            Width = 1347
             Height = 417
             Align = alTop
             Caption = 'Base'
@@ -432,6 +306,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
+            ExplicitWidth = 1351
             object Label104: TLabel
               Left = 8
               Top = 18
@@ -609,57 +484,58 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
         end
         object cxBalanca: TcxTabSheet
-          Caption = 'Balan'#231'a'
+          Caption = 'Balan'#231'a   '
           ImageIndex = 1
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
         end
         object cxObs: TcxTabSheet
           Caption = 'Observa'#231#245'es'
           ImageIndex = 2
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
           object dbmmoOBS: TDBMemo
             Left = 0
             Top = 0
-            Width = 1229
-            Height = 434
+            Width = 1347
+            Height = 369
             Align = alClient
             BorderStyle = bsNone
             DataField = 'PRO_OBS'
             DataSource = dsPrincipal
             TabOrder = 0
+            ExplicitWidth = 1351
+            ExplicitHeight = 367
           end
         end
         object cxCompra: TcxTabSheet
           Caption = 'Compras / Venda'
           ImageIndex = 4
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
           object Panel17: TPanel
             Left = 0
             Top = 217
-            Width = 1229
-            Height = 217
+            Width = 1347
+            Height = 152
             Align = alClient
             BevelOuter = bvNone
             Color = clWhite
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 1351
+            ExplicitHeight = 150
             object shp2: TShape
               AlignWithMargins = True
               Left = 0
-              Top = 29
-              Width = 1229
-              Height = 3
-              Margins.Left = 0
-              Margins.Right = 0
-              Align = alTop
-              Brush.Color = 16755285
-              Pen.Style = psClear
-              ExplicitLeft = -190
-              ExplicitTop = 27
-              ExplicitWidth = 884
-            end
-            object Shape2: TShape
-              AlignWithMargins = True
-              Left = 0
-              Top = 3
-              Width = 1229
+              Top = 20
+              Width = 1347
               Height = 3
               Margins.Left = 0
               Margins.Right = 0
@@ -673,11 +549,13 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             object cxCompras: TcxGrid
               AlignWithMargins = True
               Left = 3
-              Top = 38
-              Width = 1223
-              Height = 176
+              Top = 29
+              Width = 1341
+              Height = 120
               Align = alClient
               TabOrder = 0
+              ExplicitWidth = 1345
+              ExplicitHeight = 118
               object cxComprasDBTableView1: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
                 DataController.Summary.DefaultGroupSummaryItems = <>
@@ -753,27 +631,29 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
             end
             object cxLabel30: TcxLabel
               Left = 0
-              Top = 9
+              Top = 0
               Align = alTop
               Caption = 'Vendas do Produto'
               Style.TextColor = 16744448
               Style.TextStyle = [fsBold, fsItalic]
               Properties.Alignment.Horz = taCenter
               Properties.Alignment.Vert = taVCenter
-              AnchorX = 615
-              AnchorY = 18
+              ExplicitWidth = 1351
+              AnchorX = 674
+              AnchorY = 9
             end
           end
           object Panel18: TPanel
             Left = 0
             Top = 0
-            Width = 1229
+            Width = 1347
             Height = 217
             Align = alTop
             BevelOuter = bvNone
             Color = clWhite
             ParentBackground = False
             TabOrder = 1
+            ExplicitWidth = 1351
             object GroupBox3: TGroupBox
               AlignWithMargins = True
               Left = 3
@@ -1149,13 +1029,19 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object tabFornecedores: TcxTabSheet
           Caption = 'Fornecedores'
           ImageIndex = 5
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
           object cxFornecedores: TcxGrid
             Left = 0
             Top = 0
-            Width = 1229
-            Height = 393
+            Width = 1347
+            Height = 328
             Align = alClient
             TabOrder = 0
+            ExplicitWidth = 1351
+            ExplicitHeight = 326
             object cxFornecedoresDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -1188,26 +1074,34 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object pnl3: TPanel
             Left = 0
-            Top = 393
-            Width = 1229
+            Top = 328
+            Width = 1347
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             Color = 4718629
             ParentBackground = False
             TabOrder = 1
+            ExplicitTop = 326
+            ExplicitWidth = 1351
           end
         end
         object tabComposicao: TcxTabSheet
           Caption = 'Composi'#231#227'o'
           ImageIndex = 6
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
           object cxComposicao: TcxGrid
             Left = 0
             Top = 0
-            Width = 1229
-            Height = 393
+            Width = 1347
+            Height = 328
             Align = alClient
             TabOrder = 0
+            ExplicitWidth = 1351
+            ExplicitHeight = 326
             object cxGridDBTableView1: TcxGridDBTableView
               Navigator.Buttons.CustomButtons = <>
               DataController.Summary.DefaultGroupSummaryItems = <>
@@ -1257,19 +1151,25 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
           object Panel19: TPanel
             Left = 0
-            Top = 393
-            Width = 1229
+            Top = 328
+            Width = 1347
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             Color = 4718629
             ParentBackground = False
             TabOrder = 1
+            ExplicitTop = 326
+            ExplicitWidth = 1351
           end
         end
         object cxTabSheet1: TcxTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 6
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
           object DBCheckBox1: TDBCheckBox
             Left = 8
             Top = 3
@@ -1394,14 +1294,19 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
         object cxTabSheet2: TcxTabSheet
           Caption = 'Fiscal'
           ImageIndex = 7
+          ExplicitLeft = 2
+          ExplicitTop = 28
+          ExplicitWidth = 1351
+          ExplicitHeight = 367
           object GroupBox4: TGroupBox
             Left = 0
             Top = 0
-            Width = 1229
+            Width = 1347
             Height = 225
             Align = alTop
             Caption = 'Fiscal'
             TabOrder = 0
+            ExplicitWidth = 1351
             object Label37: TLabel
               Left = 401
               Top = 106
@@ -1587,11 +1492,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           object GroupBox5: TGroupBox
             Left = 0
             Top = 225
-            Width = 1229
+            Width = 1347
             Height = 344
             Align = alTop
             Caption = 'ePDV'
             TabOrder = 1
+            ExplicitWidth = 1351
             object Label33: TLabel
               Left = 14
               Top = 14
@@ -1739,302 +1645,283 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           end
         end
       end
-      object GBDadosProduto: TGroupBox
-        Left = 0
-        Top = 0
-        Width = 1237
-        Height = 103
-        Align = alTop
-        Caption = 'Dados produtos'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Height = -11
-        Font.Name = 'Trebuchet MS'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 1
-        object Label105: TLabel
-          Left = 271
-          Top = 18
-          Width = 74
-          Height = 16
-          Caption = 'Un Refer'#234'ncia:'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Trebuchet MS'
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label133: TLabel
-          Left = 365
-          Top = 18
-          Width = 71
-          Height = 16
-          Caption = 'Estoque Atual:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Trebuchet MS'
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label9: TLabel
-          Left = 12
-          Top = 57
-          Width = 90
-          Height = 16
-          Caption = 'Descri'#231#227'o Cupom:'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Trebuchet MS'
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label8: TLabel
-          Left = 12
-          Top = 18
-          Width = 63
-          Height = 16
-          Caption = 'C'#243'digo PLU:'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Trebuchet MS'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label11: TLabel
-          Left = 118
-          Top = 18
-          Width = 95
-          Height = 16
-          Caption = 'C'#243'digo de Barras:'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Trebuchet MS'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object Label12: TLabel
-          Left = 455
-          Top = 16
-          Width = 74
-          Height = 16
-          Caption = 'Tipo Produto:'
-        end
-        object Label13: TLabel
-          Left = 600
-          Top = 16
-          Width = 76
-          Height = 16
-          Caption = 'Data Validade:'
-          FocusControl = cxDBDateEdit1
-        end
-        object Label53: TLabel
-          Left = 726
-          Top = 16
-          Width = 157
-          Height = 16
-          Caption = 'C'#243'digo Vasilhame Engradado:'
-          FocusControl = cxDBSpinEdit1
-        end
-        object combodb_un_referencia: TcxDBLookupComboBox
-          Left = 271
-          Top = 32
-          DataBinding.DataField = 'PRO_UN_REFERENCIA'
-          DataBinding.DataSource = dsPrincipal
-          ParentFont = False
-          Properties.CharCase = ecUpperCase
-          Properties.DropDownListStyle = lsFixedList
-          Properties.GridMode = True
-          Properties.KeyFieldNames = 'Nome'
-          Properties.ListColumns = <
-            item
-              Caption = 'Nome'
-              Fixed = True
-              SortOrder = soAscending
-              FieldName = 'Nome'
-            end>
-          Properties.ListOptions.ShowHeader = False
-          Properties.ListSource = dtm_cad_Produtos.dsUNReferencia
-          Properties.PostPopupValueOnTab = True
-          Style.Font.Charset = ANSI_CHARSET
-          Style.Font.Color = clBlack
-          Style.Font.Height = -11
-          Style.Font.Name = 'Trebuchet MS'
-          Style.Font.Style = []
-          Style.IsFontAssigned = True
-          TabOrder = 0
-          Width = 88
-        end
-        object cxDBTextEdit1: TcxDBTextEdit
-          Left = 12
-          Top = 74
-          DataBinding.DataField = 'PRO_DESCRICAO_CUPOM'
-          DataBinding.DataSource = dsPrincipal
-          TabOrder = 1
-          Width = 347
-        end
-        object cxDBMEsqlCadProdutosPRO_ID: TcxDBMaskEdit
-          Left = 12
-          Top = 32
-          DataBinding.DataField = 'PRO_ID'
-          DataBinding.DataSource = dsPrincipal
-          ParentFont = False
-          Properties.Alignment.Horz = taRightJustify
-          Properties.BeepOnError = True
-          Properties.MaxLength = 14
-          Style.Color = 12582911
-          Style.Font.Charset = ANSI_CHARSET
-          Style.Font.Color = clBlack
-          Style.Font.Height = -11
-          Style.Font.Name = 'Trebuchet MS'
-          Style.Font.Style = []
-          Style.IsFontAssigned = True
-          TabOrder = 2
-          Width = 100
-        end
-        object cxDBMaskEdit1: TcxDBMaskEdit
-          Left = 118
-          Top = 32
-          DataBinding.DataField = 'PRO_COD_BARRA'
-          DataBinding.DataSource = dsPrincipal
-          ParentFont = False
-          Properties.Alignment.Horz = taRightJustify
-          Properties.BeepOnError = True
-          Properties.MaxLength = 14
-          Style.Color = 12582911
-          Style.Font.Charset = ANSI_CHARSET
-          Style.Font.Color = clBlack
-          Style.Font.Height = -11
-          Style.Font.Name = 'Trebuchet MS'
-          Style.Font.Style = []
-          Style.IsFontAssigned = True
-          TabOrder = 3
-          Width = 147
-        end
-        object cxDBCurrencyEdit1: TcxDBCurrencyEdit
-          Left = 365
-          Top = 32
-          DataBinding.DataField = 'PRO_SALDO_ESTOQUE'
-          DataBinding.DataSource = dsPrincipal
-          Properties.DisplayFormat = 'QTD ,0.00;-QTD ,0.00'
-          Style.Color = 12582911
-          TabOrder = 4
-          Width = 84
-        end
-        object cxDBLookupComboBox1: TcxDBLookupComboBox
-          Left = 455
-          Top = 32
-          DataBinding.DataField = 'PRO_TIPO_PRODUTO'
-          DataBinding.DataSource = dsPrincipal
-          ParentFont = False
-          Properties.CharCase = ecUpperCase
-          Properties.DropDownListStyle = lsFixedList
-          Properties.GridMode = True
-          Properties.KeyFieldNames = 'ID'
-          Properties.ListColumns = <
-            item
-              Caption = 'ID'
-              Fixed = True
-              SortOrder = soAscending
-              FieldName = 'ID'
-            end
-            item
-              Caption = 'Descricao'
-              FieldName = 'Descricao'
-            end>
-          Properties.ListOptions.ShowHeader = False
-          Properties.ListSource = dtm_cad_Produtos.ds_tpo_produto
-          Properties.PostPopupValueOnTab = True
-          Style.Font.Charset = ANSI_CHARSET
-          Style.Font.Color = clBlack
-          Style.Font.Height = -11
-          Style.Font.Name = 'Trebuchet MS'
-          Style.Font.Style = []
-          Style.IsFontAssigned = True
-          TabOrder = 5
-          Width = 138
-        end
-        object cxDBDateEdit1: TcxDBDateEdit
-          Left = 599
-          Top = 32
-          DataBinding.DataField = 'PRO_DATA_VALIDADE'
-          DataBinding.DataSource = dsPrincipal
-          TabOrder = 6
-          Width = 121
-        end
-        object cxDBSpinEdit1: TcxDBSpinEdit
-          Left = 726
-          Top = 32
-          DataBinding.DataField = 'PRO_COD_VASILHAME'
-          DataBinding.DataSource = dsPrincipal
-          TabOrder = 7
-          Width = 121
+    end
+  end
+  inherited pnl_top: TPanel
+    Top = 59
+    Width = 1359
+    Height = 29
+    ExplicitTop = 59
+    ExplicitWidth = 1359
+    ExplicitHeight = 29
+    inherited pbl_de_cima: TPanel
+      Top = 0
+      Width = 1359
+      ExplicitTop = 0
+      ExplicitWidth = 1359
+      inherited shape_cima: TShape
+        Width = 1199
+        Brush.Color = clWhite
+        Brush.Style = bsClear
+        ExplicitWidth = 1209
+      end
+      inherited pnl_info_direita: TPanel
+        Left = 1077
+        ExplicitLeft = 1077
+        inherited lblregistros: TLabel
+          ExplicitLeft = 167
         end
       end
     end
   end
-  inherited pnl_top: TPanel
-    Top = 68
-    Width = 1245
-    Height = 28
-    ExplicitTop = 68
-    ExplicitWidth = 1245
-    ExplicitHeight = 28
-    object lbl_qnt_produtos: TLabel [0]
-      Left = 1103
-      Top = 0
-      Width = 142
-      Height = 28
-      Align = alRight
-      Caption = 'Qunatidade de Registros:'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -11
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
-      Visible = False
-      ExplicitLeft = 1113
-      ExplicitHeight = 13
-    end
-    inherited BtnRegistroPosterior: TcxButton
-      Left = 66
-      ExplicitLeft = 66
-    end
-    inherited BtnPrimeiroRegistro: TcxButton
-      Left = 2
-      ExplicitLeft = 2
-    end
-    inherited BtnRegistroAnterior: TcxButton
-      Left = 34
-      ExplicitLeft = 34
-    end
-    inherited BtnUltimoRegistro: TcxButton
-      Left = 98
-      ExplicitLeft = 98
-    end
-  end
-  inherited Panel22: TPanel
-    Top = 700
-    Width = 1245
-    ExplicitTop = 700
-    ExplicitWidth = 1245
+  inherited pnl_baixo: TPanel
+    Top = 647
+    Width = 1359
+    ExplicitTop = 647
+    ExplicitWidth = 1359
   end
   inherited ToolBar1: TToolBar
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 1239
+    Width = 1353
     Height = 53
-    ExplicitLeft = 3
-    ExplicitTop = 3
-    ExplicitWidth = 1239
+    ExplicitWidth = 1353
     ExplicitHeight = 53
+  end
+  object GBDadosProduto: TGroupBox [4]
+    Left = 0
+    Top = 88
+    Width = 1359
+    Height = 104
+    Align = alTop
+    Caption = 'Dados produtos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Trebuchet MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    object Label105: TLabel
+      Left = 271
+      Top = 18
+      Width = 74
+      Height = 16
+      Caption = 'Un Refer'#234'ncia:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label133: TLabel
+      Left = 365
+      Top = 18
+      Width = 71
+      Height = 16
+      Caption = 'Estoque Atual:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 12
+      Top = 57
+      Width = 90
+      Height = 16
+      Caption = 'Descri'#231#227'o Cupom:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 12
+      Top = 18
+      Width = 63
+      Height = 16
+      Caption = 'C'#243'digo PLU:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = 118
+      Top = 18
+      Width = 95
+      Height = 16
+      Caption = 'C'#243'digo de Barras:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = 455
+      Top = 16
+      Width = 74
+      Height = 16
+      Caption = 'Tipo Produto:'
+    end
+    object Label13: TLabel
+      Left = 600
+      Top = 16
+      Width = 76
+      Height = 16
+      Caption = 'Data Validade:'
+      FocusControl = cxDBDateEdit1
+    end
+    object Label53: TLabel
+      Left = 726
+      Top = 16
+      Width = 157
+      Height = 16
+      Caption = 'C'#243'digo Vasilhame Engradado:'
+      FocusControl = cxDBSpinEdit1
+    end
+    object combodb_un_referencia: TcxDBLookupComboBox
+      Left = 271
+      Top = 32
+      DataBinding.DataField = 'PRO_UN_REFERENCIA'
+      DataBinding.DataSource = dsPrincipal
+      ParentFont = False
+      Properties.CharCase = ecUpperCase
+      Properties.DropDownListStyle = lsFixedList
+      Properties.GridMode = True
+      Properties.KeyFieldNames = 'Nome'
+      Properties.ListColumns = <
+        item
+          Caption = 'Nome'
+          Fixed = True
+          SortOrder = soAscending
+          FieldName = 'Nome'
+        end>
+      Properties.ListOptions.ShowHeader = False
+      Properties.ListSource = dtm_cad_Produtos.dsUNReferencia
+      Properties.PostPopupValueOnTab = True
+      Style.Font.Charset = ANSI_CHARSET
+      Style.Font.Color = clBlack
+      Style.Font.Height = -11
+      Style.Font.Name = 'Trebuchet MS'
+      Style.Font.Style = []
+      Style.IsFontAssigned = True
+      TabOrder = 0
+      Width = 88
+    end
+    object cxDBTextEdit1: TcxDBTextEdit
+      Left = 12
+      Top = 74
+      DataBinding.DataField = 'PRO_DESCRICAO_CUPOM'
+      DataBinding.DataSource = dsPrincipal
+      TabOrder = 1
+      Width = 835
+    end
+    object cxDBMEsqlCadProdutosPRO_ID: TcxDBMaskEdit
+      Left = 12
+      Top = 32
+      DataBinding.DataField = 'PRO_ID'
+      DataBinding.DataSource = dsPrincipal
+      ParentFont = False
+      Properties.Alignment.Horz = taRightJustify
+      Properties.BeepOnError = True
+      Properties.MaxLength = 14
+      Style.Color = 12582911
+      Style.Font.Charset = ANSI_CHARSET
+      Style.Font.Color = clBlack
+      Style.Font.Height = -11
+      Style.Font.Name = 'Trebuchet MS'
+      Style.Font.Style = []
+      Style.IsFontAssigned = True
+      TabOrder = 2
+      Width = 100
+    end
+    object cxDBMaskEdit1: TcxDBMaskEdit
+      Left = 118
+      Top = 32
+      DataBinding.DataField = 'PRO_COD_BARRA'
+      DataBinding.DataSource = dsPrincipal
+      ParentFont = False
+      Properties.Alignment.Horz = taRightJustify
+      Properties.BeepOnError = True
+      Properties.MaxLength = 14
+      Style.Color = 12582911
+      Style.Font.Charset = ANSI_CHARSET
+      Style.Font.Color = clBlack
+      Style.Font.Height = -11
+      Style.Font.Name = 'Trebuchet MS'
+      Style.Font.Style = []
+      Style.IsFontAssigned = True
+      TabOrder = 3
+      Width = 147
+    end
+    object cxDBCurrencyEdit1: TcxDBCurrencyEdit
+      Left = 365
+      Top = 32
+      DataBinding.DataField = 'PRO_SALDO_ESTOQUE'
+      DataBinding.DataSource = dsPrincipal
+      Properties.DisplayFormat = 'QTD ,0.00;-QTD ,0.00'
+      Style.Color = 12582911
+      TabOrder = 4
+      Width = 84
+    end
+    object cxDBLookupComboBox1: TcxDBLookupComboBox
+      Left = 455
+      Top = 32
+      DataBinding.DataField = 'PRO_TIPO_PRODUTO'
+      DataBinding.DataSource = dsPrincipal
+      ParentFont = False
+      Properties.CharCase = ecUpperCase
+      Properties.DropDownListStyle = lsFixedList
+      Properties.GridMode = True
+      Properties.KeyFieldNames = 'ID'
+      Properties.ListColumns = <
+        item
+          Caption = 'ID'
+          Fixed = True
+          SortOrder = soAscending
+          FieldName = 'ID'
+        end
+        item
+          Caption = 'Descricao'
+          FieldName = 'Descricao'
+        end>
+      Properties.ListOptions.ShowHeader = False
+      Properties.ListSource = dtm_cad_Produtos.ds_tpo_produto
+      Properties.PostPopupValueOnTab = True
+      Style.Font.Charset = ANSI_CHARSET
+      Style.Font.Color = clBlack
+      Style.Font.Height = -11
+      Style.Font.Name = 'Trebuchet MS'
+      Style.Font.Style = []
+      Style.IsFontAssigned = True
+      TabOrder = 5
+      Width = 138
+    end
+    object cxDBDateEdit1: TcxDBDateEdit
+      Left = 599
+      Top = 32
+      DataBinding.DataField = 'PRO_DATA_VALIDADE'
+      DataBinding.DataSource = dsPrincipal
+      TabOrder = 6
+      Width = 121
+    end
+    object cxDBSpinEdit1: TcxDBSpinEdit
+      Left = 726
+      Top = 32
+      DataBinding.DataField = 'PRO_COD_VASILHAME'
+      DataBinding.DataSource = dsPrincipal
+      TabOrder = 7
+      Width = 121
+    end
   end
   inherited dsPrincipal: TDataSource
     DataSet = FdqProdutos
@@ -2045,34 +1932,43 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
     Left = 1096
     Top = 0
   end
-  object FdqProdutos: TFDQuery [7]
+  inherited BarraMenu: TcxImageList
+    FormatVersion = 1
+    DesignInfo = 7537736
+  end
+  object FdqProdutos: TFDQuery [8]
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'SELECT * FROM TB_PRODUTOS')
     Left = 1027
     Top = 67
     object FdqProdutosPRO_ID: TLargeintField
+      DisplayLabel = 'Pro ID:'
       FieldName = 'PRO_ID'
       Origin = 'PRO_ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object FdqProdutosPRO_COD_BARRA: TLargeintField
+      DisplayLabel = 'C'#243'digo de Barras:'
       FieldName = 'PRO_COD_BARRA'
       Origin = 'PRO_COD_BARRA'
       Required = True
     end
     object FdqProdutosPRO_DESCRICAO_CUPOM: TStringField
+      DisplayLabel = 'Descri'#231#227'o Produto:'
       FieldName = 'PRO_DESCRICAO_CUPOM'
       Origin = 'PRO_DESCRICAO_CUPOM'
       Size = 40
     end
     object FdqProdutosPRO_DESCRICAO_PDV: TStringField
+      DisplayLabel = 'Descri'#231#227'o PDV:'
       FieldName = 'PRO_DESCRICAO_PDV'
       Origin = 'PRO_DESCRICAO_PDV'
       Size = 24
     end
     object FdqProdutosPRO_ATIVO: TStringField
+      DisplayLabel = 'Ativo:'
       FieldName = 'PRO_ATIVO'
       Origin = 'PRO_ATIVO'
       Required = True
@@ -2080,6 +1976,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Size = 1
     end
     object FdqProdutosPRO_TIPO_PRODUTO: TStringField
+      DisplayLabel = 'Tipo Produto:'
       FieldName = 'PRO_TIPO_PRODUTO'
       Origin = 'PRO_TIPO_PRODUTO'
       Required = True
@@ -2087,6 +1984,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Size = 1
     end
     object FdqProdutosPRO_CONTROLA_ESTOQUE_PRO: TStringField
+      DisplayLabel = 'Controla Estoque:'
       FieldName = 'PRO_CONTROLA_ESTOQUE_PRO'
       Origin = 'PRO_CONTROLA_ESTOQUE_PRO'
       Required = True
@@ -2094,82 +1992,99 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Size = 1
     end
     object FdqProdutosPRO_ESTOQUE_MINIMO: TBCDField
+      DisplayLabel = 'Estoque Minimo:'
       FieldName = 'PRO_ESTOQUE_MINIMO'
       Origin = 'PRO_ESTOQUE_MINIMO'
       Precision = 18
       Size = 2
     end
     object FdqProdutosPRO_SALDO_ESTOQUE: TBCDField
+      DisplayLabel = 'Saldo Estoque:'
       FieldName = 'PRO_SALDO_ESTOQUE'
       Origin = 'PRO_SALDO_ESTOQUE'
       Precision = 18
       Size = 3
     end
     object FdqProdutosPRO_DATA_VALIDADE: TDateField
+      DisplayLabel = 'Data Validade:'
       FieldName = 'PRO_DATA_VALIDADE'
       Origin = 'PRO_DATA_VALIDADE'
     end
     object FdqProdutosPRO_FORMULA: TStringField
+      DisplayLabel = 'Formula:'
       FieldName = 'PRO_FORMULA'
       Origin = 'PRO_FORMULA'
       FixedChar = True
       Size = 1
     end
     object FdqProdutosPRO_UN_REFERENCIA: TStringField
+      DisplayLabel = 'Un Refer'#234'ncia:'
       FieldName = 'PRO_UN_REFERENCIA'
       Origin = 'PRO_UN_REFERENCIA'
       FixedChar = True
       Size = 2
     end
     object FdqProdutosPRO_VLR_CUSTO: TFloatField
+      DisplayLabel = 'Valor Custo:'
       FieldName = 'PRO_VLR_CUSTO'
       Origin = 'PRO_VLR_CUSTO'
     end
     object FdqProdutosPRO_PRECO_V_ATACADO: TCurrencyField
+      DisplayLabel = 'Pre'#231'o Atacado:'
       FieldName = 'PRO_PRECO_V_ATACADO'
       Origin = 'PRO_PRECO_V_ATACADO'
     end
     object FdqProdutosPRO_VLR_PADRAO: TCurrencyField
+      DisplayLabel = 'Valor Venda Pad'#227'o:'
       FieldName = 'PRO_VLR_PADRAO'
       Origin = 'PRO_VLR_PADRAO'
     end
     object FdqProdutosPRO_VLR_PROMOC: TCurrencyField
+      DisplayLabel = 'Valor Promo'#231#227'o:'
       FieldName = 'PRO_VLR_PROMOC'
       Origin = 'PRO_VLR_PROMOC'
     end
     object FdqProdutosPRO_VLR_PRECO2: TCurrencyField
+      DisplayLabel = 'Valor Pre'#231'o 2:'
       FieldName = 'PRO_VLR_PRECO2'
       Origin = 'PRO_VLR_PRECO2'
     end
     object FdqProdutosPRO_VLR_PRECO3: TCurrencyField
+      DisplayLabel = 'Valor Preco 3:'
       FieldName = 'PRO_VLR_PRECO3'
       Origin = 'PRO_VLR_PRECO3'
     end
     object FdqProdutosPRO_VLR_PRECO4: TCurrencyField
+      DisplayLabel = 'Valor Pre'#245' 4:'
       FieldName = 'PRO_VLR_PRECO4'
       Origin = 'PRO_VLR_PRECO4'
     end
     object FdqProdutosPRO_QTD_MIN_VLR_ATACADO: TBCDField
+      DisplayLabel = 'Quantidade Minima Venda Atacado:'
       FieldName = 'PRO_QTD_MIN_VLR_ATACADO'
       Origin = 'PRO_QTD_MIN_VLR_ATACADO'
       Precision = 18
       Size = 3
     end
     object FdqProdutosPRO_QTD_MIN_VLR_PROMOC: TBCDField
+      DisplayLabel = 'Quantidade Minima Valor Promo'#231#227'o:'
       FieldName = 'PRO_QTD_MIN_VLR_PROMOC'
       Origin = 'PRO_QTD_MIN_VLR_PROMOC'
       Precision = 18
       Size = 3
     end
     object FdqProdutosPRO_DIAS_VALIDADE: TIntegerField
+      DisplayLabel = 'Dias de Validade:'
       FieldName = 'PRO_DIAS_VALIDADE'
       Origin = 'PRO_DIAS_VALIDADE'
     end
     object FdqProdutosPRO_PERMITE_FRAC: TIntegerField
+      DisplayLabel = 'Permite Fracionar?'
       FieldName = 'PRO_PERMITE_FRAC'
       Origin = 'PRO_PERMITE_FRAC'
     end
     object FdqProdutosPRO_ALCOOLICO: TStringField
+      DisplayLabel = 'Alc'#243'olico:'
       FieldName = 'PRO_ALCOOLICO'
       Origin = 'PRO_ALCOOLICO'
       Required = True
@@ -2177,10 +2092,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Size = 1
     end
     object FdqProdutosPRO_COD_VASILHAME: TLargeintField
+      DisplayLabel = 'C'#243'digo Vasilhame:'
       FieldName = 'PRO_COD_VASILHAME'
       Origin = 'PRO_COD_VASILHAME'
     end
     object FdqProdutosPRO_PEDE_LIBERACAO_FSC: TIntegerField
+      DisplayLabel = 'Pede Fiscal:'
       FieldName = 'PRO_PEDE_LIBERACAO_FSC'
       Origin = 'PRO_PEDE_LIBERACAO_FSC'
     end
@@ -2276,27 +2193,32 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Origin = 'PRO_SUB_GRUPO'
     end
     object FdqProdutosPRO_SIT_TRIBUTARIA: TStringField
+      DisplayLabel = 'Situa'#231#227'o Trib:'
       FieldName = 'PRO_SIT_TRIBUTARIA'
       Origin = 'PRO_SIT_TRIBUTARIA'
       FixedChar = True
       Size = 3
     end
     object FdqProdutosPRO_CEST: TStringField
+      DisplayLabel = 'Cest:'
       FieldName = 'PRO_CEST'
       Origin = 'PRO_CEST'
       Size = 7
     end
     object FdqProdutosPRO_CFOP: TStringField
+      DisplayLabel = 'CFOP:'
       FieldName = 'PRO_CFOP'
       Origin = 'PRO_CFOP'
       FixedChar = True
       Size = 4
     end
     object FdqProdutosPRO_NCM: TFloatField
+      DisplayLabel = 'NCM:'
       FieldName = 'PRO_NCM'
       Origin = 'PRO_NCM'
     end
     object FdqProdutosPRO_CHAVE_IBPT: TStringField
+      DisplayLabel = 'Chave IBPT:'
       FieldName = 'PRO_CHAVE_IBPT'
       Origin = 'PRO_CHAVE_IBPT'
       Size = 50
@@ -2392,10 +2314,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Origin = 'PRO_TEMPO_PREPARO'
     end
     object FdqProdutosPRO_DT_ATUALIZACAO_CADASTRO: TDateField
+      DisplayLabel = 'Data Atualiza'#231#227'o Cadastro:'
       FieldName = 'PRO_DT_ATUALIZACAO_CADASTRO'
       Origin = 'PRO_DT_ATUALIZACAO_CADASTRO'
     end
     object FdqProdutosPRO_HR__ATUALIZACAO_CADASTRO: TTimeField
+      DisplayLabel = 'Hora Atualiza'#231#227'o:'
       FieldName = 'PRO_HR__ATUALIZACAO_CADASTRO'
       Origin = 'PRO_HR__ATUALIZACAO_CADASTRO'
     end
@@ -2404,7 +2328,7 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Origin = 'PRO_COD_SEC'
     end
   end
-  object cxGridImg: TcxImageList [8]
+  object cxGridImg: TcxImageList [9]
     DrawingStyle = dsTransparent
     FormatVersion = 1
     DesignInfo = 1008
@@ -2521,12 +2445,12 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
           01010101010103020E1101010101010101010101010101010101}
       end>
   end
-  object FDQuxiliar: TFDQuery [9]
+  object FDQuxiliar: TFDQuery [10]
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'SELECT * FROM TB_PRODUTOS')
-    Left = 681
-    Top = 71
+    Left = 961
+    Top = 151
     object FDQuxiliarPRO_ID: TLargeintField
       FieldName = 'PRO_ID'
       Origin = 'PRO_ID'
@@ -2892,25 +2816,22 @@ inherited Form_Cadastro_Produtos: TForm_Cadastro_Produtos
       Origin = 'PRO_COD_SEC'
     end
   end
-  object ACBrEnterTab: TACBrEnterTab [10]
+  object ACBrEnterTab: TACBrEnterTab [11]
     EnterAsTab = True
-    Left = 880
-    Top = 8
-  end
-  inherited BarraMenu: TcxImageList
-    FormatVersion = 1
-    DesignInfo = 197360
+    Left = 1224
+    Top = 120
   end
   inherited ACBrEnterTab1: TACBrEnterTab
-    Left = 816
-    Top = 6
+    Left = 1160
+    Top = 118
   end
   inherited cxHintStyleController1: TcxHintStyleController
-    Left = 552
+    Left = 952
+    Top = 70
   end
   object DataSource1: TDataSource
     DataSet = FDQuxiliar
-    Left = 712
-    Top = 72
+    Left = 896
+    Top = 144
   end
 end

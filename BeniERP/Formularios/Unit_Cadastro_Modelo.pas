@@ -36,7 +36,6 @@ type
     dsPrincipal: TDataSource;
     cxLookAndFeelController1: TcxLookAndFeelController;
     BarraMenu: TcxImageList;
-    Shape1: TShape;
     cxPageControl1: TcxPageControl;
     tbPesquisa: TcxTabSheet;
     Panel1: TPanel;
@@ -52,14 +51,10 @@ type
     rgOptionGrid: TRadioGroup;
     tbCadastro: TcxTabSheet;
     pnl_top: TPanel;
-    BtnRegistroPosterior: TcxButton;
-    BtnPrimeiroRegistro: TcxButton;
-    BtnRegistroAnterior: TcxButton;
-    BtnUltimoRegistro: TcxButton;
     Shape3: TShape;
     ACBrEnterTab1: TACBrEnterTab;
     cxHintStyleController1: TcxHintStyleController;
-    Panel22: TPanel;
+    pnl_baixo: TPanel;
     ToolBar1: TToolBar;
     BtnNovo: TToolButton;
     BtnSalvar: TToolButton;
@@ -71,6 +66,18 @@ type
     BtnLimparPesquisa: TToolButton;
     ToolButton1: TToolButton;
     btnFechar: TToolButton;
+    pbl_de_cima: TPanel;
+    shape_cima: TShape;
+    Shape2: TShape;
+    lblStatusdataset: TLabel;
+    pnl_esq: TPanel;
+    pnl_dire: TPanel;
+    pnl_info_direita: TPanel;
+    lblregistros: TLabel;
+    Label55: TLabel;
+    ToolButton2: TToolButton;
+    btn_Registro_anterior: TToolButton;
+    BtnRegistroPosterior: TToolButton;
     procedure btn_sairClick(Sender: TObject);
     procedure BtnPrimeiroRegistroClick(Sender: TObject);
     procedure BtnRegistroAnteriorClick(Sender: TObject);
@@ -155,9 +162,20 @@ begin
     cxPageControl1.ActivePage    := tbPesquisa;
     dsPrincipal.DataSet.open;
 
+    if dsPrincipal.DataSet.RecordCount = 0 then
+    begin
+      lblregistros.Visible := False;
+      lblregistros.Caption :='';
+    end
+    else
+    begin
+      lblregistros.Visible := true;
+      lblregistros.Caption := IntToStr(dsPrincipal.DataSet.RecordCount) + ' Registros Encontrados.    '
+    end;
+
   except on e:Exception do
     begin
-       DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnConsultarClick',E.Message);
+      DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnConsultarClick',E.Message);
       AlertCard('Ops... Nossos cavalos já irá trablhar para essa solução: '+e.Message,'Erro');
     end;
   end;
@@ -305,10 +323,10 @@ procedure TForm_Cadastro_Modelo.dsPrincipalStateChange(Sender: TObject);
 begin
   BtnPesquisar.Enabled         := (Sender as TDataSource).State in [dsInactive];
   BtnLimparPesquisa.Enabled    := (Sender as TDataSource).State in [Dsbrowse];
-  BtnRegistroAnterior.Enabled  := (Sender as TDataSource).State in [Dsbrowse];
+  btn_Registro_anterior.Enabled  := (Sender as TDataSource).State in [Dsbrowse];
   BtnRegistroPosterior.Enabled := (Sender as TDataSource).State in [Dsbrowse];
-  BtnPrimeiroRegistro.Enabled  := (Sender as TDataSource).State in [Dsbrowse];
-  BtnUltimoRegistro.Enabled    := (Sender as TDataSource).State in [Dsbrowse];
+  //BtnPrimeiroRegistro.Enabled  := (Sender as TDataSource).State in [Dsbrowse];
+  //BtnUltimoRegistro.Enabled    := (Sender as TDataSource).State in [Dsbrowse];
   btnNovo.Enabled              := (Sender as TDataSource).State in [Dsbrowse, dsInactive];
   btnSalvar.Enabled            := (Sender as TDataSource).State in [dsEdit, dsInsert];
   btnCancelar.Enabled          := btnSalvar.Enabled;
@@ -318,6 +336,19 @@ begin
 
    if (Sender as TDataSource).State in [dsInactive] then
      cxPageControl1.ActivePage := tbPesquisa;
+
+  if (Sender as TDataSource).State in [dsInactive] then
+    lblStatusdataset.Caption :='';
+
+  if (Sender as TDataSource).State in [Dsbrowse] then
+    lblStatusdataset.Caption :='Pesquisa Ativada';
+
+  if (Sender as TDataSource).State in [dsEdit] then
+    lblStatusdataset.Caption :='Em Edição';
+
+  if (Sender as TDataSource).State in [dsInsert] then
+    lblStatusdataset.Caption :='Em Inserção';
+
 end;
 
 procedure TForm_Cadastro_Modelo.FormClose(Sender: TObject;
@@ -338,10 +369,10 @@ procedure TForm_Cadastro_Modelo.FormCreate(Sender: TObject);
 begin
   BtnPesquisar.Enabled         :=True;
   BtnLimparPesquisa.Enabled    :=False;
-  BtnRegistroAnterior.Enabled  :=False;
+  btn_Registro_anterior.Enabled:=False;
   BtnRegistroPosterior.Enabled :=False;
-  BtnPrimeiroRegistro.Enabled  :=False;
-  BtnUltimoRegistro.Enabled    :=False;
+ // BtnPrimeiroRegistro.Enabled  :=False;
+ // BtnUltimoRegistro.Enabled    :=False;
   btnNovo.Enabled              :=True;
   btnSalvar.Enabled            :=False;
   btnCancelar.Enabled          :=False;
@@ -350,6 +381,9 @@ begin
   btnFechar.Enabled            :=True;
   cxPageControl1.ActivePage    := tbPesquisa;
   tbCadastro.TabVisible        := False;
+  pnl_info_direita.Caption :='';
+  lblStatusdataset.Caption :='';
+  lblregistros.Caption :='';
 end;
 
 procedure TForm_Cadastro_Modelo.FormKeyDown(Sender: TObject; var Key: Word;
@@ -409,6 +443,9 @@ begin
     tbCadastro.TabVisible        := False;
     cxPageControl1.ActivePage    := tbPesquisa;
     dsPrincipal.DataSet.Close;
+
+    pnl_info_direita.Visible := False;
+    pnl_info_direita.Caption :='';
   except on e:Exception do
     begin
       DtmBcoErp.f_Auditoria('TForm_Cadastro_Modelo.BtnLimparPesquisaClick',E.Message);

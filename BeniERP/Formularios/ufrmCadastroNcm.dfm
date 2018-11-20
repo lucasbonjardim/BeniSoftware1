@@ -1,31 +1,27 @@
 inherited frm_cadastro_ncm: Tfrm_cadastro_ncm
   Caption = 'Cadastro NCM'
-  ClientHeight = 915
-  ClientWidth = 1295
-  ExplicitWidth = 1311
-  ExplicitHeight = 954
+  ClientHeight = 905
+  ClientWidth = 1256
+  ExplicitWidth = 1272
+  ExplicitHeight = 944
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Shape1: TShape
-    Width = 1295
-    ExplicitWidth = 1305
-  end
   inherited cxPageControl1: TcxPageControl
-    Width = 1295
-    Height = 815
+    Width = 1256
+    Height = 789
     Properties.ActivePage = tbCadastro
-    ExplicitWidth = 1295
-    ExplicitHeight = 815
-    ClientRectBottom = 811
-    ClientRectRight = 1291
+    ExplicitWidth = 1256
+    ExplicitHeight = 789
+    ClientRectBottom = 787
+    ClientRectRight = 1254
     inherited tbPesquisa: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1287
-      ExplicitHeight = 787
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 1281
+      ExplicitHeight = 745
       inherited Panel1: TPanel
-        Width = 1287
-        ExplicitWidth = 1287
+        Width = 1262
+        ExplicitWidth = 1281
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
@@ -33,17 +29,28 @@ inherited frm_cadastro_ncm: Tfrm_cadastro_ncm
         end
         inherited Panel2: TPanel
           inherited edtCurr: TcxCurrencyEdit
-            ExplicitHeight = 23
+            ExplicitHeight = 21
           end
         end
       end
+      inherited pnl_esq: TPanel
+        Height = 701
+        TabOrder = 3
+      end
+      inherited pnl_dire: TPanel
+        Left = 1203
+        Height = 701
+      end
       object cxGrid1: TcxGrid
-        Left = 0
+        Left = 49
         Top = 41
-        Width = 1287
-        Height = 746
+        Width = 1154
+        Height = 701
         Align = alClient
         TabOrder = 1
+        ExplicitLeft = 0
+        ExplicitWidth = 1287
+        ExplicitHeight = 746
         object cxGrid1DBTableView1: TcxGridDBTableView
           Navigator.Buttons.CustomButtons = <>
           DataController.DataSource = dsPrincipal
@@ -99,20 +106,18 @@ inherited frm_cadastro_ncm: Tfrm_cadastro_ncm
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1287
-      ExplicitHeight = 787
+      ExplicitWidth = 1252
+      ExplicitHeight = 742
       inherited Shape3: TShape
-        Top = 779
-        Width = 1287
+        Top = 734
+        Width = 1252
         ExplicitTop = 789
         ExplicitWidth = 1297
       end
       object GroupBox1: TGroupBox
         Left = 0
         Top = 0
-        Width = 1287
+        Width = 1252
         Height = 139
         Align = alTop
         Caption = 'Ncm'
@@ -265,8 +270,8 @@ inherited frm_cadastro_ncm: Tfrm_cadastro_ncm
       object GroupBox2: TGroupBox
         Left = 0
         Top = 139
-        Width = 1287
-        Height = 637
+        Width = 1252
+        Height = 592
         Align = alClient
         TabOrder = 1
         object Label6: TLabel
@@ -374,18 +379,28 @@ inherited frm_cadastro_ncm: Tfrm_cadastro_ncm
     end
   end
   inherited pnl_top: TPanel
-    Width = 1295
-    ExplicitWidth = 1295
+    Width = 1256
+    ExplicitWidth = 1256
+    inherited pbl_de_cima: TPanel
+      Width = 1256
+      ExplicitWidth = 1256
+      inherited shape_cima: TShape
+        Width = 1096
+        ExplicitWidth = 1106
+      end
+      inherited pnl_info_direita: TPanel
+        Left = 996
+        ExplicitLeft = 996
+      end
+    end
   end
-  inherited Panel22: TPanel
-    Top = 898
-    Width = 1295
-    ExplicitTop = 898
-    ExplicitWidth = 1295
+  inherited pnl_baixo: TPanel
+    Top = 893
+    Width = 1256
   end
   inherited ToolBar1: TToolBar
-    Width = 1295
-    ExplicitWidth = 1295
+    Width = 1256
+    ExplicitWidth = 1256
   end
   inherited dsPrincipal: TDataSource
     DataSet = fdq_principal

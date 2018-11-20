@@ -46,7 +46,6 @@ type
     cxCompra: TcxTabSheet;
     Panel17: TPanel;
     shp2: TShape;
-    Shape2: TShape;
     cxCompras: TcxGrid;
     cxComprasDBTableView1: TcxGridDBTableView;
     cxComprasDBTableView1RAZAO_EMP: TcxGridDBColumn;
@@ -139,21 +138,16 @@ type
     cxVisualizaLevel1: TcxGridLevel;
     FDQuxiliar: TFDQuery;
     rdg_tpo_pesquisa: TRadioGroup;
-    lbl_qnt_produtos: TLabel;
     chk_mostrafiltrogrid: TCheckBox;
     ACBrEnterTab: TACBrEnterTab;
     cxVisualizaDBTableView1PRO_ID: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_COD_BARRA: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_DESCRICAO_CUPOM: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_DESCRICAO_PDV: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ATIVO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_TIPO_PRODUTO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_CONTROLA_ESTOQUE_PRO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_ESTOQUE_MINIMO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_SALDO_ESTOQUE: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_DATA_VALIDADE: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_FORMULA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_UN_REFERENCIA: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_VLR_CUSTO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_PRECO_V_ATACADO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_VLR_PADRAO: TcxGridDBColumn;
@@ -163,56 +157,12 @@ type
     cxVisualizaDBTableView1PRO_VLR_PRECO4: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_QTD_MIN_VLR_ATACADO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_QTD_MIN_VLR_PROMOC: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_DIAS_VALIDADE: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PERMITE_FRAC: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ALCOOLICO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_COD_VASILHAME: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PEDE_LIBERACAO_FSC: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_QUANT_UNIDADE_ENTRADA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_QTD_MAXIMA_COMPRA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_QTD_MAX_VARIAVEL: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PER_ALTERA_PRECO_PDV: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_BLOQQUEIA_MULTIPLICACAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_LEVEX_PAGUEY: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_COR: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_LOCALIZACAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_OBS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CLASSIFICACAO_FISCAL: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_COD_ALIQUOTA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_COMISSAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ALIQUOTA_CSLL: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ALIQUOTA_OUTRAS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ISENTO_PIS_COFINS_PRO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CREDITO_ICMS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_TIPO_PRODUCAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_COD_GRUPO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_SUB_GRUPO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_SIT_TRIBUTARIA: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_CEST: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_CFOP: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_NCM: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_CHAVE_IBPT: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CST_ICMS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CST_PIS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CST_COFINS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ALIQ_ICMS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ALIQ_PIS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ALIQ_COFINS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PERC_IMPOSTOS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PERC_IMPOSTOS_E: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PERC_IMPOSTOS_M: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ULTIMO_USUARIO_ALTERACAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PERMITE_PARCELAMENTO_PDV: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ORIGEM_MERCA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_IMP_VALE_GAS: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_IMP_VALE_AGUA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ALERTA_COZINHA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ANDROID_VISUALIZA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_NUMERO_LOTE: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_TEMPO_PREPARO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_DT_ATUALIZACAO_CADASTRO: TcxGridDBColumn;
     cxVisualizaDBTableView1PRO_HR__ATUALIZACAO_CADASTRO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_COD_SEC: TcxGridDBColumn;
     FDQuxiliarPRO_ID: TLargeintField;
     FDQuxiliarPRO_COD_BARRA: TLargeintField;
     FDQuxiliarPRO_DESCRICAO_CUPOM: TWideStringField;
@@ -285,24 +235,9 @@ type
     FDQuxiliarPRO_HR__ATUALIZACAO_CADASTRO: TTimeField;
     FDQuxiliarPRO_COD_SEC: TIntegerField;
     grp_produto: TGroupBox;
-    GBDadosProduto: TGroupBox;
-    Label105: TLabel;
-    Label133: TLabel;
-    Label9: TLabel;
-    Label8: TLabel;
-    combodb_un_referencia: TcxDBLookupComboBox;
-    cxDBTextEdit1: TcxDBTextEdit;
-    cxDBMEsqlCadProdutosPRO_ID: TcxDBMaskEdit;
     edt_descr_pdv: TcxDBTextEdit;
     Label104: TLabel;
-    cxDBMaskEdit1: TcxDBMaskEdit;
-    Label11: TLabel;
-    cxDBCurrencyEdit1: TcxDBCurrencyEdit;
-    Label12: TLabel;
-    cxDBLookupComboBox1: TcxDBLookupComboBox;
     DataSource1: TDataSource;
-    cxDBDateEdit1: TcxDBDateEdit;
-    Label13: TLabel;
     cxTabSheet1: TcxTabSheet;
     DBCheckBox1: TDBCheckBox;
     DBCheckBox2: TDBCheckBox;
@@ -365,8 +300,6 @@ type
     Label52: TLabel;
     cxDBCurrencyEdit12: TcxDBCurrencyEdit;
     DBCheckBox11: TDBCheckBox;
-    cxDBSpinEdit1: TcxDBSpinEdit;
-    Label53: TLabel;
     FdqProdutosPRO_ID: TLargeintField;
     FdqProdutosPRO_COD_BARRA: TLargeintField;
     FdqProdutosPRO_DESCRICAO_CUPOM: TStringField;
@@ -439,6 +372,23 @@ type
     cxDBLookupComboBox2: TcxDBLookupComboBox;
     Label35: TLabel;
     DBComboBox1: TDBComboBox;
+    GBDadosProduto: TGroupBox;
+    Label105: TLabel;
+    Label133: TLabel;
+    Label9: TLabel;
+    Label8: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label53: TLabel;
+    combodb_un_referencia: TcxDBLookupComboBox;
+    cxDBTextEdit1: TcxDBTextEdit;
+    cxDBMEsqlCadProdutosPRO_ID: TcxDBMaskEdit;
+    cxDBMaskEdit1: TcxDBMaskEdit;
+    cxDBCurrencyEdit1: TcxDBCurrencyEdit;
+    cxDBLookupComboBox1: TcxDBLookupComboBox;
+    cxDBDateEdit1: TcxDBDateEdit;
+    cxDBSpinEdit1: TcxDBSpinEdit;
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
     procedure BtnConsultarClick(Sender: TObject);
@@ -486,8 +436,8 @@ procedure TForm_Cadastro_Produtos.BtnLimparPesquisaClick(Sender: TObject);
 begin
   inherited;
   edtMask.Text := '';
-  lbl_qnt_produtos.Visible := False;
-  lbl_qnt_produtos.Caption :='';
+  pnl_info_direita.Visible := False;
+  pnl_info_direita.Caption :='';
 end;
 
 procedure TForm_Cadastro_Produtos.chk_mostrafiltrogridClick(Sender: TObject);
@@ -545,8 +495,6 @@ begin
 
   dtm_cad_Produtos.dxmem_cod_tributacao_Pro.close;
   dtm_cad_Produtos.dxmem_cod_tributacao_Pro.Open;
-
-
 end;
 
 procedure TForm_Cadastro_Produtos.FormShow(Sender: TObject);
@@ -627,19 +575,21 @@ begin
 
   FdqProdutos.SQL.Text := sql;
   FdqProdutos.Open;
-  if  FdqProdutos.RecordCount = 0 then
+
+   if  FdqProdutos.RecordCount = 0 then
   begin
-    lbl_qnt_produtos.Visible := False;
-    lbl_qnt_produtos.Caption :='';
+    lblregistros.Visible := False;
+    lblregistros.Caption :='';
     edtMask.Text := '';
     AlertCard('Nenhum Registro Encontrado conforme o Critério informado.','Atenção!');
     edtMask.SetFocus;
   end
   else
   begin
-    lbl_qnt_produtos.Visible := true;
-    lbl_qnt_produtos.Caption := IntToStr(FdqProdutos.RecordCount) + ' Registros Encontrados. '
+    lblregistros.Visible := true;
+    lblregistros.Caption := IntToStr(FdqProdutos.RecordCount) + ' Registros Encontrados. '
   end;
+
 end;
 
 end.

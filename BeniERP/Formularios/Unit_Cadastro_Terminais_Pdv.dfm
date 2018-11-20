@@ -1,46 +1,57 @@
 inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
   Caption = 'Cadastro de Terminais PDV - SAT/ NFCe'
-  ClientHeight = 1040
-  ClientWidth = 1356
-  ExplicitWidth = 1372
-  ExplicitHeight = 1079
+  ClientHeight = 1030
+  ClientWidth = 1197
+  ExplicitWidth = 1213
+  ExplicitHeight = 1069
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Shape1: TShape
-    Width = 1356
-    ExplicitTop = 52
-    ExplicitWidth = 1386
-  end
   inherited cxPageControl1: TcxPageControl
-    Top = 75
-    Width = 1356
-    Height = 948
+    Top = 96
+    Width = 1197
+    Height = 922
     Properties.ActivePage = tbCadastro
-    ExplicitTop = 75
-    ExplicitWidth = 1356
-    ExplicitHeight = 948
-    ClientRectBottom = 944
-    ClientRectRight = 1352
+    ExplicitTop = 96
+    ExplicitWidth = 1197
+    ExplicitHeight = 922
+    ClientRectBottom = 920
+    ClientRectRight = 1195
     inherited tbPesquisa: TcxTabSheet
-      ExplicitWidth = 1358
-      ExplicitHeight = 930
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 1342
+      ExplicitHeight = 878
       inherited Panel1: TPanel
-        Width = 1358
-        ExplicitWidth = 1358
+        Width = 1203
+        ExplicitWidth = 1342
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
           AnchorX = 34
           AnchorY = 21
         end
+        inherited Panel2: TPanel
+          inherited edtCurr: TcxCurrencyEdit
+            ExplicitHeight = 21
+          end
+        end
+      end
+      inherited pnl_esq: TPanel
+        Height = 834
+        TabOrder = 3
+      end
+      inherited pnl_dire: TPanel
+        Left = 1144
+        Height = 834
       end
       object cxGrid1: TcxGrid
-        Left = 0
+        Left = 49
         Top = 41
-        Width = 1348
-        Height = 879
+        Width = 1095
+        Height = 834
         Align = alClient
         BorderStyle = cxcbsNone
         TabOrder = 1
+        ExplicitLeft = 0
         ExplicitWidth = 1358
         ExplicitHeight = 889
         object cxGrid1DBTableView1: TcxGridDBTableView
@@ -76,13 +87,11 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       end
     end
     inherited tbCadastro: TcxTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 1348
-      ExplicitHeight = 920
+      ExplicitWidth = 1193
+      ExplicitHeight = 875
       inherited Shape3: TShape
-        Top = 912
-        Width = 1348
+        Top = 867
+        Width = 1193
         ExplicitTop = 940
         ExplicitWidth = 1382
       end
@@ -151,8 +160,8 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       end
       object GroupBox1: TGroupBox
         Left = 0
-        Top = 638
-        Width = 1348
+        Top = 593
+        Width = 1193
         Height = 271
         Align = alBottom
         Caption = 'Valores'
@@ -353,7 +362,7 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
       object db_combo_tpo_pdv: TDBComboBox
         Left = 82
         Top = 56
-        Width = 1229
+        Width = 1070
         Height = 21
         Style = csDropDownList
         Anchors = [akLeft, akTop, akRight]
@@ -372,7 +381,7 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
         DataBinding.DataSource = dsPrincipal
         Enabled = False
         TabOrder = 8
-        Width = 1229
+        Width = 1070
       end
       object BConfigEFD: TButton
         Left = 3
@@ -385,26 +394,36 @@ inherited Form_Cadastro_Terminais_PDV: TForm_Cadastro_Terminais_PDV
     end
   end
   inherited pnl_top: TPanel
-    Top = 53
-    Width = 1356
-    ExplicitTop = 53
-    ExplicitWidth = 1356
+    Top = 44
+    Width = 1197
+    ExplicitTop = 44
+    ExplicitWidth = 1197
+    inherited pbl_de_cima: TPanel
+      Width = 1197
+      ExplicitWidth = 1197
+      inherited shape_cima: TShape
+        Width = 1037
+        ExplicitWidth = 1047
+      end
+      inherited pnl_info_direita: TPanel
+        Left = 937
+        ExplicitLeft = 937
+      end
+    end
   end
-  inherited Panel22: TPanel
-    Top = 1023
-    Width = 1356
-    ExplicitTop = 1023
-    ExplicitWidth = 1356
+  inherited pnl_baixo: TPanel
+    Top = 1018
+    Width = 1197
   end
   inherited ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
-    Top = 12
-    Width = 1350
+    Top = 3
+    Width = 1191
     Height = 38
     ExplicitLeft = 3
-    ExplicitTop = 12
-    ExplicitWidth = 1350
+    ExplicitTop = 3
+    ExplicitWidth = 1191
     ExplicitHeight = 38
   end
   inherited dsPrincipal: TDataSource
