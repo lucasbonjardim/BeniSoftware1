@@ -33,7 +33,8 @@ uses
   cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,System.StrUtils, cxCalendar,
   ACBrBase, ACBrEnterTab, dxScreenTip, dxCustomHint, cxHint,
   dxSkinsdxNavBarPainter, dxSkinsdxNavBarAccordionViewPainter, dxNavBarCollns,
-  dxNavBarBase, dxNavBar, dxmdaset, cxCalc, cxSpinEdit, cxTimeEdit;
+  dxNavBarBase, dxNavBar, dxmdaset, cxCalc, cxSpinEdit, cxTimeEdit,
+  cxImageComboBox, cxCheckBox;
 
 type
   TForm_Cadastro_Produtos = class(TForm_Cadastro_Modelo)
@@ -124,45 +125,10 @@ type
     cxComposicaoDBTableView1ESTOQUE: TcxGridDBColumn;
     cxComposicaoLevel1: TcxGridLevel;
     Panel19: TPanel;
-    cxGridImg: TcxImageList;
-    cxVisualiza: TcxGrid;
-    cxVisualizaDBTableView1: TcxGridDBTableView;
-    cxNCMs: TcxGridDBTableView;
-    cxNCMsNCM: TcxGridDBColumn;
-    cxNCMsEX: TcxGridDBColumn;
-    cxNCMsDESC_NCM: TcxGridDBColumn;
-    cxNCMsDESCRICAO: TcxGridDBColumn;
-    cxCEST: TcxGridDBTableView;
-    cxCESTCEST: TcxGridDBColumn;
-    cxCESTDescricao: TcxGridDBColumn;
-    cxVisualizaLevel1: TcxGridLevel;
     FDQuxiliar: TFDQuery;
     rdg_tpo_pesquisa: TRadioGroup;
     chk_mostrafiltrogrid: TCheckBox;
     ACBrEnterTab: TACBrEnterTab;
-    cxVisualizaDBTableView1PRO_ID: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_COD_BARRA: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_DESCRICAO_CUPOM: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_DESCRICAO_PDV: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_TIPO_PRODUTO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CONTROLA_ESTOQUE_PRO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_ESTOQUE_MINIMO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_SALDO_ESTOQUE: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_VLR_CUSTO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_PRECO_V_ATACADO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_VLR_PADRAO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_VLR_PROMOC: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_VLR_PRECO2: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_VLR_PRECO3: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_VLR_PRECO4: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_QTD_MIN_VLR_ATACADO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_QTD_MIN_VLR_PROMOC: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CEST: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CFOP: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_NCM: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_CHAVE_IBPT: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_DT_ATUALIZACAO_CADASTRO: TcxGridDBColumn;
-    cxVisualizaDBTableView1PRO_HR__ATUALIZACAO_CADASTRO: TcxGridDBColumn;
     FDQuxiliarPRO_ID: TLargeintField;
     FDQuxiliarPRO_COD_BARRA: TLargeintField;
     FDQuxiliarPRO_DESCRICAO_CUPOM: TWideStringField;
@@ -389,6 +355,78 @@ type
     cxDBLookupComboBox1: TcxDBLookupComboBox;
     cxDBDateEdit1: TcxDBDateEdit;
     cxDBSpinEdit1: TcxDBSpinEdit;
+    cxVisualizaDBTableView1: TcxGridDBTableView;
+    cxgridLevel1: TcxGridLevel;
+    cxgrid: TcxGrid;
+    cxVisualizaDBTableView1PRO_ID: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_COD_BARRA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_DESCRICAO_CUPOM: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_DESCRICAO_PDV: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ATIVO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CONTROLA_ESTOQUE_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ESTOQUE_MINIMO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_SALDO_ESTOQUE: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_DATA_VALIDADE: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_UN_REFERENCIA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_VLR_CUSTO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PRECO_V_ATACADO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_VLR_PADRAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_VLR_PROMOC: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_VLR_PRECO2: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_VLR_PRECO3: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_VLR_PRECO4: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_QTD_MIN_VLR_ATACADO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_QTD_MIN_VLR_PROMOC: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_DIAS_VALIDADE: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PERMITE_FRAC: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ALCOOLICO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_COD_VASILHAME: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PEDE_LIBERACAO_FSC: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_QUANT_UNIDADE_ENTRADA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_QTD_MAXIMA_COMPRA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_QTD_MAX_VARIAVEL: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PER_ALTERA_PRECO_PDV: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_BLOQQUEIA_MULTIPLICACAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_LEVEX_PAGUEY: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_COR: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_LOCALIZACAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_OBS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_COD_ALIQUOTA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_COMISSAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ALIQUOTA_OUTRAS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ISENTO_PIS_COFINS_PRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CREDITO_ICMS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_TIPO_PRODUCAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_COD_GRUPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_SUB_GRUPO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_SIT_TRIBUTARIA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CEST: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CFOP: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_NCM: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CHAVE_IBPT: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CST_ICMS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CST_PIS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_CST_COFINS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ALIQ_ICMS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ALIQ_PIS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ALIQ_COFINS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PERC_IMPOSTOS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PERC_IMPOSTOS_E: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PERC_IMPOSTOS_M: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ULTIMO_USUARIO_ALTERACAO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_PERMITE_PARCELAMENTO_PDV: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ORIGEM_MERCA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_IMP_VALE_GAS: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_IMP_VALE_AGUA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ALERTA_COZINHA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_ANDROID_VISUALIZA: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_NUMERO_LOTE: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_TEMPO_PREPARO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_DT_ATUALIZACAO_CADASTRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_HR__ATUALIZACAO_CADASTRO: TcxGridDBColumn;
+    cxVisualizaDBTableView1PRO_COD_SEC: TcxGridDBColumn;
+    cxGridImg: TcxImageList;
+    Panel3: TPanel;
     procedure cxVisualizaDBTableView1DblClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
     procedure BtnConsultarClick(Sender: TObject);
@@ -401,6 +439,7 @@ type
     procedure rgOptionGridClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure BtnExcluirClick(Sender: TObject);
    
   private
     procedure MostraProdutos;
@@ -430,6 +469,17 @@ uses UdtmBcoErp, Unit_Variaveis_Globais, ParamControleLicenca,
 procedure TForm_Cadastro_Produtos.BtnConsultarClick(Sender: TObject);
 begin
   MostraProdutos;
+end;
+
+procedure TForm_Cadastro_Produtos.BtnExcluirClick(Sender: TObject);
+begin
+  if  KDialog( 'Deseja Desativar esse produto do Mix de Loja?', 'Atenção', tdtPergunta ) then
+  begin
+     dsPrincipal.DataSet.Edit;
+     FdqProdutosPRO_ATIVO.Value :='N';
+     dsPrincipal.DataSet.Post;
+     AlertCard('Produto Desativado do Mix de Loja!','Atenção.');
+  end;
 end;
 
 procedure TForm_Cadastro_Produtos.BtnLimparPesquisaClick(Sender: TObject);

@@ -4,8 +4,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   BorderStyle = bsSingle
   BorderWidth = 5
   Caption = 'Form_Cadastro_Modelo'
-  ClientHeight = 586
-  ClientWidth = 1413
+  ClientHeight = 576
+  ClientWidth = 1403
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,8 +25,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object cxPageControl1: TcxPageControl
     Left = 0
     Top = 89
-    Width = 1413
-    Height = 485
+    Width = 1403
+    Height = 475
     Align = alClient
     Color = clBtnFace
     ParentBackground = False
@@ -41,29 +41,24 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     Properties.Style = 11
     Properties.TabCaptionAlignment = taRightJustify
     LookAndFeel.NativeStyle = False
-    ExplicitTop = 113
-    ExplicitWidth = 1272
-    ExplicitHeight = 461
-    ClientRectBottom = 483
+    ClientRectBottom = 473
     ClientRectLeft = 2
-    ClientRectRight = 1411
+    ClientRectRight = 1401
     ClientRectTop = 45
     object tbPesquisa: TcxTabSheet
       Caption = 'Consulta   '
       Color = clBtnFace
       ImageIndex = 10
       ParentColor = False
-      ExplicitWidth = 1268
-      ExplicitHeight = 414
+      ExplicitLeft = 0
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1409
+        Width = 1399
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 1268
         object lblPesquisa: TcxLabel
           AlignWithMargins = True
           Left = 3
@@ -116,6 +111,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
             Properties.Nullable = False
             TabOrder = 1
             Visible = False
+            ExplicitHeight = 21
             Width = 397
           end
           object edtData: TDateTimePicker
@@ -278,34 +274,33 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
         Left = 0
         Top = 41
         Width = 49
-        Height = 397
+        Height = 387
         Align = alLeft
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitHeight = 373
       end
       object pnl_dire: TPanel
-        Left = 1360
+        Left = 1350
         Top = 41
         Width = 49
-        Height = 397
+        Height = 387
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 1219
-        ExplicitHeight = 373
       end
     end
     object tbCadastro: TcxTabSheet
       Caption = 'Cadastro   '
       ImageIndex = 9
-      ExplicitWidth = 1268
-      ExplicitHeight = 414
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Shape3: TShape
         AlignWithMargins = True
         Left = 0
-        Top = 430
-        Width = 1409
+        Top = 417
+        Width = 1395
         Height = 5
         Margins.Left = 0
         Margins.Right = 0
@@ -321,31 +316,27 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
   object pnl_top: TPanel
     Left = 0
     Top = 58
-    Width = 1413
+    Width = 1403
     Height = 31
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 88
-    ExplicitWidth = 1272
     object pbl_de_cima: TPanel
       Left = 0
       Top = 2
-      Width = 1413
+      Width = 1403
       Height = 29
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitTop = 32
-      ExplicitWidth = 1272
       DesignSize = (
-        1413
+        1403
         29)
       object shape_cima: TShape
         Left = 158
         Top = 2
-        Width = 1253
+        Width = 1243
         Height = 17
         Anchors = [akLeft, akTop, akRight]
         Brush.Color = clBtnFace
@@ -383,7 +374,7 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
         Caption = 'Beni Software Sistema Gest'#227'o E.R.P'
       end
       object pnl_info_direita: TPanel
-        Left = 1131
+        Left = 1121
         Top = 0
         Width = 282
         Height = 29
@@ -397,37 +388,33 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 990
         object lblregistros: TLabel
           AlignWithMargins = True
           Left = 167
           Top = 3
           Width = 112
-          Height = 23
+          Height = 13
           Align = alRight
           Caption = 'Registros Encontrados.'
-          ExplicitLeft = 143
-          ExplicitHeight = 13
         end
       end
     end
   end
   object pnl_baixo: TPanel
     Left = 0
-    Top = 574
-    Width = 1413
+    Top = 564
+    Width = 1403
     Height = 12
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 1272
   end
   object ToolBar1: TToolBar
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1407
+    Width = 1397
     Height = 52
     ButtonHeight = 52
     ButtonWidth = 79
@@ -440,7 +427,6 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     ShowCaptions = True
     ShowHint = False
     TabOrder = 3
-    ExplicitWidth = 1266
     object BtnNovo: TToolButton
       Left = 0
       Top = 0
@@ -547,7 +533,8 @@ object Form_Cadastro_Modelo: TForm_Cadastro_Modelo
     Top = 215
   end
   object cxLookAndFeelController1: TcxLookAndFeelController
-    SkinName = 'VisualStudio2013Light'
+    NativeStyle = False
+    SkinName = 'Metropolis'
     Left = 1336
     Top = 88
   end

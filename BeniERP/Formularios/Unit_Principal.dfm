@@ -3343,9 +3343,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 179
+    Top = 176
     Width = 1287
-    Height = 607
+    Height = 610
     Align = alClient
     AutoSize = True
     Center = True
@@ -6671,33 +6671,34 @@ object Form_Principal: TForm_Principal
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       00000000000000000000000000000000000000000000000000000000}
-    Transparent = True
-    ExplicitLeft = 233
-    ExplicitTop = 210
-    ExplicitWidth = 1253
-    ExplicitHeight = 566
+    ExplicitTop = 179
+    ExplicitWidth = 171
+    ExplicitHeight = 150
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 179
+    Top = 176
     Width = 185
-    Height = 607
+    Height = 610
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 179
+    ExplicitHeight = 607
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 607
+      Height = 610
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
+      ExplicitHeight = 607
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -6841,12 +6842,11 @@ object Form_Principal: TForm_Principal
           Margins.Right = 0
           Margins.Bottom = 0
           Align = alBottom
-          BiDiMode = bdRightToLeftNoAlign
           Caption = 'Menu'
+          Default = True
           ImageAlignment = iaCenter
           ImageIndex = 0
           Images = imlIcons
-          ParentBiDiMode = False
           ParentShowHint = False
           ShowHint = True
           Style = bsCommandLink
@@ -6862,11 +6862,17 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 25
     Width = 1472
-    Height = 125
+    Height = 122
     BarManager = dxBarManager1
     Style = rs2016
-    ColorSchemeAccent = rcsaPurple
-    ColorSchemeName = 'Office2016Colorful'
+    ColorSchemeAccent = rcsaBlue
+    ColorSchemeName = 'White'
+    Fonts.AssignedFonts = [afGroupHeader]
+    Fonts.GroupHeader.Charset = DEFAULT_CHARSET
+    Fonts.GroupHeader.Color = clWhite
+    Fonts.GroupHeader.Height = -12
+    Fonts.GroupHeader.Name = 'Segoe UI'
+    Fonts.GroupHeader.Style = []
     ShowMinimizeButton = False
     Contexts = <>
     TabOrder = 2
@@ -6969,13 +6975,14 @@ object Form_Principal: TForm_Principal
   end
   object pnl_infodados: TPanel
     Left = 0
-    Top = 150
+    Top = 147
     Width = 1472
     Height = 29
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 8
+    ExplicitTop = 150
     object lbl_versao: TLabel
       AlignWithMargins = True
       Left = 3
@@ -7039,7 +7046,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 260
     Bitmap = {
-      494C01018A00F8032C0220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C01018A00F803380220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000008000000060040000010020000000000000C0
       0800000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -40955,14 +40962,15 @@ object Form_Principal: TForm_Principal
       end>
   end
   object dxSkinController1: TdxSkinController
-    SkinName = 'VisualStudio2013Light'
+    NativeStyle = False
+    SkinName = 'Metropolis'
     Left = 1360
     Top = 200
   end
   object dxTabbedMDIManager1: TdxTabbedMDIManager
     Active = True
     LookAndFeel.NativeStyle = False
-    LookAndFeel.SkinName = 'DevExpressStyle'
+    LookAndFeel.SkinName = 'Metropolis'
     TabProperties.CloseButtonMode = cbmActiveTab
     TabProperties.CustomButtons.Buttons = <>
     Left = 1277
@@ -41090,7 +41098,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar3: TdxBar
       Caption = 'Gerais'
       CaptionButtons = <>
-      DockedLeft = 184
+      DockedLeft = 182
       DockedTop = 0
       FloatLeft = 784
       FloatTop = 8
@@ -53067,7 +53075,7 @@ object Form_Principal: TForm_Principal
     Left = 256
     Top = 276
     Bitmap = {
-      494C010113001802540220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010113001802600220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A000000001002000000000000040
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
