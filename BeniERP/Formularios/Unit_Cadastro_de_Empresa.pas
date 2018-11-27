@@ -37,101 +37,7 @@ uses
 type
   TForm_Cadastro_de_Empresa = class(TForm_Cadastro_Modelo)
     FDQ_Principal: TFDQuery;
-    PC: TPageControl;
-    TabSheet1: TTabSheet;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label11: TLabel;
-    Label12: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label13: TLabel;
-    Label3: TLabel;
-    Label5: TLabel;
-    Label14: TLabel;
-    Label17: TLabel;
-    Label19: TLabel;
-    TabSheet2: TTabSheet;
-    Label4: TLabel;
-    Label15: TLabel;
-    Label16: TLabel;
-    Label18: TLabel;
-    BtnCaminhoValidador: TButton;
-    GroupBox1: TGroupBox;
-    Label21: TLabel;
-    Label22: TLabel;
-    Label23: TLabel;
-    Label24: TLabel;
-    Label25: TLabel;
-    Label20: TLabel;
-    BConfigEFD: TButton;
-    Contador: TTabSheet;
-    Label26: TLabel;
-    Label27: TLabel;
-    Label28: TLabel;
-    Label29: TLabel;
-    Label31: TLabel;
-    Label32: TLabel;
-    Label33: TLabel;
-    Label34: TLabel;
-    Label35: TLabel;
-    Label30: TLabel;
-    Label36: TLabel;
-    Label37: TLabel;
-    TabSheet3: TTabSheet;
-    GroupBox6: TGroupBox;
-    BtnLimpa: TBitBtn;
-    Panel3: TPanel;
-    BtnFoto: TBitBtn;
-    cod_emp: TcxDBSpinEdit;
-    db_razao: TcxDBTextEdit;
-    cxDBTextEdit2: TcxDBTextEdit;
-    cxDBTextEdit3: TcxDBTextEdit;
-    cxDBTextEdit4: TcxDBTextEdit;
-    cxDBTextEdit7: TcxDBTextEdit;
-    cxDBTextEdit8: TcxDBTextEdit;
-    cxDBTextEdit5: TcxDBTextEdit;
-    cxDBTextEdit9: TcxDBTextEdit;
-    cxDBTextEdit10: TcxDBTextEdit;
-    cxDBTextEdit12: TcxDBTextEdit;
-    cxDBTextEdit15: TcxDBTextEdit;
-    cxDBTextEdit6: TcxDBTextEdit;
-    db_combo_tipo_empresa: TDBComboBox;
-    DBComboBox1: TDBComboBox;
-    cxDBMaskEdit1: TcxDBMaskEdit;
-    DBImage1: TDBImage;
-    DBImage2: TDBImage;
-    db_chk_cli_prevenda: TDBCheckBox;
-    db_chk_fecherpJaberta: TDBCheckBox;
-    db_carga_balanca_tipo: TDBComboBox;
-    dbedit_caminhosintegravalidador: TcxDBTextEdit;
-    cxDBTextEdit14: TcxDBTextEdit;
-    cxDBTextEdit16: TcxDBTextEdit;
-    cxDBSpinEdit2: TcxDBSpinEdit;
     OpenDialog: TOpenDialog;
-    cxDBTextEdit13: TcxDBTextEdit;
-    cxDBTextEdit17: TcxDBTextEdit;
-    cxDBTextEdit18: TcxDBTextEdit;
-    cxDBTextEdit19: TcxDBTextEdit;
-    cxDBTextEdit20: TcxDBTextEdit;
-    cxDBTextEdit21: TcxDBTextEdit;
-    cxDBTextEdit22: TcxDBTextEdit;
-    cxDBTextEdit28: TcxDBTextEdit;
-    cxDBTextEdit27: TcxDBTextEdit;
-    cxDBTextEdit23: TcxDBTextEdit;
-    cxDBTextEdit24: TcxDBTextEdit;
-    cxDBTextEdit25: TcxDBTextEdit;
-    cxDBTextEdit26: TcxDBTextEdit;
-    DBComboBox4: TDBComboBox;
-    Button1: TButton;
-    Button2: TButton;
-    HTTPRIO1: THTTPRIO;
-    DBGrid1: TDBGrid;
-    db_chk_cli_sem_cpf: TDBCheckBox;
-    DBCheckBox1: TDBCheckBox;
     FDQ_PrincipalCOD_EMP: TIntegerField;
     FDQ_PrincipalRAZAO_EMP: TStringField;
     FDQ_PrincipalEND_EMP: TStringField;
@@ -149,8 +55,6 @@ type
     FDQ_PrincipalFANTASIA_EMP: TStringField;
     FDQ_PrincipalMOSTRAR_SITCLI_PREVENDA: TStringField;
     FDQ_PrincipalCADASTRAR_CLIENTE_SEM_CPF: TStringField;
-    FDQ_PrincipalTIPO_EMP: TIntegerField;
-    FDQ_PrincipalTIPO_CARGA_BALANCA: TIntegerField;
     FDQ_PrincipalCNPJ_EMP: TStringField;
     FDQ_PrincipalCAMINHO_VALIDADOR_SINTEGRA: TStringField;
     FDQ_PrincipalINSCRICAO_MUNICIPAL: TStringField;
@@ -168,16 +72,126 @@ type
     FDQ_PrincipalTEL_CONTADOR: TStringField;
     FDQ_PrincipalFAX_CONTADOR: TStringField;
     FDQ_PrincipalCODIGO_MUNICIPIO_CONTADOR: TStringField;
-    FDQ_PrincipalVERSAO_EFD: TIntegerField;
     FDQ_PrincipalEMAIL_CONTADOR: TStringField;
     FDQ_PrincipalPERMITE_FECHA_ERP_JANELA_ABERTA: TStringField;
-    procedure BtnCaminhoValidadorClick(Sender: TObject);
+    FDQ_PrincipalTIPO_EMP: TStringField;
+    FDQ_PrincipalVERSAO_EFD: TStringField;
+    FDQ_PrincipalTIPO_CARGA_BALANCA: TStringField;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1: TcxGrid;
+    cxGrid1DBTableView1COD_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1RAZAO_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1END_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1BAI_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1CID_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1CEP_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1EST_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1INSC_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1TEL_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1FAX_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1NOME_EMP_ETIQUETA: TcxGridDBColumn;
+    cxGrid1DBTableView1NUMERO_EMP: TcxGridDBColumn;
+    cxGrid1DBTableView1RESP_EMP: TcxGridDBColumn;
+    cxPageControl2: TcxPageControl;
+    cxTabSheet1: TcxTabSheet;
+    cxTabSheet2: TcxTabSheet;
+    cxTabSheet3: TcxTabSheet;
+    cxTabSheet4: TcxTabSheet;
+    GroupBox1: TGroupBox;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Label20: TLabel;
+    BConfigEFD: TButton;
+    cxDBTextEdit14: TcxDBTextEdit;
+    cxDBTextEdit16: TcxDBTextEdit;
+    Button1: TButton;
+    DBComboBox4: TDBComboBox;
+    cxDBSpinEdit2: TcxDBSpinEdit;
+    db_combo_tipo_empresa: TDBComboBox;
+    Label15: TLabel;
+    Label18: TLabel;
+    cxDBTextEdit6: TcxDBTextEdit;
+    Label4: TLabel;
+    db_carga_balanca_tipo: TDBComboBox;
+    Label16: TLabel;
+    db_chk_cli_sem_cpf: TDBCheckBox;
+    db_chk_cli_prevenda: TDBCheckBox;
+    db_chk_fecherpJaberta: TDBCheckBox;
+    DBCheckBox1: TDBCheckBox;
+    dbedit_caminhosintegravalidador: TcxDBTextEdit;
+    Button3: TButton;
+    GroupBox2: TGroupBox;
+    Label26: TLabel;
+    cxDBTextEdit17: TcxDBTextEdit;
+    Label27: TLabel;
+    cxDBTextEdit22: TcxDBTextEdit;
+    Label32: TLabel;
+    cxDBTextEdit23: TcxDBTextEdit;
+    Label28: TLabel;
+    cxDBTextEdit24: TcxDBTextEdit;
+    Label29: TLabel;
+    cxDBTextEdit27: TcxDBTextEdit;
+    Label31: TLabel;
+    cxDBTextEdit21: TcxDBTextEdit;
+    Label36: TLabel;
+    cxDBTextEdit20: TcxDBTextEdit;
+    cxDBTextEdit18: TcxDBTextEdit;
+    Label33: TLabel;
+    Label30: TLabel;
+    cxDBTextEdit19: TcxDBTextEdit;
+    cxDBTextEdit25: TcxDBTextEdit;
+    Label34: TLabel;
+    Label35: TLabel;
+    cxDBTextEdit26: TcxDBTextEdit;
+    Label37: TLabel;
+    cxDBTextEdit28: TcxDBTextEdit;
+    GroupBox6: TGroupBox;
+    BtnLimpa: TBitBtn;
+    Panel3: TPanel;
+    DBImage2: TDBImage;
+    BtnFoto: TBitBtn;
+    GroupBox3: TGroupBox;
+    cod_emp: TcxDBSpinEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    db_razao: TcxDBTextEdit;
+    Label17: TLabel;
+    cxDBTextEdit12: TcxDBTextEdit;
+    cxDBTextEdit2: TcxDBTextEdit;
+    Label6: TLabel;
+    cxDBTextEdit3: TcxDBTextEdit;
+    cxDBTextEdit4: TcxDBTextEdit;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label11: TLabel;
+    cxDBTextEdit15: TcxDBTextEdit;
+    Label12: TLabel;
+    cxDBTextEdit7: TcxDBTextEdit;
+    cxDBTextEdit13: TcxDBTextEdit;
+    Label19: TLabel;
+    Label5: TLabel;
+    cxDBTextEdit10: TcxDBTextEdit;
+    Label14: TLabel;
+    cxDBTextEdit9: TcxDBTextEdit;
+    Label9: TLabel;
+    DBComboBox1: TDBComboBox;
+    cxDBTextEdit8: TcxDBTextEdit;
+    Label13: TLabel;
+    Label10: TLabel;
+    cxDBMaskEdit1: TcxDBMaskEdit;
+    cxDBTextEdit5: TcxDBTextEdit;
+    Label3: TLabel;
     procedure BConfigEFDClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure DBGrid1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure BtnGravarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     function F_Dados_ok: Boolean;
     { Private declarations }
@@ -211,20 +225,20 @@ begin
    form_Configurar_Pis_Cofins.ShowModal;
 end;
 
-procedure TForm_Cadastro_de_Empresa.BtnCaminhoValidadorClick(Sender: TObject);
-begin
-  inherited;
-   if OpenDialog.Execute then
-     begin
-        dbedit_caminhosintegravalidador.Text:= OpenDialog.FileName;
-     end;
-end;
-
 procedure TForm_Cadastro_de_Empresa.BtnGravarClick(Sender: TObject);
 begin
   if f_dados_ok then
     inherited;
 
+end;
+
+procedure TForm_Cadastro_de_Empresa.Button3Click(Sender: TObject);
+begin
+  inherited;
+  if OpenDialog.Execute then
+  begin
+    dbedit_caminhosintegravalidador.Text:= OpenDialog.FileName;
+  end;
 end;
 
 procedure TForm_Cadastro_de_Empresa.FormCreate(Sender: TObject);
@@ -267,10 +281,6 @@ begin
     Abort;
   end;
 
-  if db_combo_tipo_empresa.ItemIndex >= 0  then
-  begin
-    dsPrincipal.DataSet.FieldByName('TIPO_EMP').AsInteger := db_combo_tipo_empresa.ItemIndex;
-  end;
 
    if db_carga_balanca_tipo.ItemIndex < 0  then
   begin
@@ -279,11 +289,8 @@ begin
     Abort;
   end;
 
-  if db_carga_balanca_tipo.ItemIndex >= 0  then
-  begin
-    dsPrincipal.DataSet.FieldByName('TIPO_CARGA_BALANCA').AsInteger := db_carga_balanca_tipo.ItemIndex;
-  end;
 
+   Result :=True;
 end;
 
 procedure TForm_Cadastro_de_Empresa.DBGrid1DblClick(Sender: TObject);

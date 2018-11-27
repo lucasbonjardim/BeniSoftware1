@@ -128,7 +128,6 @@ type
     FDQuxiliar: TFDQuery;
     rdg_tpo_pesquisa: TRadioGroup;
     chk_mostrafiltrogrid: TCheckBox;
-    ACBrEnterTab: TACBrEnterTab;
     FDQuxiliarPRO_ID: TLargeintField;
     FDQuxiliarPRO_COD_BARRA: TLargeintField;
     FDQuxiliarPRO_DESCRICAO_CUPOM: TWideStringField;

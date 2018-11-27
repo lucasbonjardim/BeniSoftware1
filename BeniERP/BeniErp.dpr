@@ -29,7 +29,9 @@ uses
   Unit_Splach in 'Formularios\Unit_Splach.pas' {frm_splach},
   UdtmCadProdutos in 'dtm\UdtmCadProdutos.pas' {dtm_cad_Produtos: TDataModule},
   unit_ProxyConfigIBPT_NCM in 'Formularios\unit_ProxyConfigIBPT_NCM.pas' {frProxyConfig},
-  ufrmCadastroNcm in 'Formularios\ufrmCadastroNcm.pas' {frm_cadastro_ncm};
+  ufrmCadastroNcm in 'Formularios\ufrmCadastroNcm.pas' {frm_cadastro_ncm},
+  Unit_Cadastro_Municipios in 'Formularios\Unit_Cadastro_Municipios.pas' {Form_Cadastro_Municipios},
+  Unit_Cadastro_Vendedores in 'Formularios\Unit_Cadastro_Vendedores.pas' {Form_Cadastro_Vendedores};
 
 {$R *.res}
 

@@ -411,6 +411,7 @@ type
     img_act_Base: TImageList;
     dxBarSubItem12: TdxBarSubItem;
     dxBarButton16: TdxBarButton;
+    dxNavBarOfficeNavigationBar1: TdxNavBarOfficeNavigationBar;
     procedure CarregaConfiguracao;
     procedure FormCreate(Sender: TObject);
     procedure imgMenuClick(Sender: TObject);
@@ -429,6 +430,8 @@ type
     procedure CX002Click(Sender: TObject);
     procedure act_Cad_EmpresaExecute(Sender: TObject);
     procedure C1040Click(Sender: TObject);
+    procedure C1029Click(Sender: TObject);
+    procedure Vendedor1Click(Sender: TObject);
 
 
   private
@@ -458,7 +461,8 @@ Unit_Variaveis_Globais, Unit_Rotinas, UdtmBcoErp, Unit_Cadastro_Modelo,
   Unit_Cadastro_Usuario, Unit_Relatorio_Produtos_Alterados,
   Unit_Cadastro_de_Empresa, Unit_Configurar_Pis_Cofins,
   Unit_Cadastro_Terminais_Pdv, Unit_Splach,
-  UdtmCadProdutos, ufrmCadastroNcm;
+  UdtmCadProdutos, ufrmCadastroNcm, Unit_Cadastro_Municipios,
+  Unit_Cadastro_Vendedores;
 
 {$R *.dfm}
 
@@ -495,6 +499,11 @@ begin
    AbreForm(TForm_Cadastro_Produtos,Form_Cadastro_Produtos);
 end;
 
+procedure TForm_Principal.C1029Click(Sender: TObject);
+begin
+  AbreForm(TForm_Cadastro_Municipios,Form_Cadastro_Municipios);
+end;
+
 procedure TForm_Principal.C1040Click(Sender: TObject);
 begin
    AbreForm(tfrm_cadastro_ncm,frm_cadastro_ncm);
@@ -507,7 +516,7 @@ end;
 
 procedure TForm_Principal.CarregaConfiguracao;
 var
-caminhoimgjpeg, caminhoimgpng: String;
+caminhoimgjpeg,caminhoimgjpg, caminhoimgpng: String;
 begin
   with DtmBcoErp do
   begin
@@ -534,6 +543,7 @@ begin
           // Carrega Imagem fundo
     caminhoimgpng  := ExtractFilePath(Application.ExeName) + 'imagens\fundo.png';
     caminhoimgjpeg := ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpeg';
+    caminhoimgjpg  := ExtractFilePath(Application.ExeName) + 'imagens\fundo.jpg';
 
     if FileExists(caminhoimgpng) then
     begin
@@ -544,6 +554,13 @@ begin
     if FileExists(caminhoimgjpeg) then
     begin
       img_fundo.Picture.LoadFromFile(caminhoimgjpeg);
+      img_fundo.Stretch := True;
+      img_fundo.Visible := true;
+    end
+    else
+    if FileExists(caminhoimgjpg) then
+    begin
+      img_fundo.Picture.LoadFromFile(caminhoimgjpg);
       img_fundo.Stretch := True;
       img_fundo.Visible := true;
     end;
@@ -634,6 +651,11 @@ end;
 procedure TForm_Principal.R019Click(Sender: TObject);
 begin
   AbreForm(TForm_Rel_Produtos_Alterados,Form_Rel_Produtos_Alterados);
+end;
+
+procedure TForm_Principal.Vendedor1Click(Sender: TObject);
+begin
+  AbreForm(TForm_Cadastro_Vendedores, Form_Cadastro_Vendedores);
 end;
 
 procedure TForm_Principal.Exibeefeitoespera;

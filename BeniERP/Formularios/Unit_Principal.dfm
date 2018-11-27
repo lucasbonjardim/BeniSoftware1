@@ -3343,9 +3343,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 176
+    Top = 178
     Width = 1287
-    Height = 610
+    Height = 567
     Align = alClient
     AutoSize = True
     Center = True
@@ -6671,34 +6671,32 @@ object Form_Principal: TForm_Principal
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       00000000000000000000000000000000000000000000000000000000}
-    ExplicitTop = 179
+    Stretch = True
+    ExplicitTop = 176
     ExplicitWidth = 171
     ExplicitHeight = 150
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 176
+    Top = 178
     Width = 185
-    Height = 610
+    Height = 567
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 179
-    ExplicitHeight = 607
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 610
+      Height = 567
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
-      ExplicitHeight = 607
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -6723,16 +6721,19 @@ object Form_Principal: TForm_Principal
                 Action = actHome
                 Caption = '    Inicio'
                 Hint = 'Ir em Inicio'
+                ImageIndex = 68
               end
               item
                 Action = actLayout
                 Caption = '    Cadastro de Produtos'
                 Hint = 'Cadastro de Produtos'
+                ImageIndex = 45
               end
               item
                 Action = actPower
                 Caption = '    Cadastro de Clientes'
                 Hint = 'Cadastro de Clientes'
+                ImageIndex = 7
               end>
             TextColor = clHighlightText
           end>
@@ -6862,11 +6863,11 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 25
     Width = 1472
-    Height = 122
+    Height = 124
     BarManager = dxBarManager1
     Style = rs2016
     ColorSchemeAccent = rcsaBlue
-    ColorSchemeName = 'White'
+    ColorSchemeName = 'DevExpressStyle'
     Fonts.AssignedFonts = [afGroupHeader]
     Fonts.GroupHeader.Charset = DEFAULT_CHARSET
     Fonts.GroupHeader.Color = clWhite
@@ -6975,14 +6976,13 @@ object Form_Principal: TForm_Principal
   end
   object pnl_infodados: TPanel
     Left = 0
-    Top = 147
+    Top = 149
     Width = 1472
     Height = 29
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 8
-    ExplicitTop = 150
+    TabOrder = 6
     object lbl_versao: TLabel
       AlignWithMargins = True
       Left = 3
@@ -7020,6 +7020,22 @@ object Form_Principal: TForm_Principal
       ExplicitHeight = 19
     end
   end
+  object dxNavBarOfficeNavigationBar1: TdxNavBarOfficeNavigationBar
+    Left = 0
+    Top = 745
+    Width = 1472
+    Height = 41
+    Images = imlIcons
+    Items = <
+      item
+        ImageIndex = 21
+        Text = 'Vendas Online'
+        Visible = True
+      end>
+    LookAndFeel.NativeStyle = False
+    TabOrder = 9
+    ExplicitTop = 749
+  end
   object Act_BarraLateral: TActionList
     Images = imlIcons
     Left = 1112
@@ -7046,7 +7062,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 260
     Bitmap = {
-      494C01018A00F803380220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C01018A00F8034C0220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000008000000060040000010020000000000000C0
       0800000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -41098,7 +41114,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar3: TdxBar
       Caption = 'Gerais'
       CaptionButtons = <>
-      DockedLeft = 182
+      DockedLeft = 183
       DockedTop = 0
       FloatLeft = 784
       FloatTop = 8
@@ -47881,6 +47897,7 @@ object Form_Principal: TForm_Principal
       Caption = '&Vendedor'
       Category = 1
       Visible = ivAlways
+      OnClick = Vendedor1Click
     end
     object C014: TdxBarButton
       Tag = 19
@@ -48023,9 +48040,11 @@ object Form_Principal: TForm_Principal
       Visible = ivAlways
     end
     object C1029: TdxBarButton
-      Caption = 'Cadastro de Regi'#227'o'
+      Caption = 'Cadastro de Municipios'
       Category = 1
+      Hint = 'Cadastro de Municipios'
       Visible = ivAlways
+      OnClick = C1029Click
     end
     object S002: TdxBarButton
       Caption = '&Sair'
@@ -53075,7 +53094,7 @@ object Form_Principal: TForm_Principal
     Left = 256
     Top = 276
     Bitmap = {
-      494C010113001802600220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010113001802740220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A000000001002000000000000040
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

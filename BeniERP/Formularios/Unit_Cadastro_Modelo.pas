@@ -51,7 +51,6 @@ type
     rgOptionGrid: TRadioGroup;
     tbCadastro: TcxTabSheet;
     pnl_top: TPanel;
-    Shape3: TShape;
     ACBrEnterTab1: TACBrEnterTab;
     cxHintStyleController1: TcxHintStyleController;
     pnl_baixo: TPanel;
@@ -367,12 +366,11 @@ end;
 
 procedure TForm_Cadastro_Modelo.FormCreate(Sender: TObject);
 begin
+  dsPrincipal.DataSet.Active   := False;
   BtnPesquisar.Enabled         :=True;
   BtnLimparPesquisa.Enabled    :=False;
   btn_Registro_anterior.Enabled:=False;
   BtnRegistroPosterior.Enabled :=False;
- // BtnPrimeiroRegistro.Enabled  :=False;
- // BtnUltimoRegistro.Enabled    :=False;
   btnNovo.Enabled              :=True;
   btnSalvar.Enabled            :=False;
   btnCancelar.Enabled          :=False;
@@ -381,9 +379,9 @@ begin
   btnFechar.Enabled            :=True;
   cxPageControl1.ActivePage    := tbPesquisa;
   tbCadastro.TabVisible        := False;
-  pnl_info_direita.Caption :='';
-  lblStatusdataset.Caption :='';
-  lblregistros.Caption :='';
+  pnl_info_direita.Caption     :='';
+  lblStatusdataset.Caption     :='';
+  lblregistros.Caption         :='';
 end;
 
 procedure TForm_Cadastro_Modelo.FormKeyDown(Sender: TObject; var Key: Word;

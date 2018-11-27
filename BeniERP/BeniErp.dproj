@@ -195,6 +195,14 @@
             <Form>frm_cadastro_ncm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Formularios\Unit_Cadastro_Municipios.pas">
+            <Form>Form_Cadastro_Municipios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Formularios\Unit_Cadastro_Vendedores.pas">
+            <Form>Form_Cadastro_Vendedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -647,6 +655,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>False</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

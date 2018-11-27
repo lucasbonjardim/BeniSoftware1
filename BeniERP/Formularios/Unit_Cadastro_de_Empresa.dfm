@@ -1,29 +1,31 @@
 inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   Caption = 'Cadastro de Loja'
-  ClientHeight = 608
-  ClientWidth = 1248
-  ExplicitWidth = 1264
-  ExplicitHeight = 647
+  ClientHeight = 820
+  ClientWidth = 1522
+  ExplicitWidth = 1538
+  ExplicitHeight = 859
   PixelsPerInch = 96
   TextHeight = 13
   inherited cxPageControl1: TcxPageControl
     Top = 88
-    Width = 1248
-    Height = 508
-    ExplicitTop = 84
-    ExplicitWidth = 1248
-    ExplicitHeight = 512
-    ClientRectBottom = 506
-    ClientRectRight = 1246
+    Width = 1522
+    Height = 720
+    ExplicitTop = 88
+    ExplicitWidth = 1522
+    ExplicitHeight = 720
+    ClientRectBottom = 715
+    ClientRectRight = 1517
     inherited tbPesquisa: TcxTabSheet
       ImageIndex = 12
-      ExplicitWidth = 1244
-      ExplicitHeight = 465
+      ExplicitLeft = 3
+      ExplicitTop = 26
+      ExplicitWidth = 1513
+      ExplicitHeight = 688
       inherited Panel1: TPanel
-        Width = 1244
+        Width = 1515
         Height = 25
         Visible = False
-        ExplicitWidth = 1244
+        ExplicitWidth = 1513
         ExplicitHeight = 25
         inherited lblPesquisa: TcxLabel
           Style.IsFontAssigned = True
@@ -36,6 +38,7 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
           ExplicitHeight = 25
           inherited edtText: TEdit
             Height = 7
+            ExplicitHeight = 7
           end
           inherited edtCurr: TcxCurrencyEdit
             ExplicitHeight = 7
@@ -46,6 +49,7 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
           end
           inherited edtMask: TMaskEdit
             Height = 7
+            ExplicitHeight = 7
           end
         end
         inherited cxButton1: TcxButton
@@ -67,446 +71,417 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       end
       inherited pnl_esq: TPanel
         Top = 25
-        Height = 436
-        TabOrder = 3
+        Height = 665
+        TabOrder = 2
         ExplicitTop = 25
-        ExplicitHeight = 440
+        ExplicitHeight = 426
       end
       inherited pnl_dire: TPanel
-        Left = 1195
+        Left = 1466
         Top = 25
-        Height = 436
-        ExplicitLeft = 1195
+        Height = 665
+        TabOrder = 1
+        ExplicitLeft = 1185
         ExplicitTop = 25
-        ExplicitHeight = 440
+        ExplicitHeight = 426
       end
-      object DBGrid1: TDBGrid
+      object cxGrid1: TcxGrid
         Left = 49
         Top = 25
-        Width = 1146
-        Height = 436
+        Width = 1417
+        Height = 665
         Align = alClient
-        DataSource = dsPrincipal
-        TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-        OnDblClick = DBGrid1DblClick
-        OnKeyDown = DBGrid1KeyDown
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'COD_EMP'
-            Visible = True
+        TabOrder = 3
+        ExplicitLeft = 408
+        ExplicitTop = 136
+        ExplicitWidth = 250
+        ExplicitHeight = 200
+        object cxGrid1DBTableView1: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          DataController.DataSource = dsPrincipal
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          object cxGrid1DBTableView1COD_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'COD_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'RAZAO_EMP'
-            Visible = True
+          object cxGrid1DBTableView1RAZAO_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'RAZAO_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'END_EMP'
-            Visible = True
+          object cxGrid1DBTableView1END_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'END_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'BAI_EMP'
-            Visible = True
+          object cxGrid1DBTableView1BAI_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'BAI_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'CID_EMP'
-            Visible = True
+          object cxGrid1DBTableView1CID_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'CID_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'CEP_EMP'
-            Visible = True
+          object cxGrid1DBTableView1CEP_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'CEP_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'EST_EMP'
-            Visible = True
+          object cxGrid1DBTableView1EST_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'EST_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'INSC_EMP'
-            Visible = True
+          object cxGrid1DBTableView1INSC_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'INSC_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'TEL_EMP'
-            Visible = True
+          object cxGrid1DBTableView1TEL_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'TEL_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'FAX_EMP'
-            Visible = True
+          object cxGrid1DBTableView1FAX_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'FAX_EMP'
           end
-          item
-            Expanded = False
-            FieldName = 'CNPJ_EMP'
-            Visible = True
+          object cxGrid1DBTableView1NOME_EMP_ETIQUETA: TcxGridDBColumn
+            DataBinding.FieldName = 'NOME_EMP_ETIQUETA'
           end
-          item
-            Expanded = False
-            FieldName = 'INSCRICAO_MUNICIPAL'
-            Visible = True
-          end>
+          object cxGrid1DBTableView1NUMERO_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'NUMERO_EMP'
+          end
+          object cxGrid1DBTableView1RESP_EMP: TcxGridDBColumn
+            DataBinding.FieldName = 'RESP_EMP'
+          end
+        end
+        object cxGrid1Level1: TcxGridLevel
+          GridView = cxGrid1DBTableView1
+        end
       end
     end
     inherited tbCadastro: TcxTabSheet
       ImageIndex = 13
-      ExplicitWidth = 1244
-      ExplicitHeight = 465
-      inherited Shape3: TShape
-        Top = 453
-        Width = 1244
-        ExplicitTop = 818
-        ExplicitWidth = 1284
-      end
-      object PC: TPageControl
+      ExplicitLeft = 3
+      ExplicitTop = 26
+      ExplicitWidth = 1513
+      ExplicitHeight = 688
+      object cxPageControl2: TcxPageControl
         Left = 0
         Top = 0
-        Width = 1244
-        Height = 450
-        ActivePage = TabSheet1
+        Width = 1515
+        Height = 690
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 454
-        object TabSheet1: TTabSheet
+        Properties.ActivePage = cxTabSheet1
+        Properties.CustomButtons.Buttons = <>
+        ExplicitWidth = 1513
+        ExplicitHeight = 688
+        ClientRectBottom = 685
+        ClientRectLeft = 2
+        ClientRectRight = 1510
+        ClientRectTop = 25
+        object cxTabSheet1: TcxTabSheet
           Caption = 'Dados'
-          ExplicitHeight = 426
-          object Label1: TLabel
-            Left = 8
-            Top = 8
-            Width = 33
-            Height = 13
-            Caption = 'C'#243'digo'
-          end
-          object Label2: TLabel
-            Left = 8
-            Top = 48
-            Width = 74
-            Height = 13
-            Caption = 'Raz'#227'o Social(*)'
-          end
-          object Label6: TLabel
-            Left = 8
-            Top = 128
-            Width = 45
-            Height = 13
-            Caption = 'Endere'#231'o'
-          end
-          object Label7: TLabel
-            Left = 8
-            Top = 168
-            Width = 28
-            Height = 13
-            Caption = 'Bairro'
-          end
-          object Label11: TLabel
-            Left = 8
-            Top = 208
-            Width = 25
-            Height = 13
-            Caption = 'CNPJ'
-          end
-          object Label12: TLabel
-            Left = 168
-            Top = 208
-            Width = 65
-            Height = 13
-            Caption = 'Insc.Estadual'
-          end
-          object Label8: TLabel
-            Left = 192
-            Top = 168
-            Width = 33
-            Height = 13
-            Caption = 'Cidade'
-          end
-          object Label9: TLabel
-            Left = 432
-            Top = 168
-            Width = 33
-            Height = 13
-            Caption = 'Estado'
-          end
-          object Label10: TLabel
-            Left = 512
-            Top = 168
-            Width = 19
-            Height = 13
-            Caption = 'CEP'
-          end
-          object Label13: TLabel
-            Left = 432
-            Top = 208
-            Width = 42
-            Height = 13
-            Caption = 'Telefone'
-          end
-          object Label3: TLabel
-            Left = 513
-            Top = 208
-            Width = 18
-            Height = 13
-            Caption = 'Fax'
-          end
-          object Label5: TLabel
-            Left = 8
-            Top = 248
-            Width = 61
-            Height = 13
-            Caption = 'Respons'#225'vel'
-          end
-          object Label14: TLabel
-            Left = 432
-            Top = 128
-            Width = 37
-            Height = 13
-            Caption = 'N'#250'mero'
-          end
-          object Label17: TLabel
-            Left = 8
-            Top = 88
-            Width = 41
-            Height = 13
-            Caption = 'Fantasia'
-          end
-          object Label19: TLabel
-            Left = 272
-            Top = 208
-            Width = 67
-            Height = 13
-            Caption = 'Insc.Municipal'
-          end
-          object cod_emp: TcxDBSpinEdit
-            Left = 8
-            Top = 21
-            DataBinding.DataField = 'COD_EMP'
-            DataBinding.DataSource = dsPrincipal
+          ImageIndex = 0
+          ExplicitLeft = 3
+          ExplicitTop = 26
+          ExplicitWidth = 1504
+          ExplicitHeight = 656
+          object GroupBox3: TGroupBox
+            Left = 0
+            Top = 0
+            Width = 1508
+            Height = 314
+            Align = alTop
+            Caption = 'Loja'
             TabOrder = 0
-            Width = 121
-          end
-          object db_razao: TcxDBTextEdit
-            Left = 8
-            Top = 67
-            DataBinding.DataField = 'RAZAO_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 1
-            Width = 403
-          end
-          object cxDBTextEdit2: TcxDBTextEdit
-            Left = 8
-            Top = 147
-            DataBinding.DataField = 'END_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 2
-            Width = 403
-          end
-          object cxDBTextEdit3: TcxDBTextEdit
-            Left = 8
-            Top = 184
-            DataBinding.DataField = 'BAI_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 3
-            Width = 169
-          end
-          object cxDBTextEdit4: TcxDBTextEdit
-            Left = 183
-            Top = 184
-            DataBinding.DataField = 'CID_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 4
-            Width = 228
-          end
-          object cxDBTextEdit7: TcxDBTextEdit
-            Left = 170
-            Top = 224
-            DataBinding.DataField = 'INSC_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 5
-            Width = 94
-          end
-          object cxDBTextEdit8: TcxDBTextEdit
-            Left = 432
-            Top = 224
-            DataBinding.DataField = 'TEL_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 6
-            Width = 68
-          end
-          object cxDBTextEdit5: TcxDBTextEdit
-            Left = 513
-            Top = 224
-            DataBinding.DataField = 'FAX_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 7
-            Width = 121
-          end
-          object cxDBTextEdit9: TcxDBTextEdit
-            Left = 432
-            Top = 147
-            DataBinding.DataField = 'NUMERO_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 8
-            Width = 121
-          end
-          object cxDBTextEdit10: TcxDBTextEdit
-            Left = 8
-            Top = 267
-            DataBinding.DataField = 'RESP_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 9
-            Width = 403
-          end
-          object cxDBTextEdit12: TcxDBTextEdit
-            Left = 8
-            Top = 107
-            DataBinding.DataField = 'FANTASIA_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 10
-            Width = 403
-          end
-          object cxDBTextEdit15: TcxDBTextEdit
-            Left = 8
-            Top = 224
-            DataBinding.DataField = 'CNPJ_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 11
-            Width = 121
-          end
-          object DBComboBox1: TDBComboBox
-            Left = 432
-            Top = 187
-            Width = 68
-            Height = 21
-            Style = csDropDownList
-            DataField = 'EST_EMP'
-            DataSource = dsPrincipal
-            Items.Strings = (
-              'AC'
-              'AL'
-              'AM'
-              'AP'
-              'BA'
-              'CE'
-              'DF'
-              'ES'
-              'GO'
-              'MA'
-              'MG'
-              'MS'
-              'MT'
-              'PA'
-              'PB'
-              'PE'
-              'PI'
-              'PR'
-              'RJ'
-              'RN'
-              'RO'
-              'RR'
-              'RS'
-              'SC'
-              'SE'
-              'SP'
-              'TO'
-              '')
-            TabOrder = 12
-          end
-          object cxDBMaskEdit1: TcxDBMaskEdit
-            Left = 513
-            Top = 187
-            DataBinding.DataField = 'CEP_EMP'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 13
-            Width = 81
-          end
-          object DBImage1: TDBImage
-            Left = 432
-            Top = 17
-            Width = 135
-            Height = 105
-            DataField = 'CAMINHO_FOTO_EMP'
-            DataSource = dsPrincipal
-            TabOrder = 14
-          end
-          object cxDBTextEdit13: TcxDBTextEdit
-            Left = 272
-            Top = 224
-            DataBinding.DataField = 'INSCRICAO_MUNICIPAL'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 15
-            Width = 139
-          end
-          object Button2: TButton
-            Left = 135
-            Top = 223
-            Width = 29
-            Height = 23
-            ImageIndex = 9
-            Images = BarraMenu
-            TabOrder = 16
+            ExplicitWidth = 1504
+            object Label1: TLabel
+              Left = 10
+              Top = 17
+              Width = 33
+              Height = 13
+              Caption = 'C'#243'digo'
+            end
+            object Label2: TLabel
+              Left = 10
+              Top = 59
+              Width = 74
+              Height = 13
+              Caption = 'Raz'#227'o Social(*)'
+            end
+            object Label17: TLabel
+              Left = 10
+              Top = 96
+              Width = 41
+              Height = 13
+              Caption = 'Fantasia'
+            end
+            object Label6: TLabel
+              Left = 10
+              Top = 136
+              Width = 45
+              Height = 13
+              Caption = 'Endere'#231'o'
+            end
+            object Label7: TLabel
+              Left = 10
+              Top = 176
+              Width = 28
+              Height = 13
+              Caption = 'Bairro'
+            end
+            object Label8: TLabel
+              Left = 127
+              Top = 176
+              Width = 33
+              Height = 13
+              Caption = 'Cidade'
+            end
+            object Label11: TLabel
+              Left = 10
+              Top = 219
+              Width = 25
+              Height = 13
+              Caption = 'CNPJ'
+            end
+            object Label12: TLabel
+              Left = 127
+              Top = 219
+              Width = 65
+              Height = 13
+              Caption = 'Insc.Estadual'
+            end
+            object Label19: TLabel
+              Left = 245
+              Top = 219
+              Width = 67
+              Height = 13
+              Caption = 'Insc.Municipal'
+            end
+            object Label5: TLabel
+              Left = 11
+              Top = 264
+              Width = 61
+              Height = 13
+              Caption = 'Respons'#225'vel'
+            end
+            object Label14: TLabel
+              Left = 419
+              Top = 136
+              Width = 37
+              Height = 13
+              Caption = 'N'#250'mero'
+            end
+            object Label9: TLabel
+              Left = 236
+              Top = 176
+              Width = 33
+              Height = 13
+              Caption = 'Estado'
+            end
+            object Label13: TLabel
+              Left = 295
+              Top = 176
+              Width = 42
+              Height = 13
+              Caption = 'Telefone'
+            end
+            object Label10: TLabel
+              Left = 419
+              Top = 176
+              Width = 19
+              Height = 13
+              Caption = 'CEP'
+            end
+            object Label3: TLabel
+              Left = 418
+              Top = 219
+              Width = 18
+              Height = 13
+              Caption = 'Fax'
+            end
+            object cod_emp: TcxDBSpinEdit
+              Left = 10
+              Top = 35
+              DataBinding.DataField = 'COD_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 0
+              Width = 61
+            end
+            object db_razao: TcxDBTextEdit
+              Left = 8
+              Top = 75
+              DataBinding.DataField = 'RAZAO_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 1
+              Width = 490
+            end
+            object cxDBTextEdit12: TcxDBTextEdit
+              Left = 10
+              Top = 111
+              DataBinding.DataField = 'FANTASIA_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 2
+              Width = 488
+            end
+            object cxDBTextEdit2: TcxDBTextEdit
+              Left = 10
+              Top = 151
+              DataBinding.DataField = 'END_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 3
+              Width = 403
+            end
+            object cxDBTextEdit3: TcxDBTextEdit
+              Left = 10
+              Top = 192
+              DataBinding.DataField = 'BAI_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 4
+              Width = 111
+            end
+            object cxDBTextEdit4: TcxDBTextEdit
+              Left = 127
+              Top = 192
+              DataBinding.DataField = 'CID_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 5
+              Width = 109
+            end
+            object cxDBTextEdit15: TcxDBTextEdit
+              Left = 10
+              Top = 234
+              DataBinding.DataField = 'CNPJ_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 6
+              Width = 111
+            end
+            object cxDBTextEdit7: TcxDBTextEdit
+              Left = 127
+              Top = 234
+              DataBinding.DataField = 'INSC_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 7
+              Width = 109
+            end
+            object cxDBTextEdit13: TcxDBTextEdit
+              Left = 242
+              Top = 234
+              DataBinding.DataField = 'INSCRICAO_MUNICIPAL'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 8
+              Width = 169
+            end
+            object cxDBTextEdit10: TcxDBTextEdit
+              Left = 11
+              Top = 283
+              DataBinding.DataField = 'RESP_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 9
+              Width = 487
+            end
+            object cxDBTextEdit9: TcxDBTextEdit
+              Left = 419
+              Top = 151
+              DataBinding.DataField = 'NUMERO_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 10
+              Width = 79
+            end
+            object DBComboBox1: TDBComboBox
+              Left = 242
+              Top = 192
+              Width = 47
+              Height = 21
+              Style = csDropDownList
+              DataField = 'EST_EMP'
+              DataSource = dsPrincipal
+              Items.Strings = (
+                'AC'
+                'AL'
+                'AM'
+                'AP'
+                'BA'
+                'CE'
+                'DF'
+                'ES'
+                'GO'
+                'MA'
+                'MG'
+                'MS'
+                'MT'
+                'PA'
+                'PB'
+                'PE'
+                'PI'
+                'PR'
+                'RJ'
+                'RN'
+                'RO'
+                'RR'
+                'RS'
+                'SC'
+                'SE'
+                'SP'
+                'TO'
+                '')
+              TabOrder = 11
+            end
+            object cxDBTextEdit8: TcxDBTextEdit
+              Left = 295
+              Top = 191
+              DataBinding.DataField = 'TEL_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 12
+              Width = 116
+            end
+            object cxDBMaskEdit1: TcxDBMaskEdit
+              Left = 417
+              Top = 191
+              DataBinding.DataField = 'CEP_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 13
+              Width = 81
+            end
+            object cxDBTextEdit5: TcxDBTextEdit
+              Left = 417
+              Top = 234
+              DataBinding.DataField = 'FAX_EMP'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 14
+              Width = 81
+            end
           end
         end
-        object TabSheet2: TTabSheet
+        object cxTabSheet2: TcxTabSheet
           Caption = 'Par'#226'metros'
           ImageIndex = 1
-          ExplicitHeight = 426
-          object Label4: TLabel
-            Left = 8
-            Top = 128
-            Width = 73
-            Height = 13
-            Caption = 'Abrev.Etiqueta'
-          end
+          ExplicitLeft = 3
+          ExplicitTop = 26
+          ExplicitWidth = 1504
+          ExplicitHeight = 656
           object Label15: TLabel
-            Left = 8
-            Top = 48
+            Left = 3
+            Top = 8
             Width = 79
             Height = 13
             Caption = 'Tipo de Empresa'
           end
-          object Label16: TLabel
-            Left = 144
-            Top = 128
-            Width = 107
-            Height = 13
-            Caption = 'Tipo de Carga Balan'#231'a'
-          end
           object Label18: TLabel
-            Left = 8
-            Top = 88
+            Left = 3
+            Top = 50
             Width = 131
             Height = 13
             Caption = 'Caminho Validador Sintegra'
           end
-          object BtnCaminhoValidador: TButton
-            Left = 366
-            Top = 107
-            Width = 22
-            Height = 21
-            Caption = '...'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -11
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 1
-            OnClick = BtnCaminhoValidadorClick
+          object Label4: TLabel
+            Left = 3
+            Top = 101
+            Width = 73
+            Height = 13
+            Caption = 'Abrev.Etiqueta'
+          end
+          object Label16: TLabel
+            Left = 139
+            Top = 101
+            Width = 107
+            Height = 13
+            Caption = 'Tipo de Carga Balan'#231'a'
           end
           object GroupBox1: TGroupBox
-            Left = 3
-            Top = 179
-            Width = 580
-            Height = 121
+            Left = 12
+            Top = 244
+            Width = 618
+            Height = 166
             Caption = 'EFD'
             TabOrder = 0
             object Label21: TLabel
@@ -538,8 +513,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
               Caption = '* Perfil (A, B ou C)'
             end
             object Label25: TLabel
-              Left = 164
-              Top = 98
+              Left = 212
+              Top = 63
               Width = 192
               Height = 13
               Caption = '* Tipo Atividade (0-Industrial  1-Outros)'
@@ -560,18 +535,60 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
               TabOrder = 0
               OnClick = BConfigEFDClick
             end
-          end
-          object cxDBTextEdit6: TcxDBTextEdit
-            Left = 8
-            Top = 147
-            DataBinding.DataField = 'NOME_EMP_ETIQUETA'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 2
-            Width = 120
+            object cxDBTextEdit14: TcxDBTextEdit
+              Left = 8
+              Top = 83
+              DataBinding.DataField = 'PERFIL_EFD'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 1
+              Width = 33
+            end
+            object cxDBTextEdit16: TcxDBTextEdit
+              Left = 64
+              Top = 83
+              DataBinding.DataField = 'CODIGO_MUNICIPIO'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 2
+              Width = 97
+            end
+            object Button1: TButton
+              Left = 167
+              Top = 82
+              Width = 29
+              Height = 23
+              ImageIndex = 9
+              Images = BarraMenu
+              TabOrder = 3
+            end
+            object DBComboBox4: TDBComboBox
+              Left = 267
+              Top = 101
+              Width = 136
+              Height = 21
+              Style = csDropDownList
+              DataField = 'VERSAO_EFD'
+              DataSource = dsPrincipal
+              Items.Strings = (
+                'Mais Novo'
+                '1.0.3'
+                '1.0.4'
+                '1.0.5'
+                '1.0.8'
+                '')
+              TabOrder = 4
+            end
+            object cxDBSpinEdit2: TcxDBSpinEdit
+              Left = 8
+              Top = 129
+              DataBinding.DataField = 'TIPO_ATIVIDADE_EFD'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 5
+              Width = 33
+            end
           end
           object db_combo_tipo_empresa: TDBComboBox
-            Left = 8
-            Top = 63
+            Left = 3
+            Top = 23
             Width = 350
             Height = 21
             Style = csDropDownList
@@ -582,35 +599,19 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
               'LUCRO REAL'
               'LUCRO PRESUMIDO'
               '')
-            TabOrder = 3
+            TabOrder = 1
           end
-          object db_chk_cli_prevenda: TDBCheckBox
-            Left = 12
-            Top = 329
-            Width = 281
-            Height = 17
-            Caption = 'Mostrar Situa'#231#227'o do Cliente nas Pre-Vendas'
-            DataField = 'MOSTRAR_SITCLI_PREVENDA'
-            DataSource = dsPrincipal
-            TabOrder = 4
-            ValueChecked = 'S'
-            ValueUnchecked = 'N'
-          end
-          object db_chk_fecherpJaberta: TDBCheckBox
-            Left = 12
-            Top = 352
-            Width = 281
-            Height = 17
-            Caption = 'Bloqueia encerramento do sistema com Janela aberta'
-            DataField = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
-            DataSource = dsPrincipal
-            TabOrder = 5
-            ValueChecked = 'S'
-            ValueUnchecked = 'N'
+          object cxDBTextEdit6: TcxDBTextEdit
+            Left = 3
+            Top = 120
+            DataBinding.DataField = 'NOME_EMP_ETIQUETA'
+            DataBinding.DataSource = dsPrincipal
+            TabOrder = 2
+            Width = 120
           end
           object db_carga_balanca_tipo: TDBComboBox
-            Left = 144
-            Top = 147
+            Left = 139
+            Top = 120
             Width = 214
             Height = 21
             Style = csDropDownList
@@ -620,280 +621,279 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
               'POR PRODUTO'
               'POR COD.DE BARRA'
               '')
-            TabOrder = 6
-          end
-          object dbedit_caminhosintegravalidador: TcxDBTextEdit
-            Left = 8
-            Top = 107
-            DataBinding.DataField = 'CAMINHO_VALIDADOR_SINTEGRA'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 7
-            Width = 350
-          end
-          object cxDBTextEdit14: TcxDBTextEdit
-            Left = 12
-            Top = 219
-            DataBinding.DataField = 'PERFIL_EFD'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 8
-            Width = 33
-          end
-          object cxDBTextEdit16: TcxDBTextEdit
-            Left = 67
-            Top = 219
-            DataBinding.DataField = 'CODIGO_MUNICIPIO'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 9
-            Width = 97
-          end
-          object cxDBSpinEdit2: TcxDBSpinEdit
-            Left = 12
-            Top = 262
-            DataBinding.DataField = 'TIPO_ATIVIDADE_EFD'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 10
-            Width = 33
-          end
-          object DBComboBox4: TDBComboBox
-            Left = 211
-            Top = 219
-            Width = 136
-            Height = 21
-            Style = csDropDownList
-            DataField = 'VERSAO_EFD'
-            DataSource = dsPrincipal
-            Items.Strings = (
-              'Mais Novo'
-              '1.0.3'
-              '1.0.4'
-              '1.0.5'
-              '1.0.8'
-              '')
-            TabOrder = 11
-          end
-          object Button1: TButton
-            Left = 167
-            Top = 218
-            Width = 29
-            Height = 23
-            ImageIndex = 9
-            Images = BarraMenu
-            TabOrder = 12
+            TabOrder = 3
           end
           object db_chk_cli_sem_cpf: TDBCheckBox
             Left = 12
-            Top = 306
+            Top = 152
             Width = 194
             Height = 17
             Caption = 'Cadastrar Cliente sem CPF'
             DataField = 'CADASTRAR_CLIENTE_SEM_CPF'
             DataSource = dsPrincipal
-            TabOrder = 13
+            TabOrder = 4
+            ValueChecked = 'S'
+            ValueUnchecked = 'N'
+          end
+          object db_chk_cli_prevenda: TDBCheckBox
+            Left = 12
+            Top = 175
+            Width = 281
+            Height = 17
+            Caption = 'Mostrar Situa'#231#227'o do Cliente nas Pre-Vendas'
+            DataField = 'MOSTRAR_SITCLI_PREVENDA'
+            DataSource = dsPrincipal
+            TabOrder = 5
+            ValueChecked = 'S'
+            ValueUnchecked = 'N'
+          end
+          object db_chk_fecherpJaberta: TDBCheckBox
+            Left = 12
+            Top = 198
+            Width = 281
+            Height = 17
+            Caption = 'Bloqueia encerramento do sistema com Janela aberta'
+            DataField = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
+            DataSource = dsPrincipal
+            TabOrder = 6
             ValueChecked = 'S'
             ValueUnchecked = 'N'
           end
           object DBCheckBox1: TDBCheckBox
             Left = 12
-            Top = 375
+            Top = 221
             Width = 293
             Height = 17
             Caption = 'Permite Fechar o Sistema com Janelas Abertas'
             DataField = 'PERMITE_FECHA_ERP_JANELA_ABERTA'
             DataSource = dsPrincipal
-            TabOrder = 14
+            TabOrder = 7
             ValueChecked = 'S'
             ValueUnchecked = 'N'
           end
-        end
-        object Contador: TTabSheet
-          Caption = 'Contador'
-          ImageIndex = 3
-          ExplicitHeight = 426
-          object Label26: TLabel
-            Left = 8
-            Top = 8
-            Width = 27
-            Height = 13
-            Caption = 'Nome'
-          end
-          object Label27: TLabel
-            Left = 8
-            Top = 48
-            Width = 45
-            Height = 13
-            Caption = 'Endere'#231'o'
-          end
-          object Label28: TLabel
-            Left = 72
-            Top = 88
-            Width = 28
-            Height = 13
-            Caption = 'Bairro'
-          end
-          object Label29: TLabel
-            Left = 429
-            Top = 88
-            Width = 66
-            Height = 13
-            Caption = 'C'#243'd.Munic'#237'pio'
-          end
-          object Label31: TLabel
-            Left = 521
-            Top = 88
-            Width = 19
-            Height = 13
-            Caption = 'CEP'
-          end
-          object Label32: TLabel
-            Left = 8
-            Top = 88
-            Width = 37
-            Height = 13
-            Caption = 'N'#250'mero'
-          end
-          object Label33: TLabel
-            Left = 135
-            Top = 128
-            Width = 19
-            Height = 13
-            Caption = 'CPF'
-          end
-          object Label34: TLabel
-            Left = 328
-            Top = 128
-            Width = 42
-            Height = 13
-            Caption = 'Telefone'
-          end
-          object Label35: TLabel
-            Left = 440
-            Top = 128
-            Width = 18
-            Height = 13
-            Caption = 'Fax'
-          end
-          object Label30: TLabel
-            Left = 237
-            Top = 128
-            Width = 21
-            Height = 13
-            Caption = 'CRC'
-          end
-          object Label36: TLabel
-            Left = 8
-            Top = 128
-            Width = 25
-            Height = 13
-            Caption = 'CNPJ'
-          end
-          object Label37: TLabel
-            Left = 8
-            Top = 168
-            Width = 24
-            Height = 13
-            Caption = 'Email'
-          end
-          object cxDBTextEdit17: TcxDBTextEdit
-            Left = 8
-            Top = 27
-            DataBinding.DataField = 'NOME_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 0
-            Width = 609
-          end
-          object cxDBTextEdit18: TcxDBTextEdit
-            Left = 118
-            Top = 144
-            DataBinding.DataField = 'CPF_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 1
-            Width = 104
-          end
-          object cxDBTextEdit19: TcxDBTextEdit
-            Left = 237
-            Top = 144
-            DataBinding.DataField = 'CRC_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 2
-            Width = 83
-          end
-          object cxDBTextEdit20: TcxDBTextEdit
-            Left = 8
-            Top = 144
-            DataBinding.DataField = 'CNPJ_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 3
-            Width = 102
-          end
-          object cxDBTextEdit21: TcxDBTextEdit
-            Left = 516
-            Top = 104
-            DataBinding.DataField = 'CEP_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 4
-            Width = 101
-          end
-          object cxDBTextEdit22: TcxDBTextEdit
-            Left = 8
-            Top = 67
-            DataBinding.DataField = 'END_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 5
-            Width = 609
-          end
-          object cxDBTextEdit28: TcxDBTextEdit
-            Left = 8
-            Top = 187
-            DataBinding.DataField = 'EMAIL_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 6
-            Width = 609
-          end
-          object cxDBTextEdit27: TcxDBTextEdit
-            Left = 431
-            Top = 104
-            DataBinding.DataField = 'CODIGO_MUNICIPIO_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 7
-            Width = 77
-          end
-          object cxDBTextEdit23: TcxDBTextEdit
-            Left = 7
-            Top = 104
-            DataBinding.DataField = 'NUMERO_CONTADOR'
+          object dbedit_caminhosintegravalidador: TcxDBTextEdit
+            Left = 3
+            Top = 69
+            DataBinding.DataField = 'CAMINHO_VALIDADOR_SINTEGRA'
             DataBinding.DataSource = dsPrincipal
             TabOrder = 8
-            Width = 49
+            Width = 350
           end
-          object cxDBTextEdit24: TcxDBTextEdit
-            Left = 62
-            Top = 104
-            DataBinding.DataField = 'BAIRRO_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
+          object Button3: TButton
+            Left = 359
+            Top = 67
+            Width = 33
+            Height = 25
+            Caption = '...'
             TabOrder = 9
-            Width = 363
-          end
-          object cxDBTextEdit25: TcxDBTextEdit
-            Left = 326
-            Top = 144
-            DataBinding.DataField = 'TEL_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 10
-            Width = 108
-          end
-          object cxDBTextEdit26: TcxDBTextEdit
-            Left = 440
-            Top = 144
-            DataBinding.DataField = 'FAX_CONTADOR'
-            DataBinding.DataSource = dsPrincipal
-            TabOrder = 11
-            Width = 177
+            OnClick = Button3Click
           end
         end
-        object TabSheet3: TTabSheet
-          Caption = 'Imagem'
+        object cxTabSheet3: TcxTabSheet
+          Caption = 'Contador'
           ImageIndex = 2
-          ExplicitHeight = 426
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 285
+          ExplicitHeight = 163
+          object GroupBox2: TGroupBox
+            Left = 0
+            Top = 0
+            Width = 1524
+            Height = 241
+            Align = alTop
+            Caption = 'Contador'
+            TabOrder = 0
+            ExplicitWidth = 638
+            object Label26: TLabel
+              Left = 8
+              Top = 8
+              Width = 27
+              Height = 13
+              Caption = 'Nome'
+            end
+            object Label27: TLabel
+              Left = 8
+              Top = 48
+              Width = 45
+              Height = 13
+              Caption = 'Endere'#231'o'
+            end
+            object Label32: TLabel
+              Left = 8
+              Top = 88
+              Width = 37
+              Height = 13
+              Caption = 'N'#250'mero'
+            end
+            object Label28: TLabel
+              Left = 72
+              Top = 88
+              Width = 28
+              Height = 13
+              Caption = 'Bairro'
+            end
+            object Label29: TLabel
+              Left = 429
+              Top = 88
+              Width = 66
+              Height = 13
+              Caption = 'C'#243'd.Munic'#237'pio'
+            end
+            object Label31: TLabel
+              Left = 521
+              Top = 88
+              Width = 19
+              Height = 13
+              Caption = 'CEP'
+            end
+            object Label36: TLabel
+              Left = 8
+              Top = 128
+              Width = 25
+              Height = 13
+              Caption = 'CNPJ'
+            end
+            object Label33: TLabel
+              Left = 135
+              Top = 128
+              Width = 19
+              Height = 13
+              Caption = 'CPF'
+            end
+            object Label30: TLabel
+              Left = 237
+              Top = 128
+              Width = 21
+              Height = 13
+              Caption = 'CRC'
+            end
+            object Label34: TLabel
+              Left = 328
+              Top = 128
+              Width = 42
+              Height = 13
+              Caption = 'Telefone'
+            end
+            object Label35: TLabel
+              Left = 440
+              Top = 128
+              Width = 18
+              Height = 13
+              Caption = 'Fax'
+            end
+            object Label37: TLabel
+              Left = 8
+              Top = 168
+              Width = 24
+              Height = 13
+              Caption = 'Email'
+            end
+            object cxDBTextEdit17: TcxDBTextEdit
+              Left = 8
+              Top = 27
+              DataBinding.DataField = 'NOME_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 0
+              Width = 609
+            end
+            object cxDBTextEdit22: TcxDBTextEdit
+              Left = 8
+              Top = 67
+              DataBinding.DataField = 'END_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 1
+              Width = 609
+            end
+            object cxDBTextEdit23: TcxDBTextEdit
+              Left = 7
+              Top = 104
+              DataBinding.DataField = 'NUMERO_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 2
+              Width = 49
+            end
+            object cxDBTextEdit24: TcxDBTextEdit
+              Left = 62
+              Top = 104
+              DataBinding.DataField = 'BAIRRO_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 3
+              Width = 363
+            end
+            object cxDBTextEdit27: TcxDBTextEdit
+              Left = 431
+              Top = 104
+              DataBinding.DataField = 'CODIGO_MUNICIPIO_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 4
+              Width = 77
+            end
+            object cxDBTextEdit21: TcxDBTextEdit
+              Left = 516
+              Top = 104
+              DataBinding.DataField = 'CEP_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 5
+              Width = 101
+            end
+            object cxDBTextEdit20: TcxDBTextEdit
+              Left = 8
+              Top = 144
+              DataBinding.DataField = 'CNPJ_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 6
+              Width = 102
+            end
+            object cxDBTextEdit18: TcxDBTextEdit
+              Left = 118
+              Top = 144
+              DataBinding.DataField = 'CPF_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 7
+              Width = 104
+            end
+            object cxDBTextEdit19: TcxDBTextEdit
+              Left = 237
+              Top = 144
+              DataBinding.DataField = 'CRC_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 8
+              Width = 83
+            end
+            object cxDBTextEdit25: TcxDBTextEdit
+              Left = 326
+              Top = 144
+              DataBinding.DataField = 'TEL_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 9
+              Width = 108
+            end
+            object cxDBTextEdit26: TcxDBTextEdit
+              Left = 440
+              Top = 144
+              DataBinding.DataField = 'FAX_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 10
+              Width = 177
+            end
+            object cxDBTextEdit28: TcxDBTextEdit
+              Left = 8
+              Top = 184
+              DataBinding.DataField = 'EMAIL_CONTADOR'
+              DataBinding.DataSource = dsPrincipal
+              TabOrder = 11
+              Width = 609
+            end
+          end
+        end
+        object cxTabSheet4: TcxTabSheet
+          Caption = 'Imagem'
+          ImageIndex = 3
+          ExplicitLeft = 3
+          ExplicitTop = 0
+          ExplicitWidth = 638
+          ExplicitHeight = 434
           object GroupBox6: TGroupBox
             Left = 8
             Top = 12
@@ -996,36 +996,35 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   end
   inherited pnl_top: TPanel
     Top = 57
-    Width = 1248
-    ExplicitTop = 53
-    ExplicitWidth = 1248
+    Width = 1522
+    ExplicitTop = 57
+    ExplicitWidth = 1522
     inherited pbl_de_cima: TPanel
-      Width = 1248
-      ExplicitTop = 2
-      ExplicitWidth = 1248
+      Width = 1522
+      ExplicitWidth = 1522
       inherited shape_cima: TShape
-        Width = 1088
+        Width = 1362
         ExplicitWidth = 1108
       end
       inherited pnl_info_direita: TPanel
-        Left = 966
-        ExplicitLeft = 966
+        Left = 1240
+        ExplicitLeft = 1240
         inherited lblregistros: TLabel
-          ExplicitLeft = 167
+          Height = 23
         end
       end
     end
   end
   inherited pnl_baixo: TPanel
-    Top = 596
-    Width = 1248
-    ExplicitTop = 596
-    ExplicitWidth = 1248
+    Top = 808
+    Width = 1522
+    ExplicitTop = 808
+    ExplicitWidth = 1522
   end
   inherited ToolBar1: TToolBar
-    Width = 1242
+    Width = 1516
     Height = 51
-    ExplicitWidth = 1242
+    ExplicitWidth = 1516
     ExplicitHeight = 51
     inherited btn_Registro_anterior: TToolButton
       ImageIndex = 10
@@ -1036,8 +1035,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
   end
   inherited dsPrincipal: TDataSource
     DataSet = FDQ_Principal
-    Left = 168
-    Top = 47
+    Left = 632
+    Top = 103
   end
   inherited BarraMenu: TcxImageList
     FormatVersion = 1
@@ -2911,8 +2910,8 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
     Connection = DtmBcoErp.FDBcoERP
     SQL.Strings = (
       'select * from tb_empresa')
-    Left = 288
-    Top = 46
+    Left = 720
+    Top = 94
     object FDQ_PrincipalCOD_EMP: TIntegerField
       FieldName = 'COD_EMP'
       Origin = 'COD_EMP'
@@ -3005,16 +3004,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       FixedChar = True
       Size = 1
     end
-    object FDQ_PrincipalTIPO_EMP: TIntegerField
-      FieldName = 'TIPO_EMP'
-      Origin = 'TIPO_EMP'
-      Required = True
-    end
-    object FDQ_PrincipalTIPO_CARGA_BALANCA: TIntegerField
-      FieldName = 'TIPO_CARGA_BALANCA'
-      Origin = 'TIPO_CARGA_BALANCA'
-      Required = True
-    end
     object FDQ_PrincipalCNPJ_EMP: TStringField
       FieldName = 'CNPJ_EMP'
       Origin = 'CNPJ_EMP'
@@ -3100,10 +3089,6 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       Origin = 'CODIGO_MUNICIPIO_CONTADOR'
       Size = 7
     end
-    object FDQ_PrincipalVERSAO_EFD: TIntegerField
-      FieldName = 'VERSAO_EFD'
-      Origin = 'VERSAO_EFD'
-    end
     object FDQ_PrincipalEMAIL_CONTADOR: TStringField
       FieldName = 'EMAIL_CONTADOR'
       Origin = 'EMAIL_CONTADOR'
@@ -3116,17 +3101,24 @@ inherited Form_Cadastro_de_Empresa: TForm_Cadastro_de_Empresa
       FixedChar = True
       Size = 1
     end
+    object FDQ_PrincipalTIPO_EMP: TStringField
+      FieldName = 'TIPO_EMP'
+      Origin = 'TIPO_EMP'
+      Size = 60
+    end
+    object FDQ_PrincipalVERSAO_EFD: TStringField
+      FieldName = 'VERSAO_EFD'
+      Origin = 'VERSAO_EFD'
+      Size = 60
+    end
+    object FDQ_PrincipalTIPO_CARGA_BALANCA: TStringField
+      FieldName = 'TIPO_CARGA_BALANCA'
+      Origin = 'TIPO_CARGA_BALANCA'
+      Size = 60
+    end
   end
   object OpenDialog: TOpenDialog
-    Left = 352
-    Top = 48
-  end
-  object HTTPRIO1: THTTPRIO
-    HTTPWebNode.UseUTF8InHeader = True
-    HTTPWebNode.InvokeOptions = [soIgnoreInvalidCerts, soAutoCheckAccessPointViaUDDI]
-    HTTPWebNode.WebNodeOptions = []
-    Converter.Options = [soSendMultiRefObj, soTryAllSchema, soRootRefNodesToBody, soCacheMimeResponse, soUTF8EncodeXML]
-    Left = 984
-    Top = 200
+    Left = 920
+    Top = 96
   end
 end
