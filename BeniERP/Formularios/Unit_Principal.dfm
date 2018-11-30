@@ -3343,9 +3343,9 @@ object Form_Principal: TForm_Principal
   TextHeight = 13
   object img_fundo: TImage
     Left = 185
-    Top = 178
+    Top = 179
     Width = 1287
-    Height = 567
+    Height = 566
     Align = alClient
     AutoSize = True
     Center = True
@@ -6678,25 +6678,28 @@ object Form_Principal: TForm_Principal
   end
   object pnl_lateral: TPanel
     Left = 0
-    Top = 178
+    Top = 179
     Width = 185
-    Height = 567
+    Height = 566
     Align = alLeft
     BevelOuter = bvNone
     Color = 12679980
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 178
+    ExplicitHeight = 567
     object SV: TSplitView
       Left = 0
       Top = 0
       Width = 200
-      Height = 567
+      Height = 566
       Color = 15450368
       OpenedWidth = 200
       ParentShowHint = False
       Placement = svpLeft
       ShowHint = True
       TabOrder = 0
+      ExplicitHeight = 567
       object catMenuItems: TCategoryButtons
         Left = 0
         Top = 0
@@ -6863,11 +6866,11 @@ object Form_Principal: TForm_Principal
     Left = 0
     Top = 25
     Width = 1472
-    Height = 124
+    Height = 125
     BarManager = dxBarManager1
     Style = rs2016
     ColorSchemeAccent = rcsaBlue
-    ColorSchemeName = 'DevExpressStyle'
+    ColorSchemeName = 'Office2016Colorful'
     Fonts.AssignedFonts = [afGroupHeader]
     Fonts.GroupHeader.Charset = DEFAULT_CHARSET
     Fonts.GroupHeader.Color = clWhite
@@ -6976,13 +6979,14 @@ object Form_Principal: TForm_Principal
   end
   object pnl_infodados: TPanel
     Left = 0
-    Top = 149
+    Top = 150
     Width = 1472
     Height = 29
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
-    TabOrder = 6
+    TabOrder = 5
+    ExplicitTop = 149
     object lbl_versao: TLabel
       AlignWithMargins = True
       Left = 3
@@ -7034,7 +7038,6 @@ object Form_Principal: TForm_Principal
       end>
     LookAndFeel.NativeStyle = False
     TabOrder = 9
-    ExplicitTop = 749
   end
   object Act_BarraLateral: TActionList
     Images = imlIcons
@@ -7062,7 +7065,7 @@ object Form_Principal: TForm_Principal
     Left = 1360
     Top = 260
     Bitmap = {
-      494C01018A00F8034C0220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C01018A00F803500220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000008000000060040000010020000000000000C0
       0800000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -41114,7 +41117,7 @@ object Form_Principal: TForm_Principal
     object dxBarManager1Bar3: TdxBar
       Caption = 'Gerais'
       CaptionButtons = <>
-      DockedLeft = 183
+      DockedLeft = 184
       DockedTop = 0
       FloatLeft = 784
       FloatTop = 8
@@ -53094,7 +53097,7 @@ object Form_Principal: TForm_Principal
     Left = 256
     Top = 276
     Bitmap = {
-      494C010113001802740220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010113001802780220002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A000000001002000000000000040
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
