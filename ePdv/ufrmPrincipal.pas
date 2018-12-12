@@ -52,9 +52,6 @@ type
     CardPnlEsquerdoResponsivel: TCardPanel;
     CardpnlEsquerdo: TCard;
     pnlDadosItemTotal: TPanel;
-    lblDesValItem: TLabel;
-    lblTotalItem: TLabel;
-    Label13: TLabel;
     pnlImagemItem: TPanel;
     imgProdutoVenda: TImage;
     pnlDadosItem: TPanel;
@@ -72,10 +69,21 @@ type
     Label15: TLabel;
     lblSubtotalCupom: TLabel;
     Panel11: TPanel;
-    MemobobinaRegistro: TMemo;
     pnl_aguardeCarrePDV: TPanel;
     tmrActivePDV: TTimer;
     tmrAcessoRede: TTimer;
+    Notebook2: TNotebook;
+    MemobobinaRegistro: TMemo;
+    pnlMensagemaguarde: TPanel;
+    pnl_azultop: TPanel;
+    lblMensagemAguarde: TLabel;
+    lbl_codbar: TLabel;
+    lbldesccodbar: TLabel;
+    lblDesValItem: TLabel;
+    Label13: TLabel;
+    lblTotalItem: TLabel;
+    lbl_mensRed: TLabel;
+    lbl_InfoAtencao: TLabel;
     procedure FormCreate(Sender: TObject);
 
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -88,13 +96,17 @@ type
     procedure Notebook1PageChanged(Sender: TObject);
     procedure tmrActivePDVTimer(Sender: TObject);
     procedure tmrAcessoRedeTimer(Sender: TObject);
+    procedure MemobobinaRegistroKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
   private
     procedure p_AjustaACBrECF;
     procedure p_AjustaACBrPosPrinter;
     procedure p_AjustaACBrECFVirtualNaoFiscal;
     procedure p_LimpaCodigoBarra;
     procedure p_AjustaACBrSAT;
-    procedure MostraMSGAguarde(Mensagem: string);
+    procedure p_MostraMSGAguarde(Mensagem: string);
+    procedure p_MostraMSGErro(Mensagem: string);
+
 
     { Private declarations }
   public
@@ -102,10 +114,10 @@ type
     procedure p_CaixaAberto;
     procedure p_CaixaPagamentos;
     procedure p_vendeItem(ProID: String ) ;
+    procedure p_TrataMSG;
     function  f_BuscaProduto(ProID: String ) : Boolean;
-    function  f_RegistraDadosAcbr(CMDECF: TypeComandoAcbrECF;
-  Legenda: String): Boolean;
-
+    function  f_RegistraDadosAcbr(CMDECF: TypeComandoAcbrECF; Legenda: String): Boolean;
+    function  f_mensagemRed(Mensagem: String): Boolean;
   end;
 
 var
@@ -140,6 +152,11 @@ end;
 procedure TformPrincipal.FormCreate(Sender: TObject);
 begin
   Notebook1.PageIndex := 0;
+  lbl_mensRed.Caption := '';
+  Notebook2.pageindex := 0;
+  pnlMensagemaguarde.Height := 0;
+  lblMensagemAguarde.Caption := '';
+  lblStatusPDV.Caption := '';
   memoRelGerencial.Visible := False;
   IniPDVconfig  := TIniFile.Create(ExtractFilePath(Application.ExeName)+ 'PdvConfig.ini');
 
@@ -209,7 +226,7 @@ begin
 
 
 
-      1:   // Cx Aberto
+      1:   // Cx livre.
       begin
         if key = 32 then
         begin
@@ -232,16 +249,16 @@ begin
         end;
       end;
 
-      2:  // Cx Fechado
+      2:  // Cx Pagamento
       begin
         if key = 32 then
         begin
           p_CaixaPagamentos;
         end;
 
-        if key = 13 then
+       if key = 27 then // limpa
         begin
-          p_vendeItem(strCodBarra);
+          p_CaixaAberto;
         end;
 
          if key = 192 then
@@ -252,7 +269,7 @@ begin
 
       end;
 
-      3: // CX Pagamento
+      3: // CX Consulta
       begin
         if key = 27 then // limpa
         begin
@@ -280,8 +297,8 @@ begin
     strCodBarra := f_Tecla(strCodBarra, Key, 14, 2, 'n');
     if (pos('.', strCodBarra) = 0) and (pos(',', strCodBarra) = 0) then
     begin
-        //lbl_codbar.Caption := f_trans(f_valr(strCodBarra) / 100, '000,000.00');
-      //  lbl_codbar.Caption := strCodBarra;
+       // lbl_codbar.Caption := f_trans(f_valr(strCodBarra) / 100, '000,000.00');
+        lbl_codbar.Caption := strCodBarra;
        { if XKeyBoard.FModel = 'GB' then
         begin
           XKeyBoard.LCDLimpaDisplay;
@@ -298,7 +315,7 @@ begin
     end
     else
     begin
-     // lbl_codbar.Caption := strCodBarra;
+      lbl_codbar.Caption := strCodBarra;
         //lbl_codbar.Caption := f_trans(f_valr(strCodBar), '000,000.00');
         //XKeyBoard.LCDPrintXY(13, 2, FormatFloat('0.00', f_valr(strCodBar)));
     end;
@@ -355,20 +372,9 @@ begin
   try
     with dtmBcoPdv, fdqbuscaproduto do
     begin
-      close;
-      sql.clear;
-      sql.add ('select * from tb_produtos t where  t.pro_cod_barra = :codbarra ');
-      Parambyname ('codbarra').Value := strCodBarra;
       Open;
-
-      if RecordCount =0 then
-      begin
-       Result := False;
-       p_LimpaCodigoBarra;
-       exit
-      end;
-     // Label11.Caption := 'Código Barra:';
-      Result := True;
+      IndexFieldNames := 'PRO_COD_BARRA';
+      Result := FindKey([StrToInt(ProID)]) = True;
     end;
   except on E: Exception do
     begin
@@ -377,16 +383,35 @@ begin
   end;
 end;
 
+function TformPrincipal.f_mensagemRed(Mensagem: String): Boolean;
+begin
+  try
+    lbl_mensRed.Caption := Mensagem;
+    Notebook2.pageindex := 4;
+    Result := True;
+  except
+    Result := False;
+  end;
+end;
+
 procedure TformPrincipal.p_CaixaAberto;
 begin
   p_LimpaCodigoBarra;
+  if BolVendaAberta then
+  lblStatusPDV.Caption := 'VENDA'
+  else
+  lblStatusPDV.Caption := 'CAIXA LIVRE';
+
   Notebook1.PageIndex := 1;
+  Notebook2.PageIndex := 0;
 end;
 
 procedure TformPrincipal.p_CaixaPagamentos;
 begin
-   p_LimpaCodigoBarra;
-   Notebook1.PageIndex := 2 ;
+  lblStatusPDV.Caption := 'PAGAMENTO';
+  p_LimpaCodigoBarra;
+  Notebook1.PageIndex := 1 ;
+  Notebook2.PageIndex := 2;
 end;
 
 procedure TformPrincipal.p_vendeItem(ProID: String ) ;
@@ -402,9 +427,10 @@ begin
             ACBrECF.Ativar;
 
           if not BolVendaAberta then
-            AbreCupom(strCpfConsumidrNFP,'','');
+            f_RegistraDadosAcbr(TypeAbreCupom,'ABRECUPOM');
 
-          douvlrUnitItem  := 1.99;
+
+          douvlrUnitItem  := fdqbuscaproduto.FieldByName('PRO_VLR_PADRAO').AsFloat;
           douqtdeItem     := 1;
           douTotalItem    := douvlrUnitItem  * douqtdeItem;
 
@@ -456,7 +482,7 @@ begin
   try
     tmrActivePDV.Enabled := False;
     Notebook1.PageIndex := 0;
-    MostraMSGAguarde('Aguarde! Verificando Status PDV');
+    p_MostraMSGAguarde('Aguarde! Verificando Status PDV');
 
 
     with  dtmBcoPdv, DtmAcbr do
@@ -467,14 +493,14 @@ begin
 
       if ACBrECF.Modelo in [ecfNenhum, ecfNaoFiscal] then
       begin
-        MostraMSGAguarde('Descrição Erro: ECF não parametrizada. "O Sistema será Encerrado...');
+        p_MostraMSGAguarde('Descrição Erro: ECF não parametrizada. "O Sistema será Encerrado...');
         Application.Terminate;
         Exit;
       end;
 
       if ACBrECF.Estado in [estVenda, estPagamento] then
       begin
-        MostraMSGAguarde('Aguarde! Recuperando Venda...');
+        p_MostraMSGAguarde('Aguarde! Recuperando Venda...');
         BolVendaAberta := True;
       end;
 
@@ -484,11 +510,13 @@ begin
     end;
 
     tmrAcessoRede.Enabled := True;
+    pnlMensagemaguarde.Height := 72;
+    p_TrataMSG;
 
   except on E: Exception do
     begin
-      MostraMSGAguarde(E.Message);
-      Application.Terminate;
+      p_MostraMSGErro(E.Message);
+     // Application.Terminate;
     end;
   end;
 end;
@@ -737,7 +765,7 @@ end;
 procedure TformPrincipal.p_LimpaCodigoBarra;
 begin
   try
-   // lbl_codbar.Caption := EmptyStr;
+    lbl_codbar.Caption := EmptyStr;
     strCodBarra := EmptyStr;
 
   except on E: Exception do
@@ -772,7 +800,8 @@ begin
             begin
               IntRetornoCMD  := 1;
               vl_EMessage := E.Message;
-              ShowMessage('Erro Ao Registrar ITEM no ACBR '+ E.Message);
+              if   f_mensagemRed('Erro Ao Registrar ITEM no ACBR '+ E.Message) then
+                Abort;
             end;
 
           end;
@@ -859,7 +888,7 @@ begin
         end;
         TypeAbreCupom:
         begin
-
+          AbreCupom(strCpfConsumidrNFP,'','');
         end;
 
         TypeFechaCupom:
@@ -876,16 +905,44 @@ begin
   end;
 end;
 
+procedure TformPrincipal.MemobobinaRegistroKeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+  HideCaret(0)
+end;
+
 procedure TformPrincipal.Notebook1PageChanged(Sender: TObject);
 begin
   Notebook1.Repaint;
 end;
 
-procedure TformPrincipal.MostraMSGAguarde(Mensagem: string);
+procedure TformPrincipal.p_MostraMSGAguarde(Mensagem: string);
 begin
   pnl_aguardeCarrePDV.Caption := Mensagem;
   pnl_aguardeCarrePDV.Repaint;
-  Sleep(2000);
+  Sleep(1300);
+end;
+
+procedure TformPrincipal.p_MostraMSGErro(Mensagem: string);
+begin
+  pnl_aguardeCarrePDV.Caption := Mensagem;
+  pnl_aguardeCarrePDV.Repaint;
+  Sleep(8000);
+end;
+
+procedure TformPrincipal.p_TrataMSG;
+begin
+  with dtmBcoPdv, DtmAcbr, ACBrECF do
+  begin
+    try
+      lblqdtItem.Caption       := FormatFloat('#,##0.000', douqtdeItem);
+      lblvlrItemUN.Caption     := FormatFloat('#,##0.000', douvlrUnitItem);
+      lblTotalItem.Caption     := FormatFloat('#,##0.000', douTotalItem);
+      lblSubtotalCupom.Caption := FormatFloat('#,##0.000', ACBrECF.Subtotal);
+    except
+
+    end;
+  end;
 end;
 
 end.

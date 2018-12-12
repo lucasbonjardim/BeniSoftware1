@@ -128,9 +128,9 @@ begin
   begin
     StrRespt01 := PadSpace(FormatDateTime('dd/mm/yyyy hh:nn:ss', ACBrECF.DataHora)+ '|COO:' + IntToStrZero(StrToInt(ACBrECF.NumCupom),6), 41, '|');
    // StrRespt01 := StrRespt01 + sLineBreak + stringreplace('-', 44);
-   // lbl_infomemocupom.Caption  := StrRespt01;
-   // lbl_infomemocupom.Visible  := True;
+  
     BolVendaAberta             := True;
+    lblStatusPDV.Caption       := 'CAIXA VENDA ';
     MemobobinaRegistro.Visible := True;
     douImpostosFederal         := 0;
     douImpostosEstadual        := 0;
@@ -153,22 +153,19 @@ procedure TDtmAcbr.ACBrECFDepoisVendeItem(const Codigo, Descricao,
 begin
   with dtmBcoPdv, formPrincipal, fdqbuscaproduto do
   begin
-    douImpostosFederal    := douImpostosFederal + RoundTo(TruncFix((douTotalItem-douDescontoItem) *
-                           fdqbuscaproduto.FieldByName('PRO_PERC_IMPOSTOS_F').AsFloat) / 100, -2);
+    douImpostosFederal           := douImpostosFederal + RoundTo(TruncFix((douTotalItem-douDescontoItem) *
+                                 fdqbuscaproduto.FieldByName('PRO_PERC_IMPOSTOS_F').AsFloat) / 100, -2);
 
-    douImpostosEstadual   := douImpostosEstadual + RoundTo(TruncFix((douTotalItem-douDescontoItem) *
-                          fdqbuscaproduto.FieldByName('PRO_PERC_IMPOSTOS_E').AsFloat) / 100, -2);
+    douImpostosEstadual          := douImpostosEstadual + RoundTo(TruncFix((douTotalItem-douDescontoItem) *
+                                 fdqbuscaproduto.FieldByName('PRO_PERC_IMPOSTOS_E').AsFloat) / 100, -2);
 
-    douImpostosMunicipal  := douImpostosMunicipal + RoundTo(TruncFix((douTotalItem-douDescontoItem) *
-                           fdqbuscaproduto.FieldByName('PRO_PERC_IMPOSTOS_M').AsFloat) / 100, -2);
+    douImpostosMunicipal         := douImpostosMunicipal + RoundTo(TruncFix((douTotalItem-douDescontoItem) *
+                                 fdqbuscaproduto.FieldByName('PRO_PERC_IMPOSTOS_M').AsFloat) / 100, -2);
 
-    lblStatusPDV.Caption     := fdqbuscaproduto.FieldByName('PRO_DESCRICAO_PDV').AsString;
-    lblDescricaoItem.Caption :=  fdqbuscaproduto.FieldByName('PRO_DESCRICAO_PDV').AsString;
-    lblvlrItemUN.Caption     :=FormatFloat('#,##0.00 ',douvlrUnitItem  );
-    lblqdtItem.Caption       :=FormatFloat('#,##0.00 ', douqtdeItem );
-    lblTotalItem.Caption     :=FormatFloat('#,##0.00 ', douTotalItem );
-   // lblSubtotalCupom.Caption := FormatFloat('#,##0.00 ', douWSubTotalCupom );
-    lblSubtotalCupom.Caption := FormatFloat('#,##0.00 ', ACBrECF.Subtotal );
+    lblMensagemAguarde.Caption   := fdqbuscaproduto.FieldByName('PRO_DESCRICAO_PDV').AsString;
+    lblDescricaoItem.Caption     :=  fdqbuscaproduto.FieldByName('PRO_DESCRICAO_PDV').AsString;
+    p_TrataMSG;
+
   end;
 
 

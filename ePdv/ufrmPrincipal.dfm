@@ -2,10 +2,10 @@ object formPrincipal: TformPrincipal
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
-  BorderStyle = bsSingle
+  BorderStyle = bsNone
   Caption = 'ePDV Emissor de Cupom Fiscal SAT'
-  ClientHeight = 686
-  ClientWidth = 1024
+  ClientHeight = 715
+  ClientWidth = 1030
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,9 +24,9 @@ object formPrincipal: TformPrincipal
   TextHeight = 13
   object Notebook1: TNotebook
     Left = 0
-    Top = 105
-    Width = 1024
-    Height = 527
+    Top = 182
+    Width = 1030
+    Height = 479
     Align = alClient
     PageIndex = 1
     TabOrder = 0
@@ -37,8 +37,8 @@ object formPrincipal: TformPrincipal
       object pnl_aguardeCarrePDV: TPanel
         Left = 0
         Top = 0
-        Width = 1024
-        Height = 527
+        Width = 1030
+        Height = 479
         Align = alClient
         BevelOuter = bvNone
         Caption = 'Aguarde!'
@@ -58,13 +58,13 @@ object formPrincipal: TformPrincipal
       Top = 0
       Caption = 'cxAberto'
       DesignSize = (
-        1024
-        527)
+        1030
+        479)
       object imgFundoSistemaPDV: TImage
         Left = -21
         Top = 0
-        Width = 1045
-        Height = 476
+        Width = 1051
+        Height = 428
         Anchors = [akLeft, akTop, akRight, akBottom]
         Picture.Data = {
           0954506E67496D61676589504E470D0A1A0A0000000D49484452000003200000
@@ -18768,8 +18768,8 @@ object formPrincipal: TformPrincipal
       object imgFudoPDVSombra: TImage
         Left = -21
         Top = -6
-        Width = 1045
-        Height = 537
+        Width = 1051
+        Height = 489
         Anchors = [akLeft, akTop, akRight, akBottom]
         Picture.Data = {
           0954506E67496D61676589504E470D0A1A0A0000000D49484452000003200000
@@ -19032,8 +19032,8 @@ object formPrincipal: TformPrincipal
       end
       object pnlBaixoimg: TPanel
         Left = 0
-        Top = 511
-        Width = 1024
+        Top = 463
+        Width = 1030
         Height = 16
         Align = alBottom
         BevelOuter = bvNone
@@ -19041,7 +19041,7 @@ object formPrincipal: TformPrincipal
         object Image6: TImage
           Left = 0
           Top = 0
-          Width = 1024
+          Width = 1030
           Height = 16
           Align = alClient
           Picture.Data = {
@@ -19180,7 +19180,7 @@ object formPrincipal: TformPrincipal
         Left = 0
         Top = 0
         Width = 385
-        Height = 511
+        Height = 463
         Align = alLeft
         BevelOuter = bvNone
         Padding.Left = 25
@@ -19192,7 +19192,7 @@ object formPrincipal: TformPrincipal
           Left = 25
           Top = 25
           Width = 335
-          Height = 461
+          Height = 413
           Align = alClient
           ActiveCard = CardpnlEsquerdo
           BevelOuter = bvNone
@@ -19204,13 +19204,13 @@ object formPrincipal: TformPrincipal
             Left = 0
             Top = 0
             Width = 335
-            Height = 461
+            Height = 413
             Caption = 'CardpnlEsquerdo'
             CardIndex = 0
             TabOrder = 0
             object pnlDadosItemTotal: TPanel
               Left = 0
-              Top = 389
+              Top = 341
               Width = 335
               Height = 72
               Align = alBottom
@@ -19221,59 +19221,41 @@ object formPrincipal: TformPrincipal
               DesignSize = (
                 335
                 72)
-              object lblDesValItem: TLabel
-                Left = 16
-                Top = 16
-                Width = 76
-                Height = 42
+              object lbl_codbar: TLabel
+                Left = 11
+                Top = 30
+                Width = 208
+                Height = 37
                 Margins.Left = 5
-                Caption = 'Valor Total do Item'
+                Caption = '7894521001200'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWhite
-                Font.Height = -16
+                Font.Height = -27
                 Font.Name = 'Segoe UI'
-                Font.Style = []
+                Font.Style = [fsBold]
                 ParentFont = False
                 WordWrap = True
               end
-              object lblTotalItem: TLabel
-                Left = 238
-                Top = 14
-                Width = 87
-                Height = 45
+              object lbldesccodbar: TLabel
+                Left = 11
+                Top = 1
+                Width = 149
+                Height = 25
                 Anchors = [akTop, akRight]
-                Caption = '14,00'
-                Font.Charset = DEFAULT_CHARSET
+                Caption = 'C'#243'digo de Barras:'
+                Font.Charset = ANSI_CHARSET
                 Font.Color = clWhite
-                Font.Height = -33
-                Font.Name = 'Segoe UI Black'
+                Font.Height = -19
+                Font.Name = 'Segoe UI'
                 Font.Style = []
                 ParentFont = False
-                ExplicitLeft = 152
-              end
-              object Label13: TLabel
-                Left = 151
-                Top = 33
-                Width = 83
-                Height = 30
-                Alignment = taRightJustify
-                Anchors = [akTop, akRight]
-                AutoSize = False
-                Caption = 'R$'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWhite
-                Font.Height = -16
-                Font.Name = 'Segoe UI Semibold'
-                Font.Style = []
-                ParentFont = False
-                ExplicitLeft = 65
               end
             end
             object pnlImagemItem: TPanel
               Left = 0
               Top = 0
               Width = 335
-              Height = 389
+              Height = 341
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
@@ -19281,7 +19263,7 @@ object formPrincipal: TformPrincipal
                 Left = 0
                 Top = 0
                 Width = 335
-                Height = 270
+                Height = 192
                 Align = alClient
                 Center = True
                 Picture.Data = {
@@ -20146,22 +20128,21 @@ object formPrincipal: TformPrincipal
                   9452197575819F4170700D82836B101C5C83E0E01A0407D72038B8A608BEDC7F
                   0FC07FA282BF850A0E3E99571CA89832234111D80000000049454E44AE426082}
                 Proportional = True
-                ExplicitWidth = 247
-                ExplicitHeight = 145
+                ExplicitHeight = 153
               end
               object pnlDadosItem: TPanel
                 Left = 0
-                Top = 270
+                Top = 192
                 Width = 335
-                Height = 119
+                Height = 149
                 Align = alBottom
                 TabOrder = 0
                 DesignSize = (
                   335
-                  119)
+                  149)
                 object lblqdtItem: TLabel
-                  Left = 16
-                  Top = 70
+                  Left = 15
+                  Top = 59
                   Width = 169
                   Height = 30
                   Alignment = taCenter
@@ -20174,11 +20155,10 @@ object formPrincipal: TformPrincipal
                   Font.Name = 'Segoe UI Semibold'
                   Font.Style = []
                   ParentFont = False
-                  ExplicitWidth = 81
                 end
                 object lblDescricaoQDT: TLabel
-                  Left = 16
-                  Top = 50
+                  Left = 15
+                  Top = 39
                   Width = 81
                   Height = 21
                   Caption = 'Quantidade'
@@ -20207,8 +20187,8 @@ object formPrincipal: TformPrincipal
                   ExplicitWidth = 241
                 end
                 object lblDesValrun: TLabel
-                  Left = 215
-                  Top = 50
+                  Left = 214
+                  Top = 39
                   Width = 96
                   Height = 21
                   Anchors = [akTop, akRight]
@@ -20221,9 +20201,9 @@ object formPrincipal: TformPrincipal
                   ParentFont = False
                 end
                 object lblvlrItemUN: TLabel
-                  Left = 247
-                  Top = 70
-                  Width = 81
+                  Left = 228
+                  Top = 59
+                  Width = 101
                   Height = 30
                   Anchors = [akTop, akRight]
                   AutoSize = False
@@ -20234,11 +20214,10 @@ object formPrincipal: TformPrincipal
                   Font.Name = 'Segoe UI Semibold'
                   Font.Style = []
                   ParentFont = False
-                  ExplicitLeft = 167
                 end
                 object Label10: TLabel
-                  Left = 158
-                  Top = 79
+                  Left = 141
+                  Top = 66
                   Width = 81
                   Height = 30
                   Alignment = taRightJustify
@@ -20251,7 +20230,51 @@ object formPrincipal: TformPrincipal
                   Font.Name = 'Segoe UI Semibold'
                   Font.Style = []
                   ParentFont = False
-                  ExplicitLeft = 78
+                end
+                object lblDesValItem: TLabel
+                  Left = 15
+                  Top = 98
+                  Width = 80
+                  Height = 42
+                  Margins.Left = 5
+                  Caption = 'Valor Total do Item'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clHighlight
+                  Font.Height = -16
+                  Font.Name = 'Segoe UI Semibold'
+                  Font.Style = []
+                  ParentFont = False
+                  WordWrap = True
+                end
+                object Label13: TLabel
+                  Left = 140
+                  Top = 111
+                  Width = 83
+                  Height = 30
+                  Alignment = taRightJustify
+                  Anchors = [akTop, akRight]
+                  AutoSize = False
+                  Caption = 'R$'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clHighlight
+                  Font.Height = -16
+                  Font.Name = 'Segoe UI Semibold'
+                  Font.Style = []
+                  ParentFont = False
+                end
+                object lblTotalItem: TLabel
+                  Left = 229
+                  Top = 104
+                  Width = 56
+                  Height = 32
+                  Anchors = [akTop, akRight]
+                  Caption = '14,00'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clHighlight
+                  Font.Height = -24
+                  Font.Name = 'Segoe UI Semibold'
+                  Font.Style = []
+                  ParentFont = False
                 end
               end
             end
@@ -20261,8 +20284,8 @@ object formPrincipal: TformPrincipal
       object pnlExpancivoDireito: TPanel
         Left = 385
         Top = 0
-        Width = 639
-        Height = 511
+        Width = 645
+        Height = 463
         Align = alClient
         BevelOuter = bvNone
         Padding.Top = 25
@@ -20272,8 +20295,8 @@ object formPrincipal: TformPrincipal
         object CardpnlDireitoResponcivel: TCardPanel
           Left = 0
           Top = 25
-          Width = 614
-          Height = 461
+          Width = 620
+          Height = 413
           Align = alClient
           ActiveCard = CardpnlmemoRegistro
           BevelOuter = bvNone
@@ -20283,15 +20306,15 @@ object formPrincipal: TformPrincipal
           object CardpnlmemoRegistro: TCard
             Left = 0
             Top = 0
-            Width = 614
-            Height = 461
+            Width = 620
+            Height = 413
             Caption = 'CardpnlmemoRegistro'
             CardIndex = 0
             TabOrder = 0
             object pnlAzul: TPanel
               Left = 0
-              Top = 389
-              Width = 614
+              Top = 341
+              Width = 620
               Height = 72
               Align = alBottom
               BevelOuter = bvNone
@@ -20299,7 +20322,7 @@ object formPrincipal: TformPrincipal
               ParentBackground = False
               TabOrder = 0
               DesignSize = (
-                614
+                620
                 72)
               object lblTotalPagar: TLabel
                 Left = 16
@@ -20317,7 +20340,7 @@ object formPrincipal: TformPrincipal
                 WordWrap = True
               end
               object Label15: TLabel
-                Left = 321
+                Left = 318
                 Top = 32
                 Width = 81
                 Height = 30
@@ -20331,10 +20354,9 @@ object formPrincipal: TformPrincipal
                 Font.Name = 'Segoe UI Semibold'
                 Font.Style = []
                 ParentFont = False
-                ExplicitLeft = 169
               end
               object lblSubtotalCupom: TLabel
-                Left = 408
+                Left = 405
                 Top = 6
                 Width = 194
                 Height = 54
@@ -20346,33 +20368,100 @@ object formPrincipal: TformPrincipal
                 Font.Name = 'Segoe UI Black'
                 Font.Style = []
                 ParentFont = False
-                ExplicitLeft = 256
               end
             end
             object Panel11: TPanel
               Left = 0
               Top = 0
-              Width = 614
-              Height = 389
+              Width = 620
+              Height = 341
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
-              object MemobobinaRegistro: TMemo
+              object Notebook2: TNotebook
                 Left = 0
                 Top = 0
-                Width = 614
-                Height = 389
+                Width = 620
+                Height = 341
                 Align = alClient
-                Font.Charset = ANSI_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -16
-                Font.Name = 'Segoe UI Semilight'
-                Font.Style = []
-                Lines.Strings = (
-                  '')
-                ParentFont = False
                 TabOrder = 0
-                ExplicitLeft = 40
+                object TPage
+                  Left = 0
+                  Top = 0
+                  Caption = 'memobobina'
+                  object MemobobinaRegistro: TMemo
+                    Left = 0
+                    Top = 0
+                    Width = 620
+                    Height = 341
+                    Align = alClient
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = clWindowText
+                    Font.Height = -11
+                    Font.Name = 'Tahoma'
+                    Font.Style = []
+                    Lines.Strings = (
+                      '')
+                    ParentFont = False
+                    ReadOnly = True
+                    ScrollBars = ssVertical
+                    TabOrder = 0
+                    OnKeyDown = MemobobinaRegistroKeyDown
+                    ExplicitLeft = 6
+                  end
+                end
+                object TPage
+                  Left = 0
+                  Top = 0
+                  Caption = 'consulta'
+                  ExplicitWidth = 0
+                  ExplicitHeight = 0
+                end
+                object TPage
+                  Left = 0
+                  Top = 0
+                  Caption = 'pagamento'
+                  ExplicitWidth = 0
+                  ExplicitHeight = 0
+                end
+                object TPage
+                  Left = 0
+                  Top = 0
+                  Caption = 'StringList'
+                  ExplicitWidth = 0
+                  ExplicitHeight = 0
+                end
+                object TPage
+                  Left = 0
+                  Top = 0
+                  Caption = 'MensagemRed'
+                  object lbl_mensRed: TLabel
+                    Left = 28
+                    Top = 150
+                    Width = 104
+                    Height = 37
+                    Caption = 'Aten'#231#227'o!'
+                    Font.Charset = ANSI_CHARSET
+                    Font.Color = clRed
+                    Font.Height = -27
+                    Font.Name = 'Segoe UI Semilight'
+                    Font.Style = []
+                    ParentFont = False
+                  end
+                  object lbl_InfoAtencao: TLabel
+                    Left = 144
+                    Top = 8
+                    Width = 339
+                    Height = 120
+                    Caption = 'Aten'#231#227'o!'
+                    Font.Charset = ANSI_CHARSET
+                    Font.Color = clRed
+                    Font.Height = -91
+                    Font.Name = 'Segoe UI Light'
+                    Font.Style = []
+                    ParentFont = False
+                  end
+                end
               end
             end
           end
@@ -20403,19 +20492,19 @@ object formPrincipal: TformPrincipal
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 632
-    Width = 1024
+    Top = 661
+    Width = 1030
     Height = 54
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      1024
+      1030
       54)
     object Image5: TImage
       Left = 0
       Top = 0
-      Width = 1024
+      Width = 1030
       Height = 54
       Align = alClient
       Picture.Data = {
@@ -20559,7 +20648,7 @@ object formPrincipal: TformPrincipal
       ParentFont = False
     end
     object Image9: TImage
-      Left = 967
+      Left = 973
       Top = 1
       Width = 57
       Height = 53
@@ -20747,7 +20836,7 @@ object formPrincipal: TformPrincipal
       ExplicitLeft = 706
     end
     object lblOperadorCaixa: TLabel
-      Left = 838
+      Left = 844
       Top = 24
       Width = 109
       Height = 21
@@ -20762,7 +20851,7 @@ object formPrincipal: TformPrincipal
       ExplicitLeft = 710
     end
     object lbl_ope: TLabel
-      Left = 838
+      Left = 844
       Top = 10
       Width = 50
       Height = 15
@@ -20790,19 +20879,19 @@ object formPrincipal: TformPrincipal
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 1024
+    Width = 1030
     Height = 105
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
     DesignSize = (
-      1024
+      1030
       105)
     object ImageParalogoCLi: TImage
       Left = 0
       Top = 0
-      Width = 422
-      Height = 98
+      Width = 428
+      Height = 115
       Anchors = [akLeft, akTop, akRight]
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D494844520000008B0000
@@ -20927,13 +21016,13 @@ object formPrincipal: TformPrincipal
         5D43BA86740DE91AD235A46B48D790EE030ED40164AB7A92240000000049454E
         44AE426082}
       Stretch = True
-      ExplicitWidth = 161
+      ExplicitWidth = 422
     end
     object imgpanltopDireito: TImage
-      Left = 160
+      Left = 176
       Top = -6
-      Width = 885
-      Height = 105
+      Width = 891
+      Height = 121
       Anchors = [akLeft, akTop, akRight]
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000003200000
@@ -21068,7 +21157,7 @@ object formPrincipal: TformPrincipal
         007CDBF5F36A96CB07000010790194658A79BB997BB30000000049454E44AE42
         6082}
       Stretch = True
-      ExplicitWidth = 624
+      ExplicitWidth = 885
     end
     object imgLogoCli: TImage
       Left = 16
@@ -21403,8 +21492,8 @@ object formPrincipal: TformPrincipal
       ParentFont = False
     end
     object lblStatusPDV: TLabel
-      Left = 733
-      Top = 13
+      Left = 734
+      Top = 17
       Width = 259
       Height = 62
       Anchors = [akTop, akRight]
@@ -21415,8 +21504,46 @@ object formPrincipal: TformPrincipal
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 605
     end
+  end
+  object pnlMensagemaguarde: TPanel
+    Left = 0
+    Top = 110
+    Width = 1030
+    Height = 72
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 7434609
+    ParentBackground = False
+    TabOrder = 3
+    object lblMensagemAguarde: TLabel
+      Left = 0
+      Top = 0
+      Width = 1030
+      Height = 72
+      Align = alClient
+      Alignment = taCenter
+      Caption = 'REFRIGERANTE COCA COLA LATA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -47
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      ExplicitWidth = 693
+      ExplicitHeight = 62
+    end
+  end
+  object pnl_azultop: TPanel
+    Left = 0
+    Top = 105
+    Width = 1030
+    Height = 5
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 14581528
+    ParentBackground = False
+    TabOrder = 4
   end
   object ACBrEnterTab1: TACBrEnterTab
     EnterAsTab = True
